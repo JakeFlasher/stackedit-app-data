@@ -9,6 +9,7 @@ Hi! I'm your first Markdown file in **StackEdit**. If you want to learn about St
 ### Run docker 
 ```python
  docker run --name sniper -d --privileged=true -v /hpc/home/chengaoshi/developing:/root/developing 10.120.24.15:5000/chengaoshi/ubuntu_22.04:v0  tail -f >/dev/null
+ docker exec -it ${container_id} bash
 ```
 
 ### Profile bbvs for SPEC17 Rate (int, fp)
@@ -394,7 +395,7 @@ B --> D{Rhombus}
 C --> D
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjMyNjY4Nzc5LDE2NjAwNjAyODgsMzk4Mj
+eyJoaXN0b3J5IjpbODczNTAzMTYxLDE2NjAwNjAyODgsMzk4Mj
 IxNzg5LC0xMTkxMzQ3MDE4LDE0MTQ2MDMzOTEsMjAyNzA4NDY0
 NywxODQxMDQ5ODIyLC0xNDkzNzQ0NjkzLC0xMjU1NTg3MzksLT
 E1MzI2MTA0OTcsMTU5MjUxMjA2OV19
