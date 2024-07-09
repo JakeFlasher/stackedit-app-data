@@ -6,6 +6,10 @@
 Hi! I'm your first Markdown file in **StackEdit**. If you want to learn about StackEdit, you can read me. If you want to play with Markdown, you can edit me. Once you have finished with me, you can create new files by opening the **file explorer** on the left corner of the navigation bar.
 
 ## CMDs on HPC-gz (SPEC17)
+### Run docker 
+```python
+ docker run --name sniper -d --privileged=true -v /hpc/home/chengaoshi/developing:/root/developing 10.120.24.15:5000/chengaoshi/ubuntu_22.04:v0  tail -f >/dev/null
+```
 
 ### Profile bbvs for SPEC17 Rate (int, fp)
 ```cpp
@@ -390,8 +394,8 @@ B --> D{Rhombus}
 C --> D
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY2MDA2MDI4OCwzOTgyMjE3ODksLTExOT
-EzNDcwMTgsMTQxNDYwMzM5MSwyMDI3MDg0NjQ3LDE4NDEwNDk4
-MjIsLTE0OTM3NDQ2OTMsLTEyNTU1ODczOSwtMTUzMjYxMDQ5Ny
-wxNTkyNTEyMDY5XX0=
+eyJoaXN0b3J5IjpbNjMyNjY4Nzc5LDE2NjAwNjAyODgsMzk4Mj
+IxNzg5LC0xMTkxMzQ3MDE4LDE0MTQ2MDMzOTEsMjAyNzA4NDY0
+NywxODQxMDQ5ODIyLC0xNDkzNzQ0NjkzLC0xMjU1NTg3MzksLT
+E1MzI2MTA0OTcsMTU5MjUxMjA2OV19
 -->
