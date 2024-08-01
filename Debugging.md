@@ -127,6 +127,10 @@ bash-4.1#  losetup  -a
  ```python
 ./bin/cachesim ../data/hmmer_397B.trace.xz_load_ins.csv csv lru 0.001,0.01,0.1,0.2 --ignore-obj-size 1 -t "obj-id-col=6, delimiter=,, has-header=true"
 ```
+
+```python
+ python plot_mrc_size.py --tracepath ../data/hmmer_397B.trace.xz_decode_ins.csv --trace-format csv --trace-format-params="obj-id-col=6,delimiter=," --ignore-obj-size --algos=fifo,lru,lecar,s3fifo
+ ```
 Please  review  this  file:
 
 "/root/developing/cpu2017/benchspec/CPU/521.wrf_r/build/build_base_arch_x86_test-m64.0000/make.diffwrf_521.out"
@@ -366,8 +370,9 @@ B --> D{Rhombus}
 C --> D
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU4MjI4NTA5NCw4NzM1MDMxNjEsMTY2MD
-A2MDI4OCwzOTgyMjE3ODksLTExOTEzNDcwMTgsMTQxNDYwMzM5
-MSwyMDI3MDg0NjQ3LDE4NDEwNDk4MjIsLTE0OTM3NDQ2OTMsLT
-EyNTU1ODczOSwtMTUzMjYxMDQ5NywxNTkyNTEyMDY5XX0=
+eyJoaXN0b3J5IjpbLTIwMzU3MTQ3MzcsLTU4MjI4NTA5NCw4Nz
+M1MDMxNjEsMTY2MDA2MDI4OCwzOTgyMjE3ODksLTExOTEzNDcw
+MTgsMTQxNDYwMzM5MSwyMDI3MDg0NjQ3LDE4NDEwNDk4MjIsLT
+E0OTM3NDQ2OTMsLTEyNTU1ODczOSwtMTUzMjYxMDQ5NywxNTky
+NTEyMDY5XX0=
 -->
