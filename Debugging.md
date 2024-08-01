@@ -49,30 +49,26 @@ done
 ##  Debugging Docker env on HPC-gz
   
 ### enable certains features on qemu (illegal inst)
+```python
 ../configure --target-list=x86_64-linux-user --disable-werror --enable-plugins x86_64-linux-user enable-feature-capstone enable-feature-avx2 enable-feature-avx512bw enable-feature-avx512f enable-feature-kvm && ninja
-
-
+```
+```
 gcc -march=native x86-64 (base instruction, need to be distingued with avx extended etc.)
-
 will cause Illegal instruction error
-
 docker  pull  ghcr.io/bartventer/devcontainer-images/base-archlinux:latest
-
 docker  run  -it  --privileged=true  aeed32529d7a  bash
-
+```
   
   
 
 编辑  /etc/pacman.d/mirrorlist，在文件的最顶端添加：
 
   
-
+```python
 Server  =  https://mirrors.tuna.tsinghua.edu.cn/archlinux/$repo/os/$arch
-
 pacman  -Syyu
-
 pacman  -Sy  base-devel  cmake
-
+```
   
   
 
@@ -88,74 +84,49 @@ echo  'export RUSTUP_DIST_SERVER=https://mirrors.tuna.tsinghua.edu.cn/rustup' >>
   
 
 # cargo.io
-
+```
 mkdir  -vp ${CARGO_HOME:-$HOME/.cargo}
-
-  
-
 cat << EOF | tee  -a ${CARGO_HOME:-$HOME/.cargo}/config
 
 [source.crates-io]
-
 replace-with = 'mirror'
 
   
 
 [source.mirror]
-
 registry = "https://mirrors.tuna.tsinghua.edu.cn/git/crates.io-index.git"
-
 EOF
 
-  
-  
-
 docker  run  --name  champsim_test  -d  --privileged=true  -v  /hpc/home/chengaoshi/developing:/root/developing  10.120.24.15:5000/chengaoshi/arch_env:v0  tail  -f >/dev/null
-
-  
-  
 ```
 # Intall spec2017 in docker
-
+```
 My  container  starts  into  bash,  from  this  shell  I  am  able  to  add  loop  devices  using:
-
-  
-
 mknod /dev/loop0 -m0660 b 7 0
-
 mknod /dev/loop1 -m0660 b 7 1
-
-...
-
 mknod /dev/loop9 -m0660 b 7 9
 ```
 and  now,  I  have  loop  devices  available,  so  I  am  able  to  mount  an  ISO.  However,  I  noticed  that  the  first  available  loop  device  for  me  was  /dev/loop2:
 
   
-
+```
 bash-4.1#  losetup  -f
-
 /dev/loop2
-
+```
 this  implies  that  loop0  and  loop1  are  already  in  use,  this  is  confirmed  by:
-
-  
-
+```
 bash-4.1#  losetup  -a
-
 /dev/loop0: [fd00]:1978974 (/dev/loop0)
-
 /dev/loop1: [fd00]:1978975 (/dev/loop1)
-
 /dev/loop2: [fd00]:2369514 (/path/to/my/iso)
-
+```
   
   
   
-  
-  
-  
-
+ ## Libcachesim + Champsim traces 
+ ```python
+./bin/cachesim ../data/hmmer_397B.trace.xz_load_ins.csv csv lru 0.001,0.01,0.1,0.2 --ignore-obj-size 1 -t "obj-id-col=6, delimiter=,, has-header=true"
+```
 Please  review  this  file:
 
 "/root/developing/cpu2017/benchspec/CPU/521.wrf_r/build/build_base_arch_x86_test-m64.0000/make.diffwrf_521.out"
@@ -395,8 +366,8 @@ B --> D{Rhombus}
 C --> D
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODczNTAzMTYxLDE2NjAwNjAyODgsMzk4Mj
-IxNzg5LC0xMTkxMzQ3MDE4LDE0MTQ2MDMzOTEsMjAyNzA4NDY0
-NywxODQxMDQ5ODIyLC0xNDkzNzQ0NjkzLC0xMjU1NTg3MzksLT
-E1MzI2MTA0OTcsMTU5MjUxMjA2OV19
+eyJoaXN0b3J5IjpbLTU4MjI4NTA5NCw4NzM1MDMxNjEsMTY2MD
+A2MDI4OCwzOTgyMjE3ODksLTExOTEzNDcwMTgsMTQxNDYwMzM5
+MSwyMDI3MDg0NjQ3LDE4NDEwNDk4MjIsLTE0OTM3NDQ2OTMsLT
+EyNTU1ODczOSwtMTUzMjYxMDQ5NywxNTkyNTEyMDY5XX0=
 -->
