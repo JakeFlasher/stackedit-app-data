@@ -121,6 +121,9 @@ bash-4.1#  losetup  -a
 /dev/loop2: [fd00]:2369514 (/path/to/my/iso)
 ```
   
+  ```
+  docker kill $id && docker rm $id
+  ```
   
   
  ## Libcachesim + Champsim traces 
@@ -370,9 +373,9 @@ B --> D{Rhombus}
 C --> D
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMzU3MTQ3MzcsLTU4MjI4NTA5NCw4Nz
-M1MDMxNjEsMTY2MDA2MDI4OCwzOTgyMjE3ODksLTExOTEzNDcw
-MTgsMTQxNDYwMzM5MSwyMDI3MDg0NjQ3LDE4NDEwNDk4MjIsLT
-E0OTM3NDQ2OTMsLTEyNTU1ODczOSwtMTUzMjYxMDQ5NywxNTky
-NTEyMDY5XX0=
+eyJoaXN0b3J5IjpbLTg2Mjc4MDQ1MCwtMjAzNTcxNDczNywtNT
+gyMjg1MDk0LDg3MzUwMzE2MSwxNjYwMDYwMjg4LDM5ODIyMTc4
+OSwtMTE5MTM0NzAxOCwxNDE0NjAzMzkxLDIwMjcwODQ2NDcsMT
+g0MTA0OTgyMiwtMTQ5Mzc0NDY5MywtMTI1NTU4NzM5LC0xNTMy
+NjEwNDk3LDE1OTI1MTIwNjldfQ==
 -->
