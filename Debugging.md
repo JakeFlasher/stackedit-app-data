@@ -140,7 +140,9 @@ bash-4.1#  losetup  -a
  ```
 *~34-43* GB memory consumption
 Please  review  this  file:
-
+```python
+ python plot_mrc_size.py --tracepath ../data/hmmer_397B.trace.xz_decode_ins.csv --trace-format csv --trace-format-params="obj-id-col=6,delimiter=," --ignore-obj-size --algos=fifo,lru,lecar,s3fifo --report-interval 120
+ ```
 "/root/developing/cpu2017/benchspec/CPU/521.wrf_r/build/build_base_arch_x86_test-m64.0000/make.diffwrf_521.out"
 
 ----------------------------------------------------------------------------
@@ -378,9 +380,9 @@ B --> D{Rhombus}
 C --> D
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NTE0NTk0NywtODYyNzgwNDUwLC0yMD
-M1NzE0NzM3LC01ODIyODUwOTQsODczNTAzMTYxLDE2NjAwNjAy
-ODgsMzk4MjIxNzg5LC0xMTkxMzQ3MDE4LDE0MTQ2MDMzOTEsMj
-AyNzA4NDY0NywxODQxMDQ5ODIyLC0xNDkzNzQ0NjkzLC0xMjU1
-NTg3MzksLTE1MzI2MTA0OTcsMTU5MjUxMjA2OV19
+eyJoaXN0b3J5IjpbLTE0MzIzMzcyMDksLTg2Mjc4MDQ1MCwtMj
+AzNTcxNDczNywtNTgyMjg1MDk0LDg3MzUwMzE2MSwxNjYwMDYw
+Mjg4LDM5ODIyMTc4OSwtMTE5MTM0NzAxOCwxNDE0NjAzMzkxLD
+IwMjcwODQ2NDcsMTg0MTA0OTgyMiwtMTQ5Mzc0NDY5MywtMTI1
+NTU4NzM5LC0xNTMyNjEwNDk3LDE1OTI1MTIwNjldfQ==
 -->
