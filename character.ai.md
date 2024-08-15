@@ -46,11 +46,8 @@
 - [StreamingLLM](https://arxiv.org/abs/2309.17453): 
 
 > We have reduced serving costs by a factor of 33 compared to when we began in late 2022. Today, if we were to serve our traffic using leading commercial APIs, it would cost at least 13.5X more than with our systems.
-## Workspace tested on *HPC-gz* 
-> Due to memory/Hard drive space limit, had to move the current workspace to hpc for faster, parallel executions
-- 1. *Dockerhub.io* wasn't working on vm-hpcs, had to download docker image for use from ghrc.io. 
-- 2. All tools tested with *SPEC2017* benchmarks (profiling, tracing, simulators etc.)
+
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIwMTE0MjU5OV19
+eyJoaXN0b3J5IjpbLTE0Mzk4ODUxMDVdfQ==
 -->
