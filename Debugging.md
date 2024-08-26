@@ -126,9 +126,14 @@ bash-4.1#  losetup  -a
   ```
   
   ```
-  (base) [chengaoshi@gpu02 ~]$  docker run --name decode_gpu -d --privileged=true --gpus all -v /hpc/home/chengaoshi/:/root 10.120.24.15
+module load cuda/cuda_version
+module load **
+ 
+(base) [chengaoshi@gpu02 ~]$  docker run --name decode_gpu -d --privileged=true --gpus all -v /hpc/home/chengaoshi/:/root 10.120.24.15
 :5000/jhinno/lzg_pytorch:latest tail -f >/dev/null
 (base) [chengaoshi@gpu02 ~]$ docker exec -it decode_gpu all
+
+source ../pytorch_cuda12.0/bin/activate
   ```
   
  ## Libcachesim + Champsim traces 
@@ -385,10 +390,10 @@ B --> D{Rhombus}
 C --> D
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzA2NDY0ODUxLC0xNDMyMzM3MjA5LC04Nj
-I3ODA0NTAsLTIwMzU3MTQ3MzcsLTU4MjI4NTA5NCw4NzM1MDMx
-NjEsMTY2MDA2MDI4OCwzOTgyMjE3ODksLTExOTEzNDcwMTgsMT
-QxNDYwMzM5MSwyMDI3MDg0NjQ3LDE4NDEwNDk4MjIsLTE0OTM3
-NDQ2OTMsLTEyNTU1ODczOSwtMTUzMjYxMDQ5NywxNTkyNTEyMD
-Y5XX0=
+eyJoaXN0b3J5IjpbMTY4MzE4NzIwOSw3MDY0NjQ4NTEsLTE0Mz
+IzMzcyMDksLTg2Mjc4MDQ1MCwtMjAzNTcxNDczNywtNTgyMjg1
+MDk0LDg3MzUwMzE2MSwxNjYwMDYwMjg4LDM5ODIyMTc4OSwtMT
+E5MTM0NzAxOCwxNDE0NjAzMzkxLDIwMjcwODQ2NDcsMTg0MTA0
+OTgyMiwtMTQ5Mzc0NDY5MywtMTI1NTU4NzM5LC0xNTMyNjEwND
+k3LDE1OTI1MTIwNjldfQ==
 -->
