@@ -128,6 +128,8 @@ bash-4.1#  losetup  -a
   ```
 module load cuda/cuda_version
 module load **
+python -m venv /path/to/new/virtual/environment
+pip install -r requireme
  
 (base) [chengaoshi@gpu02 ~]$  docker run --name decode_gpu -d --privileged=true --gpus all -v /hpc/home/chengaoshi/:/root 10.120.24.15
 :5000/jhinno/lzg_pytorch:latest tail -f >/dev/null
@@ -390,7 +392,7 @@ B --> D{Rhombus}
 C --> D
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY4MzE4NzIwOSw3MDY0NjQ4NTEsLTE0Mz
+eyJoaXN0b3J5IjpbMTEyODc0MDc2Nyw3MDY0NjQ4NTEsLTE0Mz
 IzMzcyMDksLTg2Mjc4MDQ1MCwtMjAzNTcxNDczNywtNTgyMjg1
 MDk0LDg3MzUwMzE2MSwxNjYwMDYwMjg4LDM5ODIyMTc4OSwtMT
 E5MTM0NzAxOCwxNDE0NjAzMzkxLDIwMjcwODQ2NDcsMTg0MTA0
