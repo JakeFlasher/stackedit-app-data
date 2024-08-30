@@ -4,7 +4,9 @@
 - [CRASH SIGFPE with glibc 2.39 · Issue #6693 · DynamoRIO/dynamorio (github.com)](https://github.com/DynamoRIO/dynamorio/issues/6693)
 - [How to downgrade glibc 2.34 to glibc-2.27 - Stack Overflow](https://stackoverflow.com/questions/74089622/how-to-downgrade-glibc-2-34-to-glibc-2-27)
 - [How to get a list of images on docker registry v2](https://stackoverflow.com/questions/31251356/how-to-get-a-list-of-images-on-docker-registry-v2)
-Hi! I'm your first Markdown file in **StackEdit**. If you want to learn about StackEdit, you can read me. If you want to play with Markdown, you can edit me. Once you have finished with me, you can create new files by opening the **file explorer** on the left corner of the navigation bar.
+# Use ghr.io as dockerhub is banned in China
+- E.g. ```docker pull ghcr.io/linuxserver/baseimage-ubuntu:noble```
+ 
 
 ## CMDs on HPC-gz (SPEC17)
 ### Run docker 
@@ -393,10 +395,11 @@ B --> D{Rhombus}
 C --> D
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODg2Mzc3ODUxLC0xMTAyMTI4NzYxLDcwNj
-Q2NDg1MSwtMTQzMjMzNzIwOSwtODYyNzgwNDUwLC0yMDM1NzE0
-NzM3LC01ODIyODUwOTQsODczNTAzMTYxLDE2NjAwNjAyODgsMz
-k4MjIxNzg5LC0xMTkxMzQ3MDE4LDE0MTQ2MDMzOTEsMjAyNzA4
-NDY0NywxODQxMDQ5ODIyLC0xNDkzNzQ0NjkzLC0xMjU1NTg3Mz
-ksLTE1MzI2MTA0OTcsMTU5MjUxMjA2OV19
+eyJoaXN0b3J5IjpbMTExMDU1NzAxMiw4ODYzNzc4NTEsLTExMD
+IxMjg3NjEsNzA2NDY0ODUxLC0xNDMyMzM3MjA5LC04NjI3ODA0
+NTAsLTIwMzU3MTQ3MzcsLTU4MjI4NTA5NCw4NzM1MDMxNjEsMT
+Y2MDA2MDI4OCwzOTgyMjE3ODksLTExOTEzNDcwMTgsMTQxNDYw
+MzM5MSwyMDI3MDg0NjQ3LDE4NDEwNDk4MjIsLTE0OTM3NDQ2OT
+MsLTEyNTU1ODczOSwtMTUzMjYxMDQ5NywxNTkyNTEyMDY5XX0=
+
 -->
