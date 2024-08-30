@@ -7,7 +7,9 @@
 ## Implemented
 ### 1.  A tracing tool based on dift-addr, that reads, decodes a tracefile (.xz, .gz) and outputs a decoded comprehensive csv trace, a global-stable target csv trace and a residual csv trace.
 ### 2. ChampSim edited to implement the above logic within the do_cycle() main functions.
+- Incurring more overheads during simulation, cause deviation in IPC
 ### 3. ChampSim edited to read a binary file that contains the #instr count when each global stable load occurs and chooses whether to skip them or not.
+- Overheads during simulation is much lower.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTcwNTEyOTUwMV19
+eyJoaXN0b3J5IjpbOTEwMjQ5NjI2XX0=
 -->
