@@ -1,10 +1,9 @@
-## Dynamorio
+## Useful HPC Debugging Resources
 
 - [SIGSEGV when the client loads the auxiliary library and the auxiliary library invokes printf. · Issue #6500 · DynamoRIO/dynamorio (github.com)](https://github.com/DynamoRIO/dynamorio/issues/6500)
 - [CRASH SIGFPE with glibc 2.39 · Issue #6693 · DynamoRIO/dynamorio (github.com)](https://github.com/DynamoRIO/dynamorio/issues/6693)
 - [How to downgrade glibc 2.34 to glibc-2.27 - Stack Overflow](https://stackoverflow.com/questions/74089622/how-to-downgrade-glibc-2-34-to-glibc-2-27)
-- [# [How to get a list of images on docker registry v2](https://stackoverflow.com/questions/31251356/how-to-get-a-list-of-images-on-docker-registry-v2)](https://stackoverflow.com/questions/31251356/how-to-get-a-list-of-images-on-docker-registry-v2)
-- 
+- [How to get a list of images on docker registry v2](https://stackoverflow.com/questions/31251356/how-to-get-a-list-of-images-on-docker-registry-v2)
 Hi! I'm your first Markdown file in **StackEdit**. If you want to learn about StackEdit, you can read me. If you want to play with Markdown, you can edit me. Once you have finished with me, you can create new files by opening the **file explorer** on the left corner of the navigation bar.
 
 ## CMDs on HPC-gz (SPEC17)
@@ -394,7 +393,7 @@ B --> D{Rhombus}
 C --> D
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYyNzEyODYxLC0xMTAyMTI4NzYxLDcwNj
+eyJoaXN0b3J5IjpbODg2Mzc3ODUxLC0xMTAyMTI4NzYxLDcwNj
 Q2NDg1MSwtMTQzMjMzNzIwOSwtODYyNzgwNDUwLC0yMDM1NzE0
 NzM3LC01ODIyODUwOTQsODczNTAzMTYxLDE2NjAwNjAyODgsMz
 k4MjIxNzg5LC0xMTkxMzQ3MDE4LDE0MTQ2MDMzOTEsMjAyNzA4
