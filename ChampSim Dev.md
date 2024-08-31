@@ -9,7 +9,7 @@
 ``` Usage: ./load_inspect generates a stable_load.bin file and log file tells you how many instructions are left excluding global stable, which is the number of actual simulation instructions for input. ```
 ### 2. *ChampSim-GST* edited to implement the above logic within the do_cycle() main functions.
 ``` Note: require the ./load_inspect's log file to retrieve the actual simulation instructions. ```
-```Sanity Check: passed, see log test v.s. base (perfs, mem footprints), but IPC ```
+```Sanity Check: passed, see log test v.s. base (perfs, mem footprints), but IPC is affected (cycles calculation affected) ```
 - Incurring more overheads during simulation, cause deviation in IPC
 ### 3. *ChampSim-Skip* edited to read a binary file that contains the #instr count when each global stable load occurs and chooses whether to skip them or not.
 ``` Note: require the ./load_inspect's log file and stable_load.bin to retrieve the actual simulation instructions and skip them in specific instruction count. ```
@@ -27,7 +27,7 @@
 >  3. [Demystifying Data Normalization in Machine Learning](https://medium.com/@weidagang/demystifying-machine-learning-normalization-0cdb8b281234#:~:text=Min-max%20normalization%20scales%20the,a%20standard%20deviation%20of%201.)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA2ODY4Nzg3MiwtNTgxNTMyNzQ3LC0xMz
+eyJoaXN0b3J5IjpbLTcyMDc3MzMwOSwtNTgxNTMyNzQ3LC0xMz
 c3NzE1ODk0LC0zODc2NDc5OSwxMjcxNzY0MTYwLC02NjQyMzE1
 NDAsMTE3NTA3ODM1Niw5MTAyNDk2MjZdfQ==
 -->
