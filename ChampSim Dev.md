@@ -26,8 +26,30 @@
 >  2.  [z-score vs min-max normalization](https://stats.stackexchange.com/questions/547446/z-score-vs-min-max-normalization)
 >  3. [Demystifying Data Normalization in Machine Learning](https://medium.com/@weidagang/demystifying-machine-learning-normalization-0cdb8b281234#:~:text=Min-max%20normalization%20scales%20the,a%20standard%20deviation%20of%201.)
 
+## Comparison of zero leading values
+```CPU 0 cumulative IPC: 0.5272 instructions: 100000004 cycles: 189696853
+CPU 0 Branch Prediction Accuracy: 96.02% MPKI: 5.379 Average ROB Occupancy at Mispredict: 105.9
+Branch type MPKI
+BRANCH_DIRECT_JUMP: 1e-05
+BRANCH_INDIRECT: 0
+BRANCH_CONDITIONAL: 5.379
+BRANCH_DIRECT_CALL: 0
+BRANCH_INDIRECT_CALL: 0
+BRANCH_RETURN: 0
+```
+```
+CPU 0 cumulative IPC: 0.5532 instructions: 65071979 cycles: 117619171
+CPU 0 Branch Prediction Accuracy: 96.18% MPKI: 7.473 Average ROB Occupancy at Mispredict: 96.6
+Branch type MPKI
+BRANCH_DIRECT_JUMP: 0.000461
+BRANCH_INDIRECT: 0
+BRANCH_CONDITIONAL: 7.473
+BRANCH_DIRECT_CALL: 0
+BRANCH_INDIRECT_CALL: 0
+BRANCH_RETURN: 1.537e-05
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjEwMTQ5MzQzMiwtNTgxNTMyNzQ3LC0xMz
-c3NzE1ODk0LC0zODc2NDc5OSwxMjcxNzY0MTYwLC02NjQyMzE1
-NDAsMTE3NTA3ODM1Niw5MTAyNDk2MjZdfQ==
+eyJoaXN0b3J5IjpbMTYwNzMxMDc1NCwyMTAxNDkzNDMyLC01OD
+E1MzI3NDcsLTEzNzc3MTU4OTQsLTM4NzY0Nzk5LDEyNzE3NjQx
+NjAsLTY2NDIzMTU0MCwxMTc1MDc4MzU2LDkxMDI0OTYyNl19
 -->
