@@ -15,7 +15,7 @@
 ``` Note: require the ./load_inspect's log file and stable_load.bin to retrieve the actual simulation instructions and skip them in specific instruction count. ```
 - Overheads during simulation is much lower.
 ### 4. No changes to ChampSim. Instead, create a custom trace profiler to filter and synthesize the traces as pre-processing.
-- Low overheads during simulation, IPC 
+- Low overheads during simulation, IPC calculation secured purity.
 ### 4. Trace-Shrinking, 
 ```Sanity Check: Trace-encoder (), Read log and shrink trace ()```
 
@@ -27,7 +27,7 @@
 >  3. [Demystifying Data Normalization in Machine Learning](https://medium.com/@weidagang/demystifying-machine-learning-normalization-0cdb8b281234#:~:text=Min-max%20normalization%20scales%20the,a%20standard%20deviation%20of%201.)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTcyMDc3MzMwOSwtNTgxNTMyNzQ3LC0xMz
+eyJoaXN0b3J5IjpbMTY3ODQyNTQwMCwtNTgxNTMyNzQ3LC0xMz
 c3NzE1ODk0LC0zODc2NDc5OSwxMjcxNzY0MTYwLC02NjQyMzE1
 NDAsMTE3NTA3ODM1Niw5MTAyNDk2MjZdfQ==
 -->
