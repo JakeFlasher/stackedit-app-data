@@ -15,8 +15,8 @@
 ``` Note: require the ./load_inspect's log file and stable_load.bin to retrieve the actual simulation instructions and skip them in specific instruction count. ```
 - Overheads during simulation is much lower.
 ### 4. Trace-Shrinking, 
-```Sanity Check: Trace-encoder ()```
+```Sanity Check: Trace-encoder (), Read log and shrink trace ()```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5MTE3NTU0MTUsMTI3MTc2NDE2MCwtNj
-Y0MjMxNTQwLDExNzUwNzgzNTYsOTEwMjQ5NjI2XX0=
+eyJoaXN0b3J5IjpbLTM4NzY0Nzk5LDEyNzE3NjQxNjAsLTY2ND
+IzMTU0MCwxMTc1MDc4MzU2LDkxMDI0OTYyNl19
 -->
