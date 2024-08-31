@@ -20,12 +20,11 @@
 
 # Results Evaluations
 ## Normalization of differences 
- > # [Bottom to top explanation of the Mahalanobis distance?](https://stats.stackexchange.com/questions/62092/bottom-to-top-explanation-of-the-mahalanobis-distance)
- 
-> # [z-score vs min-max normalization](https://stats.stackexchange.com/questions/547446/z-score-vs-min-max-normalization)
+>  1.  [Bottom to top explanation of the Mahalanobis distance?](https://stats.stackexchange.com/questions/62092/bottom-to-top-explanation-of-the-mahalanobis-distance)
+>  2.  [z-score vs min-max normalization](https://stats.stackexchange.com/questions/547446/z-score-vs-min-max-normalization)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNTExMzg4NzUsLTM4NzY0Nzk5LDEyNz
+eyJoaXN0b3J5IjpbLTEzNzc3MTU4OTQsLTM4NzY0Nzk5LDEyNz
 E3NjQxNjAsLTY2NDIzMTU0MCwxMTc1MDc4MzU2LDkxMDI0OTYy
 Nl19
 -->
