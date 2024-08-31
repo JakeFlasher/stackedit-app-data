@@ -27,6 +27,7 @@
 >  3. [Demystifying Data Normalization in Machine Learning](https://medium.com/@weidagang/demystifying-machine-learning-normalization-0cdb8b281234#:~:text=Min-max%20normalization%20scales%20the,a%20standard%20deviation%20of%201.)
 
 ## Comparison of zero leading values
+### The problem you're describing revolves around calculating a weighted average of differences, where the weights are determined by the proportion of the baseline values. This approach ensures that changes in small components do not disproportionately affect the final score.
 ```CPU 0 cumulative IPC: 0.5272 instructions: 100000004 cycles: 189696853
 CPU 0 Branch Prediction Accuracy: 96.02% MPKI: 5.379 Average ROB Occupancy at Mispredict: 105.9
 Branch type MPKI
@@ -49,7 +50,8 @@ BRANCH_INDIRECT_CALL: 0
 BRANCH_RETURN: 1.537e-05
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYwNzMxMDc1NCwyMTAxNDkzNDMyLC01OD
-E1MzI3NDcsLTEzNzc3MTU4OTQsLTM4NzY0Nzk5LDEyNzE3NjQx
-NjAsLTY2NDIzMTU0MCwxMTc1MDc4MzU2LDkxMDI0OTYyNl19
+eyJoaXN0b3J5IjpbNDQ3NzQyNTk1LDE2MDczMTA3NTQsMjEwMT
+Q5MzQzMiwtNTgxNTMyNzQ3LC0xMzc3NzE1ODk0LC0zODc2NDc5
+OSwxMjcxNzY0MTYwLC02NjQyMzE1NDAsMTE3NTA3ODM1Niw5MT
+AyNDk2MjZdfQ==
 -->
