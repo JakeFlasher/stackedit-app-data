@@ -14,7 +14,9 @@
 ### 3. *ChampSim-Skip* edited to read a binary file that contains the #instr count when each global stable load occurs and chooses whether to skip them or not.
 ``` Note: require the ./load_inspect's log file and stable_load.bin to retrieve the actual simulation instructions and skip them in specific instruction count. ```
 - Overheads during simulation is much lower.
+### 4. Trace-Shrinking, 
+```Sanity Check: Trace-encoder ()```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI3MTc2NDE2MCwtNjY0MjMxNTQwLDExNz
-UwNzgzNTYsOTEwMjQ5NjI2XX0=
+eyJoaXN0b3J5IjpbLTE5MTE3NTU0MTUsMTI3MTc2NDE2MCwtNj
+Y0MjMxNTQwLDExNzUwNzgzNTYsOTEwMjQ5NjI2XX0=
 -->
