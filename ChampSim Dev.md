@@ -22,9 +22,10 @@
 ## Normalization of differences 
 >  1.  [Bottom to top explanation of the Mahalanobis distance?](https://stats.stackexchange.com/questions/62092/bottom-to-top-explanation-of-the-mahalanobis-distance)
 >  2.  [z-score vs min-max normalization](https://stats.stackexchange.com/questions/547446/z-score-vs-min-max-normalization)
+>  3. [Demystifying Data Normalization in Machine Learning](https://medium.com/@weidagang/demystifying-machine-learning-normalization-0cdb8b281234#:~:text=Min-max%20normalization%20scales%20the,a%20standard%20deviation%20of%201.)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNzc3MTU4OTQsLTM4NzY0Nzk5LDEyNz
-E3NjQxNjAsLTY2NDIzMTU0MCwxMTc1MDc4MzU2LDkxMDI0OTYy
-Nl19
+eyJoaXN0b3J5IjpbLTU4MTUzMjc0NywtMTM3NzcxNTg5NCwtMz
+g3NjQ3OTksMTI3MTc2NDE2MCwtNjY0MjMxNTQwLDExNzUwNzgz
+NTYsOTEwMjQ5NjI2XX0=
 -->
