@@ -18,6 +18,10 @@
 - Low overheads during simulation, IPC calculation integrity secured.
 ### 4. Trace-Inspector
 ```Sanity Check: Trace-encoder (), Read log and shrink trace ()```
+
+## Novelty
+### 1. Where's your novelty besides the application of Constable?
+### 2. 
 ## Experiments
 ### 1. Baseline (vanilla ChampSim + vanilla configuration)
 ### 2. [Berti: an Accurate Local-Delta Data Prefetcher (MICRO-22)](https://dl.acm.org/doi/10.1109/MICRO56248.2022.00072)
@@ -28,6 +32,7 @@
 >  1.  [Bottom to top explanation of the Mahalanobis distance?](https://stats.stackexchange.com/questions/62092/bottom-to-top-explanation-of-the-mahalanobis-distance)
 >  2.  [z-score vs min-max normalization](https://stats.stackexchange.com/questions/547446/z-score-vs-min-max-normalization)
 >  3. [Demystifying Data Normalization in Machine Learning](https://medium.com/@weidagang/demystifying-machine-learning-normalization-0cdb8b281234#:~:text=Min-max%20normalization%20scales%20the,a%20standard%20deviation%20of%201.)
+
 
 ## Comparison of zero leading values
 ### The problem you're describing revolves around calculating a weighted average of differences, where the weights are determined by the proportion of the baseline values. This approach ensures that changes in small components do not disproportionately affect the final score.
@@ -53,8 +58,8 @@ BRANCH_INDIRECT_CALL: 0
 BRANCH_RETURN: 1.537e-05
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MTI2MTI4OTEsNDQ3NzQyNTk1LDE2MD
-czMTA3NTQsMjEwMTQ5MzQzMiwtNTgxNTMyNzQ3LC0xMzc3NzE1
-ODk0LC0zODc2NDc5OSwxMjcxNzY0MTYwLC02NjQyMzE1NDAsMT
-E3NTA3ODM1Niw5MTAyNDk2MjZdfQ==
+eyJoaXN0b3J5IjpbLTExNjQyNjI1MDUsLTE4MTI2MTI4OTEsND
+Q3NzQyNTk1LDE2MDczMTA3NTQsMjEwMTQ5MzQzMiwtNTgxNTMy
+NzQ3LC0xMzc3NzE1ODk0LC0zODc2NDc5OSwxMjcxNzY0MTYwLC
+02NjQyMzE1NDAsMTE3NTA3ODM1Niw5MTAyNDk2MjZdfQ==
 -->
