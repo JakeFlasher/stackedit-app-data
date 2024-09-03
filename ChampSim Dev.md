@@ -16,7 +16,7 @@
 - Overheads during simulation is much lower.
 ### 4. No changes to ChampSim. Instead, create a custom trace profiler to filter and synthesize the traces as pre-processing.
 - Low overheads during simulation, IPC calculation integrity secured.
-### 4. Trace-Shrinking, 
+### 4. Trace-Inspector
 ```Sanity Check: Trace-encoder (), Read log and shrink trace ()```
 
 
@@ -50,8 +50,8 @@ BRANCH_INDIRECT_CALL: 0
 BRANCH_RETURN: 1.537e-05
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDQ3NzQyNTk1LDE2MDczMTA3NTQsMjEwMT
-Q5MzQzMiwtNTgxNTMyNzQ3LC0xMzc3NzE1ODk0LC0zODc2NDc5
-OSwxMjcxNzY0MTYwLC02NjQyMzE1NDAsMTE3NTA3ODM1Niw5MT
-AyNDk2MjZdfQ==
+eyJoaXN0b3J5IjpbLTE2MTM5MDQyNDMsNDQ3NzQyNTk1LDE2MD
+czMTA3NTQsMjEwMTQ5MzQzMiwtNTgxNTMyNzQ3LC0xMzc3NzE1
+ODk0LC0zODc2NDc5OSwxMjcxNzY0MTYwLC02NjQyMzE1NDAsMT
+E3NTA3ODM1Niw5MTAyNDk2MjZdfQ==
 -->
