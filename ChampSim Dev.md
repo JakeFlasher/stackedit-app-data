@@ -18,7 +18,9 @@
 - Low overheads during simulation, IPC calculation integrity secured.
 ### 4. Trace-Inspector
 ```Sanity Check: Trace-encoder (), Read log and shrink trace ()```
-
+## Experiments
+### 1. Baseline (vanilla ChampSim + vanilla configuration)
+### 2. 
 
 # Results Evaluations
 ## Normalization of differences 
@@ -50,8 +52,8 @@ BRANCH_INDIRECT_CALL: 0
 BRANCH_RETURN: 1.537e-05
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MTM5MDQyNDMsNDQ3NzQyNTk1LDE2MD
-czMTA3NTQsMjEwMTQ5MzQzMiwtNTgxNTMyNzQ3LC0xMzc3NzE1
-ODk0LC0zODc2NDc5OSwxMjcxNzY0MTYwLC02NjQyMzE1NDAsMT
-E3NTA3ODM1Niw5MTAyNDk2MjZdfQ==
+eyJoaXN0b3J5IjpbLTYwNzkwNjA4Nyw0NDc3NDI1OTUsMTYwNz
+MxMDc1NCwyMTAxNDkzNDMyLC01ODE1MzI3NDcsLTEzNzc3MTU4
+OTQsLTM4NzY0Nzk5LDEyNzE3NjQxNjAsLTY2NDIzMTU0MCwxMT
+c1MDc4MzU2LDkxMDI0OTYyNl19
 -->
