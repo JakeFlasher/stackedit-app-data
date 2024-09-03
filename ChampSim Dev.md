@@ -20,7 +20,8 @@
 ```Sanity Check: Trace-encoder (), Read log and shrink trace ()```
 ## Experiments
 ### 1. Baseline (vanilla ChampSim + vanilla configuration)
-### 2. Berti
+### 2. [Berti: an Accurate Local-Delta Data Prefetcher (MICRO-22)](https://dl.acm.org/doi/10.1109/MICRO56248.2022.00072)
+- [Github Source](https://github.com/agusnt/ChampSim/tree/master/prefetcher/berti)
 
 # Results Evaluations
 ## Normalization of differences 
@@ -52,7 +53,7 @@ BRANCH_INDIRECT_CALL: 0
 BRANCH_RETURN: 1.537e-05
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMTE3MTk5NjcsNDQ3NzQyNTk1LDE2MD
+eyJoaXN0b3J5IjpbLTE4MTI2MTI4OTEsNDQ3NzQyNTk1LDE2MD
 czMTA3NTQsMjEwMTQ5MzQzMiwtNTgxNTMyNzQ3LC0xMzc3NzE1
 ODk0LC0zODc2NDc5OSwxMjcxNzY0MTYwLC02NjQyMzE1NDAsMT
 E3NTA3ODM1Niw5MTAyNDk2MjZdfQ==
