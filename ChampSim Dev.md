@@ -32,7 +32,9 @@
 > 1. A correlation heatmap is created for each of the benchmark (spec06, spec17, GAP) after summarzing the difference from results across all trace files.
 > 2. *IPC_variation* and *Simulation_Speedup* is found to be strongly correlated (~0.9) for all 3 benchmarks
 	> 2.1 Maybe train a learning model to correct the IPC value according to speedups?
-	> 2.2. According to 2.1, in order for the learning model to work well, we need to keep track of the vanilla_trace simulation time everytime we encounter a new trace, which is totally nonsense. 
+	> 2.2. According to 2.1, in order for the learning model to work well, we need to keep track of the vanilla_trace simulation time everytime we encounter a new trace, which is totally nonsense. Otherwise, there's no speedup if we have to run the vanilla_trace over again.
+	2.3 Elaborate the correlation further into small, more fundamentals building blocks that can be monitored within the shortened trace simulation.
+	
 ## Normalization of differences 
 >  1.  [Bottom to top explanation of the Mahalanobis distance?](https://stats.stackexchange.com/questions/62092/bottom-to-top-explanation-of-the-mahalanobis-distance)
 >  2.  [z-score vs min-max normalization](https://stats.stackexchange.com/questions/547446/z-score-vs-min-max-normalization)
@@ -63,9 +65,9 @@ BRANCH_INDIRECT_CALL: 0
 BRANCH_RETURN: 1.537e-05
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNDQ0NTU0MDMsLTExNjQyNjI1MDUsLT
-E4MTI2MTI4OTEsNDQ3NzQyNTk1LDE2MDczMTA3NTQsMjEwMTQ5
-MzQzMiwtNTgxNTMyNzQ3LC0xMzc3NzE1ODk0LC0zODc2NDc5OS
-wxMjcxNzY0MTYwLC02NjQyMzE1NDAsMTE3NTA3ODM1Niw5MTAy
-NDk2MjZdfQ==
+eyJoaXN0b3J5IjpbLTQ1OTM0NDkxMSwtMTE2NDI2MjUwNSwtMT
+gxMjYxMjg5MSw0NDc3NDI1OTUsMTYwNzMxMDc1NCwyMTAxNDkz
+NDMyLC01ODE1MzI3NDcsLTEzNzc3MTU4OTQsLTM4NzY0Nzk5LD
+EyNzE3NjQxNjAsLTY2NDIzMTU0MCwxMTc1MDc4MzU2LDkxMDI0
+OTYyNl19
 -->
