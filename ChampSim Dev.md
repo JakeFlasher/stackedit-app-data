@@ -37,6 +37,7 @@
 	> 2.2. According to 2.1, in order for the learning model to work well, we need to keep track of the vanilla_trace simulation time everytime we encounter a new trace, which is totally nonsense. Otherwise, there's no speedup if we have to run the vanilla_trace over again.
 	2.3 Elaborate the correlation further into small, more fundamentals building blocks that can be monitored within the shortened trace simulation.
 > 3. [Does correlation between variables and class label affect building a good classifier?](https://stats.stackexchange.com/questions/263531/does-correlation-between-variables-and-class-label-affect-building-a-good-classi)
+> 4. [Use of correlation analysis in machine learning?](https://stats.stackexchange.com/questions/481457/use-of-correlation-analysis-in-machine-learning)
 ## Normalization of differences 
 >  1.  [Bottom to top explanation of the Mahalanobis distance?](https://stats.stackexchange.com/questions/62092/bottom-to-top-explanation-of-the-mahalanobis-distance)
 >  2.  [z-score vs min-max normalization](https://stats.stackexchange.com/questions/547446/z-score-vs-min-max-normalization)
@@ -67,9 +68,10 @@ BRANCH_INDIRECT_CALL: 0
 BRANCH_RETURN: 1.537e-05
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUyMDEwNjkwNSw2NzU4MjM5OTEsLTQ1OT
-M0NDkxMSwtMTE2NDI2MjUwNSwtMTgxMjYxMjg5MSw0NDc3NDI1
-OTUsMTYwNzMxMDc1NCwyMTAxNDkzNDMyLC01ODE1MzI3NDcsLT
-EzNzc3MTU4OTQsLTM4NzY0Nzk5LDEyNzE3NjQxNjAsLTY2NDIz
-MTU0MCwxMTc1MDc4MzU2LDkxMDI0OTYyNl19
+eyJoaXN0b3J5IjpbLTc1NzYwMjU4NCwxNTIwMTA2OTA1LDY3NT
+gyMzk5MSwtNDU5MzQ0OTExLC0xMTY0MjYyNTA1LC0xODEyNjEy
+ODkxLDQ0Nzc0MjU5NSwxNjA3MzEwNzU0LDIxMDE0OTM0MzIsLT
+U4MTUzMjc0NywtMTM3NzcxNTg5NCwtMzg3NjQ3OTksMTI3MTc2
+NDE2MCwtNjY0MjMxNTQwLDExNzUwNzgzNTYsOTEwMjQ5NjI2XX
+0=
 -->
