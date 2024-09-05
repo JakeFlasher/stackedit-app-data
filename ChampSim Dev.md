@@ -23,7 +23,7 @@
 ### 1. Where's your novelty besides the application of Constable?
 ### 2. Need to further increase speedups, maybe put a more radical strategy in reducing instructions?
 ### 3. Need to corporate machine learning.
-### 4. We have GAP(470M) SPEC06(970M) and SPEC07(1990M), three lengths for each benchmarks. However, can we reduce the profiling
+### 4. We have GAP(470M) SPEC06(970M) and SPEC07(1990M), three lengths for each benchmarks. However, can we reduce the profiling pre-processing stage? maybe just 1 overall profile for 1 trace, instead of sliding-window profiling 1 trace multiple times.
 ## Experiments
 ### 1. Baseline (vanilla ChampSim + vanilla configuration)
 ### 2. [Berti: an Accurate Local-Delta Data Prefetcher (MICRO-22)](https://dl.acm.org/doi/10.1109/MICRO56248.2022.00072)
@@ -67,7 +67,7 @@ BRANCH_INDIRECT_CALL: 0
 BRANCH_RETURN: 1.537e-05
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzIxNDU4Nzg3LC00NTkzNDQ5MTEsLTExNj
+eyJoaXN0b3J5IjpbNjc1ODIzOTkxLC00NTkzNDQ5MTEsLTExNj
 QyNjI1MDUsLTE4MTI2MTI4OTEsNDQ3NzQyNTk1LDE2MDczMTA3
 NTQsMjEwMTQ5MzQzMiwtNTgxNTMyNzQ3LC0xMzc3NzE1ODk0LC
 0zODc2NDc5OSwxMjcxNzY0MTYwLC02NjQyMzE1NDAsMTE3NTA3
