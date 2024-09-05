@@ -36,7 +36,7 @@
 	> 2.1 Maybe train a learning model to correct the IPC value according to speedups?
 	> 2.2. According to 2.1, in order for the learning model to work well, we need to keep track of the vanilla_trace simulation time everytime we encounter a new trace, which is totally nonsense. Otherwise, there's no speedup if we have to run the vanilla_trace over again.
 	2.3 Elaborate the correlation further into small, more fundamentals building blocks that can be monitored within the shortened trace simulation.
-	
+> 3. [Does correlation between variables and class label affect building a good classifier?](https://stats.stackexchange.com/questions/263531/does-correlation-between-variables-and-class-label-affect-building-a-good-classi)
 ## Normalization of differences 
 >  1.  [Bottom to top explanation of the Mahalanobis distance?](https://stats.stackexchange.com/questions/62092/bottom-to-top-explanation-of-the-mahalanobis-distance)
 >  2.  [z-score vs min-max normalization](https://stats.stackexchange.com/questions/547446/z-score-vs-min-max-normalization)
@@ -67,9 +67,9 @@ BRANCH_INDIRECT_CALL: 0
 BRANCH_RETURN: 1.537e-05
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjc1ODIzOTkxLC00NTkzNDQ5MTEsLTExNj
-QyNjI1MDUsLTE4MTI2MTI4OTEsNDQ3NzQyNTk1LDE2MDczMTA3
-NTQsMjEwMTQ5MzQzMiwtNTgxNTMyNzQ3LC0xMzc3NzE1ODk0LC
-0zODc2NDc5OSwxMjcxNzY0MTYwLC02NjQyMzE1NDAsMTE3NTA3
-ODM1Niw5MTAyNDk2MjZdfQ==
+eyJoaXN0b3J5IjpbMTUyMDEwNjkwNSw2NzU4MjM5OTEsLTQ1OT
+M0NDkxMSwtMTE2NDI2MjUwNSwtMTgxMjYxMjg5MSw0NDc3NDI1
+OTUsMTYwNzMxMDc1NCwyMTAxNDkzNDMyLC01ODE1MzI3NDcsLT
+EzNzc3MTU4OTQsLTM4NzY0Nzk5LDEyNzE3NjQxNjAsLTY2NDIz
+MTU0MCwxMTc1MDc4MzU2LDkxMDI0OTYyNl19
 -->
