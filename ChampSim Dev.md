@@ -21,7 +21,9 @@
 
 ## Novelty
 ### 1. Where's your novelty besides the application of Constable?
-### 2. 
+### 2. Need to further increase speedups, maybe put a more radical strategy in reducing instructions?
+### 3. Need to corporate machine learning.
+### 4. We have GAP(470M) SPEC06(970M) and SPEC07(1990M), three lengths for each benchmarks. However, can we reduce the profiling
 ## Experiments
 ### 1. Baseline (vanilla ChampSim + vanilla configuration)
 ### 2. [Berti: an Accurate Local-Delta Data Prefetcher (MICRO-22)](https://dl.acm.org/doi/10.1109/MICRO56248.2022.00072)
@@ -65,9 +67,9 @@ BRANCH_INDIRECT_CALL: 0
 BRANCH_RETURN: 1.537e-05
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ1OTM0NDkxMSwtMTE2NDI2MjUwNSwtMT
-gxMjYxMjg5MSw0NDc3NDI1OTUsMTYwNzMxMDc1NCwyMTAxNDkz
-NDMyLC01ODE1MzI3NDcsLTEzNzc3MTU4OTQsLTM4NzY0Nzk5LD
-EyNzE3NjQxNjAsLTY2NDIzMTU0MCwxMTc1MDc4MzU2LDkxMDI0
-OTYyNl19
+eyJoaXN0b3J5IjpbMzIxNDU4Nzg3LC00NTkzNDQ5MTEsLTExNj
+QyNjI1MDUsLTE4MTI2MTI4OTEsNDQ3NzQyNTk1LDE2MDczMTA3
+NTQsMjEwMTQ5MzQzMiwtNTgxNTMyNzQ3LC0xMzc3NzE1ODk0LC
+0zODc2NDc5OSwxMjcxNzY0MTYwLC02NjQyMzE1NDAsMTE3NTA3
+ODM1Niw5MTAyNDk2MjZdfQ==
 -->
