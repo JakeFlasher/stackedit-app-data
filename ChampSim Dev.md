@@ -29,6 +29,8 @@
 ### 2. [Berti: an Accurate Local-Delta Data Prefetcher (MICRO-22)](https://dl.acm.org/doi/10.1109/MICRO56248.2022.00072)
 - [Github Source](https://github.com/agusnt/ChampSim/tree/master/prefetcher/berti)
 
+
+#
 # Results Evaluations
 ## Correlation Heatmaps 
 > 1. A correlation heatmap is created for each of the benchmark (spec06, spec17, GAP) after summarzing the difference from results across all trace files.
@@ -68,10 +70,10 @@ BRANCH_INDIRECT_CALL: 0
 BRANCH_RETURN: 1.537e-05
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc1NzYwMjU4NCwxNTIwMTA2OTA1LDY3NT
-gyMzk5MSwtNDU5MzQ0OTExLC0xMTY0MjYyNTA1LC0xODEyNjEy
-ODkxLDQ0Nzc0MjU5NSwxNjA3MzEwNzU0LDIxMDE0OTM0MzIsLT
-U4MTUzMjc0NywtMTM3NzcxNTg5NCwtMzg3NjQ3OTksMTI3MTc2
-NDE2MCwtNjY0MjMxNTQwLDExNzUwNzgzNTYsOTEwMjQ5NjI2XX
-0=
+eyJoaXN0b3J5IjpbLTIyMTQ2MDI4NSwtNzU3NjAyNTg0LDE1Mj
+AxMDY5MDUsNjc1ODIzOTkxLC00NTkzNDQ5MTEsLTExNjQyNjI1
+MDUsLTE4MTI2MTI4OTEsNDQ3NzQyNTk1LDE2MDczMTA3NTQsMj
+EwMTQ5MzQzMiwtNTgxNTMyNzQ3LC0xMzc3NzE1ODk0LC0zODc2
+NDc5OSwxMjcxNzY0MTYwLC02NjQyMzE1NDAsMTE3NTA3ODM1Ni
+w5MTAyNDk2MjZdfQ==
 -->
