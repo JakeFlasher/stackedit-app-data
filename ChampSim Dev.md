@@ -30,7 +30,12 @@
 - [Github Source](https://github.com/agusnt/ChampSim/tree/master/prefetcher/berti)
 
 
-#
+## Algorithms Set-up
+### 1. GSL
+###
+### 2. GSL+RD (hard threshold, fast profiling)
+### 3. GSL + RD (soft threshold, very very slow) + DIFT_leak preserving
+### 
 # Results Evaluations
 ## Correlation Heatmaps 
 > 1. A correlation heatmap is created for each of the benchmark (spec06, spec17, GAP) after summarzing the difference from results across all trace files.
@@ -70,7 +75,7 @@ BRANCH_INDIRECT_CALL: 0
 BRANCH_RETURN: 1.537e-05
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIyMTQ2MDI4NSwtNzU3NjAyNTg0LDE1Mj
+eyJoaXN0b3J5IjpbLTM3NzQ1NTMxOCwtNzU3NjAyNTg0LDE1Mj
 AxMDY5MDUsNjc1ODIzOTkxLC00NTkzNDQ5MTEsLTExNjQyNjI1
 MDUsLTE4MTI2MTI4OTEsNDQ3NzQyNTk1LDE2MDczMTA3NTQsMj
 EwMTQ5MzQzMiwtNTgxNTMyNzQ3LC0xMzc3NzE1ODk0LC0zODc2
