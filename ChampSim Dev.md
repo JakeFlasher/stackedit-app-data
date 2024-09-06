@@ -32,8 +32,8 @@
 
 ## Algorithms Set-up
 ### 1. GSL
-#### 1.1 GSL + DIFT_leak preserve (10%) =>
-#### 1.2 GSL + DIFT_leak throwing (0.2%) => (union(a,b) = a)
+#### 1.1 GSL + DIFT_leak preserve (10%) => (
+#### 1.2 GSL + DIFT_leak throwing (0.2%) => (intersection(a,b) = a)
 ### 2. GSL+RD (hard threshold, fast profiling)
 ### 3. GSL + RD (soft threshold, very very slow) + DIFT_leak preserving
 ### 
@@ -76,10 +76,10 @@ BRANCH_INDIRECT_CALL: 0
 BRANCH_RETURN: 1.537e-05
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MDYyODExNTUsLTc1NzYwMjU4NCwxNT
-IwMTA2OTA1LDY3NTgyMzk5MSwtNDU5MzQ0OTExLC0xMTY0MjYy
-NTA1LC0xODEyNjEyODkxLDQ0Nzc0MjU5NSwxNjA3MzEwNzU0LD
-IxMDE0OTM0MzIsLTU4MTUzMjc0NywtMTM3NzcxNTg5NCwtMzg3
-NjQ3OTksMTI3MTc2NDE2MCwtNjY0MjMxNTQwLDExNzUwNzgzNT
-YsOTEwMjQ5NjI2XX0=
+eyJoaXN0b3J5IjpbNjQxMjMyMDYzLC03NTc2MDI1ODQsMTUyMD
+EwNjkwNSw2NzU4MjM5OTEsLTQ1OTM0NDkxMSwtMTE2NDI2MjUw
+NSwtMTgxMjYxMjg5MSw0NDc3NDI1OTUsMTYwNzMxMDc1NCwyMT
+AxNDkzNDMyLC01ODE1MzI3NDcsLTEzNzc3MTU4OTQsLTM4NzY0
+Nzk5LDEyNzE3NjQxNjAsLTY2NDIzMTU0MCwxMTc1MDc4MzU2LD
+kxMDI0OTYyNl19
 -->
