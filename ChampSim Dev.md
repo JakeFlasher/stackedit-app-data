@@ -2,6 +2,8 @@
 ## Guidelines
 > - Arch-Agnostic
 > - Fast and Accurate
+	> 2.1 IPC v.s. cycles curve have similar shapes
+	> 2.2 Absolute/Relative errors in metric perfs are low.
 > - Low Overhead
 ## Useful Github Issues
  > - [# Physical or virtual address](https://github.com/ChampSim/ChampSim/issues/15)
@@ -85,11 +87,11 @@ BRANCH_INDIRECT_CALL: 0
 BRANCH_RETURN: 1.537e-05
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ5NzU0OTgwLC05OTk5NTU4MDAsMjI0NT
-U3NTE1LDY0MTIzMjA2MywtNzU3NjAyNTg0LDE1MjAxMDY5MDUs
-Njc1ODIzOTkxLC00NTkzNDQ5MTEsLTExNjQyNjI1MDUsLTE4MT
-I2MTI4OTEsNDQ3NzQyNTk1LDE2MDczMTA3NTQsMjEwMTQ5MzQz
-MiwtNTgxNTMyNzQ3LC0xMzc3NzE1ODk0LC0zODc2NDc5OSwxMj
-cxNzY0MTYwLC02NjQyMzE1NDAsMTE3NTA3ODM1Niw5MTAyNDk2
-MjZdfQ==
+eyJoaXN0b3J5IjpbNDIwNDc1NjE5LC00OTc1NDk4MCwtOTk5OT
+U1ODAwLDIyNDU1NzUxNSw2NDEyMzIwNjMsLTc1NzYwMjU4NCwx
+NTIwMTA2OTA1LDY3NTgyMzk5MSwtNDU5MzQ0OTExLC0xMTY0Mj
+YyNTA1LC0xODEyNjEyODkxLDQ0Nzc0MjU5NSwxNjA3MzEwNzU0
+LDIxMDE0OTM0MzIsLTU4MTUzMjc0NywtMTM3NzcxNTg5NCwtMz
+g3NjQ3OTksMTI3MTc2NDE2MCwtNjY0MjMxNTQwLDExNzUwNzgz
+NTZdfQ==
 -->
