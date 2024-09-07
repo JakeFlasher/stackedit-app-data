@@ -25,8 +25,9 @@
 ### 3. Need to corporate machine learning.
 ### 4. We have GAP(470M) SPEC06(970M) and SPEC07(1990M), three lengths for each benchmarks. However, can we reduce the profiling pre-processing stage? maybe just 1 overall profile for 1 trace, instead of sliding-window profiling 1 trace multiple times.
 ## Experiments
-### 1. Baseline (vanilla ChampSim + vanilla configuration)
-### 2. [Berti: an Accurate Local-Delta Data Prefetcher (MICRO-22)](https://dl.acm.org/doi/10.1109/MICRO56248.2022.00072)
+### Traces (GAP, SPEC06, SPEC17, Google Workloads)
+#### 1. Baseline (vanilla ChampSim + vanilla configuration)
+#### 2. [Berti: an Accurate Local-Delta Data Prefetcher (MICRO-22)](https://dl.acm.org/doi/10.1109/MICRO56248.2022.00072)
 - [Github Source](https://github.com/agusnt/ChampSim/tree/master/prefetcher/berti)
 
 
@@ -76,10 +77,10 @@ BRANCH_INDIRECT_CALL: 0
 BRANCH_RETURN: 1.537e-05
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjQxMjMyMDYzLC03NTc2MDI1ODQsMTUyMD
-EwNjkwNSw2NzU4MjM5OTEsLTQ1OTM0NDkxMSwtMTE2NDI2MjUw
-NSwtMTgxMjYxMjg5MSw0NDc3NDI1OTUsMTYwNzMxMDc1NCwyMT
-AxNDkzNDMyLC01ODE1MzI3NDcsLTEzNzc3MTU4OTQsLTM4NzY0
-Nzk5LDEyNzE3NjQxNjAsLTY2NDIzMTU0MCwxMTc1MDc4MzU2LD
-kxMDI0OTYyNl19
+eyJoaXN0b3J5IjpbMTc3NDYxNjkwMiw2NDEyMzIwNjMsLTc1Nz
+YwMjU4NCwxNTIwMTA2OTA1LDY3NTgyMzk5MSwtNDU5MzQ0OTEx
+LC0xMTY0MjYyNTA1LC0xODEyNjEyODkxLDQ0Nzc0MjU5NSwxNj
+A3MzEwNzU0LDIxMDE0OTM0MzIsLTU4MTUzMjc0NywtMTM3Nzcx
+NTg5NCwtMzg3NjQ3OTksMTI3MTc2NDE2MCwtNjY0MjMxNTQwLD
+ExNzUwNzgzNTYsOTEwMjQ5NjI2XX0=
 -->
