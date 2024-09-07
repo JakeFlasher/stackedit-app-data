@@ -2,7 +2,7 @@
 ## Guidelines
 > - Arch-Agnostic
 > - Fast and Accurate
-	> 2.1 IPC v.s. cycles curve have similar shapes
+	> 2.1 IPC v.s. cycles curve have similar shapes. (is it enough to prove that we have maintained the correct memory access behaviour?)
 	> 2.2 Absolute/Relative errors in metric perfs are low.
 > - Low Overhead
 ## Useful Github Issues
@@ -87,11 +87,11 @@ BRANCH_INDIRECT_CALL: 0
 BRANCH_RETURN: 1.537e-05
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDIwNDc1NjE5LC00OTc1NDk4MCwtOTk5OT
-U1ODAwLDIyNDU1NzUxNSw2NDEyMzIwNjMsLTc1NzYwMjU4NCwx
-NTIwMTA2OTA1LDY3NTgyMzk5MSwtNDU5MzQ0OTExLC0xMTY0Mj
-YyNTA1LC0xODEyNjEyODkxLDQ0Nzc0MjU5NSwxNjA3MzEwNzU0
-LDIxMDE0OTM0MzIsLTU4MTUzMjc0NywtMTM3NzcxNTg5NCwtMz
-g3NjQ3OTksMTI3MTc2NDE2MCwtNjY0MjMxNTQwLDExNzUwNzgz
-NTZdfQ==
+eyJoaXN0b3J5IjpbLTEyNjQ3ODYzMzMsLTQ5NzU0OTgwLC05OT
+k5NTU4MDAsMjI0NTU3NTE1LDY0MTIzMjA2MywtNzU3NjAyNTg0
+LDE1MjAxMDY5MDUsNjc1ODIzOTkxLC00NTkzNDQ5MTEsLTExNj
+QyNjI1MDUsLTE4MTI2MTI4OTEsNDQ3NzQyNTk1LDE2MDczMTA3
+NTQsMjEwMTQ5MzQzMiwtNTgxNTMyNzQ3LC0xMzc3NzE1ODk0LC
+0zODc2NDc5OSwxMjcxNzY0MTYwLC02NjQyMzE1NDAsMTE3NTA3
+ODM1Nl19
 -->
