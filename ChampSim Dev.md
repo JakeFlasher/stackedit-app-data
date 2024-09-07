@@ -26,6 +26,9 @@
 ### 4. We have GAP(470M) SPEC06(970M) and SPEC07(1990M), three lengths for each benchmarks. However, can we reduce the profiling pre-processing stage? maybe just 1 overall profile for 1 trace, instead of sliding-window profiling 1 trace multiple times.
 ## Experiments
 ### Traces (GAP, SPEC06, SPEC17, Google Workloads)
+ - These traces are used in the paper "The Last-Level Branch Predictor". They where collected by running the workloads on gem5 in full-system mode. The traces are encoded in the [ChampSim](https://github.com/ChampSim/ChampSim) format.
+- For more details on the traces and how to use them, refer to the [LLBP framework](https://github.com/dhschall/LLBP).
+- Four traces (charlie, delta, merced, whiskey) were obtained from the publicly available [Google Workload Traces](https://dynamorio.org/google_workload_traces.html), converted into the  
 #### 1. Baseline (vanilla ChampSim + vanilla configuration)
 #### 2. [Berti: an Accurate Local-Delta Data Prefetcher (MICRO-22)](https://dl.acm.org/doi/10.1109/MICRO56248.2022.00072)
 - [Github Source](https://github.com/agusnt/ChampSim/tree/master/prefetcher/berti)
@@ -77,10 +80,10 @@ BRANCH_INDIRECT_CALL: 0
 BRANCH_RETURN: 1.537e-05
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc3NDYxNjkwMiw2NDEyMzIwNjMsLTc1Nz
-YwMjU4NCwxNTIwMTA2OTA1LDY3NTgyMzk5MSwtNDU5MzQ0OTEx
-LC0xMTY0MjYyNTA1LC0xODEyNjEyODkxLDQ0Nzc0MjU5NSwxNj
-A3MzEwNzU0LDIxMDE0OTM0MzIsLTU4MTUzMjc0NywtMTM3Nzcx
-NTg5NCwtMzg3NjQ3OTksMTI3MTc2NDE2MCwtNjY0MjMxNTQwLD
-ExNzUwNzgzNTYsOTEwMjQ5NjI2XX0=
+eyJoaXN0b3J5IjpbMjI0NTU3NTE1LDY0MTIzMjA2MywtNzU3Nj
+AyNTg0LDE1MjAxMDY5MDUsNjc1ODIzOTkxLC00NTkzNDQ5MTEs
+LTExNjQyNjI1MDUsLTE4MTI2MTI4OTEsNDQ3NzQyNTk1LDE2MD
+czMTA3NTQsMjEwMTQ5MzQzMiwtNTgxNTMyNzQ3LC0xMzc3NzE1
+ODk0LC0zODc2NDc5OSwxMjcxNzY0MTYwLC02NjQyMzE1NDAsMT
+E3NTA3ODM1Niw5MTAyNDk2MjZdfQ==
 -->
