@@ -5,6 +5,7 @@
 	> 2.1 IPC v.s. cycles curve have similar shapes. (is it enough to prove that we have maintained the correct memory access behaviour?)
 	> 2.2 Absolute/Relative errors in metric perfs are low.
 > - Low Overhead
+> - Comparisons with contemporaries ( Mocktails, HRD, Camouflague )
 ## Useful Github Issues
  > - [# Physical or virtual address](https://github.com/ChampSim/ChampSim/issues/15)
  > -
@@ -87,11 +88,11 @@ BRANCH_INDIRECT_CALL: 0
 BRANCH_RETURN: 1.537e-05
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNjQ3ODYzMzMsLTQ5NzU0OTgwLC05OT
-k5NTU4MDAsMjI0NTU3NTE1LDY0MTIzMjA2MywtNzU3NjAyNTg0
-LDE1MjAxMDY5MDUsNjc1ODIzOTkxLC00NTkzNDQ5MTEsLTExNj
-QyNjI1MDUsLTE4MTI2MTI4OTEsNDQ3NzQyNTk1LDE2MDczMTA3
-NTQsMjEwMTQ5MzQzMiwtNTgxNTMyNzQ3LC0xMzc3NzE1ODk0LC
-0zODc2NDc5OSwxMjcxNzY0MTYwLC02NjQyMzE1NDAsMTE3NTA3
-ODM1Nl19
+eyJoaXN0b3J5IjpbMjkzNjY0NDkyLC0xMjY0Nzg2MzMzLC00OT
+c1NDk4MCwtOTk5OTU1ODAwLDIyNDU1NzUxNSw2NDEyMzIwNjMs
+LTc1NzYwMjU4NCwxNTIwMTA2OTA1LDY3NTgyMzk5MSwtNDU5Mz
+Q0OTExLC0xMTY0MjYyNTA1LC0xODEyNjEyODkxLDQ0Nzc0MjU5
+NSwxNjA3MzEwNzU0LDIxMDE0OTM0MzIsLTU4MTUzMjc0NywtMT
+M3NzcxNTg5NCwtMzg3NjQ3OTksMTI3MTc2NDE2MCwtNjY0MjMx
+NTQwXX0=
 -->
