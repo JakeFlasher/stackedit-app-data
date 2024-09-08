@@ -4,7 +4,7 @@
 > - Fast and Accurate
 	> 2.1 IPC v.s. cycles curve have similar shapes. (is it enough to prove that we have maintained the correct memory access behaviour?)
 	> 2.2 Absolute/Relative errors in metric perfs are low.
-	> Measure IPC curve graphs
+	> 2.3 Measure IPC curve graphs similarities
 > - Low Overhead
 > - Comparisons with contemporaries ( Mocktails, HRD, Camouflague )
 ## Useful Github Issues
@@ -89,11 +89,11 @@ BRANCH_INDIRECT_CALL: 0
 BRANCH_RETURN: 1.537e-05
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA4NDgyNzY4NCwtMTI2NDc4NjMzMywtND
-k3NTQ5ODAsLTk5OTk1NTgwMCwyMjQ1NTc1MTUsNjQxMjMyMDYz
-LC03NTc2MDI1ODQsMTUyMDEwNjkwNSw2NzU4MjM5OTEsLTQ1OT
-M0NDkxMSwtMTE2NDI2MjUwNSwtMTgxMjYxMjg5MSw0NDc3NDI1
-OTUsMTYwNzMxMDc1NCwyMTAxNDkzNDMyLC01ODE1MzI3NDcsLT
-EzNzc3MTU4OTQsLTM4NzY0Nzk5LDEyNzE3NjQxNjAsLTY2NDIz
-MTU0MF19
+eyJoaXN0b3J5IjpbNTQ1OTU2MjcyLC0xMjY0Nzg2MzMzLC00OT
+c1NDk4MCwtOTk5OTU1ODAwLDIyNDU1NzUxNSw2NDEyMzIwNjMs
+LTc1NzYwMjU4NCwxNTIwMTA2OTA1LDY3NTgyMzk5MSwtNDU5Mz
+Q0OTExLC0xMTY0MjYyNTA1LC0xODEyNjEyODkxLDQ0Nzc0MjU5
+NSwxNjA3MzEwNzU0LDIxMDE0OTM0MzIsLTU4MTUzMjc0NywtMT
+M3NzcxNTg5NCwtMzg3NjQ3OTksMTI3MTc2NDE2MCwtNjY0MjMx
+NTQwXX0=
 -->
