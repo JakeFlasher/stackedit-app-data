@@ -90,13 +90,13 @@ BRANCH_RETURN: 1.537e-05
 ```
 
 
-Maybe use obs between value leaking and global stable to find some innovations in cache side-channel attacks? (
+Maybe use obs between value leaking and global stable to find some innovations in cache side-channel attacks? (attack templates, champsim impl of cache side-channel)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3NTc2OTgwNjIsNTQ1OTU2MjcyLC0xMj
-Y0Nzg2MzMzLC00OTc1NDk4MCwtOTk5OTU1ODAwLDIyNDU1NzUx
-NSw2NDEyMzIwNjMsLTc1NzYwMjU4NCwxNTIwMTA2OTA1LDY3NT
-gyMzk5MSwtNDU5MzQ0OTExLC0xMTY0MjYyNTA1LC0xODEyNjEy
-ODkxLDQ0Nzc0MjU5NSwxNjA3MzEwNzU0LDIxMDE0OTM0MzIsLT
-U4MTUzMjc0NywtMTM3NzcxNTg5NCwtMzg3NjQ3OTksMTI3MTc2
-NDE2MF19
+eyJoaXN0b3J5IjpbMzIyMjI0LDU0NTk1NjI3MiwtMTI2NDc4Nj
+MzMywtNDk3NTQ5ODAsLTk5OTk1NTgwMCwyMjQ1NTc1MTUsNjQx
+MjMyMDYzLC03NTc2MDI1ODQsMTUyMDEwNjkwNSw2NzU4MjM5OT
+EsLTQ1OTM0NDkxMSwtMTE2NDI2MjUwNSwtMTgxMjYxMjg5MSw0
+NDc3NDI1OTUsMTYwNzMxMDc1NCwyMTAxNDkzNDMyLC01ODE1Mz
+I3NDcsLTEzNzc3MTU4OTQsLTM4NzY0Nzk5LDEyNzE3NjQxNjBd
+fQ==
 -->
