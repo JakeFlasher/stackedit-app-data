@@ -160,6 +160,9 @@ Please  review  this  file:
  ```
 "/root/developing/cpu2017/benchspec/CPU/521.wrf_r/build/build_base_arch_x86_test-m64.0000/make.diffwrf_521.out"
 
+## ChampSims
+### On usage of prefetchers:
+- Enabling prefetchers on L1D and L2C dramatically increase the total simulation runtime (3~9 times)
 ----------------------------------------------------------------------------
 
 Command  returned  exit  code  2
@@ -395,11 +398,11 @@ B --> D{Rhombus}
 C --> D
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTExMDU1NzAxMiw4ODYzNzc4NTEsLTExMD
-IxMjg3NjEsNzA2NDY0ODUxLC0xNDMyMzM3MjA5LC04NjI3ODA0
-NTAsLTIwMzU3MTQ3MzcsLTU4MjI4NTA5NCw4NzM1MDMxNjEsMT
-Y2MDA2MDI4OCwzOTgyMjE3ODksLTExOTEzNDcwMTgsMTQxNDYw
-MzM5MSwyMDI3MDg0NjQ3LDE4NDEwNDk4MjIsLTE0OTM3NDQ2OT
-MsLTEyNTU1ODczOSwtMTUzMjYxMDQ5NywxNTkyNTEyMDY5XX0=
-
+eyJoaXN0b3J5IjpbLTMzMzA3MDYyLDExMTA1NTcwMTIsODg2Mz
+c3ODUxLC0xMTAyMTI4NzYxLDcwNjQ2NDg1MSwtMTQzMjMzNzIw
+OSwtODYyNzgwNDUwLC0yMDM1NzE0NzM3LC01ODIyODUwOTQsOD
+czNTAzMTYxLDE2NjAwNjAyODgsMzk4MjIxNzg5LC0xMTkxMzQ3
+MDE4LDE0MTQ2MDMzOTEsMjAyNzA4NDY0NywxODQxMDQ5ODIyLC
+0xNDkzNzQ0NjkzLC0xMjU1NTg3MzksLTE1MzI2MTA0OTcsMTU5
+MjUxMjA2OV19
 -->
