@@ -11,7 +11,14 @@
 ### Necessity Analysis
 ### Sufficient Analysis
 ### Global Stable Load Instruction
+>- ***Some loads repeatedly fetch the same data value from same load address across entire workload***
+Both operations, address generation & data fetch, produce identical results across all dynamic instances
+Prime targets for breaking data dependency without execution
 
+> - ***Why do these loads even exist in well-optimized real-world workloads?***
+Accessing global-scope variables
+Accessing local variables of inline functions
+Limited set of architectural registers
 ### Value leaking as Addresses
 Values are data that should not be used, directly or indirectly, as memory addresses (e.g. password hashes, private encryption keys). A value can leak as a memory address when there is information flow from the value to a memory address. The scope of the tool is limited to detecting data-flow: it tracks data dependences but disregards control dependences. Assume secret is a value, the leakage in the code in Fig. 3.1 will not be detected by the tool. In Fig. 3.2, the tool will detect the leakage because secret is involved in the computation of &A[i]. Furthermore, addr will be tagged as a leak point. A leak point is a memory location where a leaked value resides.
 ```
@@ -31,6 +38,6 @@ a = A[i];
 Fig. 3.2. Code that leaks a value via data-flow.
 > Written with [StackEdit中文版](https://stackedit.cn/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAwNTU0NTM5MCw5MjM2NTAzNjgsLTEwND
-M5OTQ1NjNdfQ==
+eyJoaXN0b3J5IjpbOTUzODU0NDI1LDkyMzY1MDM2OCwtMTA0Mz
+k5NDU2M119
 -->
