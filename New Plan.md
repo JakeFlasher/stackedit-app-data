@@ -4,7 +4,7 @@
 2. Accurate in overall ipc measurement
 3. 
 ### Behaviour-domain 
-1. Examples: HRD, mocktails, WEST
+1. Examples: HRD, mocktails, WEST (memory domain)
 2. Preserve average behavior, Faster than time-domain method (1/10 synthesis ratio)
 3. Can not model phase transition (ipc curve, memory access patterns)
 ## "Time-domain" -> "Freq-domain" -> "Time-domain"
@@ -43,6 +43,6 @@ a = A[i];
 ```
 Fig. 3.2. Code that leaks a value via data-flow. 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ3ODk3MCwxMDQ3NjIzNDMxLDkyMzY1MD
-M2OCwtMTA0Mzk5NDU2M119
+eyJoaXN0b3J5IjpbMjAyNTEwOTIwNCwtNDc4OTcwLDEwNDc2Mj
+M0MzEsOTIzNjUwMzY4LC0xMDQzOTk0NTYzXX0=
 -->
