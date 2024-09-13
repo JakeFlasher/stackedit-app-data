@@ -1,4 +1,5 @@
 ## For the first time, introduce the concept of "time-domain" and "freq-domain" in workload synthesis
+The search space is almost infinite, you cannot grasp every aspect at once. Once got on some aspects, the others wil
 ### Time-domain 
 1. Examples: Sniper, Simpoints, Smarts
 2. Accurate in overall ipc measurement
@@ -43,6 +44,7 @@ a = A[i];
 ```
 Fig. 3.2. Code that leaks a value via data-flow. 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAyNTEwOTIwNCwtNDc4OTcwLDEwNDc2Mj
-M0MzEsOTIzNjUwMzY4LC0xMDQzOTk0NTYzXX0=
+eyJoaXN0b3J5IjpbLTQ5NDY0NzI1OCwyMDI1MTA5MjA0LC00Nz
+g5NzAsMTA0NzYyMzQzMSw5MjM2NTAzNjgsLTEwNDM5OTQ1NjNd
+fQ==
 -->
