@@ -1,5 +1,11 @@
 ## For the first time, introduce the concept of "time-domain" and "freq-domain" in workload synthesis
-The search space is almost infinite, you cannot grasp every aspect at once. Once got on some aspects, the others wil
+The search space is almost infinite, you cannot grasp every aspect at once. Once got on some aspects, the others will inevitably get ignored.
+
+If you cannot forsee some aspect from one specific domain, then either means these two aspects are orthogonal or it is not included.
+
+You need to focus on some specific domain to restrict the search space as well as control variables.
+
+
 ### Time-domain 
 1. Examples: Sniper, Simpoints, Smarts
 2. Accurate in overall ipc measurement
@@ -44,7 +50,7 @@ a = A[i];
 ```
 Fig. 3.2. Code that leaks a value via data-flow. 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ5NDY0NzI1OCwyMDI1MTA5MjA0LC00Nz
+eyJoaXN0b3J5IjpbMTEyMTI0NTU0MywyMDI1MTA5MjA0LC00Nz
 g5NzAsMTA0NzYyMzQzMSw5MjM2NTAzNjgsLTEwNDM5OTQ1NjNd
 fQ==
 -->
