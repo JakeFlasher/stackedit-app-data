@@ -3,7 +3,7 @@
 1. Examples: Sniper, Simpoints, Smarts
 2. Accurate in overall ipc measurement
 3. 
-### Frequency-domain 
+### Behaviour-domain 
 1. Examples: HRD, mocktails, WEST
 2. Preserve average behavior, Faster than time-domain method (1/10 synthesis ratio)
 3. Can not model phase transition (ipc curve, memory access patterns)
@@ -43,6 +43,6 @@ a = A[i];
 ```
 Fig. 3.2. Code that leaks a value via data-flow. 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA0NzYyMzQzMSw5MjM2NTAzNjgsLTEwND
-M5OTQ1NjNdfQ==
+eyJoaXN0b3J5IjpbLTQ3ODk3MCwxMDQ3NjIzNDMxLDkyMzY1MD
+M2OCwtMTA0Mzk5NDU2M119
 -->
