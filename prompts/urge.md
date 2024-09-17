@@ -1,3 +1,5 @@
+
+## Base
 Hi, I understand you are providing valuable guidance on implementing the adaptation of the Mocktails algorithm for ChampSim traces. However, to fully grasp and integrate the concepts you're explaining, I would benefit immensely from seeing a concrete example of the code itself.
 
   
@@ -30,7 +32,7 @@ I appreciate your guidance, but seeing the actual code would greatly enhance my 
 
 
 
-
+## Second
 
 Hi, I understand you are providing valuable guidance on implementing the adaptation of the Mocktails algorithm for ChampSim traces. However, to fully grasp and integrate the concepts you're explaining, I would benefit immensely from seeing a concrete example of the code itself.
 
@@ -47,5 +49,5 @@ Integration points: Where exactly does the Mocktails algorithm plug into the Cha
 Below I have provided a list of template cpp codes, you need to provided the modified file or new cpp file for each of them.  
 I appreciate your guidance, but seeing the actual code would greatly enhance my understanding and allow me to implement the solution more effectively. Could you provide the full code details?
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMzMzNzc5MTRdfQ==
+eyJoaXN0b3J5IjpbMTc3MDE4MjY4MV19
 -->
