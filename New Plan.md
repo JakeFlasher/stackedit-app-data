@@ -364,9 +364,9 @@ By leveraging existing codebases like `constable.cc` and the Clueless project, y
 
 ---
 
-I hope this helps you in extending your research and achieving further simulation speedups while preserving performance metrics. If you have any further questions or need clarification on any part of the implementation, feel free to ask!
+I hope this helps you in extending your research and achieving further simulation speedups while preserving performance metrics. If you have any further questions or need clarification on any part of the implementation, feel free to ask
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc4NzIwMDkxOSwxMTIxMjQ1NTQzLDIwMj
-UxMDkyMDQsLTQ3ODk3MCwxMDQ3NjIzNDMxLDkyMzY1MDM2OCwt
-MTA0Mzk5NDU2M119
+eyJoaXN0b3J5IjpbMTYyNDU2NTE2MiwtNzg3MjAwOTE5LDExMj
+EyNDU1NDMsMjAyNTEwOTIwNCwtNDc4OTcwLDEwNDc2MjM0MzEs
+OTIzNjUwMzY4LC0xMDQzOTk0NTYzXX0=
 -->
