@@ -8,6 +8,12 @@
 
 ### Correction of implementation
 
+```
+if(last occurrence.find(address)== last occurrence.end()) {
+last occurrence[address]=i;l else f
+// Conditions are evaluated here
+last occurrence[address]= i;
+```
 ### Extending the concpets 
 Store Instructions
 
@@ -25,5 +31,6 @@ Simulation Optimization: If conditions are satisfied, the store can be considere
 
 ##### However, it turned that *global stable stores* defined like the above only consist  of ~0.6% total instructions from the traces, compared to *global stable loads* that typically consist of  ~10-20%, *global stable stores* are negligible.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc0NTAwNzgwMywtMTUwMzA2NjU5OF19
+eyJoaXN0b3J5IjpbNjE4OTk1NTU2LC03NDUwMDc4MDMsLTE1MD
+MwNjY1OThdfQ==
 -->
