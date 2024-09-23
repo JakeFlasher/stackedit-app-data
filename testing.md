@@ -56,13 +56,13 @@ Memory State Consistency: Ensure that no intervening stores have modified the me
 
 Effective global stable load instructions can be characterized as a on simulation
 
-> 1. 1M-interval, 500 intervals: ~400 matches, averge ~1000 (remaining)
+> 1. 1M-interval, 500 intervals: ~380 matches, averge ~1000 (remaining)
 	> 1.1 Total counts of tiny RD (< 128K) is more
-> 2. 5M-interval, 100 intervals: ~350 matches, average ~20000 (remaining)
+> 2. 5M-interval, 100 intervals: ~600 matches, average ~20000 (remaining)
 	> 2.1 Total counts of tiny RD (< 128K) is fewer
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMTc2NDA3ODUsMTEzMzE2NDcxNSwtND
-A3MzcwMTUxLC0yMzExMzg0NTQsLTMxMjQyODMwNywtMjA2ODM3
-NjkxMywtMTg0NTE5NTMxMywtNzQ1MDA3ODAzLC0xNTAzMDY2NT
-k4XX0=
+eyJoaXN0b3J5IjpbOTQzODg4MDAsMTEzMzE2NDcxNSwtNDA3Mz
+cwMTUxLC0yMzExMzg0NTQsLTMxMjQyODMwNywtMjA2ODM3Njkx
+MywtMTg0NTE5NTMxMywtNzQ1MDA3ODAzLC0xNTAzMDY2NTk4XX
+0=
 -->
