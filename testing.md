@@ -5,6 +5,9 @@
 	> 	-  Condition 2: No store or store request has arrived to the memory address of I1 between the occurrences of I1 and I2. 
 
 > Satisfying Condition 1 ensures that I2 would have the same load address as I1, and thus the address computation operation of I2 can be safely eliminated. Satisfying Condition 2 ensures that I2 would fetch the same value from the memory as I1, and thus the data fetch operation of I2 can be safely eliminated.
+
+### Correction of implementation
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM4NTgxMDgyMl19
+eyJoaXN0b3J5IjpbLTE1MDMwNjY1OThdfQ==
 -->
