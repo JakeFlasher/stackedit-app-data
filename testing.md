@@ -7,7 +7,7 @@
 > Satisfying Condition 1 ensures that I2 would have the same load address as I1, and thus the address computation operation of I2 can be safely eliminated. Satisfying Condition 2 ensures that I2 would fetch the same value from the memory as I1, and thus the data fetch operation of I2 can be safely eliminated.
 
 ### Correction of implementation
-
+# Tracking Last Occurrences lncorrectly
 ```cpp
 if(last occurrence.find(address) == last occurrence.end()) {
 	last occurrence[address] = i; 
@@ -17,6 +17,7 @@ if(last occurrence.find(address) == last occurrence.end()) {
 	last occurrence[address]= i;
 }
 ```
+The current implementation tracks the last occurrence of a **memory address** rather than the last occurrence of a **static load instruction**. In Constable's definition,.conditions are applied to **dynamic instances of the same static load instruction** (i.e.. sameprogram counter or instruction pointer ip).
 ### Extending the concpets 
 Store Instructions
 
@@ -34,6 +35,6 @@ Simulation Optimization: If conditions are satisfied, the store can be considere
 
 ##### However, it turned that *global stable stores* defined like the above only consist  of ~0.6% total instructions from the traces, compared to *global stable loads* that typically consist of  ~10-20%, *global stable stores* are negligible.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDk3ODU3NjM2LC03NDUwMDc4MDMsLTE1MD
-MwNjY1OThdfQ==
+eyJoaXN0b3J5IjpbLTQ0ODkyMjkzOSwtNzQ1MDA3ODAzLC0xNT
+AzMDY2NTk4XX0=
 -->
