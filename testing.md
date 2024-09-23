@@ -18,6 +18,8 @@ if(last occurrence.find(address) == last occurrence.end()) {
 }
 ```
 The current implementation tracks the last occurrence of a **memory address** rather than the last occurrence of a **static load instruction**. In Constable's definition,.conditions are applied to **dynamic instances of the same static load instruction** (i.e.. sameprogram counter or instruction pointer ip).
+# Clarifications
+All the traces used are from CRC2, DPC3, where 
 ### Extending the concpets 
 Store Instructions
 
@@ -35,6 +37,6 @@ Simulation Optimization: If conditions are satisfied, the store can be considere
 
 ##### However, it turned that *global stable stores* defined like the above only consist  of ~0.6% total instructions from the traces, compared to *global stable loads* that typically consist of  ~10-20%, *global stable stores* are negligible.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ0ODkyMjkzOSwtNzQ1MDA3ODAzLC0xNT
-AzMDY2NTk4XX0=
+eyJoaXN0b3J5IjpbLTE4NDUxOTUzMTMsLTc0NTAwNzgwMywtMT
+UwMzA2NjU5OF19
 -->
