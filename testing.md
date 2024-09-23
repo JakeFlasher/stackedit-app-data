@@ -24,7 +24,7 @@ Using the corrected algorithm for finding **global stable load instructions (GSL
 >All the **traces** used are from CRC2, DPC3, where -o3 optimization is used when compiling these benchmarks.
 Also, **Constable** paper also showed the existence of global stable loads in off-the-shelf X86 binaries after -o3 optimization.
 # Contrast Analysis
-Effective global stable load instructions can be characterized as a on simulation
+We did a set of experiments varying the condition used to select load/store instructions to remove from the whole trace, while ensuring the same total population, the discrete distribution (measured in 500 equal intervals across the whole trace) 
 ### Extending the concpets 
 # Global  Stable Store Instructions
 
@@ -37,7 +37,11 @@ Memory State Consistency: Ensure that no intervening stores have modified the me
 >- Simulation Optimization: If conditions are satisfied, the store can be considered redundant and potentially eliminated in simulation, reducing memory operation overhead.
 
 ##### However, it turned that *global stable stores* defined like the above only consist  of ~0.6% total instructions from the traces, compared to *global stable loads* that typically consist of  ~10-20%, *global stable stores* are negligible.
+
+
+
+Effective global stable load instructions can be characterized as a on simulation 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5MzgxNjk4MzksLTE4NDUxOTUzMTMsLT
-c0NTAwNzgwMywtMTUwMzA2NjU5OF19
+eyJoaXN0b3J5IjpbMzczNTgxNDk2LC0xODQ1MTk1MzEzLC03ND
+UwMDc4MDMsLTE1MDMwNjY1OThdfQ==
 -->
