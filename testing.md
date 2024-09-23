@@ -23,7 +23,7 @@ Tracking Inputs and Outputs: Monitor the source registers for both the address a
 Memory State Consistency: Ensure that no intervening stores have modified the memory location.
 Simulation Optimization: If conditions are satisfied, the store can be considered redundant and potentially eliminated in simulation, reducing memory operation overhead.
 
-#### However, it turned that *global stable stores* defined like the above only consist  of ~0.6% total instructions from the traces, compared to *global stable loads* that typically consist of  ~10-20%, *global stable stores* are negligible.
+##### However, it turned that *global stable stores* defined like the above only consist  of ~0.6% total instructions from the traces, compared to *global stable loads* that typically consist of  ~10-20%, *global stable stores* are negligible.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY3MzE0NDM5NCwtMTUwMzA2NjU5OF19
+eyJoaXN0b3J5IjpbLTc0NTAwNzgwMywtMTUwMzA2NjU5OF19
 -->
