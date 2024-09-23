@@ -19,25 +19,21 @@ if(last occurrence.find(address) == last occurrence.end()) {
 ```
 The current implementation tracks the last occurrence of a **memory address** rather than the last occurrence of a **static load instruction**. In Constable's definition,.conditions are applied to **dynamic instances of the same static load instruction** (i.e.. sameprogram counter or instruction pointer ip).
 # Clarifications
-All the **traces** used are from CRC2, DPC3, where -o3 optimization is used when compiling these benchmarks.
+>All the **traces** used are from CRC2, DPC3, where -o3 optimization is used when compiling these benchmarks.
 Also, **Constable** paper also showed the existence of global stable loads in off-the-shelf X86 binaries after -o3 optimization.
 ### Extending the concpets 
 # Global  Stable Store Instructions
 
-Definition: A store instruction is globally stable if it writes the same value to the same memory location across dynamic instances when its inputs have not changed.
-
+> Definition: A store instruction is globally stable if it writes the same value to the same memory location across dynamic instances when its inputs have not changed.
 Conditions for Store Stability:
-
-Condition 1: The source registers and memory operands providing the store address and data have not been modified since the last occurrence.
-Condition 2: No other instruction has modified the target memory location since the last store.
-Implementation Implications:
-
-Tracking Inputs and Outputs: Monitor the source registers for both the address and data, as well as the memory location being written.
+> - Condition 1: The source registers and memory operands providing the store address and data have not been modified since the last occurrence.
+>- Condition 2: No other instruction has modified the target memory location since the last store.
+>-  Tracking Inputs and Outputs: Monitor the source registers for both the address and data, as well as the memory location being written.
 Memory State Consistency: Ensure that no intervening stores have modified the memory location.
-Simulation Optimization: If conditions are satisfied, the store can be considered redundant and potentially eliminated in simulation, reducing memory operation overhead.
+>- Simulation Optimization: If conditions are satisfied, the store can be considered redundant and potentially eliminated in simulation, reducing memory operation overhead.
 
 ##### However, it turned that *global stable stores* defined like the above only consist  of ~0.6% total instructions from the traces, compared to *global stable loads* that typically consist of  ~10-20%, *global stable stores* are negligible.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkzNzU3NTU5NCwtMTg0NTE5NTMxMywtNz
+eyJoaXN0b3J5IjpbLTk1NTM2MTc4MCwtMTg0NTE5NTMxMywtNz
 Q1MDA3ODAzLC0xNTAzMDY2NTk4XX0=
 -->
