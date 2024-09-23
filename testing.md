@@ -31,8 +31,9 @@ We did a set of experiments **varying the condition used to select load/store in
 4. Partitioned Random Sampling on Minimum footprint-saturated instructions
 
 We measure interested performance metrics in 3 major categories:
-5. General: IPC, Simulation Speedup, Instructions Reduced
-6. 
+- General: IPC, Simulation Speedup, Instructions Reduced
+- Cache: cache miss, cache latency (L1D, L2C, LLC, DTLB, STLB)
+- Memory: rowbuffer hitrate, total memory cycles 
 ### Extending the concpets 
 # Global  Stable Store Instructions
 
@@ -50,7 +51,7 @@ Memory State Consistency: Ensure that no intervening stores have modified the me
 
 Effective global stable load instructions can be characterized as a on simulation 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3NDQ2Mjg3NTMsLTMxMjQyODMwNywtMj
-A2ODM3NjkxMywtMTg0NTE5NTMxMywtNzQ1MDA3ODAzLC0xNTAz
-MDY2NTk4XX0=
+eyJoaXN0b3J5IjpbLTIzMTEzODQ1NCwtMzEyNDI4MzA3LC0yMD
+Y4Mzc2OTEzLC0xODQ1MTk1MzEzLC03NDUwMDc4MDMsLTE1MDMw
+NjY1OThdfQ==
 -->
