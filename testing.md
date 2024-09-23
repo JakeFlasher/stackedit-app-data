@@ -8,7 +8,7 @@
 
 ### Correction of implementation
 
-```
+```cpp
 if(last occurrence.find(address) == last occurrence.end()) {
 	last occurrence[address] = i; 
 } else {
@@ -34,6 +34,6 @@ Simulation Optimization: If conditions are satisfied, the store can be considere
 
 ##### However, it turned that *global stable stores* defined like the above only consist  of ~0.6% total instructions from the traces, compared to *global stable loads* that typically consist of  ~10-20%, *global stable stores* are negligible.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0Nzg3NDQxOTUsLTc0NTAwNzgwMywtMT
-UwMzA2NjU5OF19
+eyJoaXN0b3J5IjpbNDk3ODU3NjM2LC03NDUwMDc4MDMsLTE1MD
+MwNjY1OThdfQ==
 -->
