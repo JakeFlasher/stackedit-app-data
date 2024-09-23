@@ -24,7 +24,11 @@ Using the corrected algorithm for finding **global stable load instructions (GSL
 >All the **traces** used are from CRC2, DPC3, where -o3 optimization is used when compiling these benchmarks.
 Also, **Constable** paper also showed the existence of global stable loads in off-the-shelf X86 binaries after -o3 optimization.
 # Contrast Analysis
-We did a set of experiments varying the condition used to select load/store instructions to remove from the whole trace, while ensuring the same total population, the discrete distribution (measured in 500 equal intervals across the whole trace) 
+We did a set of experiments **varying the condition used to select load/store instructions to remove from the whole trace**, while ensuring the same **total population** and **discrete distribution** (measured in 500 equal intervals across the whole trace) of such load/store candidates.
+1. Global stable load instructions (GSL)
+2. Partitioned Rese-distance Pruning
+3. Partitioned Value Leaking Address Detection
+4. Partitioned Random Sampling on Minimum footprint-saturated instructions
 ### Extending the concpets 
 # Global  Stable Store Instructions
 
@@ -42,6 +46,6 @@ Memory State Consistency: Ensure that no intervening stores have modified the me
 
 Effective global stable load instructions can be characterized as a on simulation 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzczNTgxNDk2LC0xODQ1MTk1MzEzLC03ND
-UwMDc4MDMsLTE1MDMwNjY1OThdfQ==
+eyJoaXN0b3J5IjpbLTIwNjgzNzY5MTMsLTE4NDUxOTUzMTMsLT
+c0NTAwNzgwMywtMTUwMzA2NjU5OF19
 -->
