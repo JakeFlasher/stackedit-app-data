@@ -25,6 +25,7 @@ Using the corrected algorithm for finding **global stable load instructions (GSL
 Also, **Constable** paper also showed the existence of global stable loads in off-the-shelf X86 binaries after -o3 optimization.
 # Contrast Analysis
 We did a set of experiments **varying the condition used to select load/store instructions to remove from the whole trace**, while ensuring the same **total population** and **discrete distribution** (measured in 500 equal intervals across the whole trace) of such load/store candidates.
+![输入图片说明](https://media.geeksforgeeks.org/wp-content/uploads/20231004173705/Histogram.webp)
 1. Global stable load instructions (GSL)
 2. Partitioned Rese-distance Pruning
 3. Partitioned Value Leaking Address Detection
@@ -51,7 +52,7 @@ Memory State Consistency: Ensure that no intervening stores have modified the me
 
 Effective global stable load instructions can be characterized as a on simulation 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIzMTEzODQ1NCwtMzEyNDI4MzA3LC0yMD
-Y4Mzc2OTEzLC0xODQ1MTk1MzEzLC03NDUwMDc4MDMsLTE1MDMw
-NjY1OThdfQ==
+eyJoaXN0b3J5IjpbLTQwNzM3MDE1MSwtMjMxMTM4NDU0LC0zMT
+I0MjgzMDcsLTIwNjgzNzY5MTMsLTE4NDUxOTUzMTMsLTc0NTAw
+NzgwMywtMTUwMzA2NjU5OF19
 -->
