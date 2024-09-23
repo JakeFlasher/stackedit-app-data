@@ -19,7 +19,7 @@ if(last occurrence.find(address) == last occurrence.end()) {
 ```
 The current implementation tracks the last occurrence of a **memory address** rather than the last occurrence of a **static load instruction**. In Constable's definition,.conditions are applied to **dynamic instances of the same static load instruction** (i.e.. sameprogram counter or instruction pointer ip).
 
-Using the corrected algorithm for finding **global stable load instructions (GSL)** during simulation execution, we found that **GSL has very little impact on both IPC and cache miss measurement** and will **boost simulation speed by ~125%** if removed without a big loss on overall performance metrics.
+Using the corrected algorithm for finding **global stable load instructions (GSL)** during simulation execution, we found that **GSL has very little impact on both IPC (5%) and cache miss (3.2%) measurement** and will **boost simulation speed by ~125%** if removed without a big loss on overall performance metrics.
 # Clarifications
 >All the **traces** used are from CRC2, DPC3, where -o3 optimization is used when compiling these benchmarks.
 Also, **Constable** paper also showed the existence of global stable loads in off-the-shelf X86 binaries after -o3 optimization.
@@ -46,6 +46,6 @@ Memory State Consistency: Ensure that no intervening stores have modified the me
 
 Effective global stable load instructions can be characterized as a on simulation 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNjgzNzY5MTMsLTE4NDUxOTUzMTMsLT
-c0NTAwNzgwMywtMTUwMzA2NjU5OF19
+eyJoaXN0b3J5IjpbLTMxMjQyODMwNywtMjA2ODM3NjkxMywtMT
+g0NTE5NTMxMywtNzQ1MDA3ODAzLC0xNTAzMDY2NTk4XX0=
 -->
