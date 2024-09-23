@@ -22,8 +22,8 @@ The current implementation tracks the last occurrence of a **memory address** ra
 Using the corrected algorithm for finding **global stable load instructions (GSL)** during simulation execution, we found that **GSL has very little impact on both IPC (5%) and cache miss (3.2%) measurement** and will **boost simulation speed by ~125%** if removed without a big loss on overall performance metrics.
 # From Coincidences
 Though in simulation, global stable loads may have nothing to do with specific peformance metrics. Since constable presented a micro-architecture-based approach in modern pipelines in order to ensure the correct program execution while reducing redundant load instructions marked as global stable load as to improve performance. However, we do observe a seemingly unique set of instructions of which if removed, they did very impact to cumulative IPC and cache miss change thus can also be eliminated to boost simulation. Therefore, the following experiments setup aim to :
-1. Determine whether it is purely the condition of global stable 
-1. find such a condition that 
+1. Determine whether it is purely the condition of global stable load that contributes to the unique phenomenom or removing other LOAD/STORE instructions also have similar effects.
+1. If global stable load is not the superset of such a conditonal set, find such a condition that it captures all the LOAD/STORE instrutions that have this effect. 
 # Clarifications
 >All the **traces** used are from CRC2, DPC3, where -o3 optimization is used when compiling these benchmarks.
 Also, **Constable** paper also showed the existence of global stable loads in off-the-shelf X86 binaries after -o3 optimization.
@@ -56,7 +56,7 @@ Memory State Consistency: Ensure that no intervening stores have modified the me
 
 Effective global stable load instructions can be characterized as a on simulation 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgyMzYxNDc4MCwtNDA3MzcwMTUxLC0yMz
+eyJoaXN0b3J5IjpbMTEzMzE2NDcxNSwtNDA3MzcwMTUxLC0yMz
 ExMzg0NTQsLTMxMjQyODMwNywtMjA2ODM3NjkxMywtMTg0NTE5
 NTMxMywtNzQ1MDA3ODAzLC0xNTAzMDY2NTk4XX0=
 -->
