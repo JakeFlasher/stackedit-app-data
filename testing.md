@@ -8,6 +8,22 @@
 
 ### Correction of implementation
 
+### Extending the concpets 
+Store Instructions
+
+Definition: A store instruction is globally stable if it writes the same value to the same memory location across dynamic instances when its inputs have not changed.
+
+Conditions for Store Stability:
+
+Condition 1: The source registers and memory operands providing the store address and data have not been modified since the last occurrence.
+Condition 2: No other instruction has modified the target memory location since the last store.
+Implementation Implications:
+
+Tracking Inputs and Outputs: Monitor the source registers for both the address and data, as well as the memory location being written.
+Memory State Consistency: Ensure that no intervening stores have modified the memory location.
+Simulation Optimization: If conditions are satisfied, the store can be considered redundant and potentially eliminated in simulation, reducing memory operation overhead.
+
+# However, it turned that *global stable stores* defined like the above only consists ~0.6% of total instructions from the traces, compared to 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MDMwNjY1OThdfQ==
+eyJoaXN0b3J5IjpbMjc4ODM0MTA2LC0xNTAzMDY2NTk4XX0=
 -->
