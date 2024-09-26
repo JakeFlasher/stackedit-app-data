@@ -54,25 +54,19 @@ We measure interested performance metrics in 3 major categories:
  
 For every load or store instruction $I_t$ accessing memory address $M_t$ :
 
-1. If $M_t$ has been accessed before (i.e., $M_t \in \mathcal{S}$ ):
+>1. If $M_t$ has been accessed before (i.e., $M_t \in \mathcal{S}$ ):
 
-- The cumulative footprint $fp\left(M_t, t\right)$ is defined as: $fp \left(M_t, t\right)=|\mathcal{S}|$ ,where $|\mathcal{S}|$ denotes the cardinality of the set $\mathcal{S}$ at time $t$.
+>- The cumulative footprint $fp\left(M_t, t\right)$ is defined as: $fp \left(M_t, t\right)=|\mathcal{S}|$ ,where $|\mathcal{S}|$ denotes the cardinality of the set $\mathcal{S}$ at time $t$.
 
-2. If $M_t$ has not been accessed before (i.e., $M_t \notin \mathcal{S}$ ):
+>2. If $M_t$ has not been accessed before (i.e., $M_t \notin \mathcal{S}$ ):
 
-- The cumulative footprint $fp\left(M_t, t\right)$ is set to 0.
+>- The cumulative footprint $fp\left(M_t, t\right)$ is set to 0.
 
-3. Instructions $I_t$ is filtered out (i.e., selected) if: $fp \left(M_t, t\right) > \theta_{\mathrm{}}$
+>3. Instructions $I_t$ is filtered out (i.e., selected) if: $fp \left(M_t, t\right) > \theta_{\mathrm{}}$
 
-  
 
-where $$ is a preset threshold specified.
 
-  
-
-Interpretation
-
-- The condition effectively measures the total number of unique memory addresses accessed since the beginning of the sliding window execution up to time $t$, whenever a memory address $M_t$ is re-accessed. Any new memory access will not be filtered.
+>- The condition effectively measures the total number of unique memory addresses accessed since the beginning of the sliding window execution up to time $t$, whenever a memory address $M_t$ is re-accessed. Any new memory access will not be filtered.
 
 
 # Results of Perturbance Decider
@@ -155,11 +149,11 @@ Effective global stable load instructions can be characterized as a on simulatio
 > 2. 5M-interval, 100 intervals: ~600 matches, average ~20000 (remaining)
 	> 2.1 Total counts of tiny RD (< 128K) is fewer
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MDU2MTk2ODAsLTYxNzc2ODQ2NywxNT
-kxNDc1OTc5LDk2MjEwMjIwOSwxNTc2NjE3MTg5LC0xMTc1OTQ2
-NzI4LDE2NTY0MjA4NjgsLTYyNTc3NzU1MiwxMTczOTc1NDYxLC
-0xNzkwODU2NjM4LC0xNDczOTAyNjkyLC0xNDU4NTk2ODMxLC0x
-NTI1NTc0NDc0LDEyNDM2NTAyNzYsMTg2MzI1OTc5MywtNDg3MT
-gzNTM5LC0xMzYyMzE4MDMsLTg3MjE2NzMsLTE5MTA5MjIxODMs
-MjA5NjgwMDgyM119
+eyJoaXN0b3J5IjpbMTIxNTE2ODQ1NiwtNjE3NzY4NDY3LDE1OT
+E0NzU5NzksOTYyMTAyMjA5LDE1NzY2MTcxODksLTExNzU5NDY3
+MjgsMTY1NjQyMDg2OCwtNjI1Nzc3NTUyLDExNzM5NzU0NjEsLT
+E3OTA4NTY2MzgsLTE0NzM5MDI2OTIsLTE0NTg1OTY4MzEsLTE1
+MjU1NzQ0NzQsMTI0MzY1MDI3NiwxODYzMjU5NzkzLC00ODcxOD
+M1MzksLTEzNjIzMTgwMywtODcyMTY3MywtMTkxMDkyMjE4Mywy
+MDk2ODAwODIzXX0=
 -->
