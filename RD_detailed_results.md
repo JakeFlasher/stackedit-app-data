@@ -59,10 +59,11 @@ Let $\mathcal{I}=\left\{I_1, I_2, \ldots, I_N\right\}$ be the sequence of instru
 >- The condition effectively measures the total number of unique memory addresses accessed since the beginning of the sliding window execution up to time $t$, whenever a memory address $M_t$ is re-accessed. Any new memory access will not be filtered.
 
 > **(Method 3)**  For every load or store instruction $I_t$ accessing memory address $M_t$ in each window $W_j$ :
->1. Let $\mathcal{M}_{W_j}$ be the set of memory addresses accessed in window $W_j$ : $\mathcal{M}_{W_j}=\left\{M_i \mid I_i \in W_j \text { and } M_i \neq \mathrm{null}\right\}$
+>1. Let $\mathcal{M}_{W_j}$ be the set of memory addresses accessed in window $W_j$ :
+>  $\mathcal{M}_{W_j}=\left\{M_i \mid I_i \in W_j \text { and } M_i \neq \mathrm{null}\right\}$
 >2.   Let the memory footprint $F P\left(W_j\right)$ for the entire window:
 >$FP\left(W_j\right)=\left|\mathcal{M}_{W_j}\right|$
-> The Filtering Condition is:
+>3. The Filtering Condition is:
  If $F P\left(Wj\right)>\theta_{\mathrm{FP}}$, then select all load and store instructions within $W_j$.
 
 # Results of Perturbance Decider
@@ -145,7 +146,7 @@ Effective global stable load instructions can be characterized as a on simulatio
 > 2. 5M-interval, 100 intervals: ~600 matches, average ~20000 (remaining)
 	> 2.1 Total counts of tiny RD (< 128K) is fewer
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYxMjAwMDIxMCwtNjE3NzY4NDY3LDE1OT
+eyJoaXN0b3J5IjpbMTQ4OTUwNzk2NSwtNjE3NzY4NDY3LDE1OT
 E0NzU5NzksOTYyMTAyMjA5LDE1NzY2MTcxODksLTExNzU5NDY3
 MjgsMTY1NjQyMDg2OCwtNjI1Nzc3NTUyLDExNzM5NzU0NjEsLT
 E3OTA4NTY2MzgsLTE0NzM5MDI2OTIsLTE0NTg1OTY4MzEsLTE1
