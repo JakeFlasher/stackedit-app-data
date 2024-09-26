@@ -41,27 +41,64 @@ We measure interested performance metrics in 3 major categories:
 - General: IPC, Simulation Speedup, Instructions Reduced
 - Cache: cache miss, cache latency (L1D, L2C, LLC, DTLB, STLB)
 - Memory: rowbuffer hitrate, total memory cycles 
-### Extending the concpets 
-# Global  Stable Store Instructions
+Let:
 
-> Definition: A store instruction is globally stable if it writes the same value to the same memory location across dynamic instances when its inputs have not changed.
-Conditions for Store Stability:
-> - Condition 1: The source registers and memory operands providing the store address and data have not been modified since the last occurrence.
->- Condition 2: No other instruction has modified the target memory location since the last store.
->-  Tracking Inputs and Outputs: Monitor the source registers for both the address and data, as well as the memory location being written.
-Memory State Consistency: Ensure that no intervening stores have modified the memory location.
->- Simulation Optimization: If conditions are satisfied, the store can be considered redundant and potentially eliminated in simulation, reducing memory operation overhead.
+- Let $N$ be the total number of instructions during the given sliding window $w$ in the program trace, i.e. $|w|$ = N .
 
-##### However, it turned that *global stable stores* defined like the above only consist  of ~0.6% total instructions from the traces, compared to *global stable loads* that typically consist of  ~10-20%, *global stable stores* are negligible.
+- Let $\mathcal{I}=\left\{I_1, I_2, \ldots, I_N\right\}$ be the sequence of instructions during this sliding window, where each $I_i$ corresponds to instruction index $i$.
 
+- Let $\mathcal{M}=\left\{M_1, M_2, \ldots, M_N\right\}$ be the sequence of memory addresses accessed by the instructions, where $M_i$ is the memory address accessed by instruction $I_i$ (for load/store instructions). For non-memory instructions, $M_i=$ null.
 
+- Let $\mathcal{S}$ be the set of unique memory addresses accessed so far (since the beginning of the program execution).
 
-Effective global stable load instructions can be characterized as a on simulation
+- Let last_access $(A)$ be the index $i$ of the last instruction where address $A$ was accessed.
 
-> 1. 1M-interval, 500 intervals: ~380 matches, averge <1000 (remaining)
-	> 1.1 Total counts of tiny RD (< 128K) is more
-> 2. 5M-interval, 100 intervals: ~600 matches, average ~20000 (remaining)
-	> 2.1 Total counts of tiny RD (< 128K) is fewer
+  
+
+We define the Filtering Condition for instruction $I_t$ (at time $t$ ) as follows:
+
+For every load or store instruction $I_t$ accessing memory address $M_t$ :
+
+1. If $M_t$ has been accessed before (i.e., $M_t \in \mathcal{S}$ ):
+
+- The cumulative footprint $fp\left(M_t, t\right)$ is defined as:
+
+  
+
+$$
+
+R D\left(M_t, t\right)=|\mathcal{S}|
+
+$$
+
+  
+
+where $|\mathcal{S}|$ denotes the cardinality of the set $\mathcal{S}$ at time $t$.
+
+2. If $M_t$ has not been accessed before (i.e., $M_t \notin \mathcal{S}$ ):
+
+- The cumulative footprint $fp\left(M_t, t\right)$ is set to 0.
+
+3. Instructions $I_t$ is filtered out (i.e., selected) if:
+
+  
+
+$$
+
+fp\left(M_t, t\right)>\theta_{\mathrm{RD}}
+
+$$
+
+  
+
+where $\theta_{\mathrm{RD}}$ is a preset threshold specified.
+
+  
+
+Interpretation
+
+- The condition effectively measures the total number of unique memory addresses accessed since the beginning of the sliding window execution up to time $t$, whenever a memory address $M_t$ is re-accessed. Any new memory access will not be filtered.
+
 
 # Results of Perturbance Decider
 | Methods               | IPC_Var     | Rowbuffer_Hitrate | Sim_Speedup | Instr_Reduced | IPC curve dtw |
@@ -117,14 +154,37 @@ Effective global stable load instructions can be characterized as a on simulatio
 4. 在利用RD绝对值进行筛除指令时，IPC Error和Instruction Reduction在所有情况下都有相当高的correlation (0.97~0.99)，哪怕在RD=48K，此时cache error已经很高的情形。
 
 TODO:
-4. rd范围和cache关系
-5. 全局上删除，时间轴收缩可能不等比例， 平均ipc可能影响较大，局部删除，可能保存了两者等比例变化 
-<!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYxNzc2ODQ2NywxNTkxNDc1OTc5LDk2Mj
-EwMjIwOSwxNTc2NjE3MTg5LC0xMTc1OTQ2NzI4LDE2NTY0MjA4
-NjgsLTYyNTc3NzU1MiwxMTczOTc1NDYxLC0xNzkwODU2NjM4LC
-0xNDczOTAyNjkyLC0xNDU4NTk2ODMxLC0xNTI1NTc0NDc0LDEy
-NDM2NTAyNzYsMTg2MzI1OTc5MywtNDg3MTgzNTM5LC0xMzYyMz
-E4MDMsLTg3MjE2NzMsLTE5MTA5MjIxODMsMjA5NjgwMDgyM119
+5. rd范围和cache关系
+6. 全局上删除，时间轴收缩可能不等比例， 平均ipc可能影响较大，局部删除，可能保存了两者等比例变化 
 
+
+### Extending the concpets 
+# Global  Stable Store Instructions
+
+> Definition: A store instruction is globally stable if it writes the same value to the same memory location across dynamic instances when its inputs have not changed.
+Conditions for Store Stability:
+> - Condition 1: The source registers and memory operands providing the store address and data have not been modified since the last occurrence.
+>- Condition 2: No other instruction has modified the target memory location since the last store.
+>-  Tracking Inputs and Outputs: Monitor the source registers for both the address and data, as well as the memory location being written.
+Memory State Consistency: Ensure that no intervening stores have modified the memory location.
+>- Simulation Optimization: If conditions are satisfied, the store can be considered redundant and potentially eliminated in simulation, reducing memory operation overhead.
+
+##### However, it turned that *global stable stores* defined like the above only consist  of ~0.6% total instructions from the traces, compared to *global stable loads* that typically consist of  ~10-20%, *global stable stores* are negligible.
+
+
+
+Effective global stable load instructions can be characterized as a on simulation
+
+> 1. 1M-interval, 500 intervals: ~380 matches, averge <1000 (remaining)
+	> 1.1 Total counts of tiny RD (< 128K) is more
+> 2. 5M-interval, 100 intervals: ~600 matches, average ~20000 (remaining)
+	> 2.1 Total counts of tiny RD (< 128K) is fewer
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbLTgxNjA4MjY2NiwtNjE3NzY4NDY3LDE1OT
+E0NzU5NzksOTYyMTAyMjA5LDE1NzY2MTcxODksLTExNzU5NDY3
+MjgsMTY1NjQyMDg2OCwtNjI1Nzc3NTUyLDExNzM5NzU0NjEsLT
+E3OTA4NTY2MzgsLTE0NzM5MDI2OTIsLTE0NTg1OTY4MzEsLTE1
+MjU1NzQ0NzQsMTI0MzY1MDI3NiwxODYzMjU5NzkzLC00ODcxOD
+M1MzksLTEzNjIzMTgwMywtODcyMTY3MywtMTkxMDkyMjE4Mywy
+MDk2ODAwODIzXX0=
 -->
