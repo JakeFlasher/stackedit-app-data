@@ -9,7 +9,8 @@
 > - Comparisons with contemporaries ( Mocktails, HRD, Camouflague )
 ## Useful Github Issues
  > - [# Physical or virtual address](https://github.com/ChampSim/ChampSim/issues/15)
- > -
+ >  - [Ramulator Integration I](https://github.com/ChampSim/ChampSim/pull/390)
+ > - [# Ramulator Integration II](https://github.com/ChampSim/ChampSim/pull/504)
 
 # Constable feature
 ## Implemented
@@ -92,11 +93,11 @@ BRANCH_RETURN: 1.537e-05
 
 Maybe use obs between value leaking and global stable to find some innovations in cache side-channel attacks? (attack templates, champsim impl of cache side-channel)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzIyMjI0LDU0NTk1NjI3MiwtMTI2NDc4Nj
-MzMywtNDk3NTQ5ODAsLTk5OTk1NTgwMCwyMjQ1NTc1MTUsNjQx
-MjMyMDYzLC03NTc2MDI1ODQsMTUyMDEwNjkwNSw2NzU4MjM5OT
-EsLTQ1OTM0NDkxMSwtMTE2NDI2MjUwNSwtMTgxMjYxMjg5MSw0
-NDc3NDI1OTUsMTYwNzMxMDc1NCwyMTAxNDkzNDMyLC01ODE1Mz
-I3NDcsLTEzNzc3MTU4OTQsLTM4NzY0Nzk5LDEyNzE3NjQxNjBd
-fQ==
+eyJoaXN0b3J5IjpbLTEwNDg4MzEwNzQsMzIyMjI0LDU0NTk1Nj
+I3MiwtMTI2NDc4NjMzMywtNDk3NTQ5ODAsLTk5OTk1NTgwMCwy
+MjQ1NTc1MTUsNjQxMjMyMDYzLC03NTc2MDI1ODQsMTUyMDEwNj
+kwNSw2NzU4MjM5OTEsLTQ1OTM0NDkxMSwtMTE2NDI2MjUwNSwt
+MTgxMjYxMjg5MSw0NDc3NDI1OTUsMTYwNzMxMDc1NCwyMTAxND
+kzNDMyLC01ODE1MzI3NDcsLTEzNzc3MTU4OTQsLTM4NzY0Nzk5
+XX0=
 -->
