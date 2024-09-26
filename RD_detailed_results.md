@@ -94,17 +94,17 @@ he Miss Error (geomean) | Cache Latency Error (geomean) | IPC Error (geomean) | 
 1. 由于所有的Dynamic Time Warping都基本位于0.18-0.35之间，与ground truth差距较小，差值主要跟instruction reduction有关，可以基本认为按照小RD删除指令对IPC Curve影响很小 
 2. 对IPC和Cache影响小的指令probably是被删除后加速比提升也很小的指令 ：**加速比小，在仿真中latency和cycles数少，往往是data reuse (RD小)**
 3. 删除指令对IPC和Cache的影响probably是相互独立的：**删除某些指令，对Cache影响很小但是对IPC影响巨大**
-
+4. 在利用RD绝对值进行筛除指令时，IPC Error和Instruction Reduction在所有情况下都有相当高的correlation (0.97~0.99)，哪怕在RD=48K，此时cache error已经很高的情形。
 
 TODO:
 4. rd范围和cache param关系（）
 5. 2. 全局上删除，时间轴收缩可能不等比例， 平均ipc可能影响较大，局部删除，可能保存了两者等比例变化
 6.   partitioned rd具有全局和局部的性质
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU3NjYxNzE4OSwtMTE3NTk0NjcyOCwxNj
-U2NDIwODY4LC02MjU3Nzc1NTIsMTE3Mzk3NTQ2MSwtMTc5MDg1
-NjYzOCwtMTQ3MzkwMjY5MiwtMTQ1ODU5NjgzMSwtMTUyNTU3ND
-Q3NCwxMjQzNjUwMjc2LDE4NjMyNTk3OTMsLTQ4NzE4MzUzOSwt
-MTM2MjMxODAzLC04NzIxNjczLC0xOTEwOTIyMTgzLDIwOTY4MD
-A4MjNdfQ==
+eyJoaXN0b3J5IjpbOTYyMTAyMjA5LDE1NzY2MTcxODksLTExNz
+U5NDY3MjgsMTY1NjQyMDg2OCwtNjI1Nzc3NTUyLDExNzM5NzU0
+NjEsLTE3OTA4NTY2MzgsLTE0NzM5MDI2OTIsLTE0NTg1OTY4Mz
+EsLTE1MjU1NzQ0NzQsMTI0MzY1MDI3NiwxODYzMjU5NzkzLC00
+ODcxODM1MzksLTEzNjIzMTgwMywtODcyMTY3MywtMTkxMDkyMj
+E4MywyMDk2ODAwODIzXX0=
 -->
