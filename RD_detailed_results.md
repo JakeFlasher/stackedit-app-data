@@ -29,7 +29,7 @@ Though in simulation, global stable loads may have nothing to do with specific p
 Also, **Constable** paper also showed the existence of global stable loads in off-the-shelf X86 binaries after -o3 optimization.
 # Contrast Analysis
 We did a set of experiments **varying the condition used to select load/store instructions to remove from the whole trace**, while ensuring the same **total population** and **discrete distribution** (measured in 500 equal intervals across the whole trace) of such load/store candidates.
-
+![输入图片说明](https://www.researchgate.net/profile/Mathias-Johanson/publication/221910054/figure/fig4/AS:305074569007107@1449746853302/Histogram-showing-the-frequency-of-failures-in-discrete-intervals-of-mileage.png)
 > footprint: unique number of memory addresses accessed during a sliding window.
 
 1. Global stable load instructions (GSL)
@@ -101,10 +101,10 @@ TODO:
 5. 2. 全局上删除，时间轴收缩可能不等比例， 平均ipc可能影响较大，局部删除，可能保存了两者等比例变化
 6.   partitioned rd具有全局和局部的性质
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODIyNDQzMzgyLC0xMTc1OTQ2NzI4LDE2NT
-Y0MjA4NjgsLTYyNTc3NzU1MiwxMTczOTc1NDYxLC0xNzkwODU2
-NjM4LC0xNDczOTAyNjkyLC0xNDU4NTk2ODMxLC0xNTI1NTc0ND
-c0LDEyNDM2NTAyNzYsMTg2MzI1OTc5MywtNDg3MTgzNTM5LC0x
-MzYyMzE4MDMsLTg3MjE2NzMsLTE5MTA5MjIxODMsMjA5NjgwMD
-gyM119
+eyJoaXN0b3J5IjpbMTU3NjYxNzE4OSwtMTE3NTk0NjcyOCwxNj
+U2NDIwODY4LC02MjU3Nzc1NTIsMTE3Mzk3NTQ2MSwtMTc5MDg1
+NjYzOCwtMTQ3MzkwMjY5MiwtMTQ1ODU5NjgzMSwtMTUyNTU3ND
+Q3NCwxMjQzNjUwMjc2LDE4NjMyNTk3OTMsLTQ4NzE4MzUzOSwt
+MTM2MjMxODAzLC04NzIxNjczLC0xOTEwOTIyMTgzLDIwOTY4MD
+A4MjNdfQ==
 -->
