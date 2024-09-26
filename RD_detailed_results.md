@@ -8,8 +8,6 @@
 | 256                     | 2.829008832                | 0.794718217                   | 7.051488982         | 108.6694079 | 10.56544998          |
 | 64                      | 2.941739265                | 0.677701461                   | 6.876926394         | 107.6435901 | 10.29106503          |
 
-![输入图片说明](https://raw.githubusercontent.com/JakeFlasher/stackedit-app-data/refs/heads/master/img/Camouflage/rd_hist.png) 
-![输入图片说明](https://raw.githubusercontent.com/JakeFlasher/stackedit-app-data/refs/heads/master/img/Camouflage/rd_density.png)
 | RD Histogram Cut-off | Cache_Miss  | Cache_Latency | IPC_Var     | Sim_Speedup | Instr_Reduced  |
 |----------------------|-------------|---------------|-------------|-------------|----------------|
 | 10th percentile      | 27.33536502 | 6.478540375   | 18.93003391 | 146.3384793 | 18.38060444    |
@@ -17,11 +15,16 @@
 | 30th percentile      | 21.30779885 | 11.82680148   | 14.26130813 | 178.0835691 | 19.65638909    |
 | 40th percentile      | 22.643441   | 12.30648968   | 25.36967507 | 193.2707652 | 20.50298836    |
 
+
+![输入图片说明](https://raw.githubusercontent.com/JakeFlasher/stackedit-app-data/refs/heads/master/img/Camouflage/rd_hist.png) 
+![输入图片说明](https://raw.githubusercontent.com/JakeFlasher/stackedit-app-data/refs/heads/master/img/Camouflage/rd_density.png)
+
+
 1. 对I
 2. 对IPC和Cache影响小的指令probably是被删除后加速比提升也很小的指令 ：**加速比小，在仿真中latency和cycles数少，往往是data reuse (RD小)**
 3. 删除指令对IPC和Cache的影响probably是相互独立的：**删除某些指令，对Cache影响很小但是对IPC影响巨大**
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUxNTIwODk4MywtMTM2MjMxODAzLC04Nz
+eyJoaXN0b3J5IjpbLTQ4NzE4MzUzOSwtMTM2MjMxODAzLC04Nz
 IxNjczLC0xOTEwOTIyMTgzLDIwOTY4MDA4MjNdfQ==
 -->
