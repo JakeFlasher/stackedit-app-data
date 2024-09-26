@@ -16,10 +16,10 @@
 | 40th percentile      | 22.643441   | 12.30648968   | 25.36967507 | 193.2707652 | 20.50298836    |
 
 1. 对I
-2. IPC和Cache影响小的指令probably是被删除后加速比提升也很小的指令 ：**加速比小，在仿真中latency和cycles数少，往往是data reuse (RD小)**
+2. 对IPC和Cache影响小的指令probably是被删除后加速比提升也很小的指令 ：**加速比小，在仿真中latency和cycles数少，往往是data reuse (RD小)**
 3. 删除指令对IPC和Cache的影响probably是相互独立的：**删除某些指令，对Cache影响很小但是对IPC影响巨大**
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTczOTQ0ODI0OCwtODcyMTY3MywtMTkxMD
+eyJoaXN0b3J5IjpbLTEzNjIzMTgwMywtODcyMTY3MywtMTkxMD
 kyMjE4MywyMDk2ODAwODIzXX0=
 -->
