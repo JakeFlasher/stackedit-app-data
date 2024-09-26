@@ -1,77 +1,5 @@
 
-Formal Definition
-Let:
-- Let $N$ be the total number of instructions in the program trace.
-- Let $\mathcal{I}=\left\{I_1, I_2, \ldots, I_N\right\}$ be the sequence of instructions, where each $I_i$ corresponds to instruction index $i$.
-- Let $\mathcal{M}=\left\{M_1, M_2, \ldots, M_N\right\}$ be the sequence of memory addresses accessed by the instructions, where $M_i$ is the memory address accessed by instruction $I_i$ (for load/store instructions). For non-memory instructions, $M_i=$ null.
-- Let $\mathcal{S}$ be the set of unique memory addresses accessed so far (since the beginning of the program execution).
-- Let last_access $(A)$ be the index $i$ of the last instruction where address $A$ was accessed.
 
-We define the Filtering Condition for instruction $I_t$ (at time $t$ ) as follows:
-For every load or store instruction $I_t$ accessing memory address $M_t$ :
-1. If $M_t$ has been accessed before (i.e., $M_t \in \mathcal{S}$ ):
-- The approximate reuse distance $R D\left(M_t, t\right)$ is defined as:
-
-$$
-R D\left(M_t, t\right)=|\mathcal{S}|
-$$
-
-where $|\mathcal{S}|$ denotes the cardinality of the set $\mathcal{S}$ at time $t$.
-2. If $M_t$ has not been accessed before (i.e., $M_t \notin \mathcal{S}$ ):
-- The approximate reuse distance $R D\left(M_t, t\right)$ can be considered undefined or set to a default value.
-3. The instruction $I_t$ is filtered out (i.e., selected) if:
-
-$$
-R D\left(M_t, t\right)>\theta_{\mathrm{RD}}
-$$
-
-where $\theta_{\mathrm{RD}}$ is the reuse distance threshold specified.
-
-Interpretation
-- The condition effectively measures the total number of unique memory addresses accessed since the beginning of the program execution up to time $t$, whenever a memory address $M_t$ is re-accessed.
-
-2. Memory Footprint Filter
-
-Overview of the Filtering Condition
-In the memory_footprint_filter.cpp code, the condition used to filter instructions is based on the memory footprint within a sliding window. The memory footprint is calculated as the number of unique memory addresses accessed in a window of fixed size.
-
-Formal Definition
-Let:
-- Let $w$ be the window size, i.e., the number of instructions per window.
-- Let $\theta_{\mathrm{FP}}$ be the footprint threshold.
-- Divide the instruction sequence $\mathcal{I}$ into consecutive windows $W_1, W_2, \ldots, W_k$, where each window $W_j$ contains $w$ instructions.
-
-For each window $W_j$ :
-1. Let $\mathcal{M}_{W_j}$ be the set of memory addresses accessed in window $W_j$ :
-
-$$
-\mathcal{M}_{W_j}=\left\{M_i \mid I_i \in W_j \text { and } M_i \neq \mathrm{null}\right\}
-$$
-
-2. The memory footprint $F P\left(W_j\right)$ is:
-
-$$
-F P\left(W_j\right)=\left|\mathcal{M}_{W_j}\right|
-$$
-
-3. The Filtering Condition is:
-- If $F P\left(W_j\right)>\theta_{\mathrm{FP}}$, then select all load and store instructions within $W_j$.
-
-Interpretation
-- The condition selects windows whose memory footprint exceeds a specified threshold.
-- Within such windows, all load and store instructions are filtered (selected).
-- This aims to capture periods of execution where the program accesses a large amount of unique memory data within a window.
-
-Mathematical Formulation
-For each window $W_j$ :
-1. Compute the memory footprint:
-
-$$
-F P\left(W_j\right)=\mid\left\{M_i \mid I_i \in W_j \text { and } M_i \neq \operatorname{null}\right\} \mid
-$$
-
-2. Filtering Condition:
-- If $F P\left(W_j\right)>\theta_{\mathrm{FP}}$, then for all $I_i \in W_j$ such that $M_i \neq$ null (load/store instructions), mark $I_i$ as filtered.
 
 | Literal RD threshold (64x64x12) | Cac
 he Miss Error (geomean) | Cache Latency Error (geomean) | IPC Error (geomean) | Avg Speedup | Avg Instr Reduction  |
@@ -113,9 +41,9 @@ TODO:
 5. 2. 全局上删除，时间轴收缩可能不等比例， 平均ipc可能影响较大，局部删除，可能保存了两者等比例变化
 6.   partitioned rd具有全局和局部的性质
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODUyMzIzNTYyLDExNzM5NzU0NjEsLTE3OT
-A4NTY2MzgsLTE0NzM5MDI2OTIsLTE0NTg1OTY4MzEsLTE1MjU1
-NzQ0NzQsMTI0MzY1MDI3NiwxODYzMjU5NzkzLC00ODcxODM1Mz
-ksLTEzNjIzMTgwMywtODcyMTY3MywtMTkxMDkyMjE4MywyMDk2
-ODAwODIzXX0=
+eyJoaXN0b3J5IjpbLTYyNTc3NzU1MiwxMTczOTc1NDYxLC0xNz
+kwODU2NjM4LC0xNDczOTAyNjkyLC0xNDU4NTk2ODMxLC0xNTI1
+NTc0NDc0LDEyNDM2NTAyNzYsMTg2MzI1OTc5MywtNDg3MTgzNT
+M5LC0xMzYyMzE4MDMsLTg3MjE2NzMsLTE5MTA5MjIxODMsMjA5
+NjgwMDgyM119
 -->
