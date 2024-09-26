@@ -30,7 +30,7 @@ Also, **Constable** paper also showed the existence of global stable loads in of
 # Contrast Analysis
 We did a set of experiments **varying the condition used to select load/store instructions to remove from the whole trace**, while ensuring the same **total population** and **discrete distribution** (measured in 500 equal intervals across the whole trace) of such load/store candidates.
 
-footprint: unique number of memory addresses accessed during a sliding window.
+> footprint: unique number of memory addresses accessed during a sliding window.
 
 1. Global stable load instructions (GSL)
 2. Partitioned Value Leaking Address Detection
@@ -101,9 +101,10 @@ TODO:
 5. 2. 全局上删除，时间轴收缩可能不等比例， 平均ipc可能影响较大，局部删除，可能保存了两者等比例变化
 6.   partitioned rd具有全局和局部的性质
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNzU5NDY3MjgsMTY1NjQyMDg2OCwtNj
-I1Nzc3NTUyLDExNzM5NzU0NjEsLTE3OTA4NTY2MzgsLTE0NzM5
-MDI2OTIsLTE0NTg1OTY4MzEsLTE1MjU1NzQ0NzQsMTI0MzY1MD
-I3NiwxODYzMjU5NzkzLC00ODcxODM1MzksLTEzNjIzMTgwMywt
-ODcyMTY3MywtMTkxMDkyMjE4MywyMDk2ODAwODIzXX0=
+eyJoaXN0b3J5IjpbODIyNDQzMzgyLC0xMTc1OTQ2NzI4LDE2NT
+Y0MjA4NjgsLTYyNTc3NzU1MiwxMTczOTc1NDYxLC0xNzkwODU2
+NjM4LC0xNDczOTAyNjkyLC0xNDU4NTk2ODMxLC0xNTI1NTc0ND
+c0LDEyNDM2NTAyNzYsMTg2MzI1OTc5MywtNDg3MTgzNTM5LC0x
+MzYyMzE4MDMsLTg3MjE2NzMsLTE5MTA5MjIxODMsMjA5NjgwMD
+gyM119
 -->
