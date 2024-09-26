@@ -17,10 +17,11 @@
 
 | Sorted RD Density Cut-off          | Cache Miss Error (geomean) | Cache Latency Error (geomean) | IPC Error (geomean) | Avg Speedup | Avg Instr Reduction |
 |------------------------------------|----------------------------|-------------------------------|---------------------|-------------|---------------------|
-| 40th percentile | 7.001040846                | 1.367277811                   | 10.33490331         | 117.0958631 | 13.68665289         |
-| 30th percentile | 7.2479859                  | 1.382228902                   | 10.55504901         | 117.7951487 | 13.971137           |
-| 20th percentile | 7.598288011                | 1.446104132                   | 10.76943779         | 118.5145418 | 14.25758124         |
-| 10th percentile | 7.824102306                | 1.448448784                   | 11.06292966         | 119.314804  | 14.61326432         |
+| 10th percentile total Instructions | 2.158186267                | 0.711853104                   | 3.668325697         | 105.1641335 | 5.780579489         |
+| 20th percentile total Instructions | 3.31476966                 | 0.964130122                   | 6.826707658         | 106.1212914 | 9.390411534         |
+| 30th percentile total Instructions | 5.809361025                | 1.397870322                   | 5.649304913         | 109.5223588 | 11.41986073         |
+| 40th percentile total Instructions | 7.001040846                | 1.367277811                   | 10.33490331         | 117.0958631 | 13.68665289         |
+
 
 
 ![输入图片说明](https://raw.githubusercontent.com/JakeFlasher/stackedit-app-data/refs/heads/master/img/Camouflage/rd_hist.png) 
@@ -32,7 +33,8 @@
 3. 删除指令对IPC和Cache的影响probably是相互独立的：**删除某些指令，对Cache影响很小但是对IPC影响巨大**
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MjU1NzQ0NzQsMTI0MzY1MDI3NiwxOD
-YzMjU5NzkzLC00ODcxODM1MzksLTEzNjIzMTgwMywtODcyMTY3
-MywtMTkxMDkyMjE4MywyMDk2ODAwODIzXX0=
+eyJoaXN0b3J5IjpbLTE0NTg1OTY4MzEsLTE1MjU1NzQ0NzQsMT
+I0MzY1MDI3NiwxODYzMjU5NzkzLC00ODcxODM1MzksLTEzNjIz
+MTgwMywtODcyMTY3MywtMTkxMDkyMjE4MywyMDk2ODAwODIzXX
+0=
 -->
