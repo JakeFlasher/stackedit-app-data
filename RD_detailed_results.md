@@ -1,5 +1,5 @@
 
-| RD threshold (64*64*12) | Cache Miss Error (geomean) | Cache Latency Error (geomean) | IPC Error (geomean) | Avg Speedup | Avg Instr Reduction  |
+| RD threshold (64x64x12) | Cache Miss Error (geomean) | Cache Latency Error (geomean) | IPC Error (geomean) | Avg Speedup | Avg Instr Reduction  |
 |-------------------------|----------------------------|-------------------------------|---------------------|-------------|----------------------|
 | 49152                   | 20.52766049                | 4.288978837                   | 8.119020266         | 112.643219  | 15.23203454          |
 | 24576                   | 11.46614849                | 2.779277441                   | 9.258425954         | 110.4203876 | 14.11482383          |
@@ -9,5 +9,5 @@
 | 64                      | 2.941739265                | 0.677701461                   | 6.876926394         | 107.6435901 | 10.29106503          |
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzA3NDY0ODddfQ==
+eyJoaXN0b3J5IjpbMjA5NjgwMDgyM119
 -->
