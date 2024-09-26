@@ -8,7 +8,7 @@
 | 256                     | 2.829008832                | 0.794718217                   | 7.051488982         | 108.6694079 | 10.56544998          |
 | 64                      | 2.941739265                | 0.677701461                   | 6.876926394         | 107.6435901 | 10.29106503          |
 
-| RD Histogram Cut-off | Cache_Miss  | Cache_Latency | IPC_Var     | Sim_Speedup | Instr_Reduced  |
+| RD Histogram Cut-off | Cache Miss Error (geomean) | Cache Latency Error (geomean) | IPC Error (geomean) | Avg Speedup | Avg Instr Reduction  |
 |----------------------|-------------|---------------|-------------|-------------|----------------|
 | 10th percentile      | 27.33536502 | 6.478540375   | 18.93003391 | 146.3384793 | 18.38060444    |
 | 20th percentile      | 28.86031297 | 6.772132787   | 18.53796118 | 146.4992429 | 18.66504081    |
@@ -25,6 +25,7 @@
 3. 删除指令对IPC和Cache的影响probably是相互独立的：**删除某些指令，对Cache影响很小但是对IPC影响巨大**
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ4NzE4MzUzOSwtMTM2MjMxODAzLC04Nz
-IxNjczLC0xOTEwOTIyMTgzLDIwOTY4MDA4MjNdfQ==
+eyJoaXN0b3J5IjpbMzM1Nzk4MTc4LC00ODcxODM1MzksLTEzNj
+IzMTgwMywtODcyMTY3MywtMTkxMDkyMjE4MywyMDk2ODAwODIz
+XX0=
 -->
