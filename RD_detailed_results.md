@@ -19,7 +19,7 @@ if(last occurrence.find(address) == last occurrence.end()) {
 ```
 The current implementation tracks the last occurrence of a **memory address** rather than the last occurrence of a **static load instruction**. In Constable's definition,.conditions are applied to **dynamic instances of the same static load instruction** (i.e.. sameprogram counter or instruction pointer ip).
 
-Using the corrected algorithm for finding **global stable load instructions (GSL)** during simulation execution, we found that **GSL has very little impact on both IPC (5%) and cache miss (3.2%) measurement** and will **boost simulation speed by ~125%** if removed without a big loss on overall performance metrics.
+Using the corrected algorithm for finding **global stable load instructions (GSL)** during simulation execution, we found that **GSL has very little impact on both IPC (5%) and cache miss (3.2%) measurement** and will **boost simulation speed by ~110%** if removed without a big loss on overall performance metrics.
 # From Coincidences
 Though in simulation, global stable loads may have nothing to do with specific peformance metrics. Since constable presented a micro-architecture-based approach in modern pipelines in order to ensure the correct program execution while reducing redundant load instructions marked as global stable load as to improve performance. However, we do observe a seemingly unique set of instructions of which if removed, they did very impact to cumulative IPC and cache miss change thus can also be eliminated to boost simulation. Therefore, the following experiments setup aim to :
 1. Determine whether it is purely the condition of global stable load that contributes to the unique phenomenom or removing other LOAD/STORE instructions also have similar effects.
@@ -146,11 +146,11 @@ Effective global stable load instructions can be characterized as a on simulatio
 > 2. 5M-interval, 100 intervals: ~600 matches, average ~20000 (remaining)
 	> 2.1 Total counts of tiny RD (< 128K) is fewer
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ4ODE4ODYxMCwxNDg5NTA3OTY1LC02MT
-c3Njg0NjcsMTU5MTQ3NTk3OSw5NjIxMDIyMDksMTU3NjYxNzE4
-OSwtMTE3NTk0NjcyOCwxNjU2NDIwODY4LC02MjU3Nzc1NTIsMT
-E3Mzk3NTQ2MSwtMTc5MDg1NjYzOCwtMTQ3MzkwMjY5MiwtMTQ1
-ODU5NjgzMSwtMTUyNTU3NDQ3NCwxMjQzNjUwMjc2LDE4NjMyNT
-k3OTMsLTQ4NzE4MzUzOSwtMTM2MjMxODAzLC04NzIxNjczLC0x
-OTEwOTIyMTgzXX0=
+eyJoaXN0b3J5IjpbNzU5MTU5OTEwLDE0ODgxODg2MTAsMTQ4OT
+UwNzk2NSwtNjE3NzY4NDY3LDE1OTE0NzU5NzksOTYyMTAyMjA5
+LDE1NzY2MTcxODksLTExNzU5NDY3MjgsMTY1NjQyMDg2OCwtNj
+I1Nzc3NTUyLDExNzM5NzU0NjEsLTE3OTA4NTY2MzgsLTE0NzM5
+MDI2OTIsLTE0NTg1OTY4MzEsLTE1MjU1NzQ0NzQsMTI0MzY1MD
+I3NiwxODYzMjU5NzkzLC00ODcxODM1MzksLTEzNjIzMTgwMywt
+ODcyMTY3M119
 -->
