@@ -62,13 +62,11 @@ For every load or store instruction $I_t$ accessing memory address $M_t$ :
 
 - The cumulative footprint $fp\left(M_t, t\right)$ is set to 0.
 
-3. Instructions $I_t$ is filtered out (i.e., selected) if:
-
-$ fp\left(M_t, t\right)>\theta_{\mathrm{RD}} $
+3. Instructions $I_t$ is filtered out (i.e., selected) if: $fp \left(M_t, t\right) > \theta_{\mathrm{}}$
 
   
 
-where $\theta_{\mathrm{RD}}$ is a preset threshold specified.
+where $$ is a preset threshold specified.
 
   
 
@@ -157,11 +155,11 @@ Effective global stable load instructions can be characterized as a on simulatio
 > 2. 5M-interval, 100 intervals: ~600 matches, average ~20000 (remaining)
 	> 2.1 Total counts of tiny RD (< 128K) is fewer
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjg0MjI3NjUwLC02MTc3Njg0NjcsMTU5MT
-Q3NTk3OSw5NjIxMDIyMDksMTU3NjYxNzE4OSwtMTE3NTk0Njcy
-OCwxNjU2NDIwODY4LC02MjU3Nzc1NTIsMTE3Mzk3NTQ2MSwtMT
-c5MDg1NjYzOCwtMTQ3MzkwMjY5MiwtMTQ1ODU5NjgzMSwtMTUy
-NTU3NDQ3NCwxMjQzNjUwMjc2LDE4NjMyNTk3OTMsLTQ4NzE4Mz
-UzOSwtMTM2MjMxODAzLC04NzIxNjczLC0xOTEwOTIyMTgzLDIw
-OTY4MDA4MjNdfQ==
+eyJoaXN0b3J5IjpbLTE4MDU2MTk2ODAsLTYxNzc2ODQ2NywxNT
+kxNDc1OTc5LDk2MjEwMjIwOSwxNTc2NjE3MTg5LC0xMTc1OTQ2
+NzI4LDE2NTY0MjA4NjgsLTYyNTc3NzU1MiwxMTczOTc1NDYxLC
+0xNzkwODU2NjM4LC0xNDczOTAyNjkyLC0xNDU4NTk2ODMxLC0x
+NTI1NTc0NDc0LDEyNDM2NTAyNzYsMTg2MzI1OTc5MywtNDg3MT
+gzNTM5LC0xMzYyMzE4MDMsLTg3MjE2NzMsLTE5MTA5MjIxODMs
+MjA5NjgwMDgyM119
 -->
