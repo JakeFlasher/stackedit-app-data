@@ -89,6 +89,8 @@ Effective global stable load instructions can be characterized as a on simulatio
 | value leaking         | 41.20151088 | 14.81638258       | 165.7313935 | 7.523979186   | 0.936814424       |   | fp_filter_large       | 4.162173119 | 5.110396513       | 106.3684418 | 7.6636689     | 0.235623326       |
 
 
+
+
 | Literal RD threshold (64x64x12) | Cache Miss Error (geomean) | Cache Latency Error (geomean) | IPC Error (geomean) | Avg Speedup | Avg Instr Reduction  |
 |-------------------------|----------------------------|-------------------------------|---------------------|-------------|----------------------|
 | 49152                   | 20.52766049                | 4.288978837                   | 8.119020266         | 112.643219  | 15.23203454          |
@@ -125,7 +127,7 @@ TODO:
 5. 2. 全局上删除，时间轴收缩可能不等比例， 平均ipc可能影响较大，局部删除，可能保存了两者等比例变化
 6.   partitioned rd具有全局和局部的性质
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk4NTE2MTQ3Miw5NjIxMDIyMDksMTU3Nj
+eyJoaXN0b3J5IjpbLTc3MDc3OTY4NCw5NjIxMDIyMDksMTU3Nj
 YxNzE4OSwtMTE3NTk0NjcyOCwxNjU2NDIwODY4LC02MjU3Nzc1
 NTIsMTE3Mzk3NTQ2MSwtMTc5MDg1NjYzOCwtMTQ3MzkwMjY5Mi
 wtMTQ1ODU5NjgzMSwtMTUyNTU3NDQ3NCwxMjQzNjUwMjc2LDE4
