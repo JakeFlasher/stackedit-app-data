@@ -59,12 +59,12 @@ Let $\mathcal{I}=\left\{I_1, I_2, \ldots, I_N\right\}$ be the sequence of instru
 >- The condition effectively measures the total number of unique memory addresses accessed since the beginning of the sliding window execution up to time $t$, whenever a memory address $M_t$ is re-accessed. Any new memory access will not be filtered.
 
 > **(Method 3)**  For every load or store instruction $I_t$ accessing memory address $M_t$, let the current total profiled instructions be  $P_j$, which is a subset of the current sliding window $W_j$ :
->1. Let $\mathcal{M}_{P_j}$ be the set of memory addresses accessed in window $W_j$ :
+>1. Let $\mathcal{M}_{P_j}$ be the set of memory addresses accessed in a subset $P_j$ of the sliding window :
 >  $\mathcal{M}_{P_j}=\left\{M_i \mid I_i \in P_j \text { and } M_i \neq \mathrm{null}\right\}$
->2.   Let the memory footprint $F P\left(W_j\right)$ for the entire window:
->$FP\left(W_j\right)=\left|\mathcal{M}_{W_j}\right|$
+>2.   Let the memory footprint $F P\left(P_j\right)$ for the entire window:
+>$FP\left(P_j\right)=\left|\mathcal{M}_{P_j}\right|$
 >3. The Filtering Condition is:
- If $F P\left(Wj\right)>\theta_{\mathrm{FP}}$, then select all load and store instructions within $W_j$.
+ If $F P\left(P_j\right)>\theta_{\mathrm{FP}}$, then select all load and store instructions within $W_j$.
 
 # Results of Perturbance Decider
 | Methods               | IPC_Var     | Rowbuffer_Hitrate | Sim_Speedup | Instr_Reduced | IPC curve dtw |
@@ -146,7 +146,7 @@ Effective global stable load instructions can be characterized as a on simulatio
 > 2. 5M-interval, 100 intervals: ~600 matches, average ~20000 (remaining)
 	> 2.1 Total counts of tiny RD (< 128K) is fewer
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgwMTk3MjE0OCwxNDg5NTA3OTY1LC02MT
+eyJoaXN0b3J5IjpbMjExNzk5NjI2NSwxNDg5NTA3OTY1LC02MT
 c3Njg0NjcsMTU5MTQ3NTk3OSw5NjIxMDIyMDksMTU3NjYxNzE4
 OSwtMTE3NTk0NjcyOCwxNjU2NDIwODY4LC02MjU3Nzc1NTIsMT
 E3Mzk3NTQ2MSwtMTc5MDg1NjYzOCwtMTQ3MzkwMjY5MiwtMTQ1
