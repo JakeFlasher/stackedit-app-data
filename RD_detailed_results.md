@@ -56,7 +56,7 @@ Let $\mathcal{I}=\left\{I_1, I_2, \ldots, I_N\right\}$ be the sequence of instru
  The cumulative footprint $fp\left(M_t, t\right)$ is set to 0.
  >3. Instructions $I_t$ is filtered out (i.e., selected) if: $fp \left(M_t, t\right) > \theta_{\mathrm{}}$
 
-
+$\mathcal{M}_{W_j}=\left\{M_i \mid I_i \in W_j \text { and } M_i \neq \mathrm{null}\right\}$
 >- The condition effectively measures the total number of unique memory addresses accessed since the beginning of the sliding window execution up to time $t$, whenever a memory address $M_t$ is re-accessed. Any new memory access will not be filtered.
 
 
@@ -140,11 +140,11 @@ Effective global stable load instructions can be characterized as a on simulatio
 > 2. 5M-interval, 100 intervals: ~600 matches, average ~20000 (remaining)
 	> 2.1 Total counts of tiny RD (< 128K) is fewer
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0MzE4MTc4ODYsLTYxNzc2ODQ2NywxNT
-kxNDc1OTc5LDk2MjEwMjIwOSwxNTc2NjE3MTg5LC0xMTc1OTQ2
-NzI4LDE2NTY0MjA4NjgsLTYyNTc3NzU1MiwxMTczOTc1NDYxLC
-0xNzkwODU2NjM4LC0xNDczOTAyNjkyLC0xNDU4NTk2ODMxLC0x
-NTI1NTc0NDc0LDEyNDM2NTAyNzYsMTg2MzI1OTc5MywtNDg3MT
-gzNTM5LC0xMzYyMzE4MDMsLTg3MjE2NzMsLTE5MTA5MjIxODMs
-MjA5NjgwMDgyM119
+eyJoaXN0b3J5IjpbLTQ1Mjg5OTkyOCwtNjE3NzY4NDY3LDE1OT
+E0NzU5NzksOTYyMTAyMjA5LDE1NzY2MTcxODksLTExNzU5NDY3
+MjgsMTY1NjQyMDg2OCwtNjI1Nzc3NTUyLDExNzM5NzU0NjEsLT
+E3OTA4NTY2MzgsLTE0NzM5MDI2OTIsLTE0NTg1OTY4MzEsLTE1
+MjU1NzQ0NzQsMTI0MzY1MDI3NiwxODYzMjU5NzkzLC00ODcxOD
+M1MzksLTEzNjIzMTgwMywtODcyMTY3MywtMTkxMDkyMjE4Mywy
+MDk2ODAwODIzXX0=
 -->
