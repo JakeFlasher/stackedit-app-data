@@ -1,4 +1,36 @@
 
+Formal Definition
+Let:
+- Let $N$ be the total number of instructions in the program trace.
+- Let $\mathcal{I}=\left\{I_1, I_2, \ldots, I_N\right\}$ be the sequence of instructions, where each $I_i$ corresponds to instruction index $i$.
+- Let $\mathcal{M}=\left\{M_1, M_2, \ldots, M_N\right\}$ be the sequence of memory addresses accessed by the instructions, where $M_i$ is the memory address accessed by instruction $I_i$ (for load/store instructions). For non-memory instructions, $M_i=$ null.
+- Let $\mathcal{S}$ be the set of unique memory addresses accessed so far (since the beginning of the program execution).
+- Let last_access $(A)$ be the index $i$ of the last instruction where address $A$ was accessed.
+
+We define the Filtering Condition for instruction $I_t$ (at time $t$ ) as follows:
+For every load or store instruction $I_t$ accessing memory address $M_t$ :
+1. If $M_t$ has been accessed before (i.e., $M_t \in \mathcal{S}$ ):
+- The approximate reuse distance $R D\left(M_t, t\right)$ is defined as:
+
+$$
+R D\left(M_t, t\right)=|\mathcal{S}|
+$$
+
+where $|\mathcal{S}|$ denotes the cardinality of the set $\mathcal{S}$ at time $t$.
+2. If $M_t$ has not been accessed before (i.e., $M_t \notin \mathcal{S}$ ):
+- The approximate reuse distance $R D\left(M_t, t\right)$ can be considered undefined or set to a default value.
+3. The instruction $I_t$ is filtered out (i.e., selected) if:
+
+$$
+R D\left(M_t, t\right)>\theta_{\mathrm{RD}}
+$$
+
+where $\theta_{\mathrm{RD}}$ is the reuse distance threshold specified.
+
+Interpretation
+- The condition effectively measures the total number of unique memory addresses accessed since the beginning of the program execution up to time $t$, whenever a memory address $M_t$ is re-accessed.
+
+
 | Literal RD threshold (64x64x12) | Cache Miss Error (geomean) | Cache Latency Error (geomean) | IPC Error (geomean) | Avg Speedup | Avg Instr Reduction  |
 |-------------------------|----------------------------|-------------------------------|---------------------|-------------|----------------------|
 | 49152                   | 20.52766049                | 4.288978837                   | 8.119020266         | 112.643219  | 15.23203454          |
@@ -38,8 +70,9 @@ TODO:
 5. 2. 全局上删除，时间轴收缩可能不等比例， 平均ipc可能影响较大，局部删除，可能保存了两者等比例变化
 6.   partitioned rd具有全局和局部的性质
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3OTA4NTY2MzgsLTE0NzM5MDI2OTIsLT
-E0NTg1OTY4MzEsLTE1MjU1NzQ0NzQsMTI0MzY1MDI3NiwxODYz
-MjU5NzkzLC00ODcxODM1MzksLTEzNjIzMTgwMywtODcyMTY3My
-wtMTkxMDkyMjE4MywyMDk2ODAwODIzXX0=
+eyJoaXN0b3J5IjpbMTE3Mzk3NTQ2MSwtMTc5MDg1NjYzOCwtMT
+Q3MzkwMjY5MiwtMTQ1ODU5NjgzMSwtMTUyNTU3NDQ3NCwxMjQz
+NjUwMjc2LDE4NjMyNTk3OTMsLTQ4NzE4MzUzOSwtMTM2MjMxOD
+AzLC04NzIxNjczLC0xOTEwOTIyMTgzLDIwOTY4MDA4MjNdfQ==
+
 -->
