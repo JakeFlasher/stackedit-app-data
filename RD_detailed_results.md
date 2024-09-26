@@ -44,26 +44,17 @@ We measure interested performance metrics in 3 major categories:
 - 
 
 >- Let $N$ be the total number of instructions during the given sliding window $w$ in the program trace, i.e. $|w|$ = N .
-
->- Let $\mathcal{I}=\left\{I_1, I_2, \ldots, I_N\right\}$ be the sequence of instructions during this sliding window.
-
->- Let $\mathcal{M}=\left\{M_1, M_2, \ldots, M_N\right\}$ be the sequence of memory addresses accessed by the instructions, where $M_i$ is the memory address accessed by instruction $I_i$ (for load/store instructions).
-
->- Let $\mathcal{S}$ be the set of unique memory addresses accessed so far (since the beginning of the window).
+Let $\mathcal{I}=\left\{I_1, I_2, \ldots, I_N\right\}$ be the sequence of instructions during this sliding window.
+ Let $\mathcal{M}=\left\{M_1, M_2, \ldots, M_N\right\}$ be the sequence of memory addresses accessed by the instructions, where $M_i$ is the memory address accessed by instruction $I_i$ (for load/store instructions).
+ Let $\mathcal{S}$ be the set of unique memory addresses accessed so far (since the beginning of the window).
 
  
-For every load or store instruction $I_t$ accessing memory address $M_t$ :
-
+>For every load or store instruction $I_t$ accessing memory address $M_t$ :
 >1. If $M_t$ has been accessed before (i.e., $M_t \in \mathcal{S}$ ):
-
->- The cumulative footprint $fp\left(M_t, t\right)$ is defined as: $fp \left(M_t, t\right)=|\mathcal{S}|$ ,where $|\mathcal{S}|$ denotes the cardinality of the set $\mathcal{S}$ at time $t$.
-
+ The cumulative footprint $fp\left(M_t, t\right)$ is defined as: $fp \left(M_t, t\right)=|\mathcal{S}|$ ,where $|\mathcal{S}|$ denotes the cardinality of the set $\mathcal{S}$ at time $t$.
 >2. If $M_t$ has not been accessed before (i.e., $M_t \notin \mathcal{S}$ ):
-
->- The cumulative footprint $fp\left(M_t, t\right)$ is set to 0.
-
->3. Instructions $I_t$ is filtered out (i.e., selected) if: $fp \left(M_t, t\right) > \theta_{\mathrm{}}$
-
+ The cumulative footprint $fp\left(M_t, t\right)$ is set to 0.
+ >3. Instructions $I_t$ is filtered out (i.e., selected) if: $fp \left(M_t, t\right) > \theta_{\mathrm{}}$
 
 
 >- The condition effectively measures the total number of unique memory addresses accessed since the beginning of the sliding window execution up to time $t$, whenever a memory address $M_t$ is re-accessed. Any new memory access will not be filtered.
@@ -149,11 +140,11 @@ Effective global stable load instructions can be characterized as a on simulatio
 > 2. 5M-interval, 100 intervals: ~600 matches, average ~20000 (remaining)
 	> 2.1 Total counts of tiny RD (< 128K) is fewer
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIxNTE2ODQ1NiwtNjE3NzY4NDY3LDE1OT
-E0NzU5NzksOTYyMTAyMjA5LDE1NzY2MTcxODksLTExNzU5NDY3
-MjgsMTY1NjQyMDg2OCwtNjI1Nzc3NTUyLDExNzM5NzU0NjEsLT
-E3OTA4NTY2MzgsLTE0NzM5MDI2OTIsLTE0NTg1OTY4MzEsLTE1
-MjU1NzQ0NzQsMTI0MzY1MDI3NiwxODYzMjU5NzkzLC00ODcxOD
-M1MzksLTEzNjIzMTgwMywtODcyMTY3MywtMTkxMDkyMjE4Mywy
-MDk2ODAwODIzXX0=
+eyJoaXN0b3J5IjpbODY3MjAxMzQxLC02MTc3Njg0NjcsMTU5MT
+Q3NTk3OSw5NjIxMDIyMDksMTU3NjYxNzE4OSwtMTE3NTk0Njcy
+OCwxNjU2NDIwODY4LC02MjU3Nzc1NTIsMTE3Mzk3NTQ2MSwtMT
+c5MDg1NjYzOCwtMTQ3MzkwMjY5MiwtMTQ1ODU5NjgzMSwtMTUy
+NTU3NDQ3NCwxMjQzNjUwMjc2LDE4NjMyNTk3OTMsLTQ4NzE4Mz
+UzOSwtMTM2MjMxODAzLC04NzIxNjczLC0xOTEwOTIyMTgzLDIw
+OTY4MDA4MjNdfQ==
 -->
