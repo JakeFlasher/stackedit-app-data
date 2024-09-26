@@ -32,9 +32,11 @@
 2. 对IPC和Cache影响小的指令probably是被删除后加速比提升也很小的指令 ：**加速比小，在仿真中latency和cycles数少，往往是data reuse (RD小)**
 3. 删除指令对IPC和Cache的影响probably是相互独立的：**删除某些指令，对Cache影响很小但是对IPC影响巨大**
 
+
+TODO
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NzM5MDI2OTIsLTE0NTg1OTY4MzEsLT
-E1MjU1NzQ0NzQsMTI0MzY1MDI3NiwxODYzMjU5NzkzLC00ODcx
-ODM1MzksLTEzNjIzMTgwMywtODcyMTY3MywtMTkxMDkyMjE4My
-wyMDk2ODAwODIzXX0=
+eyJoaXN0b3J5IjpbLTg2ODUwODMwLC0xNDczOTAyNjkyLC0xND
+U4NTk2ODMxLC0xNTI1NTc0NDc0LDEyNDM2NTAyNzYsMTg2MzI1
+OTc5MywtNDg3MTgzNTM5LC0xMzYyMzE4MDMsLTg3MjE2NzMsLT
+E5MTA5MjIxODMsMjA5NjgwMDgyM119
 -->
