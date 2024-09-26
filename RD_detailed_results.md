@@ -82,6 +82,7 @@ Effective global stable load instructions can be characterized as a on simulatio
 | value leaking         | 3.394935434 | 6.000382796   | 22.16003187 | 4.371017967 |
 | Heuristic Stable Load | 3.334038114 | 273.7269483   | 4.099679747 | 258.6522957 |
 
+# Use reuse-distance to select LOAD/STORE instructions
 
 | Literal RD threshold (64x64x12) | Cache Miss Error (geomean) | Cache Latency Error (geomean) | IPC Error (geomean) | Avg Speedup | Avg Instr Reduction  |
 |-------------------------|----------------------------|-------------------------------|---------------------|-------------|----------------------|
@@ -119,7 +120,7 @@ TODO:
 5. 2. 全局上删除，时间轴收缩可能不等比例， 平均ipc可能影响较大，局部删除，可能保存了两者等比例变化
 6.   partitioned rd具有全局和局部的性质
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMzMDkyNjY1NCwxNTkxNDc1OTc5LDk2Mj
+eyJoaXN0b3J5IjpbMTEwOTAwMTQ5OCwxNTkxNDc1OTc5LDk2Mj
 EwMjIwOSwxNTc2NjE3MTg5LC0xMTc1OTQ2NzI4LDE2NTY0MjA4
 NjgsLTYyNTc3NzU1MiwxMTczOTc1NDYxLC0xNzkwODU2NjM4LC
 0xNDczOTAyNjkyLC0xNDU4NTk2ODMxLC0xNTI1NTc0NDc0LDEy
