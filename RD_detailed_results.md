@@ -34,8 +34,8 @@ footprint: unique number of memory addresses accessed during a sliding window.
 
 1. Global stable load instructions (GSL)
 2. Partitioned Value Leaking Address Detection
-3. 
-4. Partitioned Random Sampling on the subset of profiled instructions after **Minimum** footprint (20%) is reached  
+3. instructions after footprint becomes greater than threshold  
+4. Partitioned Random Sampling on the profiled instructions after **Minimum** footprint (20%) is reached  
 
 We measure interested performance metrics in 3 major categories:
 - General: IPC, Simulation Speedup, Instructions Reduced
@@ -101,9 +101,9 @@ TODO:
 5. 2. 全局上删除，时间轴收缩可能不等比例， 平均ipc可能影响较大，局部删除，可能保存了两者等比例变化
 6.   partitioned rd具有全局和局部的性质
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk3NDk1NjI4OSwxNjU2NDIwODY4LC02Mj
-U3Nzc1NTIsMTE3Mzk3NTQ2MSwtMTc5MDg1NjYzOCwtMTQ3Mzkw
-MjY5MiwtMTQ1ODU5NjgzMSwtMTUyNTU3NDQ3NCwxMjQzNjUwMj
-c2LDE4NjMyNTk3OTMsLTQ4NzE4MzUzOSwtMTM2MjMxODAzLC04
-NzIxNjczLC0xOTEwOTIyMTgzLDIwOTY4MDA4MjNdfQ==
+eyJoaXN0b3J5IjpbLTEyMjIwNTkyNzIsMTY1NjQyMDg2OCwtNj
+I1Nzc3NTUyLDExNzM5NzU0NjEsLTE3OTA4NTY2MzgsLTE0NzM5
+MDI2OTIsLTE0NTg1OTY4MzEsLTE1MjU1NzQ0NzQsMTI0MzY1MD
+I3NiwxODYzMjU5NzkzLC00ODcxODM1MzksLTEzNjIzMTgwMywt
+ODcyMTY3MywtMTkxMDkyMjE4MywyMDk2ODAwODIzXX0=
 -->
