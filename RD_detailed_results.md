@@ -41,8 +41,8 @@ We measure interested performance metrics in 3 major categories:
 - General: IPC, Simulation Speedup, Instructions Reduced
 - Cache: cache miss, cache latency (L1D, L2C, LLC, DTLB, STLB)
 - Memory: rowbuffer hitrate, total memory cycles 
-- 
 
+## Elaboration
 >- Let $N$ be the total number of instructions during the given sliding window $w$ in the program trace, i.e. $|w|$ = N .
 Let $\mathcal{I}=\left\{I_1, I_2, \ldots, I_N\right\}$ be the sequence of instructions during this sliding window.
  Let $\mathcal{M}=\left\{M_1, M_2, \ldots, M_N\right\}$ be the sequence of memory addresses accessed by the instructions, where $M_i$ is the memory address accessed by instruction $I_i$ (for load/store instructions).
@@ -140,11 +140,11 @@ Effective global stable load instructions can be characterized as a on simulatio
 > 2. 5M-interval, 100 intervals: ~600 matches, average ~20000 (remaining)
 	> 2.1 Total counts of tiny RD (< 128K) is fewer
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMzMDczMzk5NSwtNjE3NzY4NDY3LDE1OT
-E0NzU5NzksOTYyMTAyMjA5LDE1NzY2MTcxODksLTExNzU5NDY3
-MjgsMTY1NjQyMDg2OCwtNjI1Nzc3NTUyLDExNzM5NzU0NjEsLT
-E3OTA4NTY2MzgsLTE0NzM5MDI2OTIsLTE0NTg1OTY4MzEsLTE1
-MjU1NzQ0NzQsMTI0MzY1MDI3NiwxODYzMjU5NzkzLC00ODcxOD
-M1MzksLTEzNjIzMTgwMywtODcyMTY3MywtMTkxMDkyMjE4Mywy
-MDk2ODAwODIzXX0=
+eyJoaXN0b3J5IjpbLTE0MzE4MTc4ODYsLTYxNzc2ODQ2NywxNT
+kxNDc1OTc5LDk2MjEwMjIwOSwxNTc2NjE3MTg5LC0xMTc1OTQ2
+NzI4LDE2NTY0MjA4NjgsLTYyNTc3NzU1MiwxMTczOTc1NDYxLC
+0xNzkwODU2NjM4LC0xNDczOTAyNjkyLC0xNDU4NTk2ODMxLC0x
+NTI1NTc0NDc0LDEyNDM2NTAyNzYsMTg2MzI1OTc5MywtNDg3MT
+gzNTM5LC0xMzYyMzE4MDMsLTg3MjE2NzMsLTE5MTA5MjIxODMs
+MjA5NjgwMDgyM119
 -->
