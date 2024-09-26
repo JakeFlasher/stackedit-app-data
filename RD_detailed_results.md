@@ -70,7 +70,7 @@ Effective global stable load instructions can be characterized as a on simulatio
 | fp_filter_small       | 11.90931969 | 2.793926126       | 86.66118944 | 7.6636689     | 0.881613808   |
 | fp_filter_large       | 4.162173119 | 5.110396513       | 106.3684418 | 7.6636689     | 0.235623326   |
 | value leaking         | 41.20151088 | 14.81638258       | 165.7313935 | 7.523979186   | 0.936814424   |
-| Heuristic Stable Load | 4.090672311 | 1.279531597       | 108.5294026 | 11.23777197   | 2.774276379   |
+| *Heuristic Stable Load | 4.090672311 | 1.279531597       | 108.5294026 | 11.23777197   | 2.774276379*   |
 
 
 | Methods               | Cache_Miss  | Cache_Latency | TLB_Miss    | TLB_Latency |
@@ -120,7 +120,7 @@ TODO:
 5. 2. 全局上删除，时间轴收缩可能不等比例， 平均ipc可能影响较大，局部删除，可能保存了两者等比例变化
 6.   partitioned rd具有全局和局部的性质
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTEwOTAwMTQ5OCwxNTkxNDc1OTc5LDk2Mj
+eyJoaXN0b3J5IjpbMTE2MDA1NjUyMCwxNTkxNDc1OTc5LDk2Mj
 EwMjIwOSwxNTc2NjE3MTg5LC0xMTc1OTQ2NzI4LDE2NTY0MjA4
 NjgsLTYyNTc3NzU1MiwxMTczOTc1NDYxLC0xNzkwODU2NjM4LC
 0xNDczOTAyNjkyLC0xNDU4NTk2ODMxLC0xNTI1NTc0NDc0LDEy
