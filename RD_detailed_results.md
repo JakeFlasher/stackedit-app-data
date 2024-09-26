@@ -51,29 +51,12 @@ We measure interested performance metrics in 3 major categories:
 
 >- Let $\mathcal{S}$ be the set of unique memory addresses accessed so far (since the beginning of the window).
 
-- Let last_access $(A)$ be the index $i$ of the last instruction where address $A$ was accessed.
-
-  
-
-We define the Filtering Condition for instruction $I_t$ (at time $t$ ) as follows:
-
+ 
 For every load or store instruction $I_t$ accessing memory address $M_t$ :
 
 1. If $M_t$ has been accessed before (i.e., $M_t \in \mathcal{S}$ ):
 
-- The cumulative footprint $fp\left(M_t, t\right)$ is defined as:
-
-  
-
-$$
-
-R D\left(M_t, t\right)=|\mathcal{S}|
-
-$$
-
-  
-
-where $|\mathcal{S}|$ denotes the cardinality of the set $\mathcal{S}$ at time $t$.
+- The cumulative footprint $fp\left(M_t, t\right)$ is defined as: $fp \left(M_t, t\right)=|\mathcal{S}|$ ,where $|\mathcal{S}|$ denotes the cardinality of the set $\mathcal{S}$ at time $t$.
 
 2. If $M_t$ has not been accessed before (i.e., $M_t \notin \mathcal{S}$ ):
 
@@ -81,13 +64,7 @@ where $|\mathcal{S}|$ denotes the cardinality of the set $\mathcal{S}$ at time $
 
 3. Instructions $I_t$ is filtered out (i.e., selected) if:
 
-  
-
-$$
-
-fp\left(M_t, t\right)>\theta_{\mathrm{RD}}
-
-$$
+$ fp\left(M_t, t\right)>\theta_{\mathrm{RD}} $
 
   
 
@@ -180,11 +157,11 @@ Effective global stable load instructions can be characterized as a on simulatio
 > 2. 5M-interval, 100 intervals: ~600 matches, average ~20000 (remaining)
 	> 2.1 Total counts of tiny RD (< 128K) is fewer
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5NzA2ODgwOTMsLTYxNzc2ODQ2NywxNT
-kxNDc1OTc5LDk2MjEwMjIwOSwxNTc2NjE3MTg5LC0xMTc1OTQ2
-NzI4LDE2NTY0MjA4NjgsLTYyNTc3NzU1MiwxMTczOTc1NDYxLC
-0xNzkwODU2NjM4LC0xNDczOTAyNjkyLC0xNDU4NTk2ODMxLC0x
-NTI1NTc0NDc0LDEyNDM2NTAyNzYsMTg2MzI1OTc5MywtNDg3MT
-gzNTM5LC0xMzYyMzE4MDMsLTg3MjE2NzMsLTE5MTA5MjIxODMs
-MjA5NjgwMDgyM119
+eyJoaXN0b3J5IjpbNjg0MjI3NjUwLC02MTc3Njg0NjcsMTU5MT
+Q3NTk3OSw5NjIxMDIyMDksMTU3NjYxNzE4OSwtMTE3NTk0Njcy
+OCwxNjU2NDIwODY4LC02MjU3Nzc1NTIsMTE3Mzk3NTQ2MSwtMT
+c5MDg1NjYzOCwtMTQ3MzkwMjY5MiwtMTQ1ODU5NjgzMSwtMTUy
+NTU3NDQ3NCwxMjQzNjUwMjc2LDE4NjMyNTk3OTMsLTQ4NzE4Mz
+UzOSwtMTM2MjMxODAzLC04NzIxNjczLC0xOTEwOTIyMTgzLDIw
+OTY4MDA4MjNdfQ==
 -->
