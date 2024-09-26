@@ -28,12 +28,12 @@
 ![输入图片说明](https://raw.githubusercontent.com/JakeFlasher/stackedit-app-data/refs/heads/master/img/Camouflage/rd_density.png)
 
 
-1. 由于所有的Dynamic Time Warping都基本位于0.18-0.35之间，差距较小，主要跟instruction reduction有关，可以基本认为按照小RD删除指令对IPC Curve影响很小 
+1. 由于所有的Dynamic Time Warping都基本位于0.18-0.35之间，与ground truth差距较小，主要跟instruction reduction有关，可以基本认为按照小RD删除指令对IPC Curve影响很小 
 2. 对IPC和Cache影响小的指令probably是被删除后加速比提升也很小的指令 ：**加速比小，在仿真中latency和cycles数少，往往是data reuse (RD小)**
 3. 删除指令对IPC和Cache的影响probably是相互独立的：**删除某些指令，对Cache影响很小但是对IPC影响巨大**
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MTk2MDI5NzgsLTE0NTg1OTY4MzEsLT
+eyJoaXN0b3J5IjpbLTE1MzYyMTM4MTAsLTE0NTg1OTY4MzEsLT
 E1MjU1NzQ0NzQsMTI0MzY1MDI3NiwxODYzMjU5NzkzLC00ODcx
 ODM1MzksLTEzNjIzMTgwMywtODcyMTY3MywtMTkxMDkyMjE4My
 wyMDk2ODAwODIzXX0=
