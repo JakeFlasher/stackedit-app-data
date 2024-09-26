@@ -30,8 +30,51 @@ where $\theta_{\mathrm{RD}}$ is the reuse distance threshold specified.
 Interpretation
 - The condition effectively measures the total number of unique memory addresses accessed since the beginning of the program execution up to time $t$, whenever a memory address $M_t$ is re-accessed.
 
+2. Memory Footprint Filter
 
-| Literal RD threshold (64x64x12) | Cache Miss Error (geomean) | Cache Latency Error (geomean) | IPC Error (geomean) | Avg Speedup | Avg Instr Reduction  |
+Overview of the Filtering Condition
+In the memory_footprint_filter.cpp code, the condition used to filter instructions is based on the memory footprint within a sliding window. The memory footprint is calculated as the number of unique memory addresses accessed in a window of fixed size.
+
+Formal Definition
+Let:
+- Let $w$ be the window size, i.e., the number of instructions per window.
+- Let $\theta_{\mathrm{FP}}$ be the footprint threshold.
+- Divide the instruction sequence $\mathcal{I}$ into consecutive windows $W_1, W_2, \ldots, W_k$, where each window $W_j$ contains $w$ instructions.
+
+For each window $W_j$ :
+1. Let $\mathcal{M}_{W_j}$ be the set of memory addresses accessed in window $W_j$ :
+
+$$
+\mathcal{M}_{W_j}=\left\{M_i \mid I_i \in W_j \text { and } M_i \neq \mathrm{null}\right\}
+$$
+
+2. The memory footprint $F P\left(W_j\right)$ is:
+
+$$
+F P\left(W_j\right)=\left|\mathcal{M}_{W_j}\right|
+$$
+
+3. The Filtering Condition is:
+- If $F P\left(W_j\right)>\theta_{\mathrm{FP}}$, then select all load and store instructions within $W_j$.
+
+Interpretation
+- The condition selects windows whose memory footprint exceeds a specified threshold.
+- Within such windows, all load and store instructions are filtered (selected).
+- This aims to capture periods of execution where the program accesses a large amount of unique memory data within a window.
+
+Mathematical Formulation
+For each window $W_j$ :
+1. Compute the memory footprint:
+
+$$
+F P\left(W_j\right)=\mid\left\{M_i \mid I_i \in W_j \text { and } M_i \neq \operatorname{null}\right\} \mid
+$$
+
+2. Filtering Condition:
+- If $F P\left(W_j\right)>\theta_{\mathrm{FP}}$, then for all $I_i \in W_j$ such that $M_i \neq$ null (load/store instructions), mark $I_i$ as filtered.
+
+| Literal RD threshold (64x64x12) | Cac
+he Miss Error (geomean) | Cache Latency Error (geomean) | IPC Error (geomean) | Avg Speedup | Avg Instr Reduction  |
 |-------------------------|----------------------------|-------------------------------|---------------------|-------------|----------------------|
 | 49152                   | 20.52766049                | 4.288978837                   | 8.119020266         | 112.643219  | 15.23203454          |
 | 24576                   | 11.46614849                | 2.779277441                   | 9.258425954         | 110.4203876 | 14.11482383          |
@@ -70,9 +113,9 @@ TODO:
 5. 2. 全局上删除，时间轴收缩可能不等比例， 平均ipc可能影响较大，局部删除，可能保存了两者等比例变化
 6.   partitioned rd具有全局和局部的性质
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE3Mzk3NTQ2MSwtMTc5MDg1NjYzOCwtMT
-Q3MzkwMjY5MiwtMTQ1ODU5NjgzMSwtMTUyNTU3NDQ3NCwxMjQz
-NjUwMjc2LDE4NjMyNTk3OTMsLTQ4NzE4MzUzOSwtMTM2MjMxOD
-AzLC04NzIxNjczLC0xOTEwOTIyMTgzLDIwOTY4MDA4MjNdfQ==
-
+eyJoaXN0b3J5IjpbODUyMzIzNTYyLDExNzM5NzU0NjEsLTE3OT
+A4NTY2MzgsLTE0NzM5MDI2OTIsLTE0NTg1OTY4MzEsLTE1MjU1
+NzQ0NzQsMTI0MzY1MDI3NiwxODYzMjU5NzkzLC00ODcxODM1Mz
+ksLTEzNjIzMTgwMywtODcyMTY3MywtMTkxMDkyMjE4MywyMDk2
+ODAwODIzXX0=
 -->
