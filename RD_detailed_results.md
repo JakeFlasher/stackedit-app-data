@@ -8,7 +8,9 @@
 | 256                     | 2.829008832                | 0.794718217                   | 7.051488982         | 108.6694079 | 10.56544998          |
 | 64                      | 2.941739265                | 0.677701461                   | 6.876926394         | 107.6435901 | 10.29106503          |
 
-1. 对IPC和Cache影响小的指令一定是被删除后加速比提升也很小的指令（加速比小，在仿真中latency和cycles数少，往往是data reuse (RD小)）
+1. 对IPC和Cache影响小的指令一定是被删除后加速比提升也很小的指令 **（加速比小，在仿真中latency和cycles数少，往往是data reuse (RD小)）**
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5MTA5MjIxODMsMjA5NjgwMDgyM119
+eyJoaXN0b3J5IjpbODkxNjU5NTQzLC0xOTEwOTIyMTgzLDIwOT
+Y4MDA4MjNdfQ==
 -->
