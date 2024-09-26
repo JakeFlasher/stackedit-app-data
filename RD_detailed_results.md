@@ -80,7 +80,7 @@ Effective global stable load instructions can be characterized as a on simulatio
 | fp_filter_small       | 0.59140465  | 1.998686053   | 3.20412126  | 2.08613268  |
 | fp_filter_large       | 7.461245407 | 2.415868282   | 6.995133191 | 1.493968173 |
 | value leaking         | 3.394935434 | 6.000382796   | 22.16003187 | 4.371017967 |
-| Heuristic Stable Load | 3.334038114 | 273.7269483   | 4.099679747 | 258.6522957 |
+| *Heuristic Stable Load | 3.334038114 | 273.7269483   | 4.099679747 | 258.6522957 |
 
 # Use reuse-distance to select LOAD/STORE instructions
 
@@ -120,7 +120,7 @@ TODO:
 5. 2. 全局上删除，时间轴收缩可能不等比例， 平均ipc可能影响较大，局部删除，可能保存了两者等比例变化
 6.   partitioned rd具有全局和局部的性质
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE2MDA1NjUyMCwxNTkxNDc1OTc5LDk2Mj
+eyJoaXN0b3J5IjpbMTQ0NjMwNzIxMiwxNTkxNDc1OTc5LDk2Mj
 EwMjIwOSwxNTc2NjE3MTg5LC0xMTc1OTQ2NzI4LDE2NTY0MjA4
 NjgsLTYyNTc3NzU1MiwxMTczOTc1NDYxLC0xNzkwODU2NjM4LC
 0xNDczOTAyNjkyLC0xNDU4NTk2ODMxLC0xNTI1NTc0NDc0LDEy
