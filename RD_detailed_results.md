@@ -15,6 +15,13 @@
 | 30th percentile      | 21.30779885 | 11.82680148   | 14.26130813 | 178.0835691 | 19.65638909    |
 | 40th percentile      | 22.643441   | 12.30648968   | 25.36967507 | 193.2707652 | 20.50298836    |
 
+| Sorted RD Density Cut-off          | Cache Miss Error (geomean) | Cache Latency Error (geomean) | IPC Error (geomean) | Avg Speedup | Avg Instr Reduction |
+|------------------------------------|----------------------------|-------------------------------|---------------------|-------------|---------------------|
+| 40th percentile total Instructions | 7.001040846                | 1.367277811                   | 10.33490331         | 117.0958631 | 13.68665289         |
+| 30th percentile total Instructions | 7.2479859                  | 1.382228902                   | 10.55504901         | 117.7951487 | 13.971137           |
+| 20th percentile total Instructions | 7.598288011                | 1.446104132                   | 10.76943779         | 118.5145418 | 14.25758124         |
+| 10th percentile total Instructions | 7.824102306                | 1.448448784                   | 11.06292966         | 119.314804  | 14.61326432         |
+
 
 ![输入图片说明](https://raw.githubusercontent.com/JakeFlasher/stackedit-app-data/refs/heads/master/img/Camouflage/rd_hist.png) 
 ![输入图片说明](https://raw.githubusercontent.com/JakeFlasher/stackedit-app-data/refs/heads/master/img/Camouflage/rd_density.png)
@@ -25,7 +32,7 @@
 3. 删除指令对IPC和Cache的影响probably是相互独立的：**删除某些指令，对Cache影响很小但是对IPC影响巨大**
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg2MzI1OTc5MywtNDg3MTgzNTM5LC0xMz
-YyMzE4MDMsLTg3MjE2NzMsLTE5MTA5MjIxODMsMjA5NjgwMDgy
-M119
+eyJoaXN0b3J5IjpbLTg2MjEzNDg5OCwxODYzMjU5NzkzLC00OD
+cxODM1MzksLTEzNjIzMTgwMywtODcyMTY3MywtMTkxMDkyMjE4
+MywyMDk2ODAwODIzXX0=
 -->
