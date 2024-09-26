@@ -33,10 +33,13 @@
 3. 删除指令对IPC和Cache的影响probably是相互独立的：**删除某些指令，对Cache影响很小但是对IPC影响巨大**
 
 
-TODO
+TODO:
+4. rd范围和cache param关系（）
+5. 2. 全局上删除，时间轴收缩可能不等比例， 平均ipc可能影响较大，局部删除，可能保存了两者等比例变化
+6.   partitioned rd具有全局和局部的性质
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg2ODUwODMwLC0xNDczOTAyNjkyLC0xND
-U4NTk2ODMxLC0xNTI1NTc0NDc0LDEyNDM2NTAyNzYsMTg2MzI1
-OTc5MywtNDg3MTgzNTM5LC0xMzYyMzE4MDMsLTg3MjE2NzMsLT
-E5MTA5MjIxODMsMjA5NjgwMDgyM119
+eyJoaXN0b3J5IjpbLTE3OTA4NTY2MzgsLTE0NzM5MDI2OTIsLT
+E0NTg1OTY4MzEsLTE1MjU1NzQ0NzQsMTI0MzY1MDI3NiwxODYz
+MjU5NzkzLC00ODcxODM1MzksLTEzNjIzMTgwMywtODcyMTY3My
+wtMTkxMDkyMjE4MywyMDk2ODAwODIzXX0=
 -->
