@@ -8,6 +8,8 @@
 | 256                     | 2.829008832                | 0.794718217                   | 7.051488982         | 108.6694079 | 10.56544998          |
 | 64                      | 2.941739265                | 0.677701461                   | 6.876926394         | 107.6435901 | 10.29106503          |
 
+![输入图片说明](https://raw.githubusercontent.com/JakeFlasher/stackedit-app-data/refs/heads/master/img/Camouflage/rd_hist.png) 
+![输入图片说明](https://raw.githubusercontent.com/JakeFlasher/stackedit-app-data/refs/heads/master/img/Camouflage/rd_density.png)
 | RD Histogram Cut-off | Cache_Miss  | Cache_Latency | IPC_Var     | Sim_Speedup | Instr_Reduced  |
 |----------------------|-------------|---------------|-------------|-------------|----------------|
 | 10th percentile      | 27.33536502 | 6.478540375   | 18.93003391 | 146.3384793 | 18.38060444    |
@@ -20,6 +22,6 @@
 3. 删除指令对IPC和Cache的影响probably是相互独立的：**删除某些指令，对Cache影响很小但是对IPC影响巨大**
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNjIzMTgwMywtODcyMTY3MywtMTkxMD
-kyMjE4MywyMDk2ODAwODIzXX0=
+eyJoaXN0b3J5IjpbMTUxNTIwODk4MywtMTM2MjMxODAzLC04Nz
+IxNjczLC0xOTEwOTIyMTgzLDIwOTY4MDA4MjNdfQ==
 -->
