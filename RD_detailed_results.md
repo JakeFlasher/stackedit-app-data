@@ -63,7 +63,7 @@ Effective global stable load instructions can be characterized as a on simulatio
 > 2. 5M-interval, 100 intervals: ~600 matches, average ~20000 (remaining)
 	> 2.1 Total counts of tiny RD (< 128K) is fewer
 
-# Results of Perturbance
+# Results of Perturbance Decider
 | Methods               | IPC_Var     | Rowbuffer_Hitrate | Sim_Speedup | Instr_Reduced | IPC curve dtw |
 |-----------------------|-------------|-------------------|-------------|---------------|---------------|
 | global stable load    | 5.879529269 | 0.181407155       | 105.6660857 | 7.664156737   | 0.209375499   |
@@ -120,7 +120,7 @@ TODO:
 4. rd范围和cache关系
 5. 全局上删除，时间轴收缩可能不等比例， 平均ipc可能影响较大，局部删除，可能保存了两者等比例变化 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY1MzQyNTkxMSwxNTkxNDc1OTc5LDk2Mj
+eyJoaXN0b3J5IjpbLTYxNzc2ODQ2NywxNTkxNDc1OTc5LDk2Mj
 EwMjIwOSwxNTc2NjE3MTg5LC0xMTc1OTQ2NzI4LDE2NTY0MjA4
 NjgsLTYyNTc3NzU1MiwxMTczOTc1NDYxLC0xNzkwODU2NjM4LC
 0xNDczOTAyNjkyLC0xNDU4NTk2ODMxLC0xNTI1NTc0NDc0LDEy
