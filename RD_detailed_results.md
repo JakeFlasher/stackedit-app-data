@@ -63,6 +63,14 @@ Effective global stable load instructions can be characterized as a on simulatio
 > 2. 5M-interval, 100 intervals: ~600 matches, average ~20000 (remaining)
 	> 2.1 Total counts of tiny RD (< 128K) is fewer
 
+| Methods               | IPC_Var     | Rowbuffer_Hitrate | Sim_Speedup | Instr_Reduced | IPC curve dtw |
+|-----------------------|-------------|-------------------|-------------|---------------|---------------|
+| global stable load    | 5.879529269 | 0.181407155       | 105.6660857 | 7.664156737   | 0.209375499   |
+| RD_32                 | 6.710888837 | 2.763657624       | 104.8526892 | 7.664156737   | 0.2308437     |
+| fp_filter_small       | 11.90931969 | 2.793926126       | 86.66118944 | 7.6636689     | 0.881613808   |
+| fp_filter_large       | 4.162173119 | 5.110396513       | 106.3684418 | 7.6636689     | 0.235623326   |
+| value leaking         | 41.20151088 | 14.81638258       | 165.7313935 | 7.523979186   | 0.936814424   |
+| Heuristic Stable Load | 4.090672311 | 1.279531597       | 108.5294026 | 11.23777197   | 2.774276379   |
 
 
 
@@ -102,10 +110,11 @@ TODO:
 5. 2. 全局上删除，时间轴收缩可能不等比例， 平均ipc可能影响较大，局部删除，可能保存了两者等比例变化
 6.   partitioned rd具有全局和局部的性质
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU5MTQ3NTk3OSw5NjIxMDIyMDksMTU3Nj
-YxNzE4OSwtMTE3NTk0NjcyOCwxNjU2NDIwODY4LC02MjU3Nzc1
-NTIsMTE3Mzk3NTQ2MSwtMTc5MDg1NjYzOCwtMTQ3MzkwMjY5Mi
-wtMTQ1ODU5NjgzMSwtMTUyNTU3NDQ3NCwxMjQzNjUwMjc2LDE4
-NjMyNTk3OTMsLTQ4NzE4MzUzOSwtMTM2MjMxODAzLC04NzIxNj
-czLC0xOTEwOTIyMTgzLDIwOTY4MDA4MjNdfQ==
+eyJoaXN0b3J5IjpbODEyMjUxNDE3LDE1OTE0NzU5NzksOTYyMT
+AyMjA5LDE1NzY2MTcxODksLTExNzU5NDY3MjgsMTY1NjQyMDg2
+OCwtNjI1Nzc3NTUyLDExNzM5NzU0NjEsLTE3OTA4NTY2MzgsLT
+E0NzM5MDI2OTIsLTE0NTg1OTY4MzEsLTE1MjU1NzQ0NzQsMTI0
+MzY1MDI3NiwxODYzMjU5NzkzLC00ODcxODM1MzksLTEzNjIzMT
+gwMywtODcyMTY3MywtMTkxMDkyMjE4MywyMDk2ODAwODIzXX0=
+
 -->
