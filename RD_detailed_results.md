@@ -25,10 +25,7 @@ he Miss Error (geomean) | Cache Latency Error (geomean) | IPC Error (geomean) | 
 | 30th percentile total Instructions | 5.809361025                | 1.397870322                   | 5.649304913         | 109.5223588 | 11.41986073         |
 | 40th percentile total Instructions | 7.001040846                | 1.367277811                   | 10.33490331         | 117.0958631 | 13.68665289         |
 
-
-
-![输入图片说明](https://raw.githubusercontent.com/JakeFlasher/stackedit-app-data/refs/heads/master/img/Camouflage/rd_hist.png) 
-![输入图片说明](https://raw.githubusercontent.com/JakeFlasher/stackedit-app-data/refs/heads/master/img/Camouflage/rd_density.png)
+ ![输入图片说明](https://raw.githubusercontent.com/JakeFlasher/stackedit-app-data/refs/heads/master/img/combined.png)
 
 
 1. 由于所有的Dynamic Time Warping都基本位于0.18-0.35之间，与ground truth差距较小，差值主要跟instruction reduction有关，可以基本认为按照小RD删除指令对IPC Curve影响很小 
@@ -41,9 +38,9 @@ TODO:
 5. 2. 全局上删除，时间轴收缩可能不等比例， 平均ipc可能影响较大，局部删除，可能保存了两者等比例变化
 6.   partitioned rd具有全局和局部的性质
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYyNTc3NzU1MiwxMTczOTc1NDYxLC0xNz
-kwODU2NjM4LC0xNDczOTAyNjkyLC0xNDU4NTk2ODMxLC0xNTI1
-NTc0NDc0LDEyNDM2NTAyNzYsMTg2MzI1OTc5MywtNDg3MTgzNT
-M5LC0xMzYyMzE4MDMsLTg3MjE2NzMsLTE5MTA5MjIxODMsMjA5
-NjgwMDgyM119
+eyJoaXN0b3J5IjpbMTY1NjQyMDg2OCwtNjI1Nzc3NTUyLDExNz
+M5NzU0NjEsLTE3OTA4NTY2MzgsLTE0NzM5MDI2OTIsLTE0NTg1
+OTY4MzEsLTE1MjU1NzQ0NzQsMTI0MzY1MDI3NiwxODYzMjU5Nz
+kzLC00ODcxODM1MzksLTEzNjIzMTgwMywtODcyMTY3MywtMTkx
+MDkyMjE4MywyMDk2ODAwODIzXX0=
 -->
