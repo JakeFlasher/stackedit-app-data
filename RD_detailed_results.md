@@ -64,7 +64,7 @@ Let $\mathcal{I}=\left\{I_1, I_2, \ldots, I_N\right\}$ be the sequence of instru
 >2.   Let the memory footprint $F P\left(P_j\right)$ for the entire window:
 >$FP\left(P_j\right)=\left|\mathcal{M}_{P_j}\right|$
 >3. The Filtering Condition is:
- If $F P\left(P_j\right)>\theta_{\mathrm{FP}}$, then select all load and store instructions within $P_j$.
+ If $F P\left(P_j\right)>\theta_{\mathrm{FP}}$, then randomly sample enough  load and store instructions within $P_j$.
 
 # Results of Perturbance Decider
 | Methods               | IPC_Var     | Rowbuffer_Hitrate | Sim_Speedup | Instr_Reduced | IPC curve dtw |
@@ -146,11 +146,11 @@ Effective global stable load instructions can be characterized as a on simulatio
 > 2. 5M-interval, 100 intervals: ~600 matches, average ~20000 (remaining)
 	> 2.1 Total counts of tiny RD (< 128K) is fewer
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NDI2OTYwOTQsMTQ4OTUwNzk2NSwtNj
-E3NzY4NDY3LDE1OTE0NzU5NzksOTYyMTAyMjA5LDE1NzY2MTcx
-ODksLTExNzU5NDY3MjgsMTY1NjQyMDg2OCwtNjI1Nzc3NTUyLD
-ExNzM5NzU0NjEsLTE3OTA4NTY2MzgsLTE0NzM5MDI2OTIsLTE0
-NTg1OTY4MzEsLTE1MjU1NzQ0NzQsMTI0MzY1MDI3NiwxODYzMj
-U5NzkzLC00ODcxODM1MzksLTEzNjIzMTgwMywtODcyMTY3Mywt
-MTkxMDkyMjE4M119
+eyJoaXN0b3J5IjpbNDEyODE3NjMsMTQ4OTUwNzk2NSwtNjE3Nz
+Y4NDY3LDE1OTE0NzU5NzksOTYyMTAyMjA5LDE1NzY2MTcxODks
+LTExNzU5NDY3MjgsMTY1NjQyMDg2OCwtNjI1Nzc3NTUyLDExNz
+M5NzU0NjEsLTE3OTA4NTY2MzgsLTE0NzM5MDI2OTIsLTE0NTg1
+OTY4MzEsLTE1MjU1NzQ0NzQsMTI0MzY1MDI3NiwxODYzMjU5Nz
+kzLC00ODcxODM1MzksLTEzNjIzMTgwMywtODcyMTY3MywtMTkx
+MDkyMjE4M119
 -->
