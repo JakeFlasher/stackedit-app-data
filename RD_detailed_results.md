@@ -106,10 +106,10 @@ Let $\mathcal{I}=\left\{I_1, I_2, \ldots, I_N\right\}$ be the sequence of instru
 
 | Sorted RD Density Cut-off          | Cache Miss Error (geomean) | Cache Latency Error (geomean) | IPC Error (geomean) | Avg Speedup | Avg Instr Reduction |
 |------------------------------------|----------------------------|-------------------------------|---------------------|-------------|---------------------|
-| 10th percentile Instr| 2.158186267                | 0.711853104                   | 3.668325697         | 105.1641335 | 5.780579489         |
-| 20th percentile Instr | 3.31476966                 | 0.964130122                   | 6.826707658         | 106.1212914 | 9.390411534         |
-| 30th percentile Instr | 5.809361025                | 1.397870322                   | 5.649304913         | 109.5223588 | 11.41986073         |
-| 40th percentile Instr | 7.001040846                | 1.367277811                   | 10.33490331         | 117.0958631 | 13.68665289         |
+| 10th percentile  | 2.158186267                | 0.711853104                   | 3.668325697         | 105.1641335 | 5.780579489         |
+| 20th percentile  | 3.31476966                 | 0.964130122                   | 6.826707658         | 106.1212914 | 9.390411534         |
+| 30th percentile  | 5.809361025                | 1.397870322                   | 5.649304913         | 109.5223588 | 11.41986073         |
+| 40th percentile  | 7.001040846                | 1.367277811                   | 10.33490331         | 117.0958631 | 13.68665289         |
 
  ![输入图片说明](https://raw.githubusercontent.com/JakeFlasher/stackedit-app-data/refs/heads/master/img/combined.png)
 
@@ -146,7 +146,7 @@ Effective global stable load instructions can be characterized as a on simulatio
 > 2. 5M-interval, 100 intervals: ~600 matches, average ~20000 (remaining)
 	> 2.1 Total counts of tiny RD (< 128K) is fewer
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAxOTQzNjU4OCw3NTkxNTk5MTAsMTQ4OD
+eyJoaXN0b3J5IjpbMTU1MDU2NTU0Miw3NTkxNTk5MTAsMTQ4OD
 E4ODYxMCwxNDg5NTA3OTY1LC02MTc3Njg0NjcsMTU5MTQ3NTk3
 OSw5NjIxMDIyMDksMTU3NjYxNzE4OSwtMTE3NTk0NjcyOCwxNj
 U2NDIwODY4LC02MjU3Nzc1NTIsMTE3Mzk3NTQ2MSwtMTc5MDg1
