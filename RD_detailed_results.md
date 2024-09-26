@@ -28,13 +28,13 @@
 ![输入图片说明](https://raw.githubusercontent.com/JakeFlasher/stackedit-app-data/refs/heads/master/img/Camouflage/rd_density.png)
 
 
-1. 对I
+1. 由于s
 2. 对IPC和Cache影响小的指令probably是被删除后加速比提升也很小的指令 ：**加速比小，在仿真中latency和cycles数少，往往是data reuse (RD小)**
 3. 删除指令对IPC和Cache的影响probably是相互独立的：**删除某些指令，对Cache影响很小但是对IPC影响巨大**
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NTg1OTY4MzEsLTE1MjU1NzQ0NzQsMT
-I0MzY1MDI3NiwxODYzMjU5NzkzLC00ODcxODM1MzksLTEzNjIz
-MTgwMywtODcyMTY3MywtMTkxMDkyMjE4MywyMDk2ODAwODIzXX
-0=
+eyJoaXN0b3J5IjpbNDMwNjk2NDgxLC0xNDU4NTk2ODMxLC0xNT
+I1NTc0NDc0LDEyNDM2NTAyNzYsMTg2MzI1OTc5MywtNDg3MTgz
+NTM5LC0xMzYyMzE4MDMsLTg3MjE2NzMsLTE5MTA5MjIxODMsMj
+A5NjgwMDgyM119
 -->
