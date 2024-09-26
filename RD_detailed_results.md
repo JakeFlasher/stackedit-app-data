@@ -1,5 +1,5 @@
 
-| RD threshold (64x64x12) | Cache Miss Error (geomean) | Cache Latency Error (geomean) | IPC Error (geomean) | Avg Speedup | Avg Instr Reduction  |
+| Literal RD threshold (64x64x12) | Cache Miss Error (geomean) | Cache Latency Error (geomean) | IPC Error (geomean) | Avg Speedup | Avg Instr Reduction  |
 |-------------------------|----------------------------|-------------------------------|---------------------|-------------|----------------------|
 | 49152                   | 20.52766049                | 4.288978837                   | 8.119020266         | 112.643219  | 15.23203454          |
 | 24576                   | 11.46614849                | 2.779277441                   | 9.258425954         | 110.4203876 | 14.11482383          |
@@ -25,7 +25,7 @@
 3. 删除指令对IPC和Cache的影响probably是相互独立的：**删除某些指令，对Cache影响很小但是对IPC影响巨大**
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzM1Nzk4MTc4LC00ODcxODM1MzksLTEzNj
-IzMTgwMywtODcyMTY3MywtMTkxMDkyMjE4MywyMDk2ODAwODIz
-XX0=
+eyJoaXN0b3J5IjpbMTg2MzI1OTc5MywtNDg3MTgzNTM5LC0xMz
+YyMzE4MDMsLTg3MjE2NzMsLTE5MTA5MjIxODMsMjA5NjgwMDgy
+M119
 -->
