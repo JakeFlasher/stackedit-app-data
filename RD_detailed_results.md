@@ -116,11 +116,11 @@ Effective global stable load instructions can be characterized as a on simulatio
 4. 在利用RD绝对值进行筛除指令时，IPC Error和Instruction Reduction在所有情况下都有相当高的correlation (0.97~0.99)，哪怕在RD=48K，此时cache error已经很高的情形。
 
 TODO:
-4. rd范围和cache param关系（）
-5. 2. 全局上删除，时间轴收缩可能不等比例， 平均ipc可能影响较大，局部删除，可能保存了两者等比例变化
+4. rd范围和cache关系
+5. 全局上删除，时间轴收缩可能不等比例， 平均ipc可能影响较大，局部删除，可能保存了两者等比例变化
 6.   partitioned rd具有全局和局部的性质
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ0NjMwNzIxMiwxNTkxNDc1OTc5LDk2Mj
+eyJoaXN0b3J5IjpbLTU0NjI4MjUxOCwxNTkxNDc1OTc5LDk2Mj
 EwMjIwOSwxNTc2NjE3MTg5LC0xMTc1OTQ2NzI4LDE2NTY0MjA4
 NjgsLTYyNTc3NzU1MiwxMTczOTc1NDYxLC0xNzkwODU2NjM4LC
 0xNDczOTAyNjkyLC0xNDU4NTk2ODMxLC0xNTI1NTc0NDc0LDEy
