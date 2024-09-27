@@ -122,7 +122,7 @@ Let $\mathcal{I}=\left\{I_1, I_2, \ldots, I_N\right\}$ be the sequence of instru
 TODO:
 5. rd范围和cache关系
 6. 全局上删除，时间轴收缩可能不等比例， 平均ipc可能影响较大，局部删除，可能保存了两者等比例变化 
-
+提速比，精度损失，控制变量，先有好的结果（整体结果）
 
 ### Extending the concpets 
 # Global  Stable Store Instructions
@@ -146,11 +146,11 @@ Effective global stable load instructions can be characterized as a on simulatio
 > 2. 5M-interval, 100 intervals: ~600 matches, average ~20000 (remaining)
 	> 2.1 Total counts of tiny RD (< 128K) is fewer
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU1MDU2NTU0Miw3NTkxNTk5MTAsMTQ4OD
-E4ODYxMCwxNDg5NTA3OTY1LC02MTc3Njg0NjcsMTU5MTQ3NTk3
-OSw5NjIxMDIyMDksMTU3NjYxNzE4OSwtMTE3NTk0NjcyOCwxNj
-U2NDIwODY4LC02MjU3Nzc1NTIsMTE3Mzk3NTQ2MSwtMTc5MDg1
-NjYzOCwtMTQ3MzkwMjY5MiwtMTQ1ODU5NjgzMSwtMTUyNTU3ND
-Q3NCwxMjQzNjUwMjc2LDE4NjMyNTk3OTMsLTQ4NzE4MzUzOSwt
-MTM2MjMxODAzXX0=
+eyJoaXN0b3J5IjpbLTI5ODkzOTkyNSwxNTUwNTY1NTQyLDc1OT
+E1OTkxMCwxNDg4MTg4NjEwLDE0ODk1MDc5NjUsLTYxNzc2ODQ2
+NywxNTkxNDc1OTc5LDk2MjEwMjIwOSwxNTc2NjE3MTg5LC0xMT
+c1OTQ2NzI4LDE2NTY0MjA4NjgsLTYyNTc3NzU1MiwxMTczOTc1
+NDYxLC0xNzkwODU2NjM4LC0xNDczOTAyNjkyLC0xNDU4NTk2OD
+MxLC0xNTI1NTc0NDc0LDEyNDM2NTAyNzYsMTg2MzI1OTc5Mywt
+NDg3MTgzNTM5XX0=
 -->
