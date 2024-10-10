@@ -289,6 +289,59 @@ While CSV files are simple and widely used, they are not the most efficient for 
     
     -   Implement a custom `Dataset` class that reads data from your chosen format.
     -   Use PyTorch's `DataLoader` to handle batching, shuffling, and parallel data loading.
+    - 
+import torch
+from torch.utils.data import Dataset, DataLoader
+import pandas as pd
+
+class ChampsimDataset(Dataset):
+    def __init__(self, csv_file):
+        # Read the CSV file using pandas
+        self.data = pd.read_csv(csv_file)
+        # Convert columns to tensors
+        self.instruction_indices = torch.tensor(self.data['instruction_index'].values, dtype=torch.long)
+        self.ip = torch.tensor(self.data['ip'].values, dtype=torch.long)
+        self.address = torch.tensor(self.data['address'].values, dtype=torch.long)
+        self.opcode = torch.tensor(self.data['opcode'].values, dtype=torch.long)
+        self.reuse_distance = torch.tensor(self.data['reuse_distance'].values, dtype=torch.long)
+        self.ipc = torch.tensor(self.data['ipc'].values, dtype=torch.float32)
+
+    def __len__(self):
+        return len(self.data)
+
+    def __getitem__(self, idx):
+        return {
+            'instruction_index': self.instruction_indices[idx],
+            'ip': self.ip[idx],
+            'address': self.address[idx],
+            'opcode': self.opcode[idx],
+            'reuse_distance': self.reuse_distance[idx],
+            'ipc': self.ipc[idx],
+        }
+
+# Usage example
+if __name__ == '__main__':
+    csv_file = 'your_csv_output_file.csv'
+    dataset = ChampsimDataset(csv_file)
+    dataloader = DataLoader(dataset, batch_size=1024, shuffle=True, num_workers=4)
+
+    for batch in dataloader:
+        # Access batch data
+        instruction_indices = batch['instruction_index']
+        ip = batch['ip']
+        address = batch['address']
+        opcode = batch['opcode']
+        reuse_distance = batch['reuse_distance']
+        ipc = batch['ipc']
+
+        # Your training code here
+        # For example:
+        # outputs = model(ip, address, opcode, reuse_distance)
+        # loss = criterion(outputs, ipc)
+        # optimizer.zero_grad()
+        # loss.backward()
+        # optimizer.step()
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMyMjEyMTk5MiwtMTA5ODU2NDU2OF19
+eyJoaXN0b3J5IjpbLTkxNTE2MzYxOSwxMzIyMTIxOTkyLC0xMD
+k4NTY0NTY4XX0=
 -->
