@@ -18,7 +18,7 @@ Below is the re-organized code I've made some minor adaptations to make it work.
 
 Thanks for your help. However, the problem is: the original simulation result file is quite porous/sparse, e.g. if I simunate 1000 instructions, the result file consists of only 500 instructions that has an IPC value. If I simulate 10000 instructions, the result file contains of only 3000 instructions with IPC. Thus, simply using the previous may not be the appropriate approach since there may be a big gap of long sequence of blank IPC values. Thus I need you to use advanced numerical methods and mathemathics to deal with it. Also, the updated code doesn't correctly count the number of missing values of IPC, it will always output 0 missing values. Please fix it.
 
-An
+Another part is after data collection, what kind of deep learning or LLMs finetuning formula in pytorch is  
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg5NDM4MzkyMSwxMTYyMTgzODEwXX0=
+eyJoaXN0b3J5IjpbLTQ4MDI5ODk1OSwxMTYyMTgzODEwXX0=
 -->
