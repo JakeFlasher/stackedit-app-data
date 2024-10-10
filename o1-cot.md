@@ -320,11 +320,11 @@ class ChampsimDataset(Dataset):
         }
 
 # Usage example
+```python
 if __name__ == '__main__':
     csv_file = 'your_csv_output_file.csv'
     dataset = ChampsimDataset(csv_file)
     dataloader = DataLoader(dataset, batch_size=1024, shuffle=True, num_workers=4)
-
     for batch in dataloader:
         # Access batch data
         instruction_indices = batch['instruction_index']
@@ -341,7 +341,8 @@ if __name__ == '__main__':
         # optimizer.zero_grad()
         # loss.backward()
         # optimizer.step()
+ ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkxNTE2MzYxOSwxMzIyMTIxOTkyLC0xMD
+eyJoaXN0b3J5IjpbMTU5OTA0Mzg3NSwxMzIyMTIxOTkyLC0xMD
 k4NTY0NTY4XX0=
 -->
