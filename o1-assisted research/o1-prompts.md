@@ -31,8 +31,8 @@ Another part is after data collection, what kind of deep learning or LLMs finetu
 9,23061994127848,140731609045208,2,18446744073709551615,2
 10,23061994127853,140731609045216,2,18446744073709551615,2
 11,23061994127858,140731609045224,2,18446744073709551615,2
-12,23061994127863,140731609045224,3,0,2" where I need to train a model that can help me identify those instruction that contribute minimal to the overall cumulative IPC changes. It has been discovered from previous research that the instructions that contribute little to IPC changes also contribute little to cache miss/latency and thus simply removing them will cause very little loss to overall performa
+12,23061994127863,140731609045224,3,0,2" where I need to train a model that can help me identify those instruction that contribute minimal to the overall cumulative IPC changes. It has been discovered from previous research that the instructions that contribute little to IPC changes also contribute little to cache miss/latency and thus simply removing them will cause very little loss to overall performance metrics while speeding up simulations. Currently, one  approach I'm thinking of is to use supervised learning, i.e. we train a model to predict the ipc values based on all the other columns (features) and we partition the whole trace based on simpoints and we select 1 or 2 simpoints that have the highest/low weights and train our model on it. After
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzE1NTUzMDYzLC00ODAyOTg5NTksMTE2Mj
-E4MzgxMF19
+eyJoaXN0b3J5IjpbLTExNzg4NDA2NDYsLTQ4MDI5ODk1OSwxMT
+YyMTgzODEwXX0=
 -->
