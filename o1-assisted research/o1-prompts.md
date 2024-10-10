@@ -18,8 +18,21 @@ Below is the re-organized code I've made some minor adaptations to make it work.
 
 Thanks for your help. However, the problem is: the original simulation result file is quite porous/sparse, e.g. if I simunate 1000 instructions, the result file consists of only 500 instructions that has an IPC value. If I simulate 10000 instructions, the result file contains of only 3000 instructions with IPC. Thus, simply using the previous may not be the appropriate approach since there may be a big gap of long sequence of blank IPC values. Thus I need you to use advanced numerical methods and mathemathics to deal with it. Also, the updated code doesn't correctly count the number of missing values of IPC, it will always output 0 missing values. Please fix it.
 
-Another part is after data collection, what kind of deep learning or LLMs finetuning formula in pytorch is appropriate in this scenario? For example, given a set of dataset in csv like the following: "" 
+Another part is after data collection, what kind of deep learning or LLMs finetuning formula in pytorch is appropriate in this scenario? For example, given a set of dataset in csv like the following: "instruction_index,ip,address,opcode,reuse_distance,ipc
+0,94238970422064,0,3,18446744073709551615,0.0003471
+1,23061994127824,140731609045376,2,18446744073709551615,0.0003471
+2,23061994127826,140731609045368,2,18446744073709551615,0.003375
+3,23061994127827,140731609045368,0,0,0.003375
+4,23061994127830,140731609045360,2,18446744073709551615,0.003375
+5,23061994127831,140731609045360,0,0,4
+6,23061994127834,140731609045360,0,0,4
+7,23061994127841,140731609045360,0,0,4
+8,23061994127843,140731609045200,2,18446744073709551615,4
+9,23061994127848,140731609045208,2,18446744073709551615,2
+10,23061994127853,140731609045216,2,18446744073709551615,2
+11,23061994127858,140731609045224,2,18446744073709551615,2
+12,23061994127863,140731609045224,3,0,2" where I need to train a model that can help me identify those instruction that contribute minimal to the overall cumulative IPC changes. It has been discovered from previous research that the instructions that contribute little to IPC changes also contribute little to cache miss/latency and thus simply removing them will cause very little loss to overall performa
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY0OTMxNTA2MiwtNDgwMjk4OTU5LDExNj
-IxODM4MTBdfQ==
+eyJoaXN0b3J5IjpbNzE1NTUzMDYzLC00ODAyOTg5NTksMTE2Mj
+E4MzgxMF19
 -->
