@@ -290,6 +290,7 @@ While CSV files are simple and widely used, they are not the most efficient for 
     -   Implement a custom `Dataset` class that reads data from your chosen format.
     -   Use PyTorch's `DataLoader` to handle batching, shuffling, and parallel data loading.
     - 
+```python
 import torch
 from torch.utils.data import Dataset, DataLoader
 import pandas as pd
@@ -320,7 +321,7 @@ class ChampsimDataset(Dataset):
         }
 
 # Usage example
-```python
+
 if __name__ == '__main__':
     csv_file = 'your_csv_output_file.csv'
     dataset = ChampsimDataset(csv_file)
@@ -343,6 +344,6 @@ if __name__ == '__main__':
         # optimizer.step()
  ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU5OTA0Mzg3NSwxMzIyMTIxOTkyLC0xMD
-k4NTY0NTY4XX0=
+eyJoaXN0b3J5IjpbLTE0NDg0NTQxMzcsMTMyMjEyMTk5MiwtMT
+A5ODU2NDU2OF19
 -->
