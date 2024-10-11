@@ -590,7 +590,7 @@ for epoch in range(num_epochs):
 -   **Data Alignment**: Aligning instruction features with IPC measurements is crucial.
 -   **Model Selection**: Start simple and progressively move to more complex models as needed.
 -   **Validation**: Always validate the impact of removing instructions to ensure performance metrics are maintained.
--   **Continuous Improvement**: Use insights gained to refine your approach iteratively.
+-   **Continuous Improvement**: Use insights gained to refine your approach iteratively. 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTA0MjM1MzUwXX0=
+eyJoaXN0b3J5IjpbMzk1NDY3Njc4XX0=
 -->
