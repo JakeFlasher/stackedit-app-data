@@ -1,0 +1,4 @@
+below is a modified version of champsim Intel Pin-based tracer and a python script that does the conversion from partial registers into full registers in the existing traces. Also, I have appended the libraries that interacts with the champsim trace format for your reference, as long as the champsim trace format in trace-instruciton.h. Can you give me a in-depth elaboration and explanation as why such conversion might be beneficial? Also, since there're cases when the pre-compiled champsim traces are in *.gz format, thus I want you to modify the python script as to automatically identify the extension of the traces and use proper decompress methods, while maintaining the output compressed format in xz. Please think carefully before you answer the first question and make sure you've considered all the scenarios with great care. Also, provided a detailed python code for 2nd task.
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbNjg3MzM2NDU2XX0=
+-->
