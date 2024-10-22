@@ -1,5 +1,5 @@
 **Reviewer's Comments:**
-
+[这里输入链接描述](https://stackoverflow.com/questions/6155951/whats-the-difference-between-deadlock-and-livelock)
 **Summary:**
 
 You propose a novel method to reduce the length of processor simulation traces by identifying and removing redundant instructions that have minimal impact on key performance metrics such as IPC (Instructions Per Cycle), cache misses, and latencies. Instead of relying on trace synthesis for workload characterization—which is time-consuming and requires careful analysis per application—you focus on analyzing the redundancy within the application trace itself. By deleting instructions that contribute little to the overall performance, you aim to maintain the integrity of simulation results while significantly reducing simulation time.
@@ -118,5 +118,5 @@ Your proposed method offers a promising direction for reducing simulation trace 
 
 I encourage you to incorporate this feedback and look forward to seeing the refined version of your work.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAyNDI1MjE5Ml19
+eyJoaXN0b3J5IjpbMjA3OTc0MzQ3MCwxMDI0MjUyMTkyXX0=
 -->
