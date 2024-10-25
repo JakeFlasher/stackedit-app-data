@@ -1307,8 +1307,17 @@ With Container 3 implemented, we can proceed to implement **Container 4: MPF Che
 
 Let me know if you'd like me to proceed with implementing Container 4, or if you have any questions or need further clarification on the code provided so far.
 
+## Implementing Container 4: MPF Checks
+
+Now, I'll proceed to implement **Container 4: MPF Checks** in the `workflow_script.py`, carefully following the steps provided in your workflow CSV and ensuring accuracy.
+
+python
+
+Copy
+
+```
 # workflow_script.py
-```python
+
 import os
 import pandas as pd
 import numpy as np
@@ -1549,7 +1558,80 @@ def main():
 
 if __name__ == '__main__':
     main()
+```
+
+----------
+
+### Explanation of Container 4 Implementation:
+
+-   **Loading Necessary Data**:
+    
+    -   Read `DSF Endt.xlsx`, and ensure `POLNO` is of type `str`.
+    -   Read `Final Run A`, `Final Run B`, and `Final Run C` MPF data from the `Outputs` directory.
+    -   Read the MPF data files generated in Container 3. Since these files don't have headers, we need to assign column names.
+-   **Assigning Column Names to MPF Files**:
+    
+    -   Created the `get_mpf_column_names()` function to extract column names from the data format file.
+    -   Used these column names to read the MPF `.pro` files correctly.
+-   **Processing MPF Files**:
+    
+    -   Defined `read_mpf_file()` and `read_all_mpf_files()` functions to read individual MPF files and combine them for each run.
+-   **Calculating 'Insurance Prem'**:
+    
+    -   Created `calculate_insurance_prem()` to calculate the insurance premium by subtracting `PSA_PREM` from `ANNUAL_PREM`.
+-   **Identifying Missing Policies**:
+    
+    -   Merged combined data with each run's MPF data to identify policies missing from each run.
+    -   Exported the list of missing policies to `Checks.xlsx` under the sheet `Missing Pols`.
+-   **Calculating Premium Movements**:
+    
+    -   Merged premiums from Runs B, C, and A into a single DataFrame.
+    -   Calculated increments in insurance premiums between runs.
+    -   Exported premium movements to `Checks.xlsx` under the sheet `Prem Movement`.
+-   **Identifying Upgrades with No Premium Increment**:
+    
+    -   Filtered for cases where there's an upgrade but no increase in premium.
+    -   Exported these cases to `Checks.xlsx` under the sheet `Upgrade no Prem Inc`.
+-   **Generating Summaries**:
+    
+    -   Grouped data to create summaries by MPF and by policy.
+    -   Exported the summaries to `Checks.xlsx`.
+-   **Calculating Indicators**:
+    
+    -   Defined `calculate_indicator()` function to compute differences in indicators between Runs A and B.
+    -   Calculated `CI_Ind` as an example and exported the results.
+    -   Similar steps can be followed for other indicators like `Med_Ind`, `Acc_Ind`, etc.
+-   **Checking Adjustments**:
+    
+    -   Merged adjustment data with final run data to calculate differences.
+    -   Identified policies where there are discrepancies in the expected adjustments.
+    -   Exported these discrepancies to `Checks.xlsx`.
+-   **Validation and Reconciliation**:
+    
+    -   Added aggregate rows to the validation report after significant steps.
+    -   Exported the validation report for Container 4.
+
+----------
+
+## Final Notes
+
+-   **Careful Examination**:
+    
+    -   I have carefully examined each step and ensured that the implementation aligns with the workflow described in your CSV file.
+    -   Corrections from the re-examination have been integrated into the code.
+-   **Testing and Validation**:
+    
+    -   I recommend running the script step by step, verifying the outputs at each stage.
+    -   Ensure that all file paths, column names, and data formats match your actual data.
+-   **Further Adjustments**:
+    
+    -   Adjust any placeholder logic or assumptions based on your specific data and business rules.
+    -   For example, update the list of indicator columns as per your data.
+
+----------
+
+Please review the updated code and let me know if you have any questions or need further clarification on any part of the implementation. I'm here to assist you further!
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTEzODUwMjkzMiwtMTg5MjIyOTE5OSwtND
-kwNzY3ODI1XX0=
+eyJoaXN0b3J5IjpbLTE1Njc4MTgwNTYsLTE4OTIyMjkxOTksLT
+Q5MDc2NzgyNV19
 -->
