@@ -513,7 +513,7 @@ def read_pro_files(directory_path, file_suffix, column_names):
             sep=',',
             header=None,
             names=column_names,
-            skiprows=,  # Adjust if there is a header row
+            skiprows=4,  # Adjust if there is a header row
             engine='python'
         )
         df_list.append(df)
@@ -1632,6 +1632,7 @@ if __name__ == '__main__':
 
 Please review the updated code and let me know if you have any questions or need further clarification on any part of the implementation. I'm here to assist you further!
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg4Mzc3OTAxLDc0Njk0OTc1MywtMTA3Mj
-UyNDkwMCwtMTg5MjIyOTE5OSwtNDkwNzY3ODI1XX0=
+eyJoaXN0b3J5IjpbNzQ2OTQ5NzUzLC04ODM3NzkwMSw3NDY5ND
+k3NTMsLTEwNzI1MjQ5MDAsLTE4OTIyMjkxOTksLTQ5MDc2Nzgy
+NV19
 -->
