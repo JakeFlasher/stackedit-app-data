@@ -524,6 +524,7 @@ def read_pro_files(directory_path, file_suffix, column_names):
 
 def process_mpf_data(mpf_df, mpf_codes_df):
     """
+    process_mpf_data(ifbeg_df, mpf_codes_df)
     Processes the MPF DataFrame by filtering out unused MPF codes and SPCODE == 51, and mapping MPF Name.
     """
     # Extract the first 6 characters of the 'FileName' to create 'MPF Name'
@@ -1632,7 +1633,7 @@ if __name__ == '__main__':
 
 Please review the updated code and let me know if you have any questions or need further clarification on any part of the implementation. I'm here to assist you further!
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzQ2OTQ5NzUzLC04ODM3NzkwMSw3NDY5ND
-k3NTMsLTEwNzI1MjQ5MDAsLTE4OTIyMjkxOTksLTQ5MDc2Nzgy
-NV19
+eyJoaXN0b3J5IjpbLTU0ODY3MjQ1MSw3NDY5NDk3NTMsLTg4Mz
+c3OTAxLDc0Njk0OTc1MywtMTA3MjUyNDkwMCwtMTg5MjIyOTE5
+OSwtNDkwNzY3ODI1XX0=
 -->
