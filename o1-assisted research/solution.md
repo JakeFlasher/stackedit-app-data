@@ -1151,7 +1151,18 @@ run_a_adj_cols = [col for col in run_a_adj_df.columns if col not in final_run_c_
 
     # Output validation table
     data_rec.output_val_table('Outputs/Validation Report Container 3.csv')
+    
+def sanitize_filename(name):
+    return re.sub(r'[<>:"/\\|?*]', '_', name)  # Replace invalid characters with '_'
 
+def write_mpf_files(final_run_df, run_dir):
+    grouped = final_run_df.groupby('MPF Name')
+    for name, group in grouped:
+        safe_name = sanitize_filename(name)
+        file_path = os.path.join(run_dir, f"{safe_name}.pro")
+        group.to_csv(file_path, index=False, header=False)
+        logging.info(f"Wrote MPF file for {safe_name} with {len(group)} records to {file_path}.")
+        
 def main():
     # Call Container 1 functions (already implemented)
     # ...
@@ -1296,6 +1307,6 @@ With Container 3 implemented, we can proceed to implement **Container 4: MPF Che
 
 Let me know if you'd like me to proceed with implementing Container 4, or if you have any questions or need further clarification on the code provided so far.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAzMTAzMzc0NSwtMTg5MjIyOTE5OSwtND
-kwNzY3ODI1XX0=
+eyJoaXN0b3J5IjpbLTExODQzNzE0MjAsLTE4OTIyMjkxOTksLT
+Q5MDc2NzgyNV19
 -->
