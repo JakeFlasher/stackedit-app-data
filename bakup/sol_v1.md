@@ -1145,8 +1145,309 @@ In this response, we've carefully implemented Container 2 of your workflow in Py
 - In subsequent interactions, we'll continue with Container 3 and 4, maintaining the same level of care and attention.
 
 - Our goal is to build a comprehensive and high-quality solution that meets your requirements fully.
+**Introduction**
 
-Together, we're building a robust and efficient workflow implementation.
+Thank you for your patience and for emphasizing the importance of proceeding with great care and attention. I'll continue by implementing **Container 3: MPF Generation Setting** in the `workflow_script.py`. We'll ensure that every detail is meticulously considered and that the code aligns perfectly with your workflow requirements and data formats.
+
+---
+
+**Updating `workflow_script.py`**
+
+We'll add a new function `container_3()` to implement the steps from 10.65 to 10.76.
+
+```python
+# workflow_script.py
+
+# ... (existing imports and code)
+
+def container_3():
+    """
+    Container 3: MPF Generation Setting
+    Steps 10.65 to 10.76
+    """
+    logging.info("Starting Container 3: MPF Generation Setting")
+
+    # Step 10.65: Import necessary data
+    # - Filtered IFBEG from 10.10
+    # - Non-Neg Endt from 10.64
+    # - Run C Adj from 10.22
+    # - Run A Adj from 10.44
+
+    filtered_ifbeg_file = 'Outputs/Filtered IFBEG.xlsx'
+    non_neg_endt_file = 'Outputs/Non-Neg Endt.xlsx'
+    mpf_adj_values_file = 'Outputs/MPF Adj Values.xlsx'
+
+    filtered_ifbeg_df = pd.read_excel(filtered_ifbeg_file)
+    logging.info("Filtered IFBEG.xlsx loaded.")
+
+    non_neg_endt_df = pd.read_excel(non_neg_endt_file, sheet_name='Final Endt List')
+    logging.info("Non-Neg Endt 'Final Endt List' loaded.")
+
+    run_c_adj_df = pd.read_excel(mpf_adj_values_file, sheet_name='Run C Adj')
+    logging.info("Run C Adj data loaded from MPF Adj Values.xlsx.")
+
+    run_a_adj_df = pd.read_excel(mpf_adj_values_file, sheet_name='Run A Adj')
+    logging.info("Run A Adj data loaded from MPF Adj Values.xlsx.")
+
+    # Ensure 'POL_NUMBER' is string for merging
+    filtered_ifbeg_df['POL_NUMBER'] = filtered_ifbeg_df['POL_NUMBER'].astype(str)
+    non_neg_endt_df['POL_NUMBER'] = non_neg_endt_df['POL_NUMBER'].astype(str)
+    run_c_adj_df['POL_NUMBER'] = run_c_adj_df['POL_NUMBER'].astype(str)
+    run_a_adj_df['POL_NUMBER'] = run_a_adj_df['POL_NUMBER'].astype(str)
+
+    # Step 10.66: Map Filtered IFBEG and Final Endt List by POL_NUMBER to produce Final Run B data
+    final_run_b_df = pd.merge(
+        filtered_ifbeg_df,
+        non_neg_endt_df[['POL_NUMBER']],
+        on='POL_NUMBER',
+        how='inner'
+    )
+    logging.info(f"Final Run B data prepared with {len(final_run_b_df)} records.")
+
+    # Step 10.67: Output Final Run B.xlsx
+    final_run_b_file = 'Outputs/Final Run B.xlsx'
+    final_run_b_df.to_excel(final_run_b_file, sheet_name='MPF Data', index=False)
+    logging.info("Final Run B data saved to Final Run B.xlsx.")
+
+    # Step 10.68: Map Final Run B and Run C Adj by POL_NUMBER to produce Final Run C data
+    final_run_c_df = pd.merge(
+        final_run_b_df,
+        run_c_adj_df[['POL_NUMBER', 'Run C PSA Prem', 'PSA Endt Ind']],
+        on='POL_NUMBER',
+        how='left'
+    )
+    logging.info("Mapped Final Run B data with Run C Adj data.")
+
+    # Update 'PSA_PREM' with 'Run C PSA Prem' where 'PSA Endt Ind' == 1
+    final_run_c_df['PSA_PREM'] = np.where(
+        final_run_c_df['PSA Endt Ind'] == 1,
+        final_run_c_df['Run C PSA Prem'],
+        final_run_c_df['PSA_PREM']
+    )
+    logging.info("'PSA_PREM' updated in Final Run C data where 'PSA Endt Ind' == 1.")
+
+    # Drop 'Run C PSA Prem' and 'PSA Endt Ind' columns as they have served their purpose
+    final_run_c_df.drop(['Run C PSA Prem', 'PSA Endt Ind'], axis=1, inplace=True)
+
+    # Step 10.69: Output Final Run C.xlsx
+    final_run_c_file = 'Outputs/Final Run C.xlsx'
+    final_run_c_df.to_excel(final_run_c_file, sheet_name='MPF Data', index=False)
+    logging.info("Final Run C data saved to Final Run C.xlsx.")
+
+    # Step 10.70: Map Final Run C and Run A Adj by POL_NUMBER to produce Final Run A data
+    final_run_a_df = pd.merge(
+        final_run_c_df,
+        run_a_adj_df,
+        on=['MPF Name', 'POL_NUMBER'],
+        how='left',
+        suffixes=('', '_RunAAdj')
+    )
+    logging.info("Mapped Final Run C data with Run A Adj data to prepare Final Run A.")
+
+    # Handle updates from Run A Adj data
+    # For example, update 'ANNUAL_PREM', 'SUM_ASSURED', etc., if they exist in Run A Adj
+    
+    # List of columns to update from Run A Adj
+    columns_to_update = ['ANNUAL_PREM', 'SUM_ASSURED']  # Update this list based on actual columns
+
+    for col in columns_to_update:
+        if f"{col}_RunAAdj" in final_run_a_df.columns:
+            final_run_a_df[col] = final_run_a_df[f"{col}_RunAAdj"].combine_first(final_run_a_df[col])
+            final_run_a_df.drop(f"{col}_RunAAdj", axis=1, inplace=True)
+            logging.info(f"Updated '{col}' in Final Run A data using Run A Adj data.")
+
+    # Drop any extra columns from Run A Adj that are not needed
+    cols_to_drop = [col for col in final_run_a_df.columns if col.endswith('_RunAAdj')]
+    final_run_a_df.drop(cols_to_drop, axis=1, inplace=True)
+
+    # Step 10.71: Output Final Run A.xlsx
+    final_run_a_file = 'Outputs/Final Run A.xlsx'
+    final_run_a_df.to_excel(final_run_a_file, sheet_name='MPF Data', index=False)
+    logging.info("Final Run A data saved to Final Run A.xlsx.")
+
+    # Step 10.72: Group the result from 10.66 by MPF Name
+    mpf_names = final_run_b_df['MPF Name'].unique()
+    logging.info(f"Found {len(mpf_names)} unique 'MPF Name's for MPF generation.")
+
+    # Step 10.73: Create folders for Run A, Run B, and Run C
+    run_folders = {
+        'Run A': 'Outputs/Run A',
+        'Run B': 'Outputs/Run B',
+        'Run C': 'Outputs/Run C'
+    }
+
+    for run_name, folder_path in run_folders.items():
+        if not os.path.exists(folder_path):
+            os.makedirs(folder_path)
+            logging.info(f"Created directory '{folder_path}' for {run_name}.")
+
+    # Steps 10.74 to 10.76: Store data by MPF Name in respective run folders
+
+    def store_mpfs_by_mpf_name(df, run_folder):
+        """
+        Stores dataframes split by 'MPF Name' into .pro files in the specified folder.
+        """
+        for mpf_name, group_df in df.groupby('MPF Name'):
+            # Remove any invalid characters from mpf_name for file naming
+            safe_mpf_name = re.sub(r'[\\/*?:"<>|]', '', mpf_name)
+            file_name = os.path.join(run_folder, f"{safe_mpf_name}.pro")
+            with open(file_name, 'w') as file:
+                # Handle writing the data in .pro format
+                # We need to write the header lines, then the '!' line with column names, then the data
+                # Assuming that the first few header lines can be replicated from original .pro files
+
+                # Write header lines (customize these as necessary)
+                file.write("AFNB MPF#\n")
+                file.write(f"Output_Format, {safe_mpf_name}#\n")
+                file.write(f"NUMLINES, {len(group_df)}#\n")
+
+                # Write variable types line if needed
+                # file.write("VARIABLE_TYPES, ...#\n")  # Add variable types as in the original format
+
+                # Write the '!' line with column names
+                column_names_line = ', '.join(group_df.columns)
+                file.write('!' + column_names_line + '\n')
+
+                # Write the data rows
+                group_df.to_csv(file, sep=',', index=False, header=False)
+            logging.info(f"MPF file saved: {file_name} with {len(group_df)} records.")
+
+    # Store data for Run B
+    run_b_folder = run_folders['Run B']
+    store_mpfs_by_mpf_name(final_run_b_df, run_b_folder)
+
+    # Store data for Run C
+    run_c_folder = run_folders['Run C']
+    store_mpfs_by_mpf_name(final_run_c_df, run_c_folder)
+
+    # Store data for Run A
+    run_a_folder = run_folders['Run A']
+    store_mpfs_by_mpf_name(final_run_a_df, run_a_folder)
+
+    logging.info("Container 3 completed.")
+
+def main():
+    # Create Outputs directory if it doesn't exist
+    if not os.path.exists('Outputs'):
+        os.makedirs('Outputs')
+    
+    # Ensure previous containers have been executed
+    # container_1()
+    # container_2()
+
+    # Execute Container 3
+    container_3()
+
+    # Continue with other containers
+    # container_4()
+
+if __name__ == "__main__":
+    main()
+```
+
+---
+
+**Explanation:**
+
+- **Step 10.65:** We load the necessary data files:
+
+  - `Filtered IFBEG.xlsx` (from step 10.10)
+  - `Non-Neg Endt.xlsx` (from step 10.64)
+    - We specifically load the sheet `'Final Endt List'` as per the workflow.
+  - `MPF Adj Values.xlsx` (from steps 10.22 and 10.44), loading sheets `'Run C Adj'` and `'Run A Adj'`.
+
+- **Step 10.66:** We merge `filtered_ifbeg_df` and `non_neg_endt_df` on `'POL_NUMBER'` to create `final_run_b_df`.
+
+- **Step 10.67:** We output `Final Run B.xlsx`.
+
+- **Step 10.68:** We merge `final_run_b_df` with `run_c_adj_df` to create `final_run_c_df`.
+
+  - We update `'PSA_PREM'` with `'Run C PSA Prem'` where `'PSA Endt Ind' == 1`.
+  - We drop the `'Run C PSA Prem'` and `'PSA Endt Ind'` columns after the update.
+
+- **Step 10.69:** We output `Final Run C.xlsx`.
+
+- **Step 10.70:** We merge `final_run_c_df` with `run_a_adj_df` to create `final_run_a_df`.
+
+  - Since `run_a_adj_df` may have updated values for certain columns, we update those columns in `final_run_a_df`.
+
+  - We update the list `columns_to_update` with the actual columns that may be updated based on `Run A Adj` data.
+
+  - We handle columns with suffix `'_RunAAdj'` after merging.
+
+- **Step 10.71:** We output `Final Run A.xlsx`.
+
+- **Steps 10.72 to 10.73:** We identify unique `'MPF Name'` values and create directories for each run.
+
+- **Steps 10.74 to 10.76:** We store data by `'MPF Name'` into `.pro` files in the respective run folders.
+
+  - The `store_mpfs_by_mpf_name` function handles splitting the data and writing it in the `.pro` file format.
+
+  - We write the expected header lines, the `'!'` line with column names, and then the data rows.
+
+  - We ensure that filenames are safe by removing invalid characters from `'MPF Name'`.
+
+---
+
+**Additional Considerations:**
+
+- **Handling the `.pro` File Format:**
+
+  - We need to ensure that the `.pro` files are written with the correct format, including header lines and the exact structure expected by downstream processes.
+
+  - Verify if it's necessary to include variable types or any other specific headers in the files.
+
+- **Updating Columns in Final Run A:**
+
+  - The `columns_to_update` list should include all columns that may have updated values from `'Run A Adj'`. This needs to be adjusted based on your actual data.
+
+- **Error Handling and Data Validation:**
+
+  - You may add try-except blocks around file operations and data processing steps to handle potential errors gracefully.
+
+  - Validate that the data being written to each run's `.pro` files is correct and complete.
+
+- **Logging:**
+
+  - Logging statements track the progress and help identify any issues during execution.
+
+  - Ensure that the logging level is set appropriately (e.g., `logging.INFO` during normal operation, `logging.DEBUG` for more detailed output if needed).
+
+---
+
+**Testing the Code:**
+
+- Before running the code, ensure that:
+
+  - All file paths are correct and files exist in the expected directories.
+
+  - Column names used in the code match exactly with those in your data.
+
+- Run the script step by step, perhaps executing one container at a time, to monitor its behavior and outputs.
+
+- Review the generated `.pro` files to confirm that they adhere to the expected format.
+
+---
+
+**Next Steps:**
+
+- Proceed to **Container 4: MPF Checks** in the next interaction, where we'll implement the remaining steps and finalize the workflow.
+
+- Ensure that any feedback or changes needed from previous steps are incorporated.
+
+---
+
+**Conclusion**
+
+By carefully implementing Container 3, we've advanced the workflow significantly. We've paid close attention to:
+
+- Correct merging and updating of DataFrames.
+
+- Writing data to files in the required formats.
+
+- Handling potential issues with file names and data consistency.
+
+Please review the code above, verify the correct column names and data paths, and let me know if you have any questions or need further adjustments. Together, we'll proceed to complete the remaining steps with the same level of care and attention.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ0ODY3MDc2MSwtOTgwMTY3MjQ5XX0=
+eyJoaXN0b3J5IjpbMTA4MDYyMzkzMywtOTgwMTY3MjQ5XX0=
 -->
