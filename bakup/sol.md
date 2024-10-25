@@ -92,7 +92,7 @@ project/
 ├── IFNB_NED/
 │   ├── U_XXXX.pro
 ├── Tables/
-│   ├── Daily Sales File.xlsx
+│   ├── Daily Sales File query 0724.xlsx
 ├── Outputs/
 │   ├── Filtered IFBEG.xlsx
 │   ├── Filtered IFEND.xlsx
@@ -1634,5 +1634,5 @@ if __name__ == '__main__':
 
 Please review the updated code and let me know if you have any questions or need further clarification on any part of the implementation. I'm here to assist you further!
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg5NTA4NDQyNywtODgzNzc5MDFdfQ==
+eyJoaXN0b3J5IjpbLTE3NjI3Nzc5MzAsLTg4Mzc3OTAxXX0=
 -->
