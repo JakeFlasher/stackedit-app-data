@@ -624,7 +624,7 @@ if __name__ == "__main__":
 1. **Reading `.pro` Files:**
 
    - The `read_pro_file` function reads a `.pro` file.
-   - It skips any header lines until it finds a line starting with `'!'`, which contains the column names.
+   - It skips any header lines until it finds a line starting with the column names.
    - It then reads the data lines and ensures the DataFrame matches the number of columns.
 
 2. **Processing MPF Data:**
@@ -1810,6 +1810,6 @@ By carefully implementing Container 4, we've completed all the steps in your wor
 
 Through meticulous attention and careful implementation, we've developed a comprehensive solution that fulfills the requirements of your MPF data reconciliation workflow. Please review the code, verify its alignment with your data and needs, and provide any feedback. I'm committed to assisting you further to ensure the success of your project.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjkxMTY3Mjc2LDExMjg0NzUwNjAsLTk4MD
+eyJoaXN0b3J5IjpbODY2MTU2ODY3LDExMjg0NzUwNjAsLTk4MD
 E2NzI0OV19
 -->
