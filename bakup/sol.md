@@ -131,7 +131,7 @@ def read_pro_file(file_path, column_names):
         sep=',',
         header=None,
         names=column_names,
-        skiprows=1,  # Adjust based on actual file structure
+        skiprows=4,  # Adjust based on actual file structure
         engine='python'
     )
     return df
@@ -1634,5 +1634,5 @@ if __name__ == '__main__':
 
 Please review the updated code and let me know if you have any questions or need further clarification on any part of the implementation. I'm here to assist you further!
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3NjI3Nzc5MzAsLTg4Mzc3OTAxXX0=
+eyJoaXN0b3J5IjpbMTcwNDY2MTQzMywtODgzNzc5MDFdfQ==
 -->
