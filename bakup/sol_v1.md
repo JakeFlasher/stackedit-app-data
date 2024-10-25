@@ -137,30 +137,7 @@ grouped_sales_df.to_excel('Outputs/DSF Endt.xlsx', index=False)
 
 - Read the '.pro' files from `'IFNB_BEG/U_XXXX.pro'`.
 
-- **Parsing the '.pro' Files:**
 
-  ```python
-  def read_pro_file(file_path):
-      with open(file_path, 'r') as file:
-          data_started = False
-          data_lines = []
-          header_line = ''
-          for line in file:
-              if line.startswith('!'):
-                  # Header line with column names
-                  header_line = line.strip()
-                  data_started = True
-                  continue
-              if data_started:
-                  data_lines.append(line.strip())
-      # Extract column names from header_line
-      column_names = header_line.lstrip('!').split(', ')
-      # Create a DataFrame from data_lines
-      from io import StringIO
-      data_str = '\n'.join(data_lines)
-      df = pd.read_csv(StringIO(data_str), header=None, names=column_names)
-      return df
-  ```
 
 - Read the IFBEG data:
 
@@ -419,9 +396,339 @@ By carefully reviewing and updating your implementation to align with the actual
 
 If you have any specific questions or need further assistance with particular steps, feel free to ask!
 
+ **Introduction**
+
+Thank you for your detailed explanation and for providing the necessary data formats and workflow steps. Based on your request, I'll provide a comprehensive Python implementation of the MPF data reconciliation workflow, carefully aligning each step with the actual data and filling in any missing details. We'll proceed step by step, ensuring accuracy and clarity in the code.
+
+We'll start by setting up the project structure and environment, then move on to implement each container in the workflow. We'll use modular coding practices for maintainability and clarity.
+
 ---
 
-**Note:** Since we're working with sensitive financial data, always ensure data security and compliance with any relevant regulations.
+**Project Structure**
+
+First, let's define the project directory structure:
+
+```
+project/
+│
+├── Inputs/
+│   ├── MPF Codes.xlsx
+│   ├── IFNB_BEG/
+│   │   └── U_XXXX.pro
+│   ├── IFNB_END/
+│   │   └── U_XXXX.pro
+│   └── Daily Sales File query 0724.xlsx
+│
+├── Outputs/
+│   └── [Generated output files will be saved here]
+│
+├── common_functions.py
+├── workflow_script.py
+```
+
+---
+
+**1. `common_functions.py`**
+
+This module will contain common utility functions that will be used throughout the workflow, such as reading `.pro` files and handling data parsing.
+
+```python
+# common_functions.py
+
+import pandas as pd
+import numpy as np
+import os
+import re
+from datetime import datetime
+import logging
+
+# Set up logging
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+
+def read_pro_file(file_path):
+    """
+    Reads a .pro file and returns a pandas DataFrame.
+    Handles the special format where the column header starts with '!' and subsequent data rows.
+    """
+    with open(file_path, 'r') as file:
+        lines = file.readlines()
+
+    data_started = False
+    data_lines = []
+    column_names = []
+
+    for line in lines:
+        line = line.strip()
+        if line.startswith('!'):
+            # Column names line
+            column_names = line[1:].split(', ')
+            data_started = True
+        elif data_started:
+            data_lines.append(line)
+        else:
+            # Ignore any header lines before the column names
+            continue
+
+    # After gathering data lines, create a DataFrame
+    # Since data rows might have extra '*' columns due to the leading '!' in the header, we'll handle that.
+
+    # Create a StringIO object to simulate a file for pandas
+    from io import StringIO
+
+    # Join data_lines into a single string
+    data_str = '\n'.join(data_lines)
+
+    # Read data into DataFrame
+    df = pd.read_csv(StringIO(data_str), sep=',', header=None, names=column_names, engine='python')
+
+    # Handle any leading '*' columns if necessary
+    # Check if the number of columns in df matches the length of column_names
+    if df.shape[1] > len(column_names):
+        # Drop extra columns
+        df = df.iloc[:, :len(column_names)]
+
+    return df
+
+def process_mpf_data(df, mpf_codes_df):
+    """
+    Processes the MPF DataFrame by creating 'MPF Name' and filtering based on MPF Codes and SPCODE.
+    """
+    # Create 'MPF Name' from the first 6 characters of 'PROD_CD'
+    df['MPF Name'] = df['PROD_CD'].astype(str).str[:6]
+
+    # Exclude MPF codes listed in mpf_codes_df
+    mpf_codes_list = mpf_codes_df['MPF Name'].astype(str).tolist()
+    df = df[~df['MPF Name'].isin(mpf_codes_list)]
+
+    # Filter for SPCODE not equal to 51
+    df = df[df['SPCODE'] != 51]
+
+    return df
+
+def read_mpf_codes(file_path):
+    """
+    Reads the MPF Codes Excel file and returns a DataFrame.
+    """
+    mpf_codes_df = pd.read_excel(file_path)
+    return mpf_codes_df
+
+def read_daily_sales(file_path):
+    """
+    Reads the Daily Sales File and returns a DataFrame after selecting necessary columns and cleaning.
+    """
+    sales_df = pd.read_excel(file_path)
+
+    # Select required columns
+    sales_df = sales_df[['PERIOD_DATE', 'POLNO', 'APE', 'PRODUCT_NAME_LDESC', 'NB_ENDT_IND']]
+
+    # Clean data types
+    sales_df['PERIOD_DATE'] = pd.to_datetime(sales_df['PERIOD_DATE'], format='%Y%m%d', errors='coerce')
+    sales_df['POLNO'] = sales_df['POLNO'].astype(str)
+    sales_df['APE'] = pd.to_numeric(sales_df['APE'], errors='coerce')
+
+    return sales_df
+
+def save_to_excel(df, file_path, sheet_name='Sheet1'):
+    """
+    Saves the DataFrame to an Excel file.
+    """
+    df.to_excel(file_path, sheet_name=sheet_name, index=False)
+    logging.info(f"Data saved to {file_path} (Sheet: {sheet_name})")
+
+def merge_dataframes(left_df, right_df, left_key, right_key, how='inner'):
+    """
+    Merges two DataFrames on specified keys.
+    """
+    merged_df = pd.merge(left_df, right_df, left_on=left_key, right_on=right_key, how=how)
+    return merged_df
+```
+
+---
+
+**2. `workflow_script.py`**
+
+This is the main script that will execute the workflow step by step.
+
+```python
+# workflow_script.py
+
+import pandas as pd
+import numpy as np
+import os
+import logging
+from common_functions import read_pro_file, process_mpf_data, read_mpf_codes, read_daily_sales, save_to_excel, merge_dataframes
+
+# Set up logging
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+
+def container_1():
+    """
+    Container 1: Filter MPF for Endorsement Policies
+    """
+    logging.info("Starting Container 1: Filter MPF for Endorsement Policies")
+
+    # Step 10.1: Import Daily Sales File and MPF Codes
+    sales_file = 'Inputs/Daily Sales File query 0724.xlsx'
+    mpf_codes_file = 'Inputs/MPF Codes.xlsx'
+
+    sales_df = read_daily_sales(sales_file)
+    mpf_codes_df = read_mpf_codes(mpf_codes_file)
+
+    logging.info("Daily Sales File and MPF Codes imported successfully.")
+
+    # Step 10.2: Select and Clean Columns (already done in read_daily_sales)
+
+    # Step 10.3: Filter Data
+    # Apply filter criteria - adjust according to actual requirements
+    filtered_sales_df = sales_df[
+        (sales_df['NB_ENDT_IND'] == 'NB') &
+        (sales_df['APE'] != 0)
+    ]
+    logging.info(f"Filtered Daily Sales Data: {len(filtered_sales_df)} records after filtering.")
+
+    # Step 10.4: Group by POLNO, PRODUCT_NAME_LDESC, and Sum APE
+    grouped_sales_df = filtered_sales_df.groupby(['POLNO', 'PRODUCT_NAME_LDESC'], as_index=False)['APE'].sum()
+
+    # Step 10.5: Output DSF Endt.xlsx
+    output_file = 'Outputs/DSF Endt.xlsx'
+    save_to_excel(grouped_sales_df, output_file)
+    logging.info("Grouped Sales Data saved to DSF Endt.xlsx")
+
+    # Step 10.6: Import IFBEG MPFs
+    ifbeg_file = 'Inputs/IFNB_BEG/U_XXXX.pro'
+    ifbeg_df = read_pro_file(ifbeg_file)
+    logging.info(f"IFBEG MPF data imported from {ifbeg_file}")
+
+    # Steps 10.7 to 10.9: Process IFBEG Data
+    ifbeg_df = process_mpf_data(ifbeg_df, mpf_codes_df)
+    logging.info("IFBEG MPF data processed")
+
+    # Map with POLNO from grouped_sales_df
+    ifbeg_df['POL_NUMBER'] = ifbeg_df['POL_NUMBER'].astype(str)
+    ifbeg_filtered_df = ifbeg_df[ifbeg_df['POL_NUMBER'].isin(grouped_sales_df['POLNO'])]
+    logging.info(f"Filtered IFBEG MPF data: {len(ifbeg_filtered_df)} records after mapping with POLNO")
+
+    # Step 10.10: Output Filtered IFBEG
+    output_file_ifbeg = 'Outputs/Filtered IFBEG.xlsx'
+    save_to_excel(ifbeg_filtered_df, output_file_ifbeg)
+    logging.info("Filtered IFBEG data saved")
+
+    # Steps 10.11 to 10.15: Repeat for IFEND
+    ifend_file = 'Inputs/IFNB_END/U_XXXX.pro'
+    ifend_df = read_pro_file(ifend_file)
+    logging.info(f"IFEND MPF data imported from {ifend_file}")
+
+    ifend_df = process_mpf_data(ifend_df, mpf_codes_df)
+    logging.info("IFEND MPF data processed")
+
+    ifend_df['POL_NUMBER'] = ifend_df['POL_NUMBER'].astype(str)
+    ifend_filtered_df = ifend_df[ifend_df['POL_NUMBER'].isin(grouped_sales_df['POLNO'])]
+    logging.info(f"Filtered IFEND MPF data: {len(ifend_filtered_df)} records after mapping with POLNO")
+
+    output_file_ifend = 'Outputs/Filtered IFEND.xlsx'
+    save_to_excel(ifend_filtered_df, output_file_ifend)
+    logging.info("Filtered IFEND data saved")
+
+    logging.info("Container 1 completed.")
+
+def main():
+    # Create Outputs directory if it doesn't exist
+    if not os.path.exists('Outputs'):
+        os.makedirs('Outputs')
+
+    # Execute Container 1
+    container_1()
+
+    # Continue with other containers
+    # container_2()
+    # container_3()
+    # container_4()
+
+if __name__ == "__main__":
+    main()
+```
+
+---
+
+**Explanation and Detailed Steps:**
+
+1. **Reading `.pro` Files:**
+
+   - The `read_pro_file` function reads a `.pro` file.
+   - It skips any header lines until it finds a line starting with `'!'`, which contains the column names.
+   - It then reads the data lines and ensures the DataFrame matches the number of columns.
+
+2. **Processing MPF Data:**
+
+   - The `process_mpf_data` function creates `'MPF Name'` by taking the first 6 characters of the `'PROD_CD'` column.
+   - It filters out MPFs listed in `'MPF Codes.xlsx'`.
+   - Filters out records where `'SPCODE'` equals 51.
+
+3. **Reading MPF Codes:**
+
+   - The `read_mpf_codes` function reads the MPF Codes Excel file.
+
+4. **Reading and Cleaning Daily Sales File:**
+
+   - The `read_daily_sales` function reads the Daily Sales File and selects necessary columns.
+   - It also converts date columns and numeric columns to the appropriate data types.
+
+5. **Container 1 Execution:**
+
+   - Imports necessary files.
+   - Filters the sales data based on specified criteria.
+   - Groups the sales data and outputs `'DSF Endt.xlsx'`.
+   - Reads and processes both IFBEG and IFEND MPF data.
+   - Outputs the filtered IFBEG and IFEND data.
+
+---
+
+**Next Steps:**
+
+Given the message length limitations, we'll proceed to implement **Container 2** in the next interaction. This will include:
+
+- **Implementing the steps from 10.16 to 10.49.**
+- **Handling the Medical Upgrade List, Run C Adjustment, Run A Adjustment, and Removing Negative Endorsements.**
+
+---
+
+**Additional Notes:**
+
+- **Error Handling:**
+
+  - In the code, we should add error handling to manage any exceptions, such as file not found errors or data type conversion errors.
+
+- **Data Validation:**
+
+  - Implement data validation checks after key steps to ensure data integrity.
+
+- **Logging:**
+
+  - Logging at each significant step helps track the progress and diagnose issues.
+
+- **Ensure Column Names Match:**
+
+  - Verify that the column names used in the code match exactly with those in your actual data files.
+
+---
+
+**Conclusion**
+
+In this implementation, we've carefully followed the steps outlined in your workflow CSV, adapting the code based on the actual data provided. We addressed the issue with the '!' character in the `.pro` files by reading them appropriately and ensuring that the data aligns correctly.
+
+Please review the code for Container 1 and let me know if you'd like me to proceed with Container 2 and subsequent steps, or if you have any questions or need clarifications on any part of the code provided.
+
+---
+
+**Continuation Plan**
+
+As per your request, we'll not attempt to output the entire project in one response. In subsequent interactions, we'll:
+
+- Implement Container 2 step by step, ensuring accuracy and completeness.
+- Continue with Containers 3 and 4, following the same careful approach.
+- Incorporate any feedback or adjustments needed based on your review.
+
+Together, we'll build a high-quality, robust solution that meets your requirements.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk4MDE2NzI0OV19
+eyJoaXN0b3J5IjpbMjAyNTgwNTE0NCwtOTgwMTY3MjQ5XX0=
 -->
