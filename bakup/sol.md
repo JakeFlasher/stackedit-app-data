@@ -86,17 +86,13 @@ Organize your project directories as follows:
 project/
 │
 ├── Inputs/
-│   ├── IFNB_BEG.pro
-│   ├── IFEND.pro
 │   └── MPF Codes.xlsx
-│
 ├── IFNB_BEG/
+│   ├── U_XXXX.pro
 ├── IFNB_NED/
-│   ├── IFEND.pro
-
+│   ├── U_XXXX.pro
 ├── Tables/
 │   ├── Daily Sales File.xlsx
-├── Inputs/
 ├── Outputs/
 │   ├── Filtered IFBEG.xlsx
 │   ├── Filtered IFEND.xlsx
@@ -1638,5 +1634,5 @@ if __name__ == '__main__':
 
 Please review the updated code and let me know if you have any questions or need further clarification on any part of the implementation. I'm here to assist you further!
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTk3Mjk3MjU4LC04ODM3NzkwMV19
+eyJoaXN0b3J5IjpbMTg5NTA4NDQyNywtODgzNzc5MDFdfQ==
 -->
