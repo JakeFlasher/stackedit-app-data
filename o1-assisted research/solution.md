@@ -1306,7 +1306,250 @@ With Container 3 implemented, we can proceed to implement **Container 4: MPF Che
 ---
 
 Let me know if you'd like me to proceed with implementing Container 4, or if you have any questions or need further clarification on the code provided so far.
+
+# workflow_script.py
+
+import os
+import pandas as pd
+import numpy as np
+import logging
+from common_functions import read_pro_files, process_mpf_data, export_df_to_excel, merge_dataframes, add_calculated_column
+from common_data_reconciliation import Data_Reconciliation
+
+def container_4_mpf_checks():
+    # Initialize data reconciliation object
+    data_rec = Data_Reconciliation()
+    
+    # Load necessary data
+    # DSF Endt.xlsx
+    dsf_endt_df = pd.read_excel('Outputs/DSF Endt.xlsx')
+    dsf_endt_df['POLNO'] = dsf_endt_df['POLNO'].astype(str)
+
+    # Final Run B, Run C, Run A MPF data
+    final_run_a_df = pd.read_excel('Outputs/Final Run A.xlsx', sheet_name='MPF Data')
+    final_run_b_df = pd.read_excel('Outputs/Final Run B.xlsx', sheet_name='MPF Data')
+    final_run_c_df = pd.read_excel('Outputs/Final Run C.xlsx', sheet_name='MPF Data')
+
+    # Step 10.78: Select columns and group DSF data by POLNO
+    dsf_grouped_df = dsf_endt_df.groupby('POLNO', as_index=False).sum()
+
+    # Step 10.79: Read MPF files and process field names
+    # Since the Final Run MPF files are stored as .pro files without headers, we need to read them correctly
+    # We'll define a function to read MPF files and assign field names from the data format
+
+    # Assume 'Inputs/file.pro.data_format.pro.data_format' contains field names
+    def get_mpf_column_names():
+        # Read the data format file and extract column names
+        with open('Inputs/file.pro.data_format.pro.data_format', 'r') as f:
+            for line in f:
+                if line.startswith('VARIABLE_TYPES'):
+                    # Skip variable types line
+                    continue
+                elif line.strip().endswith('#'):
+                    # Extract column names
+                    columns_line = next(f).strip()
+                    column_names = columns_line.split(', ')
+                    return column_names
+        return []
+
+    mpf_column_names = get_mpf_column_names()
+
+    # Read MPF files for Run A, Run B, Run C
+    def read_mpf_file(file_path):
+        df = pd.read_csv(file_path, header=None, names=mpf_column_names, sep=',', engine='python')
+        return df
+
+    # For this step, read MPF files from the directories
+    def read_all_mpf_files(run_dir):
+        mpf_files = [os.path.join(run_dir, f) for f in os.listdir(run_dir) if f.endswith('.pro')]
+        df_list = []
+        for file in mpf_files:
+            df = read_mpf_file(file)
+            df_list.append(df)
+            logging.info(f"Read MPF file {file} with {len(df)} records.")
+        combined_df = pd.concat(df_list, ignore_index=True)
+        return combined_df
+
+    # Read MPF data for each run
+    run_a_dir = 'Outputs/MPF Files/Run A'
+    run_b_dir = 'Outputs/MPF Files/Run B'
+    run_c_dir = 'Outputs/MPF Files/Run C'
+
+    run_a_mpf_df = read_all_mpf_files(run_a_dir)
+    run_b_mpf_df = read_all_mpf_files(run_b_dir)
+    run_c_mpf_df = read_all_mpf_files(run_c_dir)
+
+    # Step 10.80: Map DSF grouped data with Filtered IFBEG and Non-Neg Endt List
+    # Assuming 'Filtered IFBEG.xlsx' has 'POLNO' column
+    filtered_ifbeg_df = pd.read_excel('Outputs/Filtered IFBEG.xlsx')
+    filtered_ifbeg_df['POLNO'] = filtered_ifbeg_df['POLNO'].astype(str)
+
+    non_neg_endt_list_df = pd.read_excel('Outputs/Non-Neg Endt.xlsx', sheet_name='Non-Neg Endt List')
+    non_neg_endt_list_df['POLNO'] = non_neg_endt_list_df['POLNO'].astype(str)
+
+    # Map dataframes by 'POLNO'
+    combined_df = dsf_grouped_df.merge(filtered_ifbeg_df[['POLNO']], on='POLNO', how='inner')
+    combined_df = combined_df.merge(non_neg_endt_list_df[['POLNO']], on='POLNO', how='inner')
+
+    # Step 10.81: Add 'Insurance Prem' to Run B, C, A MPF data
+    def calculate_insurance_prem(df):
+        # Assuming 'PSA_PREM' and 'ANNUAL_PREM' are columns in the MPF data
+        df['Insurance_Prem'] = df['ANNUAL_PREM'] - df['PSA_PREM']
+        return df
+
+    run_b_mpf_df = calculate_insurance_prem(run_b_mpf_df)
+    run_c_mpf_df = calculate_insurance_prem(run_c_mpf_df)
+    run_a_mpf_df = calculate_insurance_prem(run_a_mpf_df)
+
+    # Step 10.82 to 10.84: Map policies in each Run and identify missing policies
+    # Combine MPs data with combined_df
+    def identify_missing_policies(run_df, run_name):
+        run_df['POLNO'] = run_df['POLNO'].astype(str)
+        merged_df = combined_df.merge(run_df[['POLNO']], on='POLNO', how='left', indicator=True)
+        missing_policies_df = merged_df[merged_df['_merge'] == 'left_only']
+        missing_policies_df['Missing From'] = run_name
+        return missing_policies_df
+
+    missing_from_run_b = identify_missing_policies(run_b_mpf_df, 'Run B')
+    missing_from_run_c = identify_missing_policies(run_c_mpf_df, 'Run C')
+    missing_from_run_a = identify_missing_policies(run_a_mpf_df, 'Run A')
+
+    # Step 10.85: Combine missing policies
+    missing_policies = pd.concat([missing_from_run_b, missing_from_run_c, missing_from_run_a], ignore_index=True)
+    export_df_to_excel(missing_policies, 'Outputs/Checks.xlsx', sheet_name='Missing Pols')
+
+    # Step 10.86: Create variables for differences in premiums
+    # Assuming we have 'ANNUAL_PREM' and 'Insurance_Prem' in the MPF data
+    # Map and compare the premiums between Runs
+
+    # For the purpose of the example, let's create a merged DataFrame of policies with their premiums in Runs B, C, A
+    premiums_df = run_b_mpf_df[['POLNO', 'ANNUAL_PREM', 'Insurance_Prem']].rename(columns={
+        'ANNUAL_PREM': 'Run B Total Prem',
+        'Insurance_Prem': 'Run B Ins Prem'
+    })
+
+    premiums_df = premiums_df.merge(
+        run_c_mpf_df[['POLNO', 'ANNUAL_PREM', 'Insurance_Prem']].rename(columns={
+            'ANNUAL_PREM': 'Run C Total Prem',
+            'Insurance_Prem': 'Run C Ins Prem'
+        }),
+        on='POLNO',
+        how='left'
+    )
+
+    premiums_df = premiums_df.merge(
+        run_a_mpf_df[['POLNO', 'ANNUAL_PREM', 'Insurance_Prem']].rename(columns={
+            'ANNUAL_PREM': 'Run A Total Prem',
+            'Insurance_Prem': 'Run A Ins Prem'
+        }),
+        on='POLNO',
+        how='left'
+    )
+
+    # Calculate increments
+    premiums_df['Run C Ins Prem Inc'] = premiums_df['Run C Ins Prem'] - premiums_df['Run B Ins Prem']
+    premiums_df['Run A Ins Prem Inc'] = premiums_df['Run A Ins Prem'] - premiums_df['Run B Ins Prem']
+
+    # Step 10.87: Extract premium movements
+    premium_movement = premiums_df[['POLNO', 'Run B Ins Prem', 'Run C Ins Prem', 'Run A Ins Prem', 'Run C Ins Prem Inc', 'Run A Ins Prem Inc']]
+    export_df_to_excel(premium_movement, 'Outputs/Checks.xlsx', sheet_name='Prem Movement')
+
+    # Step 10.88: Filter for upgrades with no premium increment
+    upgrades_no_prem_inc = premium_movement[
+        (premium_movement['Run A Ins Prem Inc'] == 0) & (premium_movement['POLNO'].isin(run_a_mpf_df['POLNO']))  # Adjust condition as per actual logic
+    ]
+    export_df_to_excel(upgrades_no_prem_inc, 'Outputs/Checks.xlsx', sheet_name='Upgrade no Prem Inc')
+
+    # Step 10.89: Group data for summary by MPF
+    summary_by_mpf = premiums_df.groupby('POLNO').agg({
+        'Run B Total Prem': 'sum',
+        'Run C Total Prem': 'sum',
+        'Run A Total Prem': 'sum'
+    }).reset_index()
+    export_df_to_excel(summary_by_mpf, 'Outputs/Checks.xlsx', sheet_name='Summary by MPF')
+
+    # Step 10.90: Extract summaries
+    export_df_to_excel(summary_by_mpf, 'Outputs/Checks.xlsx', sheet_name='Summary by Policy')
+
+    # Steps 10.91 to 10.103: Perform endorsements checks for various indicators
+    # We'll proceed to calculate indicators such as 'CI_Ind', 'Med_Ind', etc.
+
+    # Assuming that the necessary columns are present in the MPF data
+    def calculate_indicator(run_a_df, run_b_df, indicator_columns, indicator_name):
+        # Merge Run A and Run B data on 'POLNO' and relevant columns
+        merged_df = run_a_df[['POLNO'] + indicator_columns].merge(
+            run_b_df[['POLNO'] + indicator_columns],
+            on='POLNO',
+            how='outer',
+            suffixes=('_RunA', '_RunB')
+        ).fillna(0)
+
+        # Calculate the difference to get the indicator
+        for col in indicator_columns:
+            merged_df[indicator_name] = merged_df[f'{col}_RunA'] - merged_df[f'{col}_RunB']
+
+        # Filter for positive indicators
+        indicator_df = merged_df[merged_df[indicator_name] > 0]
+        return indicator_df[['POLNO', indicator_name]]
+
+    # Example for 'CI_Ind' (Critical Illness Indicator)
+    ci_indicator_columns = ['CI_BEN']  # Replace with actual column names representing CI benefit
+    ci_indicator_df = calculate_indicator(run_a_mpf_df, run_b_mpf_df, ci_indicator_columns, 'CI_Ind')
+    export_df_to_excel(ci_indicator_df, 'Outputs/Checks.xlsx', sheet_name='CI Endorsement')
+
+    # Repeat for other indicators: Med_Ind, Acc_Ind, Payor_Ind, Basic_Ind, PSA_Ind, Booster_Ind
+    # ...
+
+    # Compile overall summary
+    overall_summary = premiums_df.copy()
+    # Include indicators in overall summary
+    overall_summary = overall_summary.merge(ci_indicator_df, on='POLNO', how='left')
+    # Merge other indicators
+    # ...
+
+    export_df_to_excel(overall_summary, 'Outputs/Checks.xlsx', sheet_name='Overall Summary')
+
+    # Step 10.103: Check Run C and Run A Adjustment Values
+    # Map Run C and Run A adjustments with final runs and compute differences
+    # For brevity, only Run C is shown here
+
+    run_c_adj_df['POLNO'] = run_c_adj_df['POLNO'].astype(str)
+    final_run_c_df['POLNO'] = final_run_c_df['POLNO'].astype(str)
+
+    run_c_check_df = run_c_adj_df.merge(final_run_c_df, on='POLNO', suffixes=('_Adj', '_Final'))
+    run_c_check_df['Diff in Values'] = run_c_check_df['PSA_PREM_Final'] - run_c_check_df['Run C PSA Prem']
+    run_c_check_df = run_c_check_df[run_c_check_df['Diff in Values'] != 0]
+    export_df_to_excel(run_c_check_df, 'Outputs/Checks.xlsx', sheet_name='Run C Adj')
+
+    # Similarly for Run A
+    run_a_adj_df['POLNO'] = run_a_adj_df['POLNO'].astype(str)
+    final_run_a_df['POLNO'] = final_run_a_df['POLNO'].astype(str)
+
+    run_a_check_df = run_a_adj_df.merge(final_run_a_df, on='POLNO', suffixes=('_Adj', '_Final'))
+    run_a_check_df['Diff in Values'] = run_a_check_df['ANNUAL_PREM_Final'] - run_a_check_df['ANNUAL_PREM_Adj']
+    run_a_check_df = run_a_check_df[run_a_check_df['Diff in Values'] != 0]
+    export_df_to_excel(run_a_check_df, 'Outputs/Checks.xlsx', sheet_name='Run A Adj')
+
+    # Output validation table for Container 4
+    data_rec.add_row_agg(premiums_df, stage='Container 4 Checks', description='MPF Checks Data')
+    data_rec.output_val_table('Outputs/Validation Report Container 4.csv')
+
+def main():
+    # Call Container 1 functions (already implemented)
+    # container_1_processing()
+
+    # Call Container 2 functions
+    # container_2_mpf_adjustment()
+
+    # Call Container 3 functions
+    # container_3_mpf_generation()
+
+    # Call Container 4 functions
+    container_4_mpf_checks()
+
+if __name__ == '__main__':
+    main()
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExODQzNzE0MjAsLTE4OTIyMjkxOTksLT
-Q5MDc2NzgyNV19
+eyJoaXN0b3J5IjpbMTQyNjc5NTMzMCwtMTg5MjIyOTE5OSwtND
+kwNzY3ODI1XX0=
 -->
