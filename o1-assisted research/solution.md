@@ -1085,14 +1085,25 @@ def container_3_mpf_generation():
     columns_to_exclude = ['MPF Name', 'POL_NUMBER', 'PSA_PREM', 'POL_NUMBER_RunC']
     run_a_adj_cols = [col for col in run_a_adj_cols if col not in columns_to_exclude]
 
-    final_run_a_df = merge_dataframes(final_run_c_df, run_a_adj_df[['POL_NUMBER'] + run_a_adj_cols], on_fields='POL_NUMBER', how='left')
+# Exclude overlapping columns to prevent duplication
+run_a_adj_cols = [col for col in run_a_adj_df.columns if col not in final_run_c_df.columns or col == 'POLNO']
 
-    # Apply necessary adjustments from Run A Adjustment
-    # For example, updating premiums or indicators based on 'Med Upgrade Ind', 'Med Booster Ind', etc.
-    # Assuming we have columns 'ANNUAL_PREM' and 'ANNUAL_PREM_ADJ' in Run A Adj data
+	final_run_a_df = merge_dataframes(
+    final_run_c_df,
+    run_a_adj_df[run_a_adj_cols],
+    on_fields='POLNO',
+    how='left'
+)
 
-    if 'ANNUAL_PREM_ADJ' in final_run_a_df.columns:
-        final_run_a_df['ANNUAL_PREM'] = final_run_a_df['ANNUAL_PREM_ADJ']
+	# Update columns in final_run_a_df with values from run_a_adj_df where applicable
+	# For example, if 'ANNUAL_PREM' needs to be updated:
+	final_run_a_df['ANNUAL_PREM'] = np.where(
+    final_run_a_df['ANNUAL_PREM_y'].notnull(),
+    final_run_a_df['ANNUAL_PREM_y'],
+    final_run_a_df['ANNUAL_PREM_x']
+)
+	# Drop the extra columns after update
+	final_run_a_df.drop(columns=['ANNUAL_PREM_x', 'ANNUAL_PREM_y'], inplace=True)
 
     # Apply other adjustments as per your business logic
     # ...
@@ -1285,5 +1296,6 @@ With Container 3 implemented, we can proceed to implement **Container 4: MPF Che
 
 Let me know if you'd like me to proceed with implementing Container 4, or if you have any questions or need further clarification on the code provided so far.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4OTIyMjkxOTksLTQ5MDc2NzgyNV19
+eyJoaXN0b3J5IjpbMTAzMTAzMzc0NSwtMTg5MjIyOTE5OSwtND
+kwNzY3ODI1XX0=
 -->
