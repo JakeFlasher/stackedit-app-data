@@ -1315,7 +1315,7 @@ python
 
 Copy
 
-```
+```python
 # workflow_script.py
 
 import os
@@ -1632,6 +1632,6 @@ if __name__ == '__main__':
 
 Please review the updated code and let me know if you have any questions or need further clarification on any part of the implementation. I'm here to assist you further!
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1Njc4MTgwNTYsLTE4OTIyMjkxOTksLT
+eyJoaXN0b3J5IjpbLTEwNzI1MjQ5MDAsLTE4OTIyMjkxOTksLT
 Q5MDc2NzgyNV19
 -->
