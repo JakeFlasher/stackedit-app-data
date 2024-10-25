@@ -444,49 +444,18 @@ import logging
 
 # Set up logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
-
-def read_pro_file(file_path):
+def read_pro_file(file_path, column_names):
     """
     Reads a .pro file and returns a pandas DataFrame.
-    Handles the special format where the column header starts with '!' and subsequent data rows.
     """
-    with open(file_path, 'r') as file:
-        lines = file.readlines()
-
-    data_started = False
-    data_lines = []
-    column_names = []
-
-    for line in lines:
-        line = line.strip()
-        if line.startswith('!'):
-            # Column names line
-            column_names = line[1:].split(', ')
-            data_started = True
-        elif data_started:
-            data_lines.append(line)
-        else:
-            # Ignore any header lines before the column names
-            continue
-
-    # After gathering data lines, create a DataFrame
-    # Since data rows might have extra '*' columns due to the leading '!' in the header, we'll handle that.
-
-    # Create a StringIO object to simulate a file for pandas
-    from io import StringIO
-
-    # Join data_lines into a single string
-    data_str = '\n'.join(data_lines)
-
-    # Read data into DataFrame
-    df = pd.read_csv(StringIO(data_str), sep=',', header=None, names=column_names, engine='python')
-
-    # Handle any leading '*' columns if necessary
-    # Check if the number of columns in df matches the length of column_names
-    if df.shape[1] > len(column_names):
-        # Drop extra columns
-        df = df.iloc[:, :len(column_names)]
-
+    df = pd.read_csv(
+        file_path,
+        sep=',',
+        header=None,
+        names=column_names,
+        skiprows=1,  # Adjust based on actual file structure
+        engine='python'
+    )
     return df
 
 def process_mpf_data(df, mpf_codes_df):
@@ -1841,5 +1810,6 @@ By carefully implementing Container 4, we've completed all the steps in your wor
 
 Through meticulous attention and careful implementation, we've developed a comprehensive solution that fulfills the requirements of your MPF data reconciliation workflow. Please review the code, verify its alignment with your data and needs, and provide any feedback. I'm committed to assisting you further to ensure the success of your project.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTEyODQ3NTA2MCwtOTgwMTY3MjQ5XX0=
+eyJoaXN0b3J5IjpbMjkxMTY3Mjc2LDExMjg0NzUwNjAsLTk4MD
+E2NzI0OV19
 -->
