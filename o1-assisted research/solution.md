@@ -526,11 +526,12 @@ def process_mpf_data(mpf_df, mpf_codes_df):
     """
     Processes the MPF DataFrame by filtering out unused MPF codes and SPCODE == 51, and mapping MPF Name.
     """
-    # Extract the first 6 characters of the 'File Name' to create 'MPF Name'
-    mpf_df['MPF Name'] = mpf_df['File_Name'].str[:6]
+    # Extract the first 6 characters of the 'FileName' to create 'MPF Name'
+    mpf_df['MPF Name'] = mpf_df['FileName'].astype(str).str[:6]
 
     # Exclude MPF codes from the Not Used MPF list
-    mpf_df = mpf_df[~mpf_df['MPF Name'].isin(mpf_codes_df['MPF Name'])]
+    mpf_codes_list = mpf_codes_df['MPF Name'].astype(str).tolist()
+    mpf_df = mpf_df[~mpf_df['MPF Name'].isin(mpf_codes_list)]
 
     # Filter out where SPCODE == 51
     mpf_df = mpf_df[mpf_df['SPCODE'] != 51]
@@ -1278,5 +1279,5 @@ With Container 3 implemented, we can proceed to implement **Container 4: MPF Che
 
 Let me know if you'd like me to proceed with implementing Container 4, or if you have any questions or need further clarification on the code provided so far.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMDI0MjM3NjcsLTQ5MDc2NzgyNV19
+eyJoaXN0b3J5IjpbLTE3ODUwODkwNzksLTQ5MDc2NzgyNV19
 -->
