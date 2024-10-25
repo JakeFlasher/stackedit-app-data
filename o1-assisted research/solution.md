@@ -908,7 +908,8 @@ def container_2_mpf_adjustment():
     suffixes=('_IFBEG', '_RunAAdj')
 )
 	ann_prem_df['Ann Prem Inc'] = ann_prem_df['Total Ann Prem_RunAAdj'] - ann_prem_df['Total Ann Prem_IFBEG']
-
+	# After merging, use `.fillna(0)` or appropriate methods to handle missing values before performing calculations.
+	ann_prem_df[['Total Ann Prem_IFBEG', 'Total Ann Prem_RunAAdj']] = ann_prem_df[['Total Ann Prem_IFBEG', 'Total Ann Prem_RunAAdj']].fillna(0)
     # Step 10.48: Filter for 'Ann Prem Inc' >= 0
     non_neg_endt_df = ann_prem_df[ann_prem_df['Ann Prem Inc'] >= 0]
     logging.info(f"Non-negative endorsements have {len(non_neg_endt_df)} records.")
@@ -1284,5 +1285,5 @@ With Container 3 implemented, we can proceed to implement **Container 4: MPF Che
 
 Let me know if you'd like me to proceed with implementing Container 4, or if you have any questions or need further clarification on the code provided so far.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTM4MzEwMjI0LC00OTA3Njc4MjVdfQ==
+eyJoaXN0b3J5IjpbLTE4OTIyMjkxOTksLTQ5MDc2NzgyNV19
 -->
