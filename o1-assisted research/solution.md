@@ -900,9 +900,14 @@ def container_2_mpf_adjustment():
     ifbeg_filtered_df['Total Ann Prem'] = ifbeg_filtered_df['ANNUAL_PREM']
     run_a_adj_df['Total Ann Prem'] = run_a_adj_df['ANNUAL_PREM']  # Adjusted premiums
 
-    # Step 10.46 to 10.47: Map IFBEG and Run A Adjustment to calculate 'Ann Prem Inc'
-    ann_prem_df = merge_dataframes(ifbeg_filtered_df[['POL_NUMBER', 'Total Ann Prem']], run_a_adj_df[['POL_NUMBER', 'Total Ann Prem']], on_fields='POL_NUMBER', suffixes=('_IFBEG', '_RunAAdj'))
-    ann_prem_df['Ann Prem Inc'] = ann_prem_df['Total Ann Prem_RunAAdj'] - ann_prem_df['Total Ann Prem_IFBEG']
+	# Step 10.46 to 10.47: Map IFBEG and Run A Adjustment to calculate 'Ann Prem Inc'
+	ann_prem_df = merge_dataframes(
+    ifbeg_filtered_df[['POLNO', 'Total Ann Prem']],
+    run_a_adj_df[['POLNO', 'Total Ann Prem']],
+    on_fields='POLNO',
+    suffixes=('_IFBEG', '_RunAAdj')
+)
+	ann_prem_df['Ann Prem Inc'] = ann_prem_df['Total Ann Prem_RunAAdj'] - ann_prem_df['Total Ann Prem_IFBEG']
 
     # Step 10.48: Filter for 'Ann Prem Inc' >= 0
     non_neg_endt_df = ann_prem_df[ann_prem_df['Ann Prem Inc'] >= 0]
@@ -1279,5 +1284,5 @@ With Container 3 implemented, we can proceed to implement **Container 4: MPF Che
 
 Let me know if you'd like me to proceed with implementing Container 4, or if you have any questions or need further clarification on the code provided so far.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3ODUwODkwNzksLTQ5MDc2NzgyNV19
+eyJoaXN0b3J5IjpbNTM4MzEwMjI0LC00OTA3Njc4MjVdfQ==
 -->
