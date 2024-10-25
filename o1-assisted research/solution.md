@@ -640,7 +640,7 @@ def main():
     ]
 
     # Step 1: Import Daily Sales File and MPF Codes
-    daily_sales_file = 'Inputs/Daily Sales File.xlsx'
+    daily_sales_file = 'Table/Daily Sales File.xlsx'
     mpf_codes_file = 'Inputs/MPF Codes.xlsx'
 
     daily_sales_df = pd.read_excel(daily_sales_file)
@@ -1633,7 +1633,7 @@ if __name__ == '__main__':
 
 Please review the updated code and let me know if you have any questions or need further clarification on any part of the implementation. I'm here to assist you further!
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU0ODY3MjQ1MSw3NDY5NDk3NTMsLTg4Mz
-c3OTAxLDc0Njk0OTc1MywtMTA3MjUyNDkwMCwtMTg5MjIyOTE5
-OSwtNDkwNzY3ODI1XX0=
+eyJoaXN0b3J5IjpbLTE1NzYxMDgxMiwtNTQ4NjcyNDUxLDc0Nj
+k0OTc1MywtODgzNzc5MDEsNzQ2OTQ5NzUzLC0xMDcyNTI0OTAw
+LC0xODkyMjI5MTk5LC00OTA3Njc4MjVdfQ==
 -->
