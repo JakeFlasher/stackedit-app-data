@@ -453,7 +453,7 @@ def read_pro_file(file_path, column_names):
         sep=',',
         header=None,
         names=column_names,
-        skiprows=1,  # Adjust based on actual file structure
+        skiprows=4,  # Adjust based on actual file structure
         engine='python'
     )
     return df
@@ -1810,5 +1810,5 @@ By carefully implementing Container 4, we've completed all the steps in your wor
 
 Through meticulous attention and careful implementation, we've developed a comprehensive solution that fulfills the requirements of your MPF data reconciliation workflow. Please review the code, verify its alignment with your data and needs, and provide any feedback. I'm committed to assisting you further to ensure the success of your project.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODY2MTU2ODY3XX0=
+eyJoaXN0b3J5IjpbLTEzMTg2MDQ4OTYsODY2MTU2ODY3XX0=
 -->
