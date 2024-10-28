@@ -1,8 +1,10 @@
 *Algorithm for Instruction Reduction*
 After completing the change point detection on the imputed IPC values, the challenge lies in removing a specific portion of instructions (achieving a target reduction rate) without losing important information. It is necessary to reduce the total instructions  while preserving critical points of interest, such as change points that signify essential memory pattern shifts in program behavior.  
 **Adaptive Window Size Calculation for Change Points**
-In order to balance between instruction reduction and information preservation, we need a fine-grained algorithm to help us filter those instructions that are supposed to contribute very little to cumulative IPC change as well as various cache performance metrics. Therefore, we design a adaptive window size calculation given an original trace file $\( T \)$, detected change points $\( \mathcal{C} \)$ and a desired instruction reduction rate $\( r \)$.
-To achieve a desired instruction reduction rate while preserving critical change points from a trace file, we employ an adaptive window size calculation using a binary search approach. The goal is to determine the optimal window size \( W \) that, when applied on each change point, results in a total number of reduced/preserved instructions close to the desired number within an acceptable tolerance.
+To achieve a desired instruction reduction rate while preserving critical change points, we need a fine-grained algorithm to help us filter those instructions that are supposed to contribute very little to cumulative IPC change as well as various cache performance metrics. Therefore, we employ an adaptive window size calculation  using a binary search approach. The goal is to determine an optimal window size \( W \) that, when applied on each change point, results in a total number of reduced  instructions closes to the desired number within an acceptable tolerance.
+
+given an original trace file $\( T \)$, detected change points $\( \mathcal{C} \)$ and a desired instruction reduction rate $\( r \)$.
+  . 
 
 Let us define the variables and functions used in the algorithm:
 
@@ -265,5 +267,5 @@ The binary search approach guarantees that the algorithm will find the optimal w
 
 The provided algorithm is logically sound and effectively addresses the problem of adaptively adjusting the window sizes around change points to achieve a target instruction reduction rate. The integration of variable definitions and explanations in the LaTeX format makes it suitable for inclusion in a conference paper, ensuring clarity and ease of understanding for the readers.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTcxNjg3ODE4NF19
+eyJoaXN0b3J5IjpbODg2ODgxMTQ1XX0=
 -->
