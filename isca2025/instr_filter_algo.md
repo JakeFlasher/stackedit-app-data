@@ -1,8 +1,8 @@
 *Algorithm for Instruction Reduction*
-After completing the change point detection on the imputed IPC values, we need a fine-grained algorithm to help us filter those instructions that are supposed to contribute very little to cumulative IPC change as well as various cache performance metrics. Therefore, we design a adaptive window size calculation given an original trace file and a change points 
+After completing the change point detection on the imputed IPC values, we need a fine-grained algorithm to help us filter those instructions that are supposed to contribute very little to cumulative IPC change as well as various cache performance metrics. Therefore, we design a adaptive window size calculation given an original trace file, detected change points and a desired instruction reduction rate.
 **Adaptive Window Size Calculation for Instruction Reduction**
 
-To achieve a desired instruction reduction rate while preserving critical change points in a trace file, we employ an adaptive window size calculation algorithm using a binary search approach. The goal is to determine the optimal window size \( W \) that, when applied around each change point, results in a total number of preserved instructions close to the desired number within an acceptable tolerance.
+To achieve a desired instruction reduction rate while preserving critical change points from a trace file, we employ an adaptive window size calculation using a binary search approach. The goal is to determine the optimal window size \( W \) that, when applied on each change point, results in a total number of preserved instructions close to the desired number within an acceptable tolerance.
 
 Let us define the variables and functions used in the algorithm:
 
@@ -265,5 +265,5 @@ The binary search approach guarantees that the algorithm will find the optimal w
 
 The provided algorithm is logically sound and effectively addresses the problem of adaptively adjusting the window sizes around change points to achieve a target instruction reduction rate. The integration of variable definitions and explanations in the LaTeX format makes it suitable for inclusion in a conference paper, ensuring clarity and ease of understanding for the readers.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMzODI1NzI1Nl19
+eyJoaXN0b3J5IjpbLTcyOTg3NjE2OV19
 -->
