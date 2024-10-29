@@ -4,7 +4,7 @@ You need more experiments to show that your IPC imputation approach in this scen
 	1. no IPC imputation
 	2. fast learning imputation, average quality
 	3. complex learning imputation, better quality
-	4. 
+and discuss the final performance metrics given the above scenarios.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMDk3OTEwNTddfQ==
+eyJoaXN0b3J5IjpbLTE5MjM5MDg5NTJdfQ==
 -->
