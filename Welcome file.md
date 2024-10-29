@@ -3,7 +3,8 @@ Since we're only imputing about 50% of missing IPC values, and when we use a cha
 You need more experiments to show that your IPC imputation approach in this scenario is imdisplacable and necessary. For example, you can try change point detection on 3 scales of IPC imputations:
 	1. no IPC imputation
 	2. fast learning imputation, average quality
-	3. complex learning imputation
+	3. complex learning imputation, better quality
+	4. 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNDk3OTQzMjRdfQ==
+eyJoaXN0b3J5IjpbLTEzMDk3OTEwNTddfQ==
 -->
