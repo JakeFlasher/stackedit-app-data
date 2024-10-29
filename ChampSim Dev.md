@@ -92,12 +92,18 @@ BRANCH_RETURN: 1.537e-05
 
 
 Maybe use obs between value leaking and global stable to find some innovations in cache side-channel attacks? (attack templates, champsim impl of cache side-channel)
+
+
+
+4 EXPERIMENTS4.1 BenchmarksWe evaluate TransFetch and the baselines using the applicationtraces generated from benchmarks SPEC CPU 2006 [ 24], SPEC CPU2017 [ 10], and GAP [2 ] using SimPoint [ 47 ]. After skipping 1M in-structions for warm-up, we use 100M instructions for experiments.We use the first 40M instructions for model training, the next 10Minstructions for validation, tuning, and generating optimal thresh-olds, and the last 50M instructions for evaluation1.Table 1: Benchmark statisticsBMKs # PCs # Addresses # Pages # DeltasSPEC 06 23∼893 60.0K∼2.21M 2.51K∼88.9K 23.6K∼2.01MSPEC 17 26∼1126 62.1K∼1.78M 7.99K∼ 0.26M 3.18K∼0.72MGAP 63∼118 0.56M∼1.25M 8.27K∼ 27.2K 0.30M∼1.20MTable 1 shows the number of unique program counters (PCs),addresses, page addresses, and deltas. If using tokenization, a tokendictionary needs to store the mapping of the unique values to tokens,which is consumes storage. Our method discards tokenization andsaves up to table of length 2.01M compared with delta inputs, andup to table of length 0.26M compared with page & offset inputs,given the same level of model complexity
+
+from pengmiao transfetch
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNDg4MzEwNzQsMzIyMjI0LDU0NTk1Nj
-I3MiwtMTI2NDc4NjMzMywtNDk3NTQ5ODAsLTk5OTk1NTgwMCwy
-MjQ1NTc1MTUsNjQxMjMyMDYzLC03NTc2MDI1ODQsMTUyMDEwNj
-kwNSw2NzU4MjM5OTEsLTQ1OTM0NDkxMSwtMTE2NDI2MjUwNSwt
-MTgxMjYxMjg5MSw0NDc3NDI1OTUsMTYwNzMxMDc1NCwyMTAxND
-kzNDMyLC01ODE1MzI3NDcsLTEzNzc3MTU4OTQsLTM4NzY0Nzk5
-XX0=
+eyJoaXN0b3J5IjpbMTQ3MDM2MjI3NSwtMTA0ODgzMTA3NCwzMj
+IyMjQsNTQ1OTU2MjcyLC0xMjY0Nzg2MzMzLC00OTc1NDk4MCwt
+OTk5OTU1ODAwLDIyNDU1NzUxNSw2NDEyMzIwNjMsLTc1NzYwMj
+U4NCwxNTIwMTA2OTA1LDY3NTgyMzk5MSwtNDU5MzQ0OTExLC0x
+MTY0MjYyNTA1LC0xODEyNjEyODkxLDQ0Nzc0MjU5NSwxNjA3Mz
+EwNzU0LDIxMDE0OTM0MzIsLTU4MTUzMjc0NywtMTM3NzcxNTg5
+NF19
 -->
