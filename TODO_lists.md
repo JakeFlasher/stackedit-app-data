@@ -1,7 +1,7 @@
 Enumerating Reduction Rate
 - set model = application-specific ImputeFormer
 - benchmarking = GAP, SPEC17
-- simulation = all 3 prefetchers (done berti, spp)
+- simulation = all 3 prefetchers (done  spp)
 
 Enumerating training dataset on pre-trained models
 - set model = ImputeFormer
@@ -13,6 +13,6 @@ Enumerating training dataset on pre-trained models
 Enumerating pre-trained models
 - set model
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQxNzE0OTAyLDg5MTAzNDU4LDQ0MDkwNT
-YxOV19
+eyJoaXN0b3J5IjpbNDQ1NDkwMTc4LC00MTcxNDkwMiw4OTEwMz
+Q1OCw0NDA5MDU2MTldfQ==
 -->
