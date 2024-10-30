@@ -20,8 +20,9 @@ Enumerating pre-trained models
 	- inferenced SPEC06
 - set model = ImputeFormer 
 - set model = TimeMixer
+- set model = ReuseDist
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzUyNjMzMTk4LDQ1ODYwNTUzMyw2NzQ1OT
-kzOTYsMjM1MjEwMzgxLC01ODgyMzEzNjIsLTQxNzE0OTAyLDg5
-MTAzNDU4LDQ0MDkwNTYxOV19
+eyJoaXN0b3J5IjpbLTEwNDkwNjQ2OTUsNDU4NjA1NTMzLDY3ND
+U5OTM5NiwyMzUyMTAzODEsLTU4ODIzMTM2MiwtNDE3MTQ5MDIs
+ODkxMDM0NTgsNDQwOTA1NjE5XX0=
 -->
