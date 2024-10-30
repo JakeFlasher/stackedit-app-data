@@ -1,5 +1,6 @@
 500 Ground truth for GAP, SPEC06, SPEC17
-	- 3 prefetchers
+- 3 prefetchers
+-
 Enumerating Reduction Rate
 - set model = application-specific ImputeFormer
 - benchmarking = GAP, SPEC17
@@ -16,6 +17,6 @@ Enumerating training dataset on pre-trained models
 Enumerating pre-trained models
 - set model
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MzY4OTk5ODgsLTU4ODIzMTM2MiwtND
-E3MTQ5MDIsODkxMDM0NTgsNDQwOTA1NjE5XX0=
+eyJoaXN0b3J5IjpbMjM1MjEwMzgxLC01ODgyMzEzNjIsLTQxNz
+E0OTAyLDg5MTAzNDU4LDQ0MDkwNTYxOV19
 -->
