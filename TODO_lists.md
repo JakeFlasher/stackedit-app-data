@@ -16,9 +16,12 @@ Enumerating training dataset on pre-trained models
 ./run_sim.sh ./models ./reference 500000000 SPP_single_core_dev_results > log_spp 2>&1 &
 
 Enumerating pre-trained models
-- set model
+- set model = SAITS
+	- inferenced SPEC06
+- set model = ImputeFormer 
+- set model = TimeMixer
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDU4NjA1NTMzLDY3NDU5OTM5NiwyMzUyMT
-AzODEsLTU4ODIzMTM2MiwtNDE3MTQ5MDIsODkxMDM0NTgsNDQw
-OTA1NjE5XX0=
+eyJoaXN0b3J5IjpbMzUyNjMzMTk4LDQ1ODYwNTUzMyw2NzQ1OT
+kzOTYsMjM1MjEwMzgxLC01ODgyMzEzNjIsLTQxNzE0OTAyLDg5
+MTAzNDU4LDQ0MDkwNTYxOV19
 -->
