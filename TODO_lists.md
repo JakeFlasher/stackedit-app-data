@@ -22,11 +22,12 @@ Enumerating pre-trained models
 	- cpded
 	- syned trace
 	
+	
 - set model = ImputeFormer 
 - set model = TimeMixer
 - set model = ReuseDist
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTcyMzMxMjU0MSwxODk0MjAwNTIxLDE2ND
+eyJoaXN0b3J5IjpbLTg0MDY0NzAyNywxODk0MjAwNTIxLDE2ND
 EwMjYyMzIsMTcxNTc1OTQwOSwxOTYzMzA5ODY5LC04MjgzMTE1
 MTMsNDU4NjA1NTMzLDY3NDU5OTM5NiwyMzUyMTAzODEsLTU4OD
 IzMTM2MiwtNDE3MTQ5MDIsODkxMDM0NTgsNDQwOTA1NjE5XX0=
