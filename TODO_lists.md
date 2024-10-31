@@ -9,7 +9,7 @@ Enumerating Reduction Rate
 
 Enumerating training dataset on pre-trained models
 - set model = ImputeFormer
-	- {gcc. xalanmb, aster, bfs10}.pypots
+	- {gcc. xalanmb, aster, bfs10, mcf}.pypots
 	- inferenced aster SPEC06
 - benchmarking = SPEC06, SPEC17
 - simulation = 1 prefetcher
@@ -31,7 +31,7 @@ Enumerating pre-trained models
 - 
 - set model = ReuseDist
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg3MzQ4NDI4NiwyMTE1MjEwODQ4LDE2OT
+eyJoaXN0b3J5IjpbLTIwNzA3NDI2MCwyMTE1MjEwODQ4LDE2OT
 Y3MzY5NjgsLTkxNTg1ODAzMSwtNTA3Njg3ODY0LC0xNjI2NDQy
 OTU0LC04NDA2NDcwMjcsMTg5NDIwMDUyMSwxNjQxMDI2MjMyLD
 E3MTU3NTk0MDksMTk2MzMwOTg2OSwtODI4MzExNTEzLDQ1ODYw
