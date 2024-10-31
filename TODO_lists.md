@@ -19,12 +19,12 @@ Enumerating training dataset on pre-trained models
 Enumerating pre-trained models
 - set model = SAITS
 	- inferenced SPEC06
-	- 
+	- inferenced SPEC17
 - set model = ImputeFormer 
 - set model = TimeMixer
 - set model = ReuseDist
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY0NzMwNjUwNywxNjQxMDI2MjMyLDE3MT
+eyJoaXN0b3J5IjpbMTg5NDIwMDUyMSwxNjQxMDI2MjMyLDE3MT
 U3NTk0MDksMTk2MzMwOTg2OSwtODI4MzExNTEzLDQ1ODYwNTUz
 Myw2NzQ1OTkzOTYsMjM1MjEwMzgxLC01ODgyMzEzNjIsLTQxNz
 E0OTAyLDg5MTAzNDU4LDQ0MDkwNTYxOV19
