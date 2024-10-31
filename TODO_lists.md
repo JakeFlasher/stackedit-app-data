@@ -8,7 +8,7 @@ Enumerating Reduction Rate
 	- done 0.75/0.5/0.25 spec/gap )
 
 Enumerating training dataset on pre-trained models
-- set model = ImputeFormer (application specific)
+- set model = ImputeFormer (application specific	)
 	- {gcc. xalanmb, aster, bfs10, mcf}.pypots
 	- inferenced aster SPEC06
 - benchmarking = SPEC06, SPEC17
@@ -31,10 +31,10 @@ Enumerating pre-trained models
 - 
 - set model = ReuseDist
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYyODk4NDE3MSwyMTE1MjEwODQ4LDE2OT
-Y3MzY5NjgsLTkxNTg1ODAzMSwtNTA3Njg3ODY0LC0xNjI2NDQy
-OTU0LC04NDA2NDcwMjcsMTg5NDIwMDUyMSwxNjQxMDI2MjMyLD
-E3MTU3NTk0MDksMTk2MzMwOTg2OSwtODI4MzExNTEzLDQ1ODYw
-NTUzMyw2NzQ1OTkzOTYsMjM1MjEwMzgxLC01ODgyMzEzNjIsLT
-QxNzE0OTAyLDg5MTAzNDU4LDQ0MDkwNTYxOV19
+eyJoaXN0b3J5IjpbLTIwNDA5MzU3NjMsMjExNTIxMDg0OCwxNj
+k2NzM2OTY4LC05MTU4NTgwMzEsLTUwNzY4Nzg2NCwtMTYyNjQ0
+Mjk1NCwtODQwNjQ3MDI3LDE4OTQyMDA1MjEsMTY0MTAyNjIzMi
+wxNzE1NzU5NDA5LDE5NjMzMDk4NjksLTgyODMxMTUxMyw0NTg2
+MDU1MzMsNjc0NTk5Mzk2LDIzNTIxMDM4MSwtNTg4MjMxMzYyLC
+00MTcxNDkwMiw4OTEwMzQ1OCw0NDA5MDU2MTldfQ==
 -->
