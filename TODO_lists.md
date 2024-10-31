@@ -23,14 +23,14 @@ Enumerating pre-trained models
 	- syned trace
 
 - set model = TEFN
-	- inferenced SPEC17
+	- inferenced SPEC17, SPEC06, GAP
 	
 - set model = ImputeFormer 
 - set model = TimeMixer
 - 
 - set model = ReuseDist
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI5OTc5MjI3NywtOTE1ODU4MDMxLC01MD
+eyJoaXN0b3J5IjpbMTY5NjczNjk2OCwtOTE1ODU4MDMxLC01MD
 c2ODc4NjQsLTE2MjY0NDI5NTQsLTg0MDY0NzAyNywxODk0MjAw
 NTIxLDE2NDEwMjYyMzIsMTcxNTc1OTQwOSwxOTYzMzA5ODY5LC
 04MjgzMTE1MTMsNDU4NjA1NTMzLDY3NDU5OTM5NiwyMzUyMTAz
