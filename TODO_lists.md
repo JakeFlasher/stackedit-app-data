@@ -19,7 +19,7 @@ Enumerating training dataset on pre-trained models
 Enumerating pre-trained models
 - set model = SAITS
 	- inferenced SPEC06, SPEC17 gap
-	- cpded
+	- cpded all (ongoing)
 	- syned trace
 	
 	
@@ -27,9 +27,9 @@ Enumerating pre-trained models
 - set model = TimeMixer
 - set model = ReuseDist
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUwNzY4Nzg2NCwtMTYyNjQ0Mjk1NCwtOD
-QwNjQ3MDI3LDE4OTQyMDA1MjEsMTY0MTAyNjIzMiwxNzE1NzU5
-NDA5LDE5NjMzMDk4NjksLTgyODMxMTUxMyw0NTg2MDU1MzMsNj
-c0NTk5Mzk2LDIzNTIxMDM4MSwtNTg4MjMxMzYyLC00MTcxNDkw
-Miw4OTEwMzQ1OCw0NDA5MDU2MTldfQ==
+eyJoaXN0b3J5IjpbLTkxNTg1ODAzMSwtNTA3Njg3ODY0LC0xNj
+I2NDQyOTU0LC04NDA2NDcwMjcsMTg5NDIwMDUyMSwxNjQxMDI2
+MjMyLDE3MTU3NTk0MDksMTk2MzMwOTg2OSwtODI4MzExNTEzLD
+Q1ODYwNTUzMyw2NzQ1OTkzOTYsMjM1MjEwMzgxLC01ODgyMzEz
+NjIsLTQxNzE0OTAyLDg5MTAzNDU4LDQ0MDkwNTYxOV19
 -->
