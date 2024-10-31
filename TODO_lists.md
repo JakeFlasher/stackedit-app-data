@@ -10,7 +10,7 @@ Enumerating Reduction Rate
 Enumerating training dataset on pre-trained models
 - set model = ImputeFormer
 	- {gcc. xalanmb, aster}.pypots
-	- done aster SPEC06
+	- inferenced aster SPEC06
 - benchmarking = GAP, SPEC06, SPEC17
 - simulation = 1 prefetcher
 
@@ -27,9 +27,9 @@ Enumerating pre-trained models
 - set model = TimeMixer
 - set model = ReuseDist
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg0MDY0NzAyNywxODk0MjAwNTIxLDE2ND
-EwMjYyMzIsMTcxNTc1OTQwOSwxOTYzMzA5ODY5LC04MjgzMTE1
-MTMsNDU4NjA1NTMzLDY3NDU5OTM5NiwyMzUyMTAzODEsLTU4OD
-IzMTM2MiwtNDE3MTQ5MDIsODkxMDM0NTgsNDQwOTA1NjE5XX0=
-
+eyJoaXN0b3J5IjpbLTE2MjY0NDI5NTQsLTg0MDY0NzAyNywxOD
+k0MjAwNTIxLDE2NDEwMjYyMzIsMTcxNTc1OTQwOSwxOTYzMzA5
+ODY5LC04MjgzMTE1MTMsNDU4NjA1NTMzLDY3NDU5OTM5NiwyMz
+UyMTAzODEsLTU4ODIzMTM2MiwtNDE3MTQ5MDIsODkxMDM0NTgs
+NDQwOTA1NjE5XX0=
 -->
