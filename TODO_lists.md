@@ -15,7 +15,8 @@ Enumerating training dataset on pre-trained models
 
 - set model = ImputeFormer (pre-trained)
 	- {gcc. xalanmb, aster, bfs10, mcf}.pypots
-	- inferenced aster SPEC06
+	- aster: inferenced aster SPEC06
+	- 
 - benchmarking = SPEC06, SPEC17
 - simulation = 1 prefetcher
 
@@ -37,7 +38,7 @@ Enumerating pre-trained models
 - 36,721,669
 - set model = ReuseDist
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM5MzIyMzUyOCwtMTM0NzIzNDMwOSwtMj
+eyJoaXN0b3J5IjpbMTAyMDMyMDU0MCwtMTM0NzIzNDMwOSwtMj
 A0MDkzNTc2MywyMTE1MjEwODQ4LDE2OTY3MzY5NjgsLTkxNTg1
 ODAzMSwtNTA3Njg3ODY0LC0xNjI2NDQyOTU0LC04NDA2NDcwMj
 csMTg5NDIwMDUyMSwxNjQxMDI2MjMyLDE3MTU3NTk0MDksMTk2
