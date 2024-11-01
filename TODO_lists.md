@@ -33,7 +33,11 @@ Enumerating pre-trained models
 	- inferenced SPEC17, SPEC06, GAP
 	- cpded SPEC06, SPEC17
 	- syned trace
-	
+
+-set model = ModernTCN
+	- params: 
+	- inferenced
+	- 
 - set model = ImputeFormer 
 - 1,194,433
 - set model = TimeMixer
@@ -41,11 +45,11 @@ Enumerating pre-trained models
 - 36,721,669
 - set model = ReuseDist
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5Mzc0NzQ2NzgsMTk2OTQyODQ4LDEwND
-Y0MDk4OTQsLTE0NjYyNTIyNDEsLTEzNDcyMzQzMDksLTIwNDA5
-MzU3NjMsMjExNTIxMDg0OCwxNjk2NzM2OTY4LC05MTU4NTgwMz
-EsLTUwNzY4Nzg2NCwtMTYyNjQ0Mjk1NCwtODQwNjQ3MDI3LDE4
-OTQyMDA1MjEsMTY0MTAyNjIzMiwxNzE1NzU5NDA5LDE5NjMzMD
-k4NjksLTgyODMxMTUxMyw0NTg2MDU1MzMsNjc0NTk5Mzk2LDIz
-NTIxMDM4MV19
+eyJoaXN0b3J5IjpbLTE2MzgwNDU1OTMsLTE5Mzc0NzQ2NzgsMT
+k2OTQyODQ4LDEwNDY0MDk4OTQsLTE0NjYyNTIyNDEsLTEzNDcy
+MzQzMDksLTIwNDA5MzU3NjMsMjExNTIxMDg0OCwxNjk2NzM2OT
+Y4LC05MTU4NTgwMzEsLTUwNzY4Nzg2NCwtMTYyNjQ0Mjk1NCwt
+ODQwNjQ3MDI3LDE4OTQyMDA1MjEsMTY0MTAyNjIzMiwxNzE1Nz
+U5NDA5LDE5NjMzMDk4NjksLTgyODMxMTUxMyw0NTg2MDU1MzMs
+Njc0NTk5Mzk2XX0=
 -->
