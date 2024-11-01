@@ -32,7 +32,7 @@ Enumerating pre-trained models
 - set model = TEFN
 	- inferenced SPEC17, SPEC06, GAP
 	- cpded SPEC06(imputeformer_aster), SPEC17, GAP (gz)
-	- syned trace /champsim_traces/traces/syn_SAITS_0.5
+	- syned trace all: /champsim_traces/traces/syn_SAITS_0.5
 
 -set model = ModernTCN
 	- params: 
@@ -45,11 +45,11 @@ Enumerating pre-trained models
 - 36,721,669
 - set model = ReuseDist
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDUzNTU3OTIxLC0xNTg5OTg0Mjg0LDM1Nj
-I5MTA0MywtMTEyMDgwMDU1OCwtMjYyODkwNjg2LC0xNDk4NDY1
-OTgwLC0xNjM4MDQ1NTkzLC0xOTM3NDc0Njc4LDE5Njk0Mjg0OC
-wxMDQ2NDA5ODk0LC0xNDY2MjUyMjQxLC0xMzQ3MjM0MzA5LC0y
-MDQwOTM1NzYzLDIxMTUyMTA4NDgsMTY5NjczNjk2OCwtOTE1OD
-U4MDMxLC01MDc2ODc4NjQsLTE2MjY0NDI5NTQsLTg0MDY0NzAy
-NywxODk0MjAwNTIxXX0=
+eyJoaXN0b3J5IjpbMjA0ODY1NjY0MiwtMTU4OTk4NDI4NCwzNT
+YyOTEwNDMsLTExMjA4MDA1NTgsLTI2Mjg5MDY4NiwtMTQ5ODQ2
+NTk4MCwtMTYzODA0NTU5MywtMTkzNzQ3NDY3OCwxOTY5NDI4ND
+gsMTA0NjQwOTg5NCwtMTQ2NjI1MjI0MSwtMTM0NzIzNDMwOSwt
+MjA0MDkzNTc2MywyMTE1MjEwODQ4LDE2OTY3MzY5NjgsLTkxNT
+g1ODAzMSwtNTA3Njg3ODY0LC0xNjI2NDQyOTU0LC04NDA2NDcw
+MjcsMTg5NDIwMDUyMV19
 -->
