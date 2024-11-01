@@ -9,6 +9,11 @@ Enumerating Reduction Rate
 
 Enumerating training dataset on pre-trained models
 - set model = ImputeFormer (application specific	)
+- runed SPEC17,GAP
+- trained SPEC06
+- inferenced
+
+- set model = ImputeFormer (pre-trained)
 	- {gcc. xalanmb, aster, bfs10, mcf}.pypots
 	- inferenced aster SPEC06
 - benchmarking = SPEC06, SPEC17
@@ -32,11 +37,11 @@ Enumerating pre-trained models
 - 36,721,669
 - set model = ReuseDist
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNDcyMzQzMDksLTIwNDA5MzU3NjMsMj
-ExNTIxMDg0OCwxNjk2NzM2OTY4LC05MTU4NTgwMzEsLTUwNzY4
-Nzg2NCwtMTYyNjQ0Mjk1NCwtODQwNjQ3MDI3LDE4OTQyMDA1Mj
-EsMTY0MTAyNjIzMiwxNzE1NzU5NDA5LDE5NjMzMDk4NjksLTgy
-ODMxMTUxMyw0NTg2MDU1MzMsNjc0NTk5Mzk2LDIzNTIxMDM4MS
-wtNTg4MjMxMzYyLC00MTcxNDkwMiw4OTEwMzQ1OCw0NDA5MDU2
-MTldfQ==
+eyJoaXN0b3J5IjpbLTM5MzIyMzUyOCwtMTM0NzIzNDMwOSwtMj
+A0MDkzNTc2MywyMTE1MjEwODQ4LDE2OTY3MzY5NjgsLTkxNTg1
+ODAzMSwtNTA3Njg3ODY0LC0xNjI2NDQyOTU0LC04NDA2NDcwMj
+csMTg5NDIwMDUyMSwxNjQxMDI2MjMyLDE3MTU3NTk0MDksMTk2
+MzMwOTg2OSwtODI4MzExNTEzLDQ1ODYwNTUzMyw2NzQ1OTkzOT
+YsMjM1MjEwMzgxLC01ODgyMzEzNjIsLTQxNzE0OTAyLDg5MTAz
+NDU4XX0=
 -->
