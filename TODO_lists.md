@@ -25,7 +25,7 @@ Enumerating training dataset on pre-trained models
 
 Enumerating pre-trained models
 - set model = SAITS
-	- 
+	- 1,324,934
 	- inferenced SPEC06, SPEC17 gap
 	- cpded all (ongoing)
 	- syned trace all: /champsim_traces/traces/syn_SAITS_0.5
@@ -41,13 +41,14 @@ Enumerating pre-trained models
 	- inferenced spec06, gap, spec17
 	- 
 - set model = ImputeFormer 
-- 1,194,433
+	- 1,194,433
 - set model = TimeMixer
+	- 
 - set model = TimesNet
-- 36,721,669
+	- 36,721,669
 - set model = ReuseDist
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU1NjMwMjcxMCwtMTE2NTk1NjA2MCwtMT
+eyJoaXN0b3J5IjpbMTQwODUwMTkwMSwtMTE2NTk1NjA2MCwtMT
 U4OTk4NDI4NCwzNTYyOTEwNDMsLTExMjA4MDA1NTgsLTI2Mjg5
 MDY4NiwtMTQ5ODQ2NTk4MCwtMTYzODA0NTU5MywtMTkzNzQ3ND
 Y3OCwxOTY5NDI4NDgsMTA0NjQwOTg5NCwtMTQ2NjI1MjI0MSwt
