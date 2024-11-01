@@ -22,6 +22,8 @@ Enumerating training dataset on pre-trained models
 		- cpded:
 		- synced:
 	- bfs-10 inferenced SPEC17, gap
+
+
 - benchmarking = SPEC06, SPEC17
 - simulation = 1 prefetcher
 
@@ -33,7 +35,8 @@ Enumerating pre-trained models
 	- inferenced SPEC06, SPEC17, gap
 	- cpded all (ongoing)
 	- syned trace all: /champsim_traces/traces/syn_SAITS_0.5
-
+	- results
+	
 - set model = TEFN
 	- 552
 	- inferenced SPEC17, SPEC06, GAP
@@ -44,6 +47,7 @@ Enumerating pre-trained models
 	- params:  475,049
 	- inferenced spec06, gap, spec17
 	- 
+	- 
 - set model = ImputeFormer 
 	- 1,194,433
 - set model = TimeMixer
@@ -53,11 +57,11 @@ Enumerating pre-trained models
 	- 36,721,669
 - set model = ReuseDist
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjEyNTI2NTQzLDEzODA2MTI3NDksNDcxOT
-MxNDA0LDE3OTk0MDE4MTQsNjc2MjgxNTY0LC0xODA2MzE0NDU4
-LDE3MzUzNDMyNjUsMjA3MzY2NDAwOCwtMTE2NTk1NjA2MCwtMT
-U4OTk4NDI4NCwzNTYyOTEwNDMsLTExMjA4MDA1NTgsLTI2Mjg5
-MDY4NiwtMTQ5ODQ2NTk4MCwtMTYzODA0NTU5MywtMTkzNzQ3ND
-Y3OCwxOTY5NDI4NDgsMTA0NjQwOTg5NCwtMTQ2NjI1MjI0MSwt
-MTM0NzIzNDMwOV19
+eyJoaXN0b3J5IjpbLTE5NTE3NDk2MjksNjEyNTI2NTQzLDEzOD
+A2MTI3NDksNDcxOTMxNDA0LDE3OTk0MDE4MTQsNjc2MjgxNTY0
+LC0xODA2MzE0NDU4LDE3MzUzNDMyNjUsMjA3MzY2NDAwOCwtMT
+E2NTk1NjA2MCwtMTU4OTk4NDI4NCwzNTYyOTEwNDMsLTExMjA4
+MDA1NTgsLTI2Mjg5MDY4NiwtMTQ5ODQ2NTk4MCwtMTYzODA0NT
+U5MywtMTkzNzQ3NDY3OCwxOTY5NDI4NDgsMTA0NjQwOTg5NCwt
+MTQ2NjI1MjI0MV19
 -->
