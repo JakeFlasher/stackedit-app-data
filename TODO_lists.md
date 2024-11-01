@@ -9,8 +9,8 @@ Enumerating Reduction Rate
 
 Enumerating training dataset on pre-trained models
 - set model = ImputeFormer (application specific	)
-- runed SPEC17,GAP
-- trained SPEC06
+- runed SPEC17,GAP (3 reduction rate)
+- trained SPEC06 
 - inferenced
 
 - set model = ImputeFormer (pre-trained)
@@ -48,7 +48,7 @@ Enumerating pre-trained models
 	- 36,721,669
 - set model = ReuseDist
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQwODUwMTkwMSwtMTE2NTk1NjA2MCwtMT
+eyJoaXN0b3J5IjpbMjA3MzY2NDAwOCwtMTE2NTk1NjA2MCwtMT
 U4OTk4NDI4NCwzNTYyOTEwNDMsLTExMjA4MDA1NTgsLTI2Mjg5
 MDY4NiwtMTQ5ODQ2NTk4MCwtMTYzODA0NTU5MywtMTkzNzQ3ND
 Y3OCwxOTY5NDI4NDgsMTA0NjQwOTg5NCwtMTQ2NjI1MjI0MSwt
