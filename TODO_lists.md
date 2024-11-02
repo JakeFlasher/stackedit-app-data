@@ -36,7 +36,7 @@ Enumerating pre-trained models
 	- inferenced SPEC06, SPEC17, gap
 	- cpded all (ongoing)
 	- syned trace all: /champsim_traces/traces/syn_SAITS_0.5
-	- results: spp, bingo finished, berti rerunning
+	- results: spp, bingo finished, berti (rerunning, need to summarize)
 	
 - set model = TEFN
 	- 552
@@ -58,11 +58,11 @@ Enumerating pre-trained models
 	- 36,721,669
 - set model = ReuseDist
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTU3MDg3OTA5LC0xMjgzODg4NTQ3LDk3Mz
-k5MDU5MSwxNDg2MzI4NTExLDE5NDg5ODk1ODMsMTk0ODk4OTU4
-MywtMTY5MDY0Nzc3MiwtMTk2Mjg0NTExNiwyOTEzMjg5MTksMT
-A2NTI1NTE1MSwtNzY4OTU0MTU2LDExNzA4NDI3OTcsLTEyMTQ2
-NDE2MTgsLTEwNDQ3MjYxMjQsMjAyNDA1OTczOCwxMzU3NzE4MD
-ksLTE5NTE3NDk2MjksNjEyNTI2NTQzLDEzODA2MTI3NDksNDcx
-OTMxNDA0XX0=
+eyJoaXN0b3J5IjpbMTc5NTA1MzMxNCw5NTcwODc5MDksLTEyOD
+M4ODg1NDcsOTczOTkwNTkxLDE0ODYzMjg1MTEsMTk0ODk4OTU4
+MywxOTQ4OTg5NTgzLC0xNjkwNjQ3NzcyLC0xOTYyODQ1MTE2LD
+I5MTMyODkxOSwxMDY1MjU1MTUxLC03Njg5NTQxNTYsMTE3MDg0
+Mjc5NywtMTIxNDY0MTYxOCwtMTA0NDcyNjEyNCwyMDI0MDU5Nz
+M4LDEzNTc3MTgwOSwtMTk1MTc0OTYyOSw2MTI1MjY1NDMsMTM4
+MDYxMjc0OV19
 -->
