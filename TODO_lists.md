@@ -31,8 +31,8 @@ Enumerating training dataset on pre-trained models
 ./run_sim.sh ./models ./reference 500000000 SPP_single_core_dev_results > log_spp 2>&1 &
 
 Enumerating pre-trained models
-- set model = SAITS 
-	- 1,324,934
+- set model = SAITS (2 layers)
+	- 1,324,934 (4 layers)
 	- inferenced SPEC06, SPEC17, gap
 	- cpded all (ongoing)
 	- syned trace all: /champsim_traces/traces/syn_SAITS_0.5
@@ -58,11 +58,11 @@ Enumerating pre-trained models
 	- 36,721,669
 - set model = ReuseDist
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NDQ3MzM4MjAsMTc5NTA1MzMxNCw5NT
-cwODc5MDksLTEyODM4ODg1NDcsOTczOTkwNTkxLDE0ODYzMjg1
-MTEsMTk0ODk4OTU4MywxOTQ4OTg5NTgzLC0xNjkwNjQ3NzcyLC
-0xOTYyODQ1MTE2LDI5MTMyODkxOSwxMDY1MjU1MTUxLC03Njg5
-NTQxNTYsMTE3MDg0Mjc5NywtMTIxNDY0MTYxOCwtMTA0NDcyNj
-EyNCwyMDI0MDU5NzM4LDEzNTc3MTgwOSwtMTk1MTc0OTYyOSw2
-MTI1MjY1NDNdfQ==
+eyJoaXN0b3J5IjpbLTEwNjg1MDcyLDE3OTUwNTMzMTQsOTU3MD
+g3OTA5LC0xMjgzODg4NTQ3LDk3Mzk5MDU5MSwxNDg2MzI4NTEx
+LDE5NDg5ODk1ODMsMTk0ODk4OTU4MywtMTY5MDY0Nzc3MiwtMT
+k2Mjg0NTExNiwyOTEzMjg5MTksMTA2NTI1NTE1MSwtNzY4OTU0
+MTU2LDExNzA4NDI3OTcsLTEyMTQ2NDE2MTgsLTEwNDQ3MjYxMj
+QsMjAyNDA1OTczOCwxMzU3NzE4MDksLTE5NTE3NDk2MjksNjEy
+NTI2NTQzXX0=
 -->
