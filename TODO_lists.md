@@ -21,7 +21,7 @@ Enumerating training dataset on pre-trained models
 	- gcc: inferendced SPEC17, gap, spec06(ongoing partial)
 		- cpded:
 		- synced:
-	- bfs-10 inferenced SPEC17, gap
+	- bfs-10 inferenced SPEC17, gap 
 
 
 - benchmarking = SPEC06, SPEC17
@@ -57,11 +57,11 @@ Enumerating pre-trained models
 	- 36,721,669
 - set model = ReuseDist
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk0ODk4OTU4MywxOTQ4OTg5NTgzLC0xNj
-kwNjQ3NzcyLC0xOTYyODQ1MTE2LDI5MTMyODkxOSwxMDY1MjU1
-MTUxLC03Njg5NTQxNTYsMTE3MDg0Mjc5NywtMTIxNDY0MTYxOC
-wtMTA0NDcyNjEyNCwyMDI0MDU5NzM4LDEzNTc3MTgwOSwtMTk1
-MTc0OTYyOSw2MTI1MjY1NDMsMTM4MDYxMjc0OSw0NzE5MzE0MD
-QsMTc5OTQwMTgxNCw2NzYyODE1NjQsLTE4MDYzMTQ0NTgsMTcz
-NTM0MzI2NV19
+eyJoaXN0b3J5IjpbMTQ4NjMyODUxMSwxOTQ4OTg5NTgzLDE5ND
+g5ODk1ODMsLTE2OTA2NDc3NzIsLTE5NjI4NDUxMTYsMjkxMzI4
+OTE5LDEwNjUyNTUxNTEsLTc2ODk1NDE1NiwxMTcwODQyNzk3LC
+0xMjE0NjQxNjE4LC0xMDQ0NzI2MTI0LDIwMjQwNTk3MzgsMTM1
+NzcxODA5LC0xOTUxNzQ5NjI5LDYxMjUyNjU0MywxMzgwNjEyNz
+Q5LDQ3MTkzMTQwNCwxNzk5NDAxODE0LDY3NjI4MTU2NCwtMTgw
+NjMxNDQ1OF19
 -->
