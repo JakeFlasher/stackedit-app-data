@@ -45,7 +45,7 @@ Enumerating pre-trained models
 
 -set model = ModernTCN
 	- params:  475,049
-	- inferenced spec06, gap, spec17 
+	- inferenced spec06, gap, spec17 (remainder spec17)
 	- cpded
 	- 
 - set model = ImputeFormer 
@@ -57,11 +57,11 @@ Enumerating pre-trained models
 	- 36,721,669
 - set model = ReuseDist
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODkyNjMwMzksMTM1NzcxODA5LC0xOTUxNz
-Q5NjI5LDYxMjUyNjU0MywxMzgwNjEyNzQ5LDQ3MTkzMTQwNCwx
-Nzk5NDAxODE0LDY3NjI4MTU2NCwtMTgwNjMxNDQ1OCwxNzM1Mz
-QzMjY1LDIwNzM2NjQwMDgsLTExNjU5NTYwNjAsLTE1ODk5ODQy
-ODQsMzU2MjkxMDQzLC0xMTIwODAwNTU4LC0yNjI4OTA2ODYsLT
-E0OTg0NjU5ODAsLTE2MzgwNDU1OTMsLTE5Mzc0NzQ2NzgsMTk2
-OTQyODQ4XX0=
+eyJoaXN0b3J5IjpbMjAyNDA1OTczOCwxMzU3NzE4MDksLTE5NT
+E3NDk2MjksNjEyNTI2NTQzLDEzODA2MTI3NDksNDcxOTMxNDA0
+LDE3OTk0MDE4MTQsNjc2MjgxNTY0LC0xODA2MzE0NDU4LDE3Mz
+UzNDMyNjUsMjA3MzY2NDAwOCwtMTE2NTk1NjA2MCwtMTU4OTk4
+NDI4NCwzNTYyOTEwNDMsLTExMjA4MDA1NTgsLTI2Mjg5MDY4Ni
+wtMTQ5ODQ2NTk4MCwtMTYzODA0NTU5MywtMTkzNzQ3NDY3OCwx
+OTY5NDI4NDhdfQ==
 -->
