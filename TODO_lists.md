@@ -16,7 +16,7 @@ Enumerating training dataset on pre-trained models
 - set model = ImputeFormer (pre-trained)
 	- {gcc, aster, bfs10, mcf}.pypots	
 	- aster: inferenced  SPEC06, gap
-		- cpded: spec06
+		- cpded: spec06 (skip the)
 		- synced:
 	- gcc: inferendced SPEC17, gap, spec06
 		- cpded:
@@ -57,11 +57,11 @@ Enumerating pre-trained models
 	- 36,721,669
 - set model = ReuseDist
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAyNDA1OTczOCwxMzU3NzE4MDksLTE5NT
-E3NDk2MjksNjEyNTI2NTQzLDEzODA2MTI3NDksNDcxOTMxNDA0
-LDE3OTk0MDE4MTQsNjc2MjgxNTY0LC0xODA2MzE0NDU4LDE3Mz
-UzNDMyNjUsMjA3MzY2NDAwOCwtMTE2NTk1NjA2MCwtMTU4OTk4
-NDI4NCwzNTYyOTEwNDMsLTExMjA4MDA1NTgsLTI2Mjg5MDY4Ni
-wtMTQ5ODQ2NTk4MCwtMTYzODA0NTU5MywtMTkzNzQ3NDY3OCwx
-OTY5NDI4NDhdfQ==
+eyJoaXN0b3J5IjpbLTE2NDkyNTMwMjcsMjAyNDA1OTczOCwxMz
+U3NzE4MDksLTE5NTE3NDk2MjksNjEyNTI2NTQzLDEzODA2MTI3
+NDksNDcxOTMxNDA0LDE3OTk0MDE4MTQsNjc2MjgxNTY0LC0xOD
+A2MzE0NDU4LDE3MzUzNDMyNjUsMjA3MzY2NDAwOCwtMTE2NTk1
+NjA2MCwtMTU4OTk4NDI4NCwzNTYyOTEwNDMsLTExMjA4MDA1NT
+gsLTI2Mjg5MDY4NiwtMTQ5ODQ2NTk4MCwtMTYzODA0NTU5Mywt
+MTkzNzQ3NDY3OF19
 -->
