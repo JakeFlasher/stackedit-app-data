@@ -18,7 +18,7 @@ Enumerating training dataset on pre-trained models
 	- aster: inferenced  SPEC06, gap
 		- cpded: spec06 (skip them next time)
 		- synced:
-	- gcc: inferendced SPEC17, gap, spec06
+	- gcc: inferendced SPEC17, gap, spec06(partial)
 		- cpded:
 		- synced:
 	- bfs-10 inferenced SPEC17, gap
@@ -57,11 +57,11 @@ Enumerating pre-trained models
 	- 36,721,669
 - set model = ReuseDist
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNDQ3MjYxMjQsMjAyNDA1OTczOCwxMz
-U3NzE4MDksLTE5NTE3NDk2MjksNjEyNTI2NTQzLDEzODA2MTI3
-NDksNDcxOTMxNDA0LDE3OTk0MDE4MTQsNjc2MjgxNTY0LC0xOD
-A2MzE0NDU4LDE3MzUzNDMyNjUsMjA3MzY2NDAwOCwtMTE2NTk1
-NjA2MCwtMTU4OTk4NDI4NCwzNTYyOTEwNDMsLTExMjA4MDA1NT
-gsLTI2Mjg5MDY4NiwtMTQ5ODQ2NTk4MCwtMTYzODA0NTU5Mywt
-MTkzNzQ3NDY3OF19
+eyJoaXN0b3J5IjpbLTEyMTQ2NDE2MTgsLTEwNDQ3MjYxMjQsMj
+AyNDA1OTczOCwxMzU3NzE4MDksLTE5NTE3NDk2MjksNjEyNTI2
+NTQzLDEzODA2MTI3NDksNDcxOTMxNDA0LDE3OTk0MDE4MTQsNj
+c2MjgxNTY0LC0xODA2MzE0NDU4LDE3MzUzNDMyNjUsMjA3MzY2
+NDAwOCwtMTE2NTk1NjA2MCwtMTU4OTk4NDI4NCwzNTYyOTEwND
+MsLTExMjA4MDA1NTgsLTI2Mjg5MDY4NiwtMTQ5ODQ2NTk4MCwt
+MTYzODA0NTU5M119
 -->
