@@ -47,7 +47,7 @@ Enumerating pre-trained models
 -set model = ModernTCN
 	- params:  475,049
 	- inferenced spec06, gap, spec17 (ongoing, partial, remainder spec17)
-	- cpded
+	- cpded gap, spec06
 	- 
 - set model = ImputeFormer 
 	- 1,194,433
@@ -58,7 +58,7 @@ Enumerating pre-trained models
 	- 36,721,669
 - set model = ReuseDist
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI3MzM1MzAyLC0xMjgzODg4NTQ3LDk3Mz
+eyJoaXN0b3J5IjpbOTU3MDg3OTA5LC0xMjgzODg4NTQ3LDk3Mz
 k5MDU5MSwxNDg2MzI4NTExLDE5NDg5ODk1ODMsMTk0ODk4OTU4
 MywtMTY5MDY0Nzc3MiwtMTk2Mjg0NTExNiwyOTEzMjg5MTksMT
 A2NTI1NTE1MSwtNzY4OTU0MTU2LDExNzA4NDI3OTcsLTEyMTQ2
