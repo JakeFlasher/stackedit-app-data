@@ -4,7 +4,9 @@
 Enumerating Reduction Rate
 - set model = application-specific ImputeFormer
 - benchmarking = GAP, SPEC17, SPEC06 (ongoinh)
-	- GemsTD, astar
+	- GemsTD, astar ... etc spec06 (inferenced)
+	- cped: spec06
+	- 
 - simulation = all 3 prefetchers (done all spp, done berti,
 	- done 0.75/0.5/0.25 spec/gap )
 
@@ -58,11 +60,11 @@ Enumerating pre-trained models
 	- 36,721,669
 - set model = ReuseDist
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNjg1MDcyLDE3OTUwNTMzMTQsOTU3MD
-g3OTA5LC0xMjgzODg4NTQ3LDk3Mzk5MDU5MSwxNDg2MzI4NTEx
-LDE5NDg5ODk1ODMsMTk0ODk4OTU4MywtMTY5MDY0Nzc3MiwtMT
-k2Mjg0NTExNiwyOTEzMjg5MTksMTA2NTI1NTE1MSwtNzY4OTU0
-MTU2LDExNzA4NDI3OTcsLTEyMTQ2NDE2MTgsLTEwNDQ3MjYxMj
-QsMjAyNDA1OTczOCwxMzU3NzE4MDksLTE5NTE3NDk2MjksNjEy
-NTI2NTQzXX0=
+eyJoaXN0b3J5IjpbLTczNjk5NDEzMiwtMTA2ODUwNzIsMTc5NT
+A1MzMxNCw5NTcwODc5MDksLTEyODM4ODg1NDcsOTczOTkwNTkx
+LDE0ODYzMjg1MTEsMTk0ODk4OTU4MywxOTQ4OTg5NTgzLC0xNj
+kwNjQ3NzcyLC0xOTYyODQ1MTE2LDI5MTMyODkxOSwxMDY1MjU1
+MTUxLC03Njg5NTQxNTYsMTE3MDg0Mjc5NywtMTIxNDY0MTYxOC
+wtMTA0NDcyNjEyNCwyMDI0MDU5NzM4LDEzNTc3MTgwOSwtMTk1
+MTc0OTYyOV19
 -->
