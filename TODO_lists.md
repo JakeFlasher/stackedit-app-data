@@ -61,13 +61,19 @@ Enumerating pre-trained models
 - set model = TimesNet
 	- 36,721,669
 	- inferenced spec17, GAP spec06
+-
+
 - set model = ReuseDist
+	- Simulation: re-running results
+	- 
+- set model = naive change point detection
+	- CPD: re-running cpd for all traces
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMDE3MjE4NzQsNDYyNzE1MjMwLDIxMz
-c1NzIxNzMsLTEzNzYzMDk0MjYsMTgxNTY0MTgzOCw5OTU4MTY0
-NTMsLTEwNjg1MDcyLDE3OTUwNTMzMTQsOTU3MDg3OTA5LC0xMj
-gzODg4NTQ3LDk3Mzk5MDU5MSwxNDg2MzI4NTExLDE5NDg5ODk1
-ODMsMTk0ODk4OTU4MywtMTY5MDY0Nzc3MiwtMTk2Mjg0NTExNi
-wyOTEzMjg5MTksMTA2NTI1NTE1MSwtNzY4OTU0MTU2LDExNzA4
-NDI3OTddfQ==
+eyJoaXN0b3J5IjpbLTE1MTQ3NjYyLDQ2MjcxNTIzMCwyMTM3NT
+cyMTczLC0xMzc2MzA5NDI2LDE4MTU2NDE4MzgsOTk1ODE2NDUz
+LC0xMDY4NTA3MiwxNzk1MDUzMzE0LDk1NzA4NzkwOSwtMTI4Mz
+g4ODU0Nyw5NzM5OTA1OTEsMTQ4NjMyODUxMSwxOTQ4OTg5NTgz
+LDE5NDg5ODk1ODMsLTE2OTA2NDc3NzIsLTE5NjI4NDUxMTYsMj
+kxMzI4OTE5LDEwNjUyNTUxNTEsLTc2ODk1NDE1NiwxMTcwODQy
+Nzk3XX0=
 -->
