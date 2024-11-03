@@ -34,7 +34,7 @@ Enumerating training dataset on pre-trained models
 
 Enumerating pre-trained models
 - set model = SAITS (2 layers)
-	- 1,324,934 (2 layers)
+	- 1,324,934 (2 layers, d_model = 256)
 	- 81,901,958 (4 layers, d_model = 1536)
 	- inferenced SPEC06, SPEC17, gap
 	- cpded all (ongoing)
@@ -70,7 +70,7 @@ Enumerating pre-trained models
 - set model = naive change point detection
 	- CPD: re-running cpd for all traces
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjgzMzEzNDM1LC0xNTE0NzY2Miw0NjI3MT
+eyJoaXN0b3J5IjpbNDk5ODI1NDUzLC0xNTE0NzY2Miw0NjI3MT
 UyMzAsMjEzNzU3MjE3MywtMTM3NjMwOTQyNiwxODE1NjQxODM4
 LDk5NTgxNjQ1MywtMTA2ODUwNzIsMTc5NTA1MzMxNCw5NTcwOD
 c5MDksLTEyODM4ODg1NDcsOTczOTkwNTkxLDE0ODYzMjg1MTEs
