@@ -19,7 +19,7 @@ Enumerating training dataset on pre-trained models
 - set model = ImputeFormer (pre-trained)
 	- {gcc, aster, bfs10, mcf}.pypots	
 	- aster: inferenced  SPEC06, gap, spec17 (imputation_astar		)
-		- cpded: ???spec06 (skip them next time)
+		- cpded: ???spec06 (skip them next time), spec17, gap
 		- synced:
 	- gcc: inferendced SPEC17, gap, spec06(ongoing partial)
 		- cpded:
@@ -71,11 +71,11 @@ Enumerating pre-trained models
 - set model = naive change point detection
 	- CPD: re-running cpd for all traces
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTcyMDI1MjAzNyw0OTk4MjU0NTMsLTE1MT
-Q3NjYyLDQ2MjcxNTIzMCwyMTM3NTcyMTczLC0xMzc2MzA5NDI2
-LDE4MTU2NDE4MzgsOTk1ODE2NDUzLC0xMDY4NTA3MiwxNzk1MD
-UzMzE0LDk1NzA4NzkwOSwtMTI4Mzg4ODU0Nyw5NzM5OTA1OTEs
-MTQ4NjMyODUxMSwxOTQ4OTg5NTgzLDE5NDg5ODk1ODMsLTE2OT
-A2NDc3NzIsLTE5NjI4NDUxMTYsMjkxMzI4OTE5LDEwNjUyNTUx
-NTFdfQ==
+eyJoaXN0b3J5IjpbLTEzNjYzMjAyNjgsLTcyMDI1MjAzNyw0OT
+k4MjU0NTMsLTE1MTQ3NjYyLDQ2MjcxNTIzMCwyMTM3NTcyMTcz
+LC0xMzc2MzA5NDI2LDE4MTU2NDE4MzgsOTk1ODE2NDUzLC0xMD
+Y4NTA3MiwxNzk1MDUzMzE0LDk1NzA4NzkwOSwtMTI4Mzg4ODU0
+Nyw5NzM5OTA1OTEsMTQ4NjMyODUxMSwxOTQ4OTg5NTgzLDE5ND
+g5ODk1ODMsLTE2OTA2NDc3NzIsLTE5NjI4NDUxMTYsMjkxMzI4
+OTE5XX0=
 -->
