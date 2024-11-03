@@ -22,10 +22,10 @@ Enumerating training dataset on pre-trained models
 		- cpded: ???spec06 (skip them next time), spec17, gap
 		- synced:
 	- gcc: inferendced SPEC17, gap, spec06(ongoing partial)
-		- cpded:
-		- synced:
-	- bfs-10 inferenced SPEC17, gap, spec06
 		- cpded: 
+		- synced: 
+	- bfs-10 inferenced SPEC17, gap, spec06
+		- cpded:  
 		- synced:
 
 - benchmarking = SPEC06, SPEC17
@@ -71,11 +71,11 @@ Enumerating pre-trained models
 - set model = naive change point detection
 	- CPD: re-running cpd for all traces
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMjg0NDk0NDgsLTEzNjYzMjAyNjgsLT
-gyNDg3OTczOCwtMTM2NjMyMDI2OCwtNzIwMjUyMDM3LDQ5OTgy
-NTQ1MywtMTUxNDc2NjIsNDYyNzE1MjMwLDIxMzc1NzIxNzMsLT
-EzNzYzMDk0MjYsMTgxNTY0MTgzOCw5OTU4MTY0NTMsLTEwNjg1
-MDcyLDE3OTUwNTMzMTQsOTU3MDg3OTA5LC0xMjgzODg4NTQ3LD
-k3Mzk5MDU5MSwxNDg2MzI4NTExLDE5NDg5ODk1ODMsMTk0ODk4
+eyJoaXN0b3J5IjpbMTQ5NTkzNzI3NiwtMTMyODQ0OTQ0OCwtMT
+M2NjMyMDI2OCwtODI0ODc5NzM4LC0xMzY2MzIwMjY4LC03MjAy
+NTIwMzcsNDk5ODI1NDUzLC0xNTE0NzY2Miw0NjI3MTUyMzAsMj
+EzNzU3MjE3MywtMTM3NjMwOTQyNiwxODE1NjQxODM4LDk5NTgx
+NjQ1MywtMTA2ODUwNzIsMTc5NTA1MzMxNCw5NTcwODc5MDksLT
+EyODM4ODg1NDcsOTczOTkwNTkxLDE0ODYzMjg1MTEsMTk0ODk4
 OTU4M119
 -->
