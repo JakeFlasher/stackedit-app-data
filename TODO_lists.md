@@ -36,7 +36,7 @@ Enumerating training dataset on pre-trained models
 Enumerating pre-trained models
 - set model = SAITS (2 layers)
 	- 1,324,934 (2 layers, d_model = 256)
-	- 81,901,958 (4 layers, d_model = 1536)
+	- 37,824,902 (4 layers, d_model = 1024)
 	- inferenced SPEC06, SPEC17, gap
 	- cpded all (ongoing)
 	- syned trace all: /champsim_traces/traces/syn_SAITS_0.5
@@ -71,11 +71,11 @@ Enumerating pre-trained models
 - set model = naive change point detection
 	- CPD: re-running cpd for all traces
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNjYzMjAyNjgsLTgyNDg3OTczOCwtMT
-M2NjMyMDI2OCwtNzIwMjUyMDM3LDQ5OTgyNTQ1MywtMTUxNDc2
-NjIsNDYyNzE1MjMwLDIxMzc1NzIxNzMsLTEzNzYzMDk0MjYsMT
-gxNTY0MTgzOCw5OTU4MTY0NTMsLTEwNjg1MDcyLDE3OTUwNTMz
-MTQsOTU3MDg3OTA5LC0xMjgzODg4NTQ3LDk3Mzk5MDU5MSwxND
-g2MzI4NTExLDE5NDg5ODk1ODMsMTk0ODk4OTU4MywtMTY5MDY0
-Nzc3Ml19
+eyJoaXN0b3J5IjpbLTEzMjg0NDk0NDgsLTEzNjYzMjAyNjgsLT
+gyNDg3OTczOCwtMTM2NjMyMDI2OCwtNzIwMjUyMDM3LDQ5OTgy
+NTQ1MywtMTUxNDc2NjIsNDYyNzE1MjMwLDIxMzc1NzIxNzMsLT
+EzNzYzMDk0MjYsMTgxNTY0MTgzOCw5OTU4MTY0NTMsLTEwNjg1
+MDcyLDE3OTUwNTMzMTQsOTU3MDg3OTA5LC0xMjgzODg4NTQ3LD
+k3Mzk5MDU5MSwxNDg2MzI4NTExLDE5NDg5ODk1ODMsMTk0ODk4
+OTU4M119
 -->
