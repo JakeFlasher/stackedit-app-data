@@ -44,12 +44,12 @@ Enumerating pre-trained models
 	- 552
 	- inferenced SPEC17, SPEC06, GAP
 	- cpded ongoing SPEC06(imputeformer_aster), SPEC17, GAP (gz)
-	- 
+	- synced
 
 -set model = ModernTCN
 	- params:  475,049
 	- inferenced spec06, gap, spec17 (ongoing, partial, remainder spec17)
-	- cpded gap, spec06
+	- cpded gap, spec06, spec17
 	- 
 - set model = ImputeFormer 
 	- 1,194,433
@@ -61,11 +61,11 @@ Enumerating pre-trained models
 	- inferenced spec17, GAP spec06
 - set model = ReuseDist
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjEzNzU3MjE3MywtMTM3NjMwOTQyNiwxOD
-E1NjQxODM4LDk5NTgxNjQ1MywtMTA2ODUwNzIsMTc5NTA1MzMx
-NCw5NTcwODc5MDksLTEyODM4ODg1NDcsOTczOTkwNTkxLDE0OD
-YzMjg1MTEsMTk0ODk4OTU4MywxOTQ4OTg5NTgzLC0xNjkwNjQ3
-NzcyLC0xOTYyODQ1MTE2LDI5MTMyODkxOSwxMDY1MjU1MTUxLC
-03Njg5NTQxNTYsMTE3MDg0Mjc5NywtMTIxNDY0MTYxOCwtMTA0
-NDcyNjEyNF19
+eyJoaXN0b3J5IjpbNDYyNzE1MjMwLDIxMzc1NzIxNzMsLTEzNz
+YzMDk0MjYsMTgxNTY0MTgzOCw5OTU4MTY0NTMsLTEwNjg1MDcy
+LDE3OTUwNTMzMTQsOTU3MDg3OTA5LC0xMjgzODg4NTQ3LDk3Mz
+k5MDU5MSwxNDg2MzI4NTExLDE5NDg5ODk1ODMsMTk0ODk4OTU4
+MywtMTY5MDY0Nzc3MiwtMTk2Mjg0NTExNiwyOTEzMjg5MTksMT
+A2NTI1NTE1MSwtNzY4OTU0MTU2LDExNzA4NDI3OTcsLTEyMTQ2
+NDE2MThdfQ==
 -->
