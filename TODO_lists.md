@@ -59,7 +59,7 @@ Enumerating pre-trained models
 	- 1,194,433n
 - set model = TimeMixer
 	- broken for layer=4 (layer=2 can work)
-	- 16,861,805
+	- 8,479,341
 
 
 - set model = TimesNet
@@ -73,11 +73,11 @@ Enumerating pre-trained models
 - set model = naive change point detection
 	- CPD: re-running cpd for all traces
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM1MjY1ODUwNiwyMTQwNTQwNDI0LC0xOD
-E4MTg1NjI4LDEwMTE3ODQ4MDEsMTQ5NTkzNzI3NiwtMTMyODQ0
-OTQ0OCwtMTM2NjMyMDI2OCwtODI0ODc5NzM4LC0xMzY2MzIwMj
-Y4LC03MjAyNTIwMzcsNDk5ODI1NDUzLC0xNTE0NzY2Miw0NjI3
-MTUyMzAsMjEzNzU3MjE3MywtMTM3NjMwOTQyNiwxODE1NjQxOD
-M4LDk5NTgxNjQ1MywtMTA2ODUwNzIsMTc5NTA1MzMxNCw5NTcw
-ODc5MDldfQ==
+eyJoaXN0b3J5IjpbLTEzNjI3MTI5OTEsLTM1MjY1ODUwNiwyMT
+QwNTQwNDI0LC0xODE4MTg1NjI4LDEwMTE3ODQ4MDEsMTQ5NTkz
+NzI3NiwtMTMyODQ0OTQ0OCwtMTM2NjMyMDI2OCwtODI0ODc5Nz
+M4LC0xMzY2MzIwMjY4LC03MjAyNTIwMzcsNDk5ODI1NDUzLC0x
+NTE0NzY2Miw0NjI3MTUyMzAsMjEzNzU3MjE3MywtMTM3NjMwOT
+QyNiwxODE1NjQxODM4LDk5NTgxNjQ1MywtMTA2ODUwNzIsMTc5
+NTA1MzMxNF19
 -->
