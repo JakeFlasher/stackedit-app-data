@@ -74,14 +74,15 @@ Enumerating pre-trained models
 - set model = ReuseDist
 	- Simulation: re-running results
 	- 
+	- 
 - set model = naive change point detection
 	- CPD: re-running cpd for all traces
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDY3MjMzNzQzLC0xMzYyNzEyOTkxLC0zNT
-I2NTg1MDYsMjE0MDU0MDQyNCwtMTgxODE4NTYyOCwxMDExNzg0
-ODAxLDE0OTU5MzcyNzYsLTEzMjg0NDk0NDgsLTEzNjYzMjAyNj
-gsLTgyNDg3OTczOCwtMTM2NjMyMDI2OCwtNzIwMjUyMDM3LDQ5
-OTgyNTQ1MywtMTUxNDc2NjIsNDYyNzE1MjMwLDIxMzc1NzIxNz
-MsLTEzNzYzMDk0MjYsMTgxNTY0MTgzOCw5OTU4MTY0NTMsLTEw
-Njg1MDcyXX0=
+eyJoaXN0b3J5IjpbMTk3NDE2MTIwMiwtMTM2MjcxMjk5MSwtMz
+UyNjU4NTA2LDIxNDA1NDA0MjQsLTE4MTgxODU2MjgsMTAxMTc4
+NDgwMSwxNDk1OTM3Mjc2LC0xMzI4NDQ5NDQ4LC0xMzY2MzIwMj
+Y4LC04MjQ4Nzk3MzgsLTEzNjYzMjAyNjgsLTcyMDI1MjAzNyw0
+OTk4MjU0NTMsLTE1MTQ3NjYyLDQ2MjcxNTIzMCwyMTM3NTcyMT
+czLC0xMzc2MzA5NDI2LDE4MTU2NDE4MzgsOTk1ODE2NDUzLC0x
+MDY4NTA3Ml19
 -->
