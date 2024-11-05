@@ -14,13 +14,17 @@ Enumerating training dataset on pre-trained models
 - set model = ImputeFormer (application specific	)
 - runed SPEC17,GAP (3 reduction rate)
 - trained SPEC06 
-- inferenced
+- inferenced all
+- synced all
+- simulation: run all
 
 - set model = ImputeFormer (pre-trained)
 	- {gcc, aster, bfs10, mcf}.pypots	
-	- aster: inferenced  SPEC06, gap, spec17 (imputation_astar		)
+	- aster: inferenced  SPEC06, gap, spec17 (imputation_astar		
 		- cpded: ???spec06 (skip them next time), spec17, gap
-		- synced:
+		- synced: all
+		- simultion: run all (ongoing) 
+		- 
 	- gcc: inferendced SPEC17, gap, spec06(ongoing partial)
 		- cpded: all (ongoing)
 		- synced: 
@@ -47,7 +51,7 @@ Enumerating pre-trained models
 	- inferenced SPEC17, SPEC06, GAP
 	- cpded ongoing SPEC06(imputeformer_aster), SPEC17, GAP (gz)
 	- synced all traces
-	- simulation: 
+	- simulation:  runned all
 
 -set model = ModernTCN
 	- params:  475,049
@@ -73,11 +77,11 @@ Enumerating pre-trained models
 - set model = naive change point detection
 	- CPD: re-running cpd for all traces
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNjI3MTI5OTEsLTM1MjY1ODUwNiwyMT
-QwNTQwNDI0LC0xODE4MTg1NjI4LDEwMTE3ODQ4MDEsMTQ5NTkz
-NzI3NiwtMTMyODQ0OTQ0OCwtMTM2NjMyMDI2OCwtODI0ODc5Nz
-M4LC0xMzY2MzIwMjY4LC03MjAyNTIwMzcsNDk5ODI1NDUzLC0x
-NTE0NzY2Miw0NjI3MTUyMzAsMjEzNzU3MjE3MywtMTM3NjMwOT
-QyNiwxODE1NjQxODM4LDk5NTgxNjQ1MywtMTA2ODUwNzIsMTc5
-NTA1MzMxNF19
+eyJoaXN0b3J5IjpbNDY3MjMzNzQzLC0xMzYyNzEyOTkxLC0zNT
+I2NTg1MDYsMjE0MDU0MDQyNCwtMTgxODE4NTYyOCwxMDExNzg0
+ODAxLDE0OTU5MzcyNzYsLTEzMjg0NDk0NDgsLTEzNjYzMjAyNj
+gsLTgyNDg3OTczOCwtMTM2NjMyMDI2OCwtNzIwMjUyMDM3LDQ5
+OTgyNTQ1MywtMTUxNDc2NjIsNDYyNzE1MjMwLDIxMzc1NzIxNz
+MsLTEzNzYzMDk0MjYsMTgxNTY0MTgzOCw5OTU4MTY0NTMsLTEw
+Njg1MDcyXX0=
 -->
