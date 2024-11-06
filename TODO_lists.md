@@ -72,7 +72,7 @@ Enumerating pre-trained models
 - set model = TimesNet
 	- 36,721,669
 	- inferenced spec17, GAP spec06
--
+	-
 
 - set model = ReuseDist
 	- Simulation: re-running results
@@ -82,11 +82,11 @@ Enumerating pre-trained models
 	- CPD: re-running cpd for all traces
 	- synced: all traces (ongoing)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ2NjEwNzYyOCw5NTc3NjA3MjIsMTk3ND
-E2MTIwMiwtMTM2MjcxMjk5MSwtMzUyNjU4NTA2LDIxNDA1NDA0
-MjQsLTE4MTgxODU2MjgsMTAxMTc4NDgwMSwxNDk1OTM3Mjc2LC
-0xMzI4NDQ5NDQ4LC0xMzY2MzIwMjY4LC04MjQ4Nzk3MzgsLTEz
-NjYzMjAyNjgsLTcyMDI1MjAzNyw0OTk4MjU0NTMsLTE1MTQ3Nj
-YyLDQ2MjcxNTIzMCwyMTM3NTcyMTczLC0xMzc2MzA5NDI2LDE4
-MTU2NDE4MzhdfQ==
+eyJoaXN0b3J5IjpbMTUzNjc3NjUyLDk1Nzc2MDcyMiwxOTc0MT
+YxMjAyLC0xMzYyNzEyOTkxLC0zNTI2NTg1MDYsMjE0MDU0MDQy
+NCwtMTgxODE4NTYyOCwxMDExNzg0ODAxLDE0OTU5MzcyNzYsLT
+EzMjg0NDk0NDgsLTEzNjYzMjAyNjgsLTgyNDg3OTczOCwtMTM2
+NjMyMDI2OCwtNzIwMjUyMDM3LDQ5OTgyNTQ1MywtMTUxNDc2Nj
+IsNDYyNzE1MjMwLDIxMzc1NzIxNzMsLTEzNzYzMDk0MjYsMTgx
+NTY0MTgzOF19
 -->
