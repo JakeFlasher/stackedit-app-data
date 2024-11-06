@@ -3,10 +3,6 @@
 - 
 ./run_sim.sh ./models ./reference 500000000 SPP_single_core_dev_results > log_spp 2>&1 &
 
-
-
-
-
 - set model = ImputeFormer (pre-trained)
 	- {gcc, aster, bfs10, mcf}.pypots	
 	- aster: inferenced  SPEC06, gap, spec17 (imputation_astar		
@@ -18,7 +14,7 @@
 		- cpded: all (ongoing)
 		- synced: 
 		- simulation:
-		- 
+		
 	- bfs-10 inferenced SPEC17, gap, spec06
 		- cpded:  all traces (ongoing)
 		- synced: all traces (ongoing)
@@ -94,11 +90,11 @@ Enumerating pre-trained models
 	- syned trace all: /champsim_traces/traces/syn_SAITS_0.5
 	- results: spp, bingo finished, berti (rerunning, need to summarize)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNTA5MDA3NDgsOTU3NzYwNzIyLDE5Nz
-QxNjEyMDIsLTEzNjI3MTI5OTEsLTM1MjY1ODUwNiwyMTQwNTQw
-NDI0LC0xODE4MTg1NjI4LDEwMTE3ODQ4MDEsMTQ5NTkzNzI3Ni
-wtMTMyODQ0OTQ0OCwtMTM2NjMyMDI2OCwtODI0ODc5NzM4LC0x
-MzY2MzIwMjY4LC03MjAyNTIwMzcsNDk5ODI1NDUzLC0xNTE0Nz
-Y2Miw0NjI3MTUyMzAsMjEzNzU3MjE3MywtMTM3NjMwOTQyNiwx
-ODE1NjQxODM4XX0=
+eyJoaXN0b3J5IjpbMTkwNTY2MTg0OSw5NTc3NjA3MjIsMTk3ND
+E2MTIwMiwtMTM2MjcxMjk5MSwtMzUyNjU4NTA2LDIxNDA1NDA0
+MjQsLTE4MTgxODU2MjgsMTAxMTc4NDgwMSwxNDk1OTM3Mjc2LC
+0xMzI4NDQ5NDQ4LC0xMzY2MzIwMjY4LC04MjQ4Nzk3MzgsLTEz
+NjYzMjAyNjgsLTcyMDI1MjAzNyw0OTk4MjU0NTMsLTE1MTQ3Nj
+YyLDQ2MjcxNTIzMCwyMTM3NTcyMTczLC0xMzc2MzA5NDI2LDE4
+MTU2NDE4MzhdfQ==
 -->
