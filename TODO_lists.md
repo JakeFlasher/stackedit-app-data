@@ -28,9 +28,12 @@ Enumerating training dataset on pre-trained models
 	- gcc: inferendced SPEC17, gap, spec06(ongoing partial)
 		- cpded: all (ongoing)
 		- synced: 
+		- simulation
+		- 
 	- bfs-10 inferenced SPEC17, gap, spec06
 		- cpded:  all traces (ongoing)
 		- synced: all traces (ongoing)
+		- simulation: 
 
 - benchmarking = SPEC06, SPEC17
 - simulation = 1 prefetcher
@@ -79,11 +82,11 @@ Enumerating pre-trained models
 	- CPD: re-running cpd for all traces
 	- synced: all traces (ongoing)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYxOTg3NjgxLDk1Nzc2MDcyMiwxOTc0MT
-YxMjAyLC0xMzYyNzEyOTkxLC0zNTI2NTg1MDYsMjE0MDU0MDQy
-NCwtMTgxODE4NTYyOCwxMDExNzg0ODAxLDE0OTU5MzcyNzYsLT
-EzMjg0NDk0NDgsLTEzNjYzMjAyNjgsLTgyNDg3OTczOCwtMTM2
-NjMyMDI2OCwtNzIwMjUyMDM3LDQ5OTgyNTQ1MywtMTUxNDc2Nj
-IsNDYyNzE1MjMwLDIxMzc1NzIxNzMsLTEzNzYzMDk0MjYsMTgx
-NTY0MTgzOF19
+eyJoaXN0b3J5IjpbLTEzNTM3MDg5MTIsOTU3NzYwNzIyLDE5Nz
+QxNjEyMDIsLTEzNjI3MTI5OTEsLTM1MjY1ODUwNiwyMTQwNTQw
+NDI0LC0xODE4MTg1NjI4LDEwMTE3ODQ4MDEsMTQ5NTkzNzI3Ni
+wtMTMyODQ0OTQ0OCwtMTM2NjMyMDI2OCwtODI0ODc5NzM4LC0x
+MzY2MzIwMjY4LC03MjAyNTIwMzcsNDk5ODI1NDUzLC0xNTE0Nz
+Y2Miw0NjI3MTUyMzAsMjEzNzU3MjE3MywtMTM3NjMwOTQyNiwx
+ODE1NjQxODM4XX0=
 -->
