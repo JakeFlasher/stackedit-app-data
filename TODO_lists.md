@@ -23,7 +23,7 @@ Enumerating training dataset on pre-trained models
 	- aster: inferenced  SPEC06, gap, spec17 (imputation_astar		
 		- cpded: ???spec06 (skip them next time), spec17, gap
 		- synced: all
-		- simultion: run all (ongoing) 
+		- simultion: run all (ongoing) BERTI (left-ongoing)
 		- 
 	- gcc: inferendced SPEC17, gap, spec06(ongoing partial)
 		- cpded: all (ongoing)
@@ -79,11 +79,11 @@ Enumerating pre-trained models
 	- CPD: re-running cpd for all traces
 	- synced: all traces (ongoing)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTU3NzYwNzIyLDE5NzQxNjEyMDIsLTEzNj
-I3MTI5OTEsLTM1MjY1ODUwNiwyMTQwNTQwNDI0LC0xODE4MTg1
-NjI4LDEwMTE3ODQ4MDEsMTQ5NTkzNzI3NiwtMTMyODQ0OTQ0OC
-wtMTM2NjMyMDI2OCwtODI0ODc5NzM4LC0xMzY2MzIwMjY4LC03
-MjAyNTIwMzcsNDk5ODI1NDUzLC0xNTE0NzY2Miw0NjI3MTUyMz
-AsMjEzNzU3MjE3MywtMTM3NjMwOTQyNiwxODE1NjQxODM4LDk5
-NTgxNjQ1M119
+eyJoaXN0b3J5IjpbLTY0NjQ1MDk2Niw5NTc3NjA3MjIsMTk3ND
+E2MTIwMiwtMTM2MjcxMjk5MSwtMzUyNjU4NTA2LDIxNDA1NDA0
+MjQsLTE4MTgxODU2MjgsMTAxMTc4NDgwMSwxNDk1OTM3Mjc2LC
+0xMzI4NDQ5NDQ4LC0xMzY2MzIwMjY4LC04MjQ4Nzk3MzgsLTEz
+NjYzMjAyNjgsLTcyMDI1MjAzNyw0OTk4MjU0NTMsLTE1MTQ3Nj
+YyLDQ2MjcxNTIzMCwyMTM3NTcyMTczLC0xMzc2MzA5NDI2LDE4
+MTU2NDE4MzhdfQ==
 -->
