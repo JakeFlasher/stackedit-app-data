@@ -1,6 +1,9 @@
 500 Ground truth for GAP, SPEC06, SPEC17
 - 3 prefetchers
--
+- 
+./run_sim.sh ./models ./reference 500000000 SPP_single_core_dev_results > log_spp 2>&1 &
+
+
 
 
 
@@ -20,11 +23,6 @@
 		- cpded:  all traces (ongoing)
 		- synced: all traces (ongoing)
 		- simulation: 
-
-- benchmarking = SPEC06, SPEC17
-- simulation = 1 prefetcher
-
-./run_sim.sh ./models ./reference 500000000 SPP_single_core_dev_results > log_spp 2>&1 &
 
 
 
@@ -67,8 +65,10 @@ Enumerating Reduction Rate
 	- GemsTD, astar ... etc spec06 (inferenced)
 	- cped: spec06
 	- synced and results
-- simulation = all 3 prefetchers (done all spp, done berti,
+	- simulation = all 3 prefetchers (done all spp, done berti,
 	- done 0.75/0.5/0.25 spec/gap )
+	- benchmarking = SPEC06, SPEC17
+	- simulation = 3 prefetcher
 
 Enumerating training dataset on pre-trained models
 - set model = ImputeFormer (application specific	)
@@ -94,11 +94,11 @@ Enumerating pre-trained models
 	- syned trace all: /champsim_traces/traces/syn_SAITS_0.5
 	- results: spp, bingo finished, berti (rerunning, need to summarize)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc5NzYyODIwNCw5NTc3NjA3MjIsMTk3ND
-E2MTIwMiwtMTM2MjcxMjk5MSwtMzUyNjU4NTA2LDIxNDA1NDA0
-MjQsLTE4MTgxODU2MjgsMTAxMTc4NDgwMSwxNDk1OTM3Mjc2LC
-0xMzI4NDQ5NDQ4LC0xMzY2MzIwMjY4LC04MjQ4Nzk3MzgsLTEz
-NjYzMjAyNjgsLTcyMDI1MjAzNyw0OTk4MjU0NTMsLTE1MTQ3Nj
-YyLDQ2MjcxNTIzMCwyMTM3NTcyMTczLC0xMzc2MzA5NDI2LDE4
-MTU2NDE4MzhdfQ==
+eyJoaXN0b3J5IjpbLTExNTA5MDA3NDgsOTU3NzYwNzIyLDE5Nz
+QxNjEyMDIsLTEzNjI3MTI5OTEsLTM1MjY1ODUwNiwyMTQwNTQw
+NDI0LC0xODE4MTg1NjI4LDEwMTE3ODQ4MDEsMTQ5NTkzNzI3Ni
+wtMTMyODQ0OTQ0OCwtMTM2NjMyMDI2OCwtODI0ODc5NzM4LC0x
+MzY2MzIwMjY4LC03MjAyNTIwMzcsNDk5ODI1NDUzLC0xNTE0Nz
+Y2Miw0NjI3MTUyMzAsMjEzNzU3MjE3MywtMTM3NjMwOTQyNiwx
+ODE1NjQxODM4XX0=
 -->
