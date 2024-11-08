@@ -39,6 +39,10 @@
 	- broken for layer=4 (layer=2 can work)
 	- 8,479,341
 
+- set model = TimesMixer
+	- 8,479,341
+	- inferenced spec17,  spec06
+	-
 
 - set model = TimesNet
 	- 36,721,669
@@ -94,11 +98,11 @@ Enumerating pre-trained models
 	- syned trace all: /champsim_traces/traces/syn_SAITS_0.5
 	- results: spp, bingo finished, berti (rerunning, need to summarize)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDI1MTk4MjAwLDEzMTA2OTMzNTgsLTIzNz
-E4MDMyOSwxOTA1NjYxODQ5LDk1Nzc2MDcyMiwxOTc0MTYxMjAy
-LC0xMzYyNzEyOTkxLC0zNTI2NTg1MDYsMjE0MDU0MDQyNCwtMT
-gxODE4NTYyOCwxMDExNzg0ODAxLDE0OTU5MzcyNzYsLTEzMjg0
-NDk0NDgsLTEzNjYzMjAyNjgsLTgyNDg3OTczOCwtMTM2NjMyMD
-I2OCwtNzIwMjUyMDM3LDQ5OTgyNTQ1MywtMTUxNDc2NjIsNDYy
-NzE1MjMwXX0=
+eyJoaXN0b3J5IjpbODA2MjcwNDk0LDQyNTE5ODIwMCwxMzEwNj
+kzMzU4LC0yMzcxODAzMjksMTkwNTY2MTg0OSw5NTc3NjA3MjIs
+MTk3NDE2MTIwMiwtMTM2MjcxMjk5MSwtMzUyNjU4NTA2LDIxND
+A1NDA0MjQsLTE4MTgxODU2MjgsMTAxMTc4NDgwMSwxNDk1OTM3
+Mjc2LC0xMzI4NDQ5NDQ4LC0xMzY2MzIwMjY4LC04MjQ4Nzk3Mz
+gsLTEzNjYzMjAyNjgsLTcyMDI1MjAzNyw0OTk4MjU0NTMsLTE1
+MTQ3NjYyXX0=
 -->
