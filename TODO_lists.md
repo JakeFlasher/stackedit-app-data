@@ -22,7 +22,7 @@
 		- simulation: 
 
 # paper writing
-## introduce the importance and popularity of simpoints traces in cache size/prefetecher etc simulations, i.e. emuerating simulation settings and run various simulations on 1 simpoint trace.
+## introduce the importance and popularity of simpoints traces in cache size/tprefetecher etc simulations, i.e. emuerating simulation settings and run various simulations on 1 simpoint trace.
 ## training time/inference time cost table
 ## optimize cpd
 
@@ -94,11 +94,11 @@ Enumerating pre-trained models
 	- syned trace all: /champsim_traces/traces/syn_SAITS_0.5
 	- results: spp, bingo finished, berti (rerunning, need to summarize)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMxMDY5MzM1OCwtMjM3MTgwMzI5LDE5MD
-U2NjE4NDksOTU3NzYwNzIyLDE5NzQxNjEyMDIsLTEzNjI3MTI5
-OTEsLTM1MjY1ODUwNiwyMTQwNTQwNDI0LC0xODE4MTg1NjI4LD
-EwMTE3ODQ4MDEsMTQ5NTkzNzI3NiwtMTMyODQ0OTQ0OCwtMTM2
-NjMyMDI2OCwtODI0ODc5NzM4LC0xMzY2MzIwMjY4LC03MjAyNT
-IwMzcsNDk5ODI1NDUzLC0xNTE0NzY2Miw0NjI3MTUyMzAsMjEz
-NzU3MjE3M119
+eyJoaXN0b3J5IjpbNDI1MTk4MjAwLDEzMTA2OTMzNTgsLTIzNz
+E4MDMyOSwxOTA1NjYxODQ5LDk1Nzc2MDcyMiwxOTc0MTYxMjAy
+LC0xMzYyNzEyOTkxLC0zNTI2NTg1MDYsMjE0MDU0MDQyNCwtMT
+gxODE4NTYyOCwxMDExNzg0ODAxLDE0OTU5MzcyNzYsLTEzMjg0
+NDk0NDgsLTEzNjYzMjAyNjgsLTgyNDg3OTczOCwtMTM2NjMyMD
+I2OCwtNzIwMjUyMDM3LDQ5OTgyNTQ1MywtMTUxNDc2NjIsNDYy
+NzE1MjMwXX0=
 -->
