@@ -41,7 +41,7 @@
 
 - set model = TimesMixer
 	- 8,479,341
-	- inferenced spec17,  spec06
+	- inferenced spec17,  gap
 	-
 
 - set model = TimesNet
@@ -98,11 +98,11 @@ Enumerating pre-trained models
 	- syned trace all: /champsim_traces/traces/syn_SAITS_0.5
 	- results: spp, bingo finished, berti (rerunning, need to summarize)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODA2MjcwNDk0LDQyNTE5ODIwMCwxMzEwNj
-kzMzU4LC0yMzcxODAzMjksMTkwNTY2MTg0OSw5NTc3NjA3MjIs
-MTk3NDE2MTIwMiwtMTM2MjcxMjk5MSwtMzUyNjU4NTA2LDIxND
-A1NDA0MjQsLTE4MTgxODU2MjgsMTAxMTc4NDgwMSwxNDk1OTM3
-Mjc2LC0xMzI4NDQ5NDQ4LC0xMzY2MzIwMjY4LC04MjQ4Nzk3Mz
-gsLTEzNjYzMjAyNjgsLTcyMDI1MjAzNyw0OTk4MjU0NTMsLTE1
-MTQ3NjYyXX0=
+eyJoaXN0b3J5IjpbNTEyMjYzMDkxLDgwNjI3MDQ5NCw0MjUxOT
+gyMDAsMTMxMDY5MzM1OCwtMjM3MTgwMzI5LDE5MDU2NjE4NDks
+OTU3NzYwNzIyLDE5NzQxNjEyMDIsLTEzNjI3MTI5OTEsLTM1Mj
+Y1ODUwNiwyMTQwNTQwNDI0LC0xODE4MTg1NjI4LDEwMTE3ODQ4
+MDEsMTQ5NTkzNzI3NiwtMTMyODQ0OTQ0OCwtMTM2NjMyMDI2OC
+wtODI0ODc5NzM4LC0xMzY2MzIwMjY4LC03MjAyNTIwMzcsNDk5
+ODI1NDUzXX0=
 -->
