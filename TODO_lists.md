@@ -21,7 +21,10 @@
 		- synced: all traces (ongoing)
 		- simulation: 
 
-
+# paper writing
+## introduce the importance and popularity of simpoints traces in prefetecher etc simulations, i.e. emuerating simulation settings and run various simulations on 1 simpoint trace.
+## training time/inference time cost table
+## optimize cpd
 
 	
 
@@ -91,11 +94,11 @@ Enumerating pre-trained models
 	- syned trace all: /champsim_traces/traces/syn_SAITS_0.5
 	- results: spp, bingo finished, berti (rerunning, need to summarize)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIzNzE4MDMyOSwxOTA1NjYxODQ5LDk1Nz
-c2MDcyMiwxOTc0MTYxMjAyLC0xMzYyNzEyOTkxLC0zNTI2NTg1
-MDYsMjE0MDU0MDQyNCwtMTgxODE4NTYyOCwxMDExNzg0ODAxLD
-E0OTU5MzcyNzYsLTEzMjg0NDk0NDgsLTEzNjYzMjAyNjgsLTgy
-NDg3OTczOCwtMTM2NjMyMDI2OCwtNzIwMjUyMDM3LDQ5OTgyNT
-Q1MywtMTUxNDc2NjIsNDYyNzE1MjMwLDIxMzc1NzIxNzMsLTEz
-NzYzMDk0MjZdfQ==
+eyJoaXN0b3J5IjpbNjE5NDI4MDI4LC0yMzcxODAzMjksMTkwNT
+Y2MTg0OSw5NTc3NjA3MjIsMTk3NDE2MTIwMiwtMTM2MjcxMjk5
+MSwtMzUyNjU4NTA2LDIxNDA1NDA0MjQsLTE4MTgxODU2MjgsMT
+AxMTc4NDgwMSwxNDk1OTM3Mjc2LC0xMzI4NDQ5NDQ4LC0xMzY2
+MzIwMjY4LC04MjQ4Nzk3MzgsLTEzNjYzMjAyNjgsLTcyMDI1Mj
+AzNyw0OTk4MjU0NTMsLTE1MTQ3NjYyLDQ2MjcxNTIzMCwyMTM3
+NTcyMTczXX0=
 -->
