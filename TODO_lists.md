@@ -25,16 +25,18 @@ Enumerating training dataset on pre-trained models
 		- 
 	- gcc: inferendced SPEC17, gap, spec06(ongoing partial)
 		- cpded: all (ongoing)
-		- synced: 
+		- synced: compled ongoimg
 		- simulation:
 		
 	- bfs-10 inferenced SPEC17, gap, spec06
 		- cpded:  all traces (ongoing)
 		- synced: all traces (ongoing)
-		- simulation: 
+		- simulation:  fini
 
 # paper writing
-## introduce the importance and popularity of simpoints traces in cache size/t
+## introduce the importance and popularity of simpoints traces in cache size/t\
+
+
 		- synced:
 	- gcc: inferendced SPEC17, gap, spec06(ongoing partial)
 		- cpded:
@@ -53,7 +55,7 @@ Enumerating training dataset on pre-trained models
 	- params:  475,049
 	- inferenced spec06, gap, spec17 (ongoing, partial, remainder spec17)
 	- cpded gap, spec06, spec17
-	- 
+	-  simuation ongoin all tracs
 	- 
 
 - set model = TimeMixer
@@ -143,11 +145,11 @@ Enumerat
 	- 36,721,669
 - set model = ReuseDist
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA3MTAwMDE2OCw1MTIyNjMwOTEsODA2Mj
-cwNDk0LDQyNTE5ODIwMCwxMzEwNjkzMzU4LC0yMzcxODAzMjks
-MTkwNTY2MTg0OSw5NTc3NjA3MjIsMTk3NDE2MTIwMiwtMTM2Mj
-cxMjk5MSwtMzUyNjU4NTA2LDIxNDA1NDA0MjQsLTE4MTgxODU2
-MjgsMTAxMTc4NDgwMSwxNDk1OTM3Mjc2LC0xMzI4NDQ5NDQ4LC
-0xMzY2MzIwMjY4LC04MjQ4Nzk3MzgsLTEzNjYzMjAyNjgsLTcy
-MDI1MjAzN119
+eyJoaXN0b3J5IjpbLTYwOTIyMDA3NSwxMDcxMDAwMTY4LDUxMj
+I2MzA5MSw4MDYyNzA0OTQsNDI1MTk4MjAwLDEzMTA2OTMzNTgs
+LTIzNzE4MDMyOSwxOTA1NjYxODQ5LDk1Nzc2MDcyMiwxOTc0MT
+YxMjAyLC0xMzYyNzEyOTkxLC0zNTI2NTg1MDYsMjE0MDU0MDQy
+NCwtMTgxODE4NTYyOCwxMDExNzg0ODAxLDE0OTU5MzcyNzYsLT
+EzMjg0NDk0NDgsLTEzNjYzMjAyNjgsLTgyNDg3OTczOCwtMTM2
+NjMyMDI2OF19
 -->
