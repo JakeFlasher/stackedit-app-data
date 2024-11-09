@@ -3,10 +3,22 @@
 - 
 ./run_sim.sh ./models ./reference 500000000 SPP_single_core_dev_results > log_spp 2>&1 &
 ./run_sim.sh ../traces/astar_specific_imputeformer ./models 500000000 Berti_single_core_dev_results/astar_specific_imputeformer > log_berti 2>&1 &
+Enumerating Reduction Rate
+- set model = application-specific ImputeFormer
+- benchmarking = GAP, SPEC17, SPEC06 (ongoinh)
+	- GemsTD, astar
+- simulation = all 3 prefetchers (done all spp, done berti,
+	- done 0.75/0.5/0.25 spec/gap )
+
+Enumerating training dataset on pre-trained models
+- set model = ImputeFormer (application specific	)
+- runed SPEC17,GAP (3 reduction rate)
+- trained SPEC06 
+- inferenced
 
 - set model = ImputeFormer (pre-trained)
 	- {gcc, aster, bfs10, mcf}.pypots	
-	- aster: inferenced  SPEC06, gap, spec17 (imputation_astar		
+	- aster: inferenced  SPEC06, gap, spec17 (imputation_astar		)
 		- cpded: ???spec06 (skip them next time), spec17, gap
 		- synced: all
 		- simultion: run all (ongoing) BERTI (left-ongoing)
@@ -22,7 +34,16 @@
 		- simulation: 
 
 # paper writing
-## introduce the importance and popularity of simpoints traces in cache size/tprefetecher etc simulations, i.e. emuerating simulation settings and run various simulations on 1 simpoint trace.
+## introduce the importance and popularity of simpoints traces in cache size/t
+		- synced:
+	- gcc: inferendced SPEC17, gap, spec06(ongoing partial)
+		- cpded:
+		- synced:
+	- bfs-10 inferenced SPEC17, gap, spec06
+
+
+- benchmarking = SPEC06, SPEC17
+- simulation = 1 prefetecher etc simulations, i.e. emuerating simulation settings and run various simulations on 1 simpoint trace.
 ## training time/inference time cost table
 ## optimize cpd
 
@@ -55,7 +76,15 @@
 	- 
 - set model = naive change point detection
 	- CPD: re-running cpd for all traces
-	- synced: all traces (ongoing)
+	- sync
+
+./run_sim.sh ./models ./reference 500000000 SPP_single_core_dev_results > log_spp 2>&1 &
+
+Enumerating pre-trained models
+- set model = SAITS
+	- 1,324,934
+	- inferenced SPEC06, SPEC17, gap
+	- cpded: all traces (ongoing)
 
 
 # Finished
@@ -81,7 +110,9 @@ Enumerating training dataset on pre-trained models
 - inferenced all
 - synced all
 - simulation: run all
-- 
+- 	- syned trace all: /champsim_traces/traces/syn_SAITS_0.5
+	- results: spp, bingo finished, berti rerunning
+	
 - set model = TEFN
 	- 552
 	- inferenced SPEC17, SPEC06, GAP
@@ -89,20 +120,34 @@ Enumerating training dataset on pre-trained models
 	- synced all traces
 	- simulation:  runned all
 
-Enumerating pre-trained models
+Enumerat
+
+-set model = ModernTCN
+	- params:  475,049
+	- inferenced spec06, gap, spec17 (ongoing, pre-trained models
 - set model = SAITS (2 layers)
 	- 1,324,934 (2 layers, d_model = 256)
 	- 37,824,902 (4 layers, d_model = 1024)
 	- inferenced SPEC06, SPEC17, gap
 	- cpded all (ongoing)
 	- syned trace all: /champsim_traces/traces/syn_SAITS_0.5
-	- results: spp, bingo finished, berti (rerunning, need to summarize)
+	- results: spp, bingo finished, berti (rerunning, need to summarize)artial, remainder spec17)
+	- cpded gap, spec06
+	- 
+- set model = ImputeFormer 
+	- 1,194,433
+- set model = TimeMixer
+	- broken for layer=4 (layer=2 can work)
+	- 16,861,805
+- set model = TimesNet
+	- 36,721,669
+- set model = ReuseDist
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTEyMjYzMDkxLDgwNjI3MDQ5NCw0MjUxOT
-gyMDAsMTMxMDY5MzM1OCwtMjM3MTgwMzI5LDE5MDU2NjE4NDks
-OTU3NzYwNzIyLDE5NzQxNjEyMDIsLTEzNjI3MTI5OTEsLTM1Mj
-Y1ODUwNiwyMTQwNTQwNDI0LC0xODE4MTg1NjI4LDEwMTE3ODQ4
-MDEsMTQ5NTkzNzI3NiwtMTMyODQ0OTQ0OCwtMTM2NjMyMDI2OC
-wtODI0ODc5NzM4LC0xMzY2MzIwMjY4LC03MjAyNTIwMzcsNDk5
-ODI1NDUzXX0=
+eyJoaXN0b3J5IjpbMTA3MTAwMDE2OCw1MTIyNjMwOTEsODA2Mj
+cwNDk0LDQyNTE5ODIwMCwxMzEwNjkzMzU4LC0yMzcxODAzMjks
+MTkwNTY2MTg0OSw5NTc3NjA3MjIsMTk3NDE2MTIwMiwtMTM2Mj
+cxMjk5MSwtMzUyNjU4NTA2LDIxNDA1NDA0MjQsLTE4MTgxODU2
+MjgsMTAxMTc4NDgwMSwxNDk1OTM3Mjc2LC0xMzI4NDQ5NDQ4LC
+0xMzY2MzIwMjY4LC04MjQ4Nzk3MzgsLTEzNjYzMjAyNjgsLTcy
+MDI1MjAzN119
 -->
