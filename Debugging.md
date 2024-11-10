@@ -100,7 +100,7 @@ replace-with = 'mirror'
 registry = "https://mirrors.tuna.tsinghua.edu.cn/git/crates.io-index.git"
 EOF
 --cpu-shares 1024 (default x10)
-docker  run  --name  champsim_test  -d  --privileged=true --user $(id -u):$(id -g)  -v  /hpc/home/chengaoshi:/root 10.120.24.15:5000/chengaoshi/arch_env:v0  tail  -f >/dev/null
+docker  run  --name  champsim_test  -d  --privileged=true --user $(id -u):$(id -g)  -v  /hpc/home/chengaoshi:/root 10.120.24.15:5000/chengaoshi/ubuntu24.04 :v0  tail  -f >/dev/null
 ```
 # Intall spec2017 in docker
 ```
@@ -398,11 +398,11 @@ B --> D{Rhombus}
 C --> D
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODEzNDM3MzM2LC0xNzY3MTEyNDE3LC0zMz
-MwNzA2MiwxMTEwNTU3MDEyLDg4NjM3Nzg1MSwtMTEwMjEyODc2
-MSw3MDY0NjQ4NTEsLTE0MzIzMzcyMDksLTg2Mjc4MDQ1MCwtMj
-AzNTcxNDczNywtNTgyMjg1MDk0LDg3MzUwMzE2MSwxNjYwMDYw
-Mjg4LDM5ODIyMTc4OSwtMTE5MTM0NzAxOCwxNDE0NjAzMzkxLD
-IwMjcwODQ2NDcsMTg0MTA0OTgyMiwtMTQ5Mzc0NDY5MywtMTI1
-NTU4NzM5XX0=
+eyJoaXN0b3J5IjpbLTE5MDQ5NTU2NjksLTE3NjcxMTI0MTcsLT
+MzMzA3MDYyLDExMTA1NTcwMTIsODg2Mzc3ODUxLC0xMTAyMTI4
+NzYxLDcwNjQ2NDg1MSwtMTQzMjMzNzIwOSwtODYyNzgwNDUwLC
+0yMDM1NzE0NzM3LC01ODIyODUwOTQsODczNTAzMTYxLDE2NjAw
+NjAyODgsMzk4MjIxNzg5LC0xMTkxMzQ3MDE4LDE0MTQ2MDMzOT
+EsMjAyNzA4NDY0NywxODQxMDQ5ODIyLC0xNDkzNzQ0NjkzLC0x
+MjU1NTg3MzldfQ==
 -->
