@@ -33,10 +33,13 @@ Enumerating training dataset on pre-trained models
 		- synced: all traces (ongoing)
 		- simulation:  fini
 		- 
-TimesNet l2: bingo, berti,
+TimesNet l2: bingo, berti, spp
 TimesNet ar
-TimeMixer l2 
+TimeMixer l2 : bingo, berti, spp
 TimeMixer ar
+
+spec06 0.25: spp
+spec06 0.75: bingo, berti, spp
 # paper writing
 ## introduce the importance and popularity of simpoints traces in cache size/t\
 ## limitations: only tested simpoint traces, which are traces that are already clustered
@@ -151,7 +154,7 @@ Enumerat
 	- 36,721,669
 - set model = ReuseDist
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA1MDM1MjA4OCwtMzcxMDg2NDUwLDIwNj
+eyJoaXN0b3J5IjpbLTM1NzA3MzMzMSwtMzcxMDg2NDUwLDIwNj
 Q4MDk2MDYsLTE1MDYyNDE1NTMsLTYwOTIyMDA3NSwxMDcxMDAw
 MTY4LDUxMjI2MzA5MSw4MDYyNzA0OTQsNDI1MTk4MjAwLDEzMT
 A2OTMzNTgsLTIzNzE4MDMyOSwxOTA1NjYxODQ5LDk1Nzc2MDcy
