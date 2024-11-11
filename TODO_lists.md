@@ -38,7 +38,7 @@ TimesNet ar
 TimeMixer l2 : bingo, berti, spp
 TimeMixer ar
 
-spec06 0.25: spp
+spec06 0.25: spp, bingo, berti
 spec06 0.75: bingo, berti, spp
 # paper writing
 ## introduce the importance and popularity of simpoints traces in cache size/t\
@@ -154,11 +154,11 @@ Enumerat
 	- 36,721,669
 - set model = ReuseDist
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM1NzA3MzMzMSwtMzcxMDg2NDUwLDIwNj
-Q4MDk2MDYsLTE1MDYyNDE1NTMsLTYwOTIyMDA3NSwxMDcxMDAw
-MTY4LDUxMjI2MzA5MSw4MDYyNzA0OTQsNDI1MTk4MjAwLDEzMT
-A2OTMzNTgsLTIzNzE4MDMyOSwxOTA1NjYxODQ5LDk1Nzc2MDcy
-MiwxOTc0MTYxMjAyLC0xMzYyNzEyOTkxLC0zNTI2NTg1MDYsMj
-E0MDU0MDQyNCwtMTgxODE4NTYyOCwxMDExNzg0ODAxLDE0OTU5
-MzcyNzZdfQ==
+eyJoaXN0b3J5IjpbLTE5MDQ0ODY3OTIsLTM1NzA3MzMzMSwtMz
+cxMDg2NDUwLDIwNjQ4MDk2MDYsLTE1MDYyNDE1NTMsLTYwOTIy
+MDA3NSwxMDcxMDAwMTY4LDUxMjI2MzA5MSw4MDYyNzA0OTQsND
+I1MTk4MjAwLDEzMTA2OTMzNTgsLTIzNzE4MDMyOSwxOTA1NjYx
+ODQ5LDk1Nzc2MDcyMiwxOTc0MTYxMjAyLC0xMzYyNzEyOTkxLC
+0zNTI2NTg1MDYsMjE0MDU0MDQyNCwtMTgxODE4NTYyOCwxMDEx
+Nzg0ODAxXX0=
 -->
