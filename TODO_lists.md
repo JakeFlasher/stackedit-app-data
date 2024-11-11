@@ -33,7 +33,7 @@ Enumerating training dataset on pre-trained models
 		- synced: all traces (ongoing)
 		- simulation:  fini
 		- 
-TimesNet l2: bingo, berti
+TimesNet l2: bingo, berti,
 TimesNet ar
 TimeMixer l2 
 TimeMixer ar
@@ -151,11 +151,11 @@ Enumerat
 	- 36,721,669
 - set model = ReuseDist
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM3MTA4NjQ1MCwyMDY0ODA5NjA2LC0xNT
-A2MjQxNTUzLC02MDkyMjAwNzUsMTA3MTAwMDE2OCw1MTIyNjMw
-OTEsODA2MjcwNDk0LDQyNTE5ODIwMCwxMzEwNjkzMzU4LC0yMz
-cxODAzMjksMTkwNTY2MTg0OSw5NTc3NjA3MjIsMTk3NDE2MTIw
-MiwtMTM2MjcxMjk5MSwtMzUyNjU4NTA2LDIxNDA1NDA0MjQsLT
-E4MTgxODU2MjgsMTAxMTc4NDgwMSwxNDk1OTM3Mjc2LC0xMzI4
-NDQ5NDQ4XX0=
+eyJoaXN0b3J5IjpbMTA1MDM1MjA4OCwtMzcxMDg2NDUwLDIwNj
+Q4MDk2MDYsLTE1MDYyNDE1NTMsLTYwOTIyMDA3NSwxMDcxMDAw
+MTY4LDUxMjI2MzA5MSw4MDYyNzA0OTQsNDI1MTk4MjAwLDEzMT
+A2OTMzNTgsLTIzNzE4MDMyOSwxOTA1NjYxODQ5LDk1Nzc2MDcy
+MiwxOTc0MTYxMjAyLC0xMzYyNzEyOTkxLC0zNTI2NTg1MDYsMj
+E0MDU0MDQyNCwtMTgxODE4NTYyOCwxMDExNzg0ODAxLDE0OTU5
+MzcyNzZdfQ==
 -->
