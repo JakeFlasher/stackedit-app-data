@@ -37,6 +37,7 @@ Enumerating training dataset on pre-trained models
 ## introduce the importance and popularity of simpoints traces in cache size/t\
 ## limitations: only tested simpoint traces, which are traces that are already clustered
 ## further analysis: pre-trained models reached very well performance, why? Using time series imputation to enhance ipc values increase performance to a great deal than purely CPD, why?
+## Testing different cost functions for CPD (ar)
 
 		- synced:
 	- gcc: inferendced SPEC17, gap, spec06(ongoing partial)
@@ -146,11 +147,11 @@ Enumerat
 	- 36,721,669
 - set model = ReuseDist
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MDYyNDE1NTMsLTYwOTIyMDA3NSwxMD
-cxMDAwMTY4LDUxMjI2MzA5MSw4MDYyNzA0OTQsNDI1MTk4MjAw
-LDEzMTA2OTMzNTgsLTIzNzE4MDMyOSwxOTA1NjYxODQ5LDk1Nz
-c2MDcyMiwxOTc0MTYxMjAyLC0xMzYyNzEyOTkxLC0zNTI2NTg1
-MDYsMjE0MDU0MDQyNCwtMTgxODE4NTYyOCwxMDExNzg0ODAxLD
-E0OTU5MzcyNzYsLTEzMjg0NDk0NDgsLTEzNjYzMjAyNjgsLTgy
-NDg3OTczOF19
+eyJoaXN0b3J5IjpbMTA2NzQ3ODk4OCwtMTUwNjI0MTU1MywtNj
+A5MjIwMDc1LDEwNzEwMDAxNjgsNTEyMjYzMDkxLDgwNjI3MDQ5
+NCw0MjUxOTgyMDAsMTMxMDY5MzM1OCwtMjM3MTgwMzI5LDE5MD
+U2NjE4NDksOTU3NzYwNzIyLDE5NzQxNjEyMDIsLTEzNjI3MTI5
+OTEsLTM1MjY1ODUwNiwyMTQwNTQwNDI0LC0xODE4MTg1NjI4LD
+EwMTE3ODQ4MDEsMTQ5NTkzNzI3NiwtMTMyODQ0OTQ0OCwtMTM2
+NjMyMDI2OF19
 -->
