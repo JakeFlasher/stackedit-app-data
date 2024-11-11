@@ -33,6 +33,8 @@ Enumerating training dataset on pre-trained models
 		- synced: all traces (ongoing)
 		- simulation:  fini
 		- 
+
+add results from spec06 to reduction rate experiments and Modify the trace reduction rate tables
 TimesNet l2: bingo, berti, spp
 TimesNet ar
 TimeMixer l2 : bingo, berti, spp
@@ -154,11 +156,11 @@ Enumerat
 	- 36,721,669
 - set model = ReuseDist
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5MDQ0ODY3OTIsLTM1NzA3MzMzMSwtMz
-cxMDg2NDUwLDIwNjQ4MDk2MDYsLTE1MDYyNDE1NTMsLTYwOTIy
-MDA3NSwxMDcxMDAwMTY4LDUxMjI2MzA5MSw4MDYyNzA0OTQsND
-I1MTk4MjAwLDEzMTA2OTMzNTgsLTIzNzE4MDMyOSwxOTA1NjYx
-ODQ5LDk1Nzc2MDcyMiwxOTc0MTYxMjAyLC0xMzYyNzEyOTkxLC
-0zNTI2NTg1MDYsMjE0MDU0MDQyNCwtMTgxODE4NTYyOCwxMDEx
-Nzg0ODAxXX0=
+eyJoaXN0b3J5IjpbMTI4MjI2NzM4MywtMzU3MDczMzMxLC0zNz
+EwODY0NTAsMjA2NDgwOTYwNiwtMTUwNjI0MTU1MywtNjA5MjIw
+MDc1LDEwNzEwMDAxNjgsNTEyMjYzMDkxLDgwNjI3MDQ5NCw0Mj
+UxOTgyMDAsMTMxMDY5MzM1OCwtMjM3MTgwMzI5LDE5MDU2NjE4
+NDksOTU3NzYwNzIyLDE5NzQxNjEyMDIsLTEzNjI3MTI5OTEsLT
+M1MjY1ODUwNiwyMTQwNTQwNDI0LC0xODE4MTg1NjI4LDEwMTE3
+ODQ4MDFdfQ==
 -->
