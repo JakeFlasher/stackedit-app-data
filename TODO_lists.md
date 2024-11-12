@@ -43,7 +43,9 @@ TimeMixer ar
 spec06 0.25: spp, bingo, berti
 spec06 0.75: bingo, berti, spp
 # paper writing
-## introduce the importance and popularity of simpoints traces in cache size/t\
+
+## Radar Graph value fillings
+## Comparison of different CPD cost functions.
 ## limitations: only tested simpoint traces, which are traces that are already clustered
 ## further analysis: pre-trained models reached very well performance, why? Using time series imputation to enhance ipc values increase performance to a great deal than purely CPD, why?
 ## Testing different cost functions for CPD (ar, l2)
@@ -156,11 +158,11 @@ Enumerat
 	- 36,721,669
 - set model = ReuseDist
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI4MjI2NzM4MywtMzU3MDczMzMxLC0zNz
-EwODY0NTAsMjA2NDgwOTYwNiwtMTUwNjI0MTU1MywtNjA5MjIw
-MDc1LDEwNzEwMDAxNjgsNTEyMjYzMDkxLDgwNjI3MDQ5NCw0Mj
-UxOTgyMDAsMTMxMDY5MzM1OCwtMjM3MTgwMzI5LDE5MDU2NjE4
-NDksOTU3NzYwNzIyLDE5NzQxNjEyMDIsLTEzNjI3MTI5OTEsLT
-M1MjY1ODUwNiwyMTQwNTQwNDI0LC0xODE4MTg1NjI4LDEwMTE3
-ODQ4MDFdfQ==
+eyJoaXN0b3J5IjpbLTU5MDkyMTc4NCwxMjgyMjY3MzgzLC0zNT
+cwNzMzMzEsLTM3MTA4NjQ1MCwyMDY0ODA5NjA2LC0xNTA2MjQx
+NTUzLC02MDkyMjAwNzUsMTA3MTAwMDE2OCw1MTIyNjMwOTEsOD
+A2MjcwNDk0LDQyNTE5ODIwMCwxMzEwNjkzMzU4LC0yMzcxODAz
+MjksMTkwNTY2MTg0OSw5NTc3NjA3MjIsMTk3NDE2MTIwMiwtMT
+M2MjcxMjk5MSwtMzUyNjU4NTA2LDIxNDA1NDA0MjQsLTE4MTgx
+ODU2MjhdfQ==
 -->
