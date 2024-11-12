@@ -43,7 +43,7 @@ TimeMixer ar
 spec06 0.25: spp, bingo, berti
 spec06 0.75: bingo, berti, spp
 # paper writing
-
+## Polish abstract (ddl: 11.16 UTC)
 ## Radar Graph value fillings
 ## Comparison of different CPD cost functions.
 ## limitations: only tested simpoint traces, which are traces that are already clustered
@@ -158,7 +158,7 @@ Enumerat
 	- 36,721,669
 - set model = ReuseDist
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU5MDkyMTc4NCwxMjgyMjY3MzgzLC0zNT
+eyJoaXN0b3J5IjpbMTQ1ODAxNzczNywxMjgyMjY3MzgzLC0zNT
 cwNzMzMzEsLTM3MTA4NjQ1MCwyMDY0ODA5NjA2LC0xNTA2MjQx
 NTUzLC02MDkyMjAwNzUsMTA3MTAwMDE2OCw1MTIyNjMwOTEsOD
 A2MjcwNDk0LDQyNTE5ODIwMCwxMzEwNjkzMzU4LC0yMzcxODAz
