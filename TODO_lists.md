@@ -44,6 +44,7 @@ spec06 0.25: spp, bingo, berti
 spec06 0.75: bingo, berti, spp
 # paper writing
 ## Polish abstract (ddl: 11.16 UTC)
+## Review Time Costs for training and inference (using 4090 experimental values)
 ## Radar Graph value fillings
 ## Comparison of different CPD cost functions.
 ## limitations: only tested simpoint traces, which are traces that are already clustered
@@ -158,11 +159,11 @@ Enumerat
 	- 36,721,669
 - set model = ReuseDist
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ1ODAxNzczNywxMjgyMjY3MzgzLC0zNT
-cwNzMzMzEsLTM3MTA4NjQ1MCwyMDY0ODA5NjA2LC0xNTA2MjQx
-NTUzLC02MDkyMjAwNzUsMTA3MTAwMDE2OCw1MTIyNjMwOTEsOD
-A2MjcwNDk0LDQyNTE5ODIwMCwxMzEwNjkzMzU4LC0yMzcxODAz
-MjksMTkwNTY2MTg0OSw5NTc3NjA3MjIsMTk3NDE2MTIwMiwtMT
-M2MjcxMjk5MSwtMzUyNjU4NTA2LDIxNDA1NDA0MjQsLTE4MTgx
-ODU2MjhdfQ==
+eyJoaXN0b3J5IjpbLTE2ODQyMzk4NjcsMTQ1ODAxNzczNywxMj
+gyMjY3MzgzLC0zNTcwNzMzMzEsLTM3MTA4NjQ1MCwyMDY0ODA5
+NjA2LC0xNTA2MjQxNTUzLC02MDkyMjAwNzUsMTA3MTAwMDE2OC
+w1MTIyNjMwOTEsODA2MjcwNDk0LDQyNTE5ODIwMCwxMzEwNjkz
+MzU4LC0yMzcxODAzMjksMTkwNTY2MTg0OSw5NTc3NjA3MjIsMT
+k3NDE2MTIwMiwtMTM2MjcxMjk5MSwtMzUyNjU4NTA2LDIxNDA1
+NDA0MjRdfQ==
 -->
