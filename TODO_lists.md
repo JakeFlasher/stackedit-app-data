@@ -40,6 +40,10 @@ TimesNet ar
 TimeMixer l2 : bingo, berti, spp
 TimeMixer ar
 
+
+## Training
+spring
+
 spec06 0.25: spp, bingo, berti
 spec06 0.75: bingo, berti, spp
 # paper writing
@@ -159,11 +163,11 @@ Enumerat
 	- 36,721,669
 - set model = ReuseDist
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2ODQyMzk4NjcsMTQ1ODAxNzczNywxMj
-gyMjY3MzgzLC0zNTcwNzMzMzEsLTM3MTA4NjQ1MCwyMDY0ODA5
-NjA2LC0xNTA2MjQxNTUzLC02MDkyMjAwNzUsMTA3MTAwMDE2OC
-w1MTIyNjMwOTEsODA2MjcwNDk0LDQyNTE5ODIwMCwxMzEwNjkz
-MzU4LC0yMzcxODAzMjksMTkwNTY2MTg0OSw5NTc3NjA3MjIsMT
-k3NDE2MTIwMiwtMTM2MjcxMjk5MSwtMzUyNjU4NTA2LDIxNDA1
-NDA0MjRdfQ==
+eyJoaXN0b3J5IjpbLTE1Mzk5OTcxNTAsLTE2ODQyMzk4NjcsMT
+Q1ODAxNzczNywxMjgyMjY3MzgzLC0zNTcwNzMzMzEsLTM3MTA4
+NjQ1MCwyMDY0ODA5NjA2LC0xNTA2MjQxNTUzLC02MDkyMjAwNz
+UsMTA3MTAwMDE2OCw1MTIyNjMwOTEsODA2MjcwNDk0LDQyNTE5
+ODIwMCwxMzEwNjkzMzU4LC0yMzcxODAzMjksMTkwNTY2MTg0OS
+w5NTc3NjA3MjIsMTk3NDE2MTIwMiwtMTM2MjcxMjk5MSwtMzUy
+NjU4NTA2XX0=
 -->
