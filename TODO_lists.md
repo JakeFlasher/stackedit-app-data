@@ -43,7 +43,7 @@ TimeMixer ar
 
 ## Training
 spring, PRE
-twitter, APP, Pre (truncated to 600M)
+twitter, APP, Pre (truncated to 500M)
 kafka, PRE
 tomcat
 fpm
@@ -171,7 +171,7 @@ Enumerat
 	- 36,721,669
 - set model = ReuseDist
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODg3MDkzNzI5LDExNzI2MjIwNiwtMTA5ND
+eyJoaXN0b3J5IjpbNjUyMjkwMjcyLDExNzI2MjIwNiwtMTA5ND
 gwODEwNywtNDQzMjU1MzQ4LDk4NDI0MzAyNCw2OTYwMTY4Nywx
 NDAyODI4NzM2LDEwODQzODYzODEsMjQ4MzkzMTI3LC0xNjg0Mj
 M5ODY3LDE0NTgwMTc3MzcsMTI4MjI2NzM4MywtMzU3MDczMzMx
