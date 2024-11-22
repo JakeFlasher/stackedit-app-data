@@ -66,6 +66,9 @@ spec06 0.75: bingo, berti, spp
 ## further analysis: pre-trained models reached very well performance, why? Using time series imputation to enhance ipc values increase performance to a great deal than purely CPD, why?
 ## Testing different cost functions for CPD (ar, l2)
 
+
+# paper writing
+## introduce the importance and popularity of simpoints traces in cache size/t
 		- synced:
 	- gcc: inferendced SPEC17, gap, spec06(ongoing partial)
 		- cpded:
@@ -174,11 +177,11 @@ Enumerat
 	- 36,721,669
 - set model = ReuseDist
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMjQzNDE2NzAsLTE0NDEyMDA0NzIsLT
-QwNzI0NjQxMywxNjY3MjMyMjQwLDI5OTE0MzMzOSw2NTIyOTAy
-NzIsMTE3MjYyMjA2LC0xMDk0ODA4MTA3LC00NDMyNTUzNDgsOT
-g0MjQzMDI0LDY5NjAxNjg3LDE0MDI4Mjg3MzYsMTA4NDM4NjM4
-MSwyNDgzOTMxMjcsLTE2ODQyMzk4NjcsMTQ1ODAxNzczNywxMj
-gyMjY3MzgzLC0zNTcwNzMzMzEsLTM3MTA4NjQ1MCwyMDY0ODA5
-NjA2XX0=
+eyJoaXN0b3J5IjpbLTIxMjQ1NTQzNjksLTIwMjQzNDE2NzAsLT
+E0NDEyMDA0NzIsLTQwNzI0NjQxMywxNjY3MjMyMjQwLDI5OTE0
+MzMzOSw2NTIyOTAyNzIsMTE3MjYyMjA2LC0xMDk0ODA4MTA3LC
+00NDMyNTUzNDgsOTg0MjQzMDI0LDY5NjAxNjg3LDE0MDI4Mjg3
+MzYsMTA4NDM4NjM4MSwyNDgzOTMxMjcsLTE2ODQyMzk4NjcsMT
+Q1ODAxNzczNywxMjgyMjY3MzgzLC0zNTcwNzMzMzEsLTM3MTA4
+NjQ1MF19
 -->
