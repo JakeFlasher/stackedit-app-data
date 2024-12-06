@@ -6,7 +6,12 @@ ssh -i .ssh/id_rsa -p 6000    chengaoshi@hpc-gz.liuyinyi.com
 ## https://www.agner.org/optimize/
 ## # [What is the difference between Copy and Clone?](https://stackoverflow.com/questions/31012923/what-is-the-difference-between-copy-and-clone)
 ## # [What is the difference between println's format styles?](https://stackoverflow.com/questions/40100077/what-is-the-difference-between-printlns-format-styles)
+
+
+1. Deepbindiff 
+2. 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgyNjQ4NDI4MiwzMTg0NjgwMTIsMTM3OT
-M0NDk5OSwxNjY5ODc3ODMxLC0zNDkzMjI4NDldfQ==
+eyJoaXN0b3J5IjpbLTY5NDYwNjQ2MywtODI2NDg0MjgyLDMxOD
+Q2ODAxMiwxMzc5MzQ0OTk5LDE2Njk4Nzc4MzEsLTM0OTMyMjg0
+OV19
 -->
