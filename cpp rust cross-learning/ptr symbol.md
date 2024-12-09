@@ -6,7 +6,9 @@ ssh -i .ssh/id_rsa -p 6000    chengaoshi@hpc-gz.liuyinyi.com
 ## https://www.agner.org/optimize/
 ## # [What is the difference between Copy and Clone?](https://stackoverflow.com/questions/31012923/what-is-the-difference-between-copy-and-clone)
 ## # [What is the difference between println's format styles?](https://stackoverflow.com/questions/40100077/what-is-the-difference-between-printlns-format-styles)
+## [Difference between capturing and passing an argument in lambda functions](https://stackoverflow.com/questions/31038437/difference-between-capturing-and-passing-an-argument-in-lambda-functions)
 
+[Ask Question](https://stackoverflow.com/questions/ask)
 
 1. Deepbindiff 
 2. 
@@ -65,7 +67,7 @@ operator<<(std::ostream& stream, const T& e)
 Note: std::is_scoped_enum is introduced in C++23. For earlier standards, determining whether an enum is scoped or not requires different approaches or assumptions.
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NTAwMzExMzUsLTY5NDYwNjQ2MywtOD
-I2NDg0MjgyLDMxODQ2ODAxMiwxMzc5MzQ0OTk5LDE2Njk4Nzc4
-MzEsLTM0OTMyMjg0OV19
+eyJoaXN0b3J5IjpbMTc0NzYyNjg5NiwtMTY1MDAzMTEzNSwtNj
+k0NjA2NDYzLC04MjY0ODQyODIsMzE4NDY4MDEyLDEzNzkzNDQ5
+OTksMTY2OTg3NzgzMSwtMzQ5MzIyODQ5XX0=
 -->
