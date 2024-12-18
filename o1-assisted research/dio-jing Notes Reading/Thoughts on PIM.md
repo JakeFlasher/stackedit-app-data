@@ -9,7 +9,40 @@
 in memory computing，简称PIM。
 
 ![](https://pica.zhimg.com/v2-0e1a752e3a1a5de5979cf135455c98f5_720w.jpg?source=d16d100b)
- 
+ content in picture: "Upmem Embeds Processors in DRAM
+Custom DIMMs Bring In-Memory Computing to Standard Servers
+
+August 26, 2019 (PDF Version |
+Ay
+
+By Tom R. Halfhill
+
+Organic brains don’t partition thinking and memory in separate hemispheres, and some computer scientists think electronic brains shouldn't either. In-
+memory computing is a frontier technology that relieves the CPU-DRAM bottleneck by integrating both functions on the same chip. The main obstacles
+are physical: DRAM is difficult to integrate in a conventional logic process, and logic performs poorly in a conventional DRAM process.
+
+French startup Upmem tackles this dilemma by using massive parallelism to overcome the physical limitations of embedding logic in a DRAM chip. Its
+unique data processing units (DPUs) run at only 500MHz, but each can execute 24 hardware threads. Each chip has eight DPUs and 4Gbits of DRAM.
+Sixteen chips populate a memory module that’s compatible with industry-standard DIMM slots, as Figure 1 shows. Thus, each processor-in-memory
+(PIM) module has 128 DPUs and 8GB of DRAM, and it can work alongside the usual DIMMs or replace them altogether.
+
+Figure 1. Upmem processor-in-memory (PIM) module. Each module has 16 custom DRAM chips and
+is compatible with industry-standard DIMM slots. It totals 128 proprietary data processing units (DPUs) and
+8GB of memory.
+
+A fully populated Intel Xeon system with six DRAM channels could amass 1,536 DPUs, 36,864 threads, and 96GB of main memory. Even larger
+configurations are possible using AMD or IBM servers that have eight DRAM channels—or an IBM Power9 scale-up system with 32 channels. The host
+processor offloads critical tasks to the DPUs, which enjoy intimate access to their local DRAM. Upmem says an AMD or IBM system with 2,048 DPUs,
+49,152 threads, and 128GB of main memory can execute one trillion operations per second (TOPS). To verify this claim, it employed simulations and
+sample chips manufactured at a Taiwanese DRAM fab since 2Q19. The first production-grade modules are scheduled to ship in October, followed by
+volume production in 1Q20. When early production begins, the company plans to disclose prices, the DRAM foundry, and more performance data.
+
+The founders presented their case for in-memory computing at the recent Hot Chips conference. Upmem claims its DPUs will typically deliver 20x better
+performance on memory-intensive workloads and 10x better energy efficiency than a standard x86 server. Although the PIM modules cost more and
+consume more power than standard DIMMs, their higher performance would increase efficiency and decrease the total cost of ownership (TCO) relative
+to standard servers delivering equal throughput. They won't replace GPUs or FPGAs for most scientific workloads, however, because the DPUs lack
+floating-point hardware. They focus mainly on pattern matching, such as database index searches, big-data graph analytic 
+"
  
 首先需要明确一下near memory computing和in memory computing的定义，这事我和业界灌水王onur mutlu吃饭还刚过一波，结论是：真理掌握在英语表达能力范围内。┐(‘～`；)┌
 
@@ -41,5 +74,5 @@ PIM最大的障碍是memory interleave，所有PIM的议题，如果在内存交
 
 额外一说，UPMEM的方案是DIMM结构，其DIMM上包含了8颗独立的DRAM芯片，每一颗都只有1/8的容量、带宽和计算能力，业务数据依旧可能分割放在了多课DRAM芯片内。UPMEM亦需要额外的DRAM芯片间的通信才能完成一个完整的运算。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA1NzE0NTAzLC01NTg1MzAzMTddfQ==
+eyJoaXN0b3J5IjpbLTE1ODA5NTIwMTUsLTU1ODUzMDMxN119
 -->
