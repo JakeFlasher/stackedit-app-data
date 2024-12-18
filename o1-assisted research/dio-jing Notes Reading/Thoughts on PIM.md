@@ -10,6 +10,7 @@ in memory computing，简称PIM。
 
 ![](https://pica.zhimg.com/v2-0e1a752e3a1a5de5979cf135455c98f5_720w.jpg?source=d16d100b)
  
+ 
 首先需要明确一下near memory computing和in memory computing的定义，这事我和业界灌水王onur mutlu吃饭还刚过一波，结论是：真理掌握在英语表达能力范围内。┐(‘～`；)┌
 
 很多时候这是一个参照系问题，如果严格要以in为前缀，只有把memory cell本体对信号的模拟特性的变化用于计算才是真正的in，在cell旁边加MAC都不能算，这就很苛刻了，业界除了AI有一些其他都只能算near。
@@ -40,5 +41,5 @@ PIM最大的障碍是memory interleave，所有PIM的议题，如果在内存交
 
 额外一说，UPMEM的方案是DIMM结构，其DIMM上包含了8颗独立的DRAM芯片，每一颗都只有1/8的容量、带宽和计算能力，业务数据依旧可能分割放在了多课DRAM芯片内。UPMEM亦需要额外的DRAM芯片间的通信才能完成一个完整的运算。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU1ODUzMDMxN119
+eyJoaXN0b3J5IjpbMjA1NzE0NTAzLC01NTg1MzAzMTddfQ==
 -->
