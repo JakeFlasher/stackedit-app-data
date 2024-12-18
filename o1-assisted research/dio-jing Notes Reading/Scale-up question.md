@@ -91,6 +91,70 @@ Explanation of Technical Jargon
     
 
 This explanation should help clarify the technical concepts and context of the article. Let me know if you need further details!
+
+#### Scale-Up vs. Scale-Out Architectures[](https://genai.ust.hk/#scale-up-vs-scale-out-architectures)
+
+1.  **Scale-Up Architecture**:
+    
+    -   Focuses on increasing the performance and capacity of a single system by adding more resources (e.g., GPUs) within the same system.
+    -   Emphasizes high bandwidth (>1TBps) and low-latency interconnections.
+    -   Nvidia’s NVLink is a key technology enabling Scale-Up by providing high-speed communication between GPUs.
+2.  **Scale-Out Architecture**:
+    
+    -   Involves connecting multiple systems to work as a single unit, often using technologies like InfiniBand or Ethernet.
+    -   Not the focus of this article.
+
+#### Nvidia's Evolution in Scale-Up[](https://genai.ust.hk/#nvidia-s-evolution-in-scale-up)
+
+-   **P100 to H100 Series**:
+    -   Initial products like the DGX-1 with P100 GPUs used non-symmetric interconnections.
+    -   The DGX-2 with V100 GPUs introduced a switch-based Clos topology, enhancing scalability.
+    -   The GH200 attempted to expand using NVLink-Network but faced challenges.
+    -   The NVL72 achieved a significant milestone with a non-convergent Clos switch, supporting up to 72 GPUs with terabyte-level bandwidth.
+
+#### NVL72: A Breakthrough in Scale-Up[](https://genai.ust.hk/#nvl72-a-breakthrough-in-scale-up)
+
+-   **NVL72**:
+    -   First product exceeding 16P (16 processors) in a Scale-Up configuration without convergence issues.
+    -   Combines multiple advanced technologies, making it difficult to replicate without similar resources and expertise.
+    -   Utilizes a single-dimensional electrical cable for Scale-Up, achieving unmatched performance.
+
+#### Technical Challenges and Considerations[](https://genai.ust.hk/#technical-challenges-and-considerations)
+
+1.  **Layered Interconnects**:
+    
+    -   Real-world implementations often require a layered approach due to physical and technological constraints.
+    -   Chiplet interfaces, PCB or high-density cable interconnects, and optical connections are used at different layers (within chip, board, rack, etc.).
+2.  **Topology Choices**:
+    
+    -   **Clos Topology**: Offers symmetric interconnections, making it easier for programmers to work without topology awareness.
+    -   **Mesh/Torus Topologies**: Provide local connectivity advantages but complicate software adaptation, limiting their widespread use.
+
+#### Plan A vs. Plan B[](https://genai.ust.hk/#plan-a-vs-plan-b)
+
+1.  **Plan A**:
+    
+    -   Uses a combination of cable and optical interconnects.
+    -   Prioritizes internal board interconnections and optical connections for external communication.
+2.  **Plan B**:
+    
+    -   Similar to NVL72, prioritizes chiplet-level interconnections and uses optical connections for broader communication.
+    -   Less focus on CPU-NPU tight coupling, more on NPU-to-NPU connections.
+
+#### Considerations for Future Development[](https://genai.ust.hk/#considerations-for-future-development)
+
+-   **Bandwidth and Power Efficiency**:
+    
+    -   Different interconnects offer varying bandwidths and power efficiencies, crucial for designing efficient systems.
+-   **Scalability and Flexibility**:
+    
+    -   Choosing the right topology and interconnection strategy affects the system's scalability and adaptability to different workloads.
+
+#### Conclusion[](https://genai.ust.hk/#conclusion)
+
+The article highlights the challenges in designing and implementing Scale-Up GPU architectures, emphasizing Nvidia’s innovations and the complexities involved in achieving high-performance, non-convergent systems. The choice between different architectural plans (Plan A vs. Plan B) depends on the specific requirements and constraints, such as bandwidth, power efficiency, and scalability needs.
+
+Understanding these concepts is crucial for anyone involved in developing or utilizing high-performance computing systems, especially in the context of AI and machine learning workloads.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzYyMjM0NTk2XX0=
+eyJoaXN0b3J5IjpbLTI2OTUwNDA0OV19
 -->
