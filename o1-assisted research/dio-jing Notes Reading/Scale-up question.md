@@ -30,6 +30,8 @@ Clos是一种全对称互联，可以基本做到编程对拓扑的不感知，�
 
 After explaining the necessary technical jargons, I want you to do a sentence by sentence reading comprehension and explanation as I do not understand any Chinese at all.
 
+Below is a chinese article relating to the challenges faced in "scale-up" GPU architectures, however, there are many techinical jargons and abbreviations that made me hard to understand the article as well as the figures presented, can you help me explain and draw a detailed explanation or illustrations? 
+
 Do a comprehensive reading and comprehension with other related resources necesssary to understand this topic, at least write for 4000 tokens as output response
 
 # Response
@@ -157,5 +159,5 @@ The article highlights the challenges in designing and implementing Scale-Up GPU
 
 Understanding these concepts is crucial for anyone involved in developing or utilizing high-performance computing systems, especially in the context of AI and machine learning workloads.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg4MjY0MDMyMl19
+eyJoaXN0b3J5IjpbLTM3MDQ5MDAzOCwxODgyNjQwMzIyXX0=
 -->
