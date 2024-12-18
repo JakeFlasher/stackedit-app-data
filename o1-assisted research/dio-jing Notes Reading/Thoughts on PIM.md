@@ -1,4 +1,5 @@
 # Prompt
+[link to original](https://zhuanlan.zhihu.com/p/82392062)
 Below is a chinese article relating to the challenges faced in PIM computing, however, there are many techinical jargons and abbreviations that made me hard to understand the article as well as the figures presented, can you help me explain and draw a detailed explanation or illustrations? 
 
 Do a comprehensive reading and comprehension with other related resources necesssary to understand this topic, at least write for 4000 tokens as output response: "
@@ -670,6 +671,6 @@ PIM computing embodies a strategic response to the evolving demands of high-perf
 
 ---
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjUxNzUzODI3LDE1ODA3MjcyMjEsLTU1OD
-UzMDMxN119
+eyJoaXN0b3J5IjpbMTYzMzc1MjM0NywxNTgwNzI3MjIxLC01NT
+g1MzAzMTddfQ==
 -->
