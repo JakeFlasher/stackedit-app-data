@@ -1,4 +1,5 @@
 # Prompt
+[link to original article](https://zhuanlan.zhihu.com/p/707355769)
 Below is a chinese article relating to the challenges faced in "scale-up" GPU architectures, however, there are many techinical jargons and abbreviations that made me hard to understand the article as well as the figures presented, can you help me explain and draw a detailed explanation or illustrations? Thanks. "我有一个朋友，他是做AI的训练芯片，就是让Nvidia增值到3亿刀的，大号的，H100、B200，类似的。。。。。。 他最近遇到了一些技术上的困扰，但在他周边得到的反馈却往往是进度、KPI、XX比、更换参照系等等奇怪的维度的答案，所以我帮他把问题引出来，不知道能否在万能的群友中找到更技术性或更前瞻性些的答案。
 
   
@@ -91,5 +92,5 @@ Explanation of Technical Jargon
 
 This explanation should help clarify the technical concepts and context of the article. Let me know if you need further details!
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzI2NjA4OTQxXX0=
+eyJoaXN0b3J5IjpbNzYyMjM0NTk2XX0=
 -->
