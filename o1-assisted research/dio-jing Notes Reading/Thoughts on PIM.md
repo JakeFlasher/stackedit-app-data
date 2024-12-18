@@ -1,9 +1,6 @@
-作者：Dio-晶  
-链接：https://zhuanlan.zhihu.com/p/82392062  
-来源：知乎  
-著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。  
-  
+Below is a chinese article relating to the challenges faced in PIM computing, however, there are many techinical jargons and abbreviations that made me hard to understand the article as well as the figures presented, can you help me explain and draw a detailed explanation or illustrations? 
 
+Do a comprehensive reading and comprehension with other related resources necesssary to understand this topic, at least write for 4000 tokens as output response: "
 早上刷手机刚好看到winnie姐姐转发upmem的内容，对这个东西还算蛮熟，中秋月圆，借机刚一波。
 
 in memory computing，简称PIM。
@@ -72,7 +69,7 @@ PIM最大的障碍是memory interleave，所有PIM的议题，如果在内存交
 
 以UPMEM为例，为了使能其功能，就需要把某特定业务的数据放到一根DIMM，假设系统是8通道交织200GB，先不考虑CACHE一致性的损伤（PIM加速的数据需要FLUSH到内存），那这个单一业务去交织后就只能得到1/8的25GB带宽了，等价于使能PIM后至少需要获得大于8倍带宽的收益才是赚的，算一算，很难噢。当然这样比较也不是特别合适，如果有8个同构，size恰当，时间上并行度也很好业务，并不会带宽受损。
 
-额外一说，UPMEM的方案是DIMM结构，其DIMM上包含了8颗独立的DRAM芯片，每一颗都只有1/8的容量、带宽和计算能力，业务数据依旧可能分割放在了多课DRAM芯片内。UPMEM亦需要额外的DRAM芯片间的通信才能完成一个完整的运算。
+额外一说，UPMEM的方案是DIMM结构，其DIMM上包含了8颗独立的DRAM芯片，每一颗都只有1/8的容量、带宽和计算能力，业务数据依旧可能分割放在了多课DRAM芯片内。UPMEM亦需要额外的DRAM芯片间的通信才能完成一个完整的运算"
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1ODA5NTIwMTUsLTU1ODUzMDMxN119
+eyJoaXN0b3J5IjpbMTU4MDcyNzIyMSwtNTU4NTMwMzE3XX0=
 -->
