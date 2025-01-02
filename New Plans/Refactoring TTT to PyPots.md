@@ -381,6 +381,307 @@ SUMMARY
 By following these steps, you’ll have a TTT-based RNN imputation model that fits seamlessly into the same pipeline as the “Transformer” in PyPOTS. And importantly, you won’t be skipping any of the details crucial for handling partially-observed time series (embedding, masking, ORT+MIT losses, patching outputs to keep original observed data).  
 
 Hopefully this detailed breakdown clarifies exactly how to implement it in Python and PyTorch, step by step!
+
+
+Below is an illustrative walkthrough of how you can refactor (or reshape) a naïve test-time training (TTT) model (originally an RNN approach) into a style similar to how PyPOTS deals with the “Transformer” for partial observations and imputation. We will incorporate the ideas of:  
+• Embedding strategy (concatenate the input with its missing mask),  
+• ORT + MIT loss (as in SAITS),  
+• PyTorch’s forward / training loop that aligns with the typical PyPOTS “imputer” style.
+
+Since you mentioned you’re extremely new to Python and PyTorch, the explanation below is detailed. I’ll first summarize the main concepts, then provide a step-by-step refactor with code.
+
+--------------------------------------------------------------------------------
+1) KEY IDEAS BEHIND PYPOUTS-STYLE IMPUTATION
+--------------------------------------------------------------------------------
+
+1.1) Embedding Strategy (X & Missing Mask):
+In many PyPOTS imputation models, you’ll see something like the following in their forward pass:  
+  • They have an input X of shape [batch_size, sequence_length, n_features].  
+  • They also have a missing_mask of the same shape, which indicates (with 0/1) where X is missing vs. observed.  
+
+The model first concatenates X and missing_mask along the feature dimension, forming shape [batch_size, sequence_length, 2 * n_features]. That concatenated data is then projected (via a linear layer) into d_model. This results in a “learned embedding” that is fed into the backbone (RNN, Transformer, etc.).
+
+1.2) ORT + MIT Loss:
+• ORT refers to Original Reconstruction Task. It is basically a reconstruction loss that measures how well the model reconstructs the originally observed values.  
+• MIT refers to Masked Imputation Task. It is a separate reconstruction loss that measures how well the model reconstructs the part of the data that was artificially masked for training.  
+
+Hence, total_loss = ORT_weight * ORT_loss + MIT_weight * MIT_loss
+
+Where each sub-loss might be an MAE, MSE, CrossEntropy, or whichever measure you prefer for continuous/time-series data. For PyPOTS, an MAE-like function is often used, e.g. SaitsLoss.  
+
+--------------------------------------------------------------------------------
+2) HOW TO REFASHION A NAÏVE RNN (TEST-TIME TRAINING)
+--------------------------------------------------------------------------------
+
+Let’s assume you have a basic recurrent model that at every time step t does:
+    
+    h_t = RNNCell(x_t, h_{t-1})
+    y_t = some_output_layer(h_t)
+
+But we want to integrate this with the same framework as PyPOTS. Specifically:
+
+• We define an “embedding” module that:  
+  → Takes in [X, missing_mask] (concatenated)  
+  → Applies a linear layer to get a d_hidden dimensional feature.  
+  → (Optionally) adds positional encoding if you want to parallel the Transformer style.  
+  → (Optionally) applies dropout.  
+
+• We define a “backbone” module that in your case is an RNN. It could be LSTM, GRU, or vanilla RNNCell rolled in a loop.  
+
+• We define an “output projection” module that maps from the RNN hidden dimension back to Y (the data dimension).  
+
+• We define a “loss function” that calculates ORT and MIT. Then total loss = ORT + MIT.
+
+Below is a minimal (and purely illustrative) PyTorch module that follows the same pattern as the Transformer code in PyPOTS. It uses:  
+• SaitsEmbedding-like approach for input.  
+• RNN as the “encoder.”  
+• A final linear for output.  
+• A SaitsLoss-like function for ORT + MIT.
+
+--------------------------------------------------------------------------------
+3) DETAILED REFRACTORING EXAMPLE
+--------------------------------------------------------------------------------
+
+────────────────────────────────────────────────────────────────────────────────
+File 1: my_ttt_rnn.py   (the main TTT model, similar to how PyPOTS organizes it)
+────────────────────────────────────────────────────────────────────────────────
+
+import torch
+import torch.nn as nn
+import torch.nn.functional as F
+
+# Reuse the same SaitsLoss as in SAITS, or define a new class similarly.
+# In practice, you'd import from PyPOTS wherever SaitsLoss is implemented:
+# from ...nn.modules.saits import SaitsLoss
+# For demonstration, let's define a mini version below:
+
+class MySaitsLoss(nn.Module):
+    def __init__(self, ORT_weight: float = 1.0, MIT_weight: float = 1.0, loss_calc_func=F.l1_loss):
+        """
+        If you want to mimic SAITS's original design, replace l1_loss with the actual method,
+        e.g. `calc_mae` from PyPOTS or your codebase.
+        """
+        super().__init__()
+        self.ORT_weight = ORT_weight
+        self.MIT_weight = MIT_weight
+        self.loss_calc_func = loss_calc_func
+
+    def forward(self, reconstruction, X_ori, missing_mask, indicating_mask):
+        # ORT = how well we reconstruct the observed ground truth
+        ORT_loss = self.loss_calc_func(
+            reconstruction * missing_mask, 
+            X_ori * missing_mask, 
+            reduction='mean'
+        )
+        # MIT = how well we reconstruct the artificially masked portion
+        MIT_loss = self.loss_calc_func(
+            reconstruction * indicating_mask,
+            X_ori * indicating_mask,
+            reduction='mean'
+        )
+        # Weighted sum
+        loss = self.ORT_weight * ORT_loss + self.MIT_weight * MIT_loss
+        return loss, ORT_loss, MIT_loss
+
+# Next, define an embedding class that mimics SaitsEmbedding:
+# This is basically the same approach: we do a Linear projection of [X, missing_mask].
+# Optionally add positional encoding (not done here for brevity).
+class MyEmbedding(nn.Module):
+    def __init__(self, d_in: int, d_out: int, dropout: float = 0.0):
+        """
+        d_in  = number_of_original_features * 2 (since we concat X and mask)
+        d_out = hidden dimension for the backbone RNN
+        """
+        super().__init__()
+        self.embedding_layer = nn.Linear(d_in, d_out)
+        self.dropout = nn.Dropout(p=dropout) if dropout > 0 else nn.Identity()
+
+    def forward(self, X, missing_mask):
+        """
+        X: shape [batch_size, seq_len, n_features]
+        missing_mask: shape [batch_size, seq_len, n_features]
+        -> concat along last dim: shape [batch_size, seq_len, 2*n_features]
+        """
+        # Concatenate
+        cat_input = torch.cat([X, missing_mask], dim=2)
+        # Linear projection
+        embed = self.embedding_layer(cat_input)
+        # optional dropout
+        embed = self.dropout(embed)
+        return embed
+
+
+class MyTTTRNN(nn.Module):
+    """
+    This is analogous to how PyPOTS sets up Transformer, except we use an RNN
+    as the “encoder” backbone. In forward(), we do:
+      1) embedding
+      2) run RNN
+      3) output projection
+      4) form imputation by combining reconstruction with observed X
+      5) if training, compute ORT+MIT
+    """
+
+    def __init__(
+        self,
+        n_steps: int,
+        n_features: int,
+        d_hidden: int,
+        rnn_type: str = "GRU",
+        num_layers: int = 1,
+        dropout: float = 0.0,
+        ORT_weight: float = 1.0,
+        MIT_weight: float = 1.0,
+    ):
+        """
+        n_steps: time-series length
+        n_features: number of features
+        d_hidden: hidden dimension in the RNN
+        rnn_type: choose "RNN", "LSTM", or "GRU"
+        num_layers: how many layers the RNN has
+        dropout: dropout rate in the embedding (and possibly in RNN)
+        ORT_weight, MIT_weight: weighting for the two loss terms
+        """
+        super().__init__()
+        # Embedding dimension is d_hidden
+        # Input dimension to embedding is n_features * 2 (X + mask)
+        self.embedding = MyEmbedding(d_in=n_features * 2, d_out=d_hidden, dropout=dropout)
+
+        # RNN backbone
+        if rnn_type.upper() == "RNN":
+            self.rnn = nn.RNN(input_size=d_hidden, hidden_size=d_hidden, batch_first=True, num_layers=num_layers)
+        elif rnn_type.upper() == "LSTM":
+            self.rnn = nn.LSTM(input_size=d_hidden, hidden_size=d_hidden, batch_first=True, num_layers=num_layers)
+        else:
+            # default GRU
+            self.rnn = nn.GRU(input_size=d_hidden, hidden_size=d_hidden, batch_first=True, num_layers=num_layers)
+
+        # We project from hidden dimension back to n_features
+        self.output_projection = nn.Linear(d_hidden, n_features)
+
+        # The same style of SAITSLoss
+        self.ttt_loss = MySaitsLoss(ORT_weight=ORT_weight, MIT_weight=MIT_weight)
+
+    def forward(self, inputs: dict, training: bool = True) -> dict:
+        """
+        inputs is a dictionary like:
+          {
+            "X": X,
+            "missing_mask": missing_mask,
+            "X_ori": X_ori,
+            "indicating_mask": indicating_mask
+          }
+        For inference, we might not have "X_ori" or "indicating_mask," so we check them below.
+        """
+        X = inputs["X"]  # [B, L, n_features]
+        missing_mask = inputs["missing_mask"]  # [B, L, n_features]
+
+        # 1) Embedding: [B, L, d_hidden]
+        embedded = self.embedding(X, missing_mask)
+
+        # 2) RNN forward pass
+        #    rnn_out has shape [B, L, d_hidden]
+        rnn_out, _ = self.rnn(embedded)  # ignoring hidden states for simplicity
+
+        # 3) Output projection
+        #    -> reconstruction’s shape is [B, L, n_features]
+        reconstruction = self.output_projection(rnn_out)
+
+        # 4) Imputation:  imputed_data = missing_mask * X + (1 - missing_mask) * reconstruction
+        #    So wherever X was observed, we keep X; wherever it’s missing, we fill with reconstruction.
+        imputed_data = missing_mask * X + (1 - missing_mask) * reconstruction
+
+        # Prepare a results dict, which PyPOTS style usually returns
+        results = {"imputed_data": imputed_data}
+
+        # 5) If training, compute losses: ORT + MIT
+        if training:
+            X_ori = inputs.get("X_ori", None)
+            indicating_mask = inputs.get("indicating_mask", None)
+            if X_ori is None or indicating_mask is None:
+                raise ValueError("For training, we need 'X_ori' and 'indicating_mask' in inputs.")
+            # compute TTT loss
+            loss, ORT_loss, MIT_loss = self.ttt_loss(reconstruction, X_ori, missing_mask, indicating_mask)
+            results["loss"] = loss
+            results["ORT_loss"] = ORT_loss
+            results["MIT_loss"] = MIT_loss
+
+        return results
+
+
+────────────────────────────────────────────────────────────────────────────────
+Explanation of the Logic in MyTTTRNN
+────────────────────────────────────────────────────────────────────────────────
+
+• self.embedding(...) merges X and mask, feeds them through a linear layer.  
+• self.rnn(...) is a standard PyTorch RNN (it could be LSTM, plain RNN, or GRU). We do not do anything fancy with hidden states (like skip connections or layer norms).  
+• reconstruction = self.output_projection(rnn_output). This is an attempt to map the hidden states back to the raw data dimension.  
+• imputed_data = missing_mask * X + (1 - missing_mask) * reconstruction. So if label in missing_mask is 1, that means the value is observed in X, so we keep it. If it’s 0, we fill it with the model’s reconstruction.  
+• The total TTT loss = ORT + MIT.  
+
+--------------------------------------------------------------------------------
+4) A POSSIBLE TRAINING LOOP
+--------------------------------------------------------------------------------
+Below is a minimal training loop using MyTTTRNN. Notice that we follow the PyPOTS pattern of passing a dictionary of inputs to the forward function, then reading out “results[‘loss’]” for backprop:
+
+def train_one_epoch(model, dataloader, optimizer):
+    model.train()
+    running_loss = 0.0
+    for batch_idx, data in enumerate(dataloader):
+        # data might be something like:
+        # [indices, X, missing_mask, X_ori, indicating_mask]
+        # which you then put on device, etc.
+        idx, X, missing_mask, X_ori, indicating_mask = data
+        inputs = {
+            "X": X,
+            "missing_mask": missing_mask,
+            "X_ori": X_ori,
+            "indicating_mask": indicating_mask,
+        }
+        optimizer.zero_grad()
+        results = model(inputs, training=True)
+        loss = results["loss"]
+        loss.backward()
+        optimizer.step()
+        running_loss += loss.item()
+    return running_loss / len(dataloader)
+
+def validate(model, dataloader):
+    model.eval()
+    running_loss = 0.0
+    with torch.no_grad():
+        for data in dataloader:
+            idx, X, missing_mask, X_ori, indicating_mask = data
+            inputs = {
+                "X": X,
+                "missing_mask": missing_mask,
+                "X_ori": X_ori,
+                "indicating_mask": indicating_mask,
+            }
+            results = model(inputs, training=True)  
+            # For validation, we also have ground-truth X and indicating_mask, so we can compute a loss.
+            # Sometimes you might do "training=False" and skip the extra loss. It's up to you.
+            loss = results["loss"]
+            running_loss += loss.item()
+    return running_loss / len(dataloader)
+
+--------------------------------------------------------------------------------
+5) SUMMARY
+--------------------------------------------------------------------------------
+
+This rough example shows how a naïve test-time training approach with an RNN can be structured similarly to PyPOTS’s “Transformer” approach by combining:
+
+• (X, MissingMask) → Embedding  
+• RNN backbone (instead of TransformerEncoder)  
+• Output projection back to original dimension  
+• Imputation = mix of original observed data and the reconstructed predictions  
+• A specially-designed SAITS-like loss function (ORT + MIT)  
+
+By carefully following this design, you can adapt almost any architecture (CNN, RNN, or advanced attention-based methods) to handle partial time series and to produce an imputation consistent with PyPOTS’s pipeline.
+
+That’s the essence of refactoring your TTT RNN model into a PyPOTS-like style. You get clear separation of steps, straightforward training, and a consistent data-flow for partial sequences.
+
+Hope this helps you rewrite your own code for test-time training in a style akin to the PyPOTS transformer-based imputation! If anything is unclear or you want to see more details, feel free to ask.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk5NTM1ODI3MF19
+eyJoaXN0b3J5IjpbLTQyMDE2MzU0NiwxOTk1MzU4MjcwXX0=
 -->
